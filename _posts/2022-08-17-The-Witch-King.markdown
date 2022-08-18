@@ -34,11 +34,18 @@ So how to flesh it out?
 Spray-on space-filling foam seemed the best option, though I weill admit I did not research options extensively. I went through four or five cans to get it to this stage (photo), and then cut it down to something more resembling the final product (photo). Did this with just a kitchen knife, shaping bit by bit until it looked and felt right. There was very little exactness after this, just comparing to photos and eyeballing it. The one difficult part was the spikes - take a look (photo) - they're very ... spiky, sure, but triangular. Or cones with edges. Very particular shape. I was careful to keep the foam like that. Wasn't sure if I was going to do more or not there. 
 
 ### The handle and chain
-The chain was simple, just bought a chain from home depot. 
-PVC, dowel, pleather, treeflex
+While the head gets built, I need to think about how the handle will attach and how to make it look proper. Here's what it looks like in the film: 
+
+Not super clear, but you can see some outlines of metal "wings" along the handle, it's probably wrapped in leather, and there are some studs. It's also gotta have a chain attach, and be strong enough to hold the weight. I had some spare dowel left over after lopping off ... four feet, so can use that as a base. But that felt a little too thin. Looking around the shed, I had some slightly wider PVC, which fit the dowel nicely. Alright! Got some caps, bolted the ring for the chain attach point through the cap into the dowel, and we have a viable handle! Now it just needs to look right. 
+
+The PVC was easy to cover in pleather, so I just sewed a cylinder of pleather, added the studs, and as a final step after coveringthe pipe I nailed it onto the pipe so it wouldn't slide as I held the handle. Let's take a look at those metal wings then.
+
+You get a vague idea of the shape from the very few closeups we get, which also implies that I don't need to be super exact. This seemed like a good chance to use treeflex - heat-moldable, thin as I need, and nice and rigid once cool. I cut the fins out of thin treeflex for both ends, covered the caps, and just heat-molded the fins on:
+
+Then it was just a matter of painting, and viola! 
 
 
-
+The chain was simple, just bought a chain from home depot. Closed up the eyelets with glue or treeflex, and as long as the strain isn't on those exact points, we're good. It's an odd place to have the force anyway. 
 
 
 ### Smoothing
@@ -59,7 +66,7 @@ Just went for a few layers of a nice classic metal gray. Tried this hammered ste
 ### Second thoughts, more paint, and then glue
 It still didn't look _quite_ right, and furthermore the spackle kept cracking. I was poking around online and saw some suggestions to handle similar issues and also get a nice shine to a final product: a layer of glue. Dries clear, and you're essentially plastic coating. Worth a shot! (did not consider the possibility it might look bad)
 
-Painted that on over the paint, and yeah it turned out really well!
+Painted that on over the paint, and yeah it turned out really well! Even the treeflex on the handle got the treatment.
 
 ### A stand
 The stand was honestly a rush job: some padding for the bottom spike to take the weight, coouple of sticks to ensure it sat upright, and a holder for the handle. I don't look at the stand much, it's not important.
