@@ -66,16 +66,72 @@ The cheeks are not flat pieces; they curve with the face a bit and have their ow
 
 ![cheeky](/assets/initial_cheek.jpg){: .center}
 
+This stage had a lot of size adjustment - how long do I make those cheek spikes? How far down and also in front of my face should they go? The recurved spikes back up - how close should they meet in the middle? Many question,and much close watching of various films clips happened. I eventually just picked something that seemed right to me - remember, I'm sizing this to my head - and went with it. Then came the finer detail. Take a look at the cheecks around the ear-level:
+
+There's these deep grooves that lead to a webbed/bat-wing style look. This was just many iterations of heating, molding by hand, cooling, checking, wearing, repeat. For those who want to try this at home, sorry I don't have an exact method for you to follow. Here's an in progress shot:
+
+![groovy](/assets/grooves.jpg){: .center}
+
+As an aside, you can see the history of the piece right there - previous lines and text squished in, previous pieces I used molded back into this cheek piece, and also notes for future changes on the band and the spike. 
+
+All of these pieces attached quite easily together with heat molding - just heat the treeflex join edges up, squish them together, squish it some more so there isn't an obvious seam, and bam done. 
+
+One final note before I move on: take a look at the movie helmet in this scene, particular on the cheek. 
+
+It's as if the metal has eroded over the sheer age of this creature - remember, the Witch King was an ancient being, killed and resurrected yonks before the later Second Age when the hunt for the Ring truly began in earnest. I wanted to try to replicate some of that, and thankfully treeflex makes it quite easy - heat the piece up, and then since it's very grainy within the resin, you can pull the edges and it breaks apart in a similar fashion. Perfect!
+
+(picutre)
 
 
 ### The gauntlets
-a logn story
+As I said at the beginning, I had originally found a template online for these and worked from that. I bought some basic black pleather gloves with long wrists online, and looking at the gauntlets from the film, things seemed obvious:
+
+[movie gauntlets]
+
+They're made of little spiky plates lined along the fingers, with some back-of-hand plates that are bigger, with a bit of a webbed bat-wing pattern. This was also clear from the templates:
+
+[templates screenshot]
+
+I did a few iterations of the first spiky plate before settling on a design that was big enough to wrap around my finger, but not prohibitively big. Once I had that, it was just a matter of cutting them all out from a plate of treeflex and gluing them to my fingers. 
+
+![groovy](/assets/finger_curl.jpg){: .left}
+![groovy](/assets/hand_Start1.jpg){: .center}
+![groovy](/assets/all_fingers.jpg){: .right}
+
+
+As I said before, I wish I had thought of flattening the treeflex earlier, if only to make cutting easier. At least I was efficient in other ways:
+
+![groovy](/assets/cutting.jpg){: .center}
+
+This .... just took ages. You know what else takes ages? Watching all the Lord of the Rings films. At least I could do this in the background as I worked. One of the more difficult parts of this was I only had one hand to mold and glue - since the other hand had to be in the glove so things were pressed on in the right way while hot. Yes, I could have bought a fake hand ... alas for hindsight. 
+
+Every so often I would check functionality - could I curl my hand without pieces breaking off, could I grip things, etc, just to make sure I wasn't losing that. 
+
+![groovy](/assets/grip.jpg){: .center}
+
+
+The knuckles and the back of the hand. Again, there's many ribbed/webbed/whatever plates leading down the back of the hand, and this has proved difficult over the years in that whenever I take it out to wear it I inevitably have to reglue some part of this - the pieces are just not a nice shape to sit on the hand. Ah well. 
+
+[template of back of hand pieces]
+
+Cut from template, mold with two hands, stick to back of one hand, repeat. 
+
+![groovy](/assets/knuckles1.jpg){: .left}
+![groovy](/assets/knuckles2.jpg){: .right}
+
+
+
+
 
 
 
 ### Shoulders and upper arms
 ooft
 
+### Painting
+I actually had decided on painting back when I started the gauntlets, in that i picked some spray paint colours and gave it go, and followed this theme when I finished each piece incrementally. 
+
+But as with the flail, I felt this was too ... matte, and went with the glue treatment and a slightly different gray, something more worn and metallic. I think Home Depot called it "hammered steel", which felt quite appropriate for armour. 
 
 ### The cloak
 bought, mostly

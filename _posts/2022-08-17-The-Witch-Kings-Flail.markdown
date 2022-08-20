@@ -72,6 +72,8 @@ The one difficult part was the spikes - take a look (photo) - they're very ... s
 ### The handle
 While the head gets built, I need to think about how the handle will attach and how to make it look proper. Here's what it looks like in the film: 
 
+![First attempt](/assets/handle_forearm.jpg){: .center}
+
 Not super clear, but you can see some outlines of metal "wings" along the handle, it's probably wrapped in leather, and there are some studs. It's also gotta have a chain attach point, and be strong enough to hold the weight. I had some spare dowel left over after lopping off ... four feet, so can use that as a base. But that felt a little too thin. Looking around the shed, I had some slightly wider PVC, which fit the dowel nicely. Alright! Got some caps, bolted the ring for the chain attach point through the cap into the dowel, got a chain from home depot, and we have a viable handle! Now it just needs to look ... more Mordor.
 
 ![More of a staff](/assets/basic_handle.jpg){: .center}
