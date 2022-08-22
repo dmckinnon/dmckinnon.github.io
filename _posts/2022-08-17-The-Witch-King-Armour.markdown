@@ -140,7 +140,7 @@ Let's start with the wrist.
 #### The wrist
 This is most clearly seen in the shot that pans down from behind, facing Eowyn, as W-K lifts his flail - "clearly seen", yeah right. 
 
-![First attempt](/assets/handle_forearm.jpg){: .center}
+![First attempt](/assets/handle_forearm1.jpg){: .center}
 
 So again, I watched that seen _to death_. Here's my notes:
 - goes from gauntlet to elbow
@@ -194,7 +194,9 @@ Layer of new paint, layer of glue, and these pieces were looking schmicko:
 mace and helmet photo
 
 ### The cloak
-I wanted a long black cloak with wide sleeves, and a hood. Someone online linked me to one they found online for general costume-ness, and they'd used this for their Witch-King build. Sounds good to me. Bought one, but it was too ... _clean_. This needed to be aged. Tatty. Worn. The actual one in the film looks thicker and heavier, and the purchased one was thin, light, and wavy. However, there's a practical element: costumes are _hot_ and I was going to sweat in this. Might as well keep it light. 
+I wanted a long black cloak with wide sleeves, and a hood. Someone online linked me to one they found online for general costume-ness, and they'd used this for their Witch-King build. Sounds good to me. Bought one, but it was too ... _clean_, as you can see in the photo. This needed to be aged. Tatty. Worn. The actual one in the film looks thicker and heavier, and the purchased one was thin, light, and wavy. However, there's a practical element: costumes are _hot_ and I was going to sweat in this. Might as well keep it light. 
+
+![groovy](/assets/straight_clock.jpg){: .center}
 
 I subjected the cloak to some fast wear-and-tear, including brushing it with various string wire brushes intended for cleaning up metal, slashing it a bit, sewing bits together to create intentional folds so it didn't sit too straight, and then also weighing it down - I sewed steel ball bearings that I had lying around into the bottom hem, just to keep it from being too floaty. 
 
