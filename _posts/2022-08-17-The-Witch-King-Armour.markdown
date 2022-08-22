@@ -66,7 +66,11 @@ The cheeks are not flat pieces; they curve with the face a bit and have their ow
 
 ![cheeky](/assets/initial_cheek.jpg){: .center}
 
-This stage had a lot of size adjustment - how long do I make those cheek spikes? How far down and also in front of my face should they go? The recurved spikes back up - how close should they meet in the middle? Many question,and much close watching of various films clips happened. I eventually just picked something that seemed right to me - remember, I'm sizing this to my head - and went with it. Then came the finer detail. Take a look at the cheecks around the ear-level:
+This stage had a lot of size adjustment - how long do I make those cheek spikes? How far down and also in front of my face should they go? The recurved spikes back up - how close should they meet in the middle? Many question,and much close watching of various films clips happened. You can see my experiments with different lengths here, comapre the left and the right:
+
+![groovy](/assets/front.jpg){: .center}
+
+I eventually just picked something that seemed right to me - remember, I'm sizing this to my head - and went with it. Then came the finer detail. Take a look at the cheecks around the ear-level:
 
 There's these deep grooves that lead to a webbed/bat-wing style look. This was just many iterations of heating, molding by hand, cooling, checking, wearing, repeat. For those who want to try this at home, sorry I don't have an exact method for you to follow. Here's an in progress shot:
 
@@ -81,6 +85,12 @@ One final note before I move on: take a look at the movie helmet in this scene, 
 It's as if the metal has eroded over the sheer age of this creature - remember, the Witch King was an ancient being, killed and resurrected yonks before the later Second Age when the hunt for the Ring truly began in earnest. I wanted to try to replicate some of that, and thankfully treeflex makes it quite easy - heat the piece up, and then since it's very grainy within the resin, you can pull the edges and it breaks apart in a similar fashion. Perfect!
 
 (picutre)
+
+#### Final before painting
+The black covering for my head is a sleeve of a shirt that I sewed one end shut on. Simple, does the job. Can't see well, but there's enough other impracticalities with this entire costume that I'm not stressed there. Gotta try not to stab someone in the face.
+
+![groovy](/assets/spikes.jpg){: .center}
+
 
 
 ### The gauntlets
@@ -119,25 +129,80 @@ Cut from template, mold with two hands, stick to back of one hand, repeat.
 ![groovy](/assets/knuckles1.jpg){: .left}
 ![groovy](/assets/knuckles2.jpg){: .right}
 
+I worked all the way down to that flat piece on the wrist, which also hit the end of the glove and I figured that was a good stopped point for the gauntlets - at the time I wasn't sure if I would do a wrist piece or not. 
+
+
+### The rest of the arm
+This part involved the most guesswork. There's probably less than 5 seconds _total_ where you can see the shoulder/upper arm/wrist armour of the Witch King _at all_, let alone clearly. 
+
+Let's start with the wrist.
+
+#### The wrist
+This is most clearly seen in the shot that pans down from behind, facing Eowyn, as W-K lifts his flail - "clearly seen", yeah right. 
+
+![First attempt](/assets/handle_forearm.jpg){: .center}
+
+So again, I watched that seen _to death_. Here's my notes:
+- goes from gauntlet to elbow
+- there's lines that curl around and along the forearm that are either sunken in or raised. I think raised.
+- There's that honking great elbow spike
+- The elbow piece appears to be separate from the forearm
+- a bunch of other detail like straps and connection points 
+
+Good grief. I tried some experiments with a fluted piece near the start of the wrist, that would lead into this, but it didn't feel right:
+
+![groovy](/assets/fluted_wrist.jpg){: .center}
+
+First off, I made a decision: only one piece, no spearate elbow piece or wrist piece from the main forearm piece. This is already getting immensely complicated and elbows are a pain.
+I flattened out one large sheet, heated it up, and just straight up pressed it onto my arm. Not comfortable at all, but it's not hot enough to burn me and it worked. The raised grooves were easy, just really thin cuts rolled into cylinders and heat-pressed on, taking care to keep them raised. I kinda winged the patterns a bit, cos we get to see so little. The elbow spike I made separately, and gave it some structure to make it more robust, and then heat-attached it to the end of the arm. Here's the attempt thus far:
+
+![groovy](/assets/forearm.jpg){: .center}
+
+Those ridges need to be smoothed down, but otherwise I was quite happy! Again this was difficult since I could only use one hand at a time and I'm heavily right handed, but I made do. 
+
+#### Shoulders
+Let's examine the few shreds of footage there are of the shoulders:
+
+Notes:
+- there's a ... bar? wall? That sticks out, at the closest line to the body
+- Again, swirling ridges whose pattern I can guess at
+- webbed bottom
+- several plates below that. Possibly 3, maybe more
+
+I decided to just do three plates total, including the shoulder, cos it really started extending down my arm, and if all you see of these plates is the webbed ending then I might as well not make much of them, and they all have to squish onto my arm. 
+
+There's also the question of how these will attach to my arm. I decided on straps and buckles, attached on the inside of all the pieces at the right points (somehow), and buckled under my arm. For the shoulder piece, theoretically it would also rest atop my shoulder and so stay on that way. There's perhaps better wats, but this ended up working. I made my own straps from left-over pleather, by sewing long cylinders, sewing buckles onto the end, and then using small screws and washers to hold these to the armour. This final part was not great, but it meant they could rotate, instead of being glued in. Here's a photo
+
+{strap photo}
+
+I started with the shoulder piece, as that was the biggest and probably the most defining. A large plate, rolled thin, heated and pressed against my own shoulder to get the basic shape. I padded this out to a nice rounded shape with an orange and my hands, as I felt it should be more filled than my scrawny lil shoulder, and more even. For the webbed end I just picked a design and cut it out:
+
+
+That ridge that sticks out was a long thin strip that was heat-molded onto the end, and this took several goes to get it sticking strongly at a right angle. Another bar on top, and it was working pretty well. Again, all this was was major guesswork from a few tiny frames. The ridges I added last, and this was retrospectively a mistake, which I learned and fix for the other shoulder. I suppose one was going ot be a test case anyway, and I ended up liking the test case. The curved shape made it really hard to smooth the ridges out properly, which is so much easier on a flat surface. Regardless, I was happy with the final product:
 
 
 
-
-
-
-### Shoulders and upper arms
-ooft
+You'll also note the next two pieces in that photo (and they're all painted, I did not document this properly at the time). These followed fairly simply, in that I largely copied the ridges, the webbed end, etc, and just made sure to make them short so they would fit one under the other, and without going too far down my arm. I also made sure to not make anything too uniform (ridge placement, webbed end, etc), as I felt this armour exhibited a bit of ... not haphazard design, but not the standard uniformity one expects of armour. I did left-right mirror every piece though.
 
 ### Painting
-I actually had decided on painting back when I started the gauntlets, in that i picked some spray paint colours and gave it go, and followed this theme when I finished each piece incrementally. 
+I actually had decided on painting back when I started the gauntlets, in that i picked some spray paint colours and gave it go, and followed this theme when I finished each piece incrementally, as you can see in some of the above photos. 
 
 But as with the flail, I felt this was too ... matte, and went with the glue treatment and a slightly different gray, something more worn and metallic. I think Home Depot called it "hammered steel", which felt quite appropriate for armour. 
 
+Layer of new paint, layer of glue, and these pieces were looking schmicko:
+
+mace and helmet photo
+
 ### The cloak
-bought, mostly
+I wanted a long black cloak with wide sleeves, and a hood. Someone online linked me to one they found online for general costume-ness, and they'd used this for their Witch-King build. Sounds good to me. Bought one, but it was too ... _clean_. This needed to be aged. Tatty. Worn. The actual one in the film looks thicker and heavier, and the purchased one was thin, light, and wavy. However, there's a practical element: costumes are _hot_ and I was going to sweat in this. Might as well keep it light. 
+
+I subjected the cloak to some fast wear-and-tear, including brushing it with various string wire brushes intended for cleaning up metal, slashing it a bit, sewing bits together to create intentional folds so it didn't sit too straight, and then also weighing it down - I sewed steel ball bearings that I had lying around into the bottom hem, just to keep it from being too floaty. 
+
+
 
 ### Sabatons
-These were a lot of effort for perhaps something not necessary
+These were a lot of effort for perhaps something not necessary. Impractical to wear, at least. But you can see sabatons in the film - or rather, I could, due to how closely I was watching. And this was also an opportunity to add some height - the actor who played the Witck King was a huge man, and I'm ... not. Some more height would be nice, really get that _looming_ feel. 
+
 
 
 ### A stand

@@ -102,6 +102,8 @@ Well, it got all spackled and there were some cracks, but let's peg that down to
 ### Paint
 Just went for a few layers of a nice classic metal gray. Tried a few different grays before finally settling on light and matte:
 
+![More of a staff](/assets/hanging.jpg){: .left}
+
 ![More of a staff](/assets/full_painted.jpg){: .left}
 
 
