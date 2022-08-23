@@ -11,7 +11,7 @@ I actualyl started making the gauntlets for the Witch King back in 2018, and the
 
 And then once that was done, got inspiration to finish the gauntlets, and do the cape, other scraps of armour, and polish the whole look off. 
 
-As with the [flail](), there are not many clear shots in the film - except for the helmet - and I did a lot of frame-by-frame watching, and guesswork. Tried to not look at other people's attempts too much, with one exception - I had started from a template of the gauntlets. Can't remember where I got it from - sorry to whoever made it, you deserve the credit. 
+As with the [flail](), there are not many clear shots in the film - except for the helmet - and I did a lot of frame-by-frame watching, and guesswork - [here's a compilation](https://www.youtube.com/watch?v=OdjGPV8X-l4&ab_channel=BOSSProductions) with most of the Witch-King scenes, and gee there's not many clear still shots. Tried to not look at other people's attempts too much, with one exception - I had started from a template of the gauntlets. Can't remember where I got it from - sorry to whoever made it, you deserve the credit. 
 
 ## Contents
 - [Materials](#materials)  
@@ -20,9 +20,13 @@ As with the [flail](), there are not many clear shots in the film - except for t
 
 - [The gauntlets](#the-gaunlets)
 
-- [Smoothing](#smoothing)
+- [The rest of the arm](#the-rest-of-the-arm)
 
-- [Paint](#paint)
+- [Painting](#paint)
+
+- [The cloak](#the-cloak)
+
+- [Sabatons](#sabatons)
 
 - [A stand](#a-stand)
 
@@ -35,11 +39,24 @@ This stuff is wonderful - comes in thick sheets and its heat-moldable at reasona
 
 At first I didn't have the idea of making it that thin, so parts of the gauntlets are really really thick, which in retrospect probably slowed me down since I was having a hard time cutting and getting it right. Once I thought of making it really thin, that part became easy. 
 
+Treeflex also gave me a really nice texture that appeared to be in the film too. Take a look at this closeup:
+
+![spiky](/assets/eyes.jpg){: .center}
+
+and then a closeup of my painted treeflex:
+
+![spiky](/assets/close_paint.jpg){: .center}
+
+I'm not far from the correct texture. I suppose it's due to the grainy nature of treeflex, and I didn't do a thick layer of primer before painting - but that was deliberate. I wanted that texture. 
+
 #### Templates
 I kept all my templates, and can attach them at the end as images, with scale in the images. These came from either the gauntlet template I started with and adjusted slightly, or painstakingly watching the relevant scenes, drawing something, cutting, testing, redrawing, and so on. They aren't perfect, if I did some of them again I'd probably tweak a bit, but they're a decent starting point. 
 
 ### The helmet
-This was a difficult one to start - look at it:
+This was my favourite part of the entire build, as it's just so iconic and noticeable, but also a difficult one to start - look at it:
+
+![spiky](/assets/nazgul.jpg){: .center}
+![spiky](/assets/head_and_shoulders.jpg){: .center}
 
 Where do you start? 
 After much consideration, I broke it down into:
@@ -47,7 +64,7 @@ After much consideration, I broke it down into:
 - a forehead piece that leads into that central spike, that also formed the upper halves of the eyes and had the nose bridge
 - each cheek, which would form the lower half of each eye
 
-Each of these I could make separately and then heat-mold together at the end. This actually worked out quite well. 
+Each of these I could make separately and then heat-mold together at the end. This actually worked out quite well.
 
 #### The Forehead Spike
 I rolled together two sheets to create a really long sheet as this spike was approximately a foot long (guessing and scaling down to my size). Simple to draw, and just had to make sure it didn't taper too strongly. Here's an initial version that mostly stayed the same:
@@ -91,16 +108,25 @@ The black covering for my head is a sleeve of a shirt that I sewed one end shut 
 
 ![groovy](/assets/spikes.jpg){: .center}
 
+Looking back, I think my spikes are not as angled as the film prop:
+
+![spiky](/assets/head_and_shoulders.jpg){: .center}
+
+But you know what, it's probably ok. No one has called me out on this. 
+
 
 
 ### The gauntlets
 As I said at the beginning, I had originally found a template online for these and worked from that. I bought some basic black pleather gloves with long wrists online, and looking at the gauntlets from the film, things seemed obvious:
 
-[movie gauntlets]
+![spiky](/assets/head_and_shoulders.jpg){: .center}
+![spiky](/assets/movie_gauntlets.jpg){: .center}
 
 They're made of little spiky plates lined along the fingers, with some back-of-hand plates that are bigger, with a bit of a webbed bat-wing pattern. This was also clear from the templates:
 
-[templates screenshot]
+![spiky](/assets/template1.jpg){: .center}
+![spiky](/assets/template2.jpg){: .center}
+![spiky](/assets/template3.jpg){: .center}
 
 I did a few iterations of the first spiky plate before settling on a design that was big enough to wrap around my finger, but not prohibitively big. Once I had that, it was just a matter of cutting them all out from a plate of treeflex and gluing them to my fingers. 
 
@@ -133,9 +159,12 @@ I worked all the way down to that flat piece on the wrist, which also hit the en
 
 
 ### The rest of the arm
-This part involved the most guesswork. There's probably less than 5 seconds _total_ where you can see the shoulder/upper arm/wrist armour of the Witch King _at all_, let alone clearly. 
+This part involved the most guesswork. There's probably less than 5 seconds _total_ where you can see the shoulder/upper arm/wrist armour of the Witch King _at all_, let alone clearly. It's in a few broad shots, where I think the entire character is completely CGI:
 
-Let's start with the wrist.
+![groovy](/assets/full_body.jpg){: .left}
+![groovy](/assets/full_cgi.jpg){: .right}
+
+These weren't particularly helpful, so I didn't overindex on them. Then there's a few close ups where you can see the shoulders easier, as well as a separate shot I used for the wrist. Let's start with the wrist.
 
 #### The wrist
 This is most clearly seen in the shot that pans down from behind, facing Eowyn, as W-K lifts his flail - "clearly seen", yeah right. 
@@ -163,6 +192,9 @@ Those ridges need to be smoothed down, but otherwise I was quite happy! Again th
 #### Shoulders
 Let's examine the few shreds of footage there are of the shoulders:
 
+![groovy](/assets/head_and_shoulders.jpg){: .left}
+![groovy](/assets/nazgul.jpg){: .right}
+
 Notes:
 - there's a ... bar? wall? That sticks out, at the closest line to the body
 - Again, swirling ridges whose pattern I can guess at
@@ -173,16 +205,23 @@ I decided to just do three plates total, including the shoulder, cos it really s
 
 There's also the question of how these will attach to my arm. I decided on straps and buckles, attached on the inside of all the pieces at the right points (somehow), and buckled under my arm. For the shoulder piece, theoretically it would also rest atop my shoulder and so stay on that way. There's perhaps better wats, but this ended up working. I made my own straps from left-over pleather, by sewing long cylinders, sewing buckles onto the end, and then using small screws and washers to hold these to the armour. This final part was not great, but it meant they could rotate, instead of being glued in. Here's a photo
 
-{strap photo}
+![groovy](/assets/strap1.jpg){: .left}
+![groovy](/assets/strap2.jpg){: .right}
 
 I started with the shoulder piece, as that was the biggest and probably the most defining. A large plate, rolled thin, heated and pressed against my own shoulder to get the basic shape. I padded this out to a nice rounded shape with an orange and my hands, as I felt it should be more filled than my scrawny lil shoulder, and more even. For the webbed end I just picked a design and cut it out:
 
+![groovy](/assets/shoulder1.jpg){: .right}
 
 That ridge that sticks out was a long thin strip that was heat-molded onto the end, and this took several goes to get it sticking strongly at a right angle. Another bar on top, and it was working pretty well. Again, all this was was major guesswork from a few tiny frames. The ridges I added last, and this was retrospectively a mistake, which I learned and fix for the other shoulder. I suppose one was going ot be a test case anyway, and I ended up liking the test case. The curved shape made it really hard to smooth the ridges out properly, which is so much easier on a flat surface. Regardless, I was happy with the final product:
 
-
+![groovy](/assets/upper_arm.jpg){: .right}
 
 You'll also note the next two pieces in that photo (and they're all painted, I did not document this properly at the time). These followed fairly simply, in that I largely copied the ridges, the webbed end, etc, and just made sure to make them short so they would fit one under the other, and without going too far down my arm. I also made sure to not make anything too uniform (ridge placement, webbed end, etc), as I felt this armour exhibited a bit of ... not haphazard design, but not the standard uniformity one expects of armour. I did left-right mirror every piece though.
+
+#### Bringing it all together
+![groovy](/assets/whole_arm.jpg){: .right}
+
+It felt so great to put this all on, it came together really well!
 
 ### Painting
 I actually had decided on painting back when I started the gauntlets, in that i picked some spray paint colours and gave it go, and followed this theme when I finished each piece incrementally, as you can see in some of the above photos. 
@@ -191,7 +230,7 @@ But as with the flail, I felt this was too ... matte, and went with the glue tre
 
 Layer of new paint, layer of glue, and these pieces were looking schmicko:
 
-mace and helmet photo
+![groovy](/assets/mace_and_helmet.jpg){: .right}
 
 ### The cloak
 I wanted a long black cloak with wide sleeves, and a hood. Someone online linked me to one they found online for general costume-ness, and they'd used this for their Witch-King build. Sounds good to me. Bought one, but it was too ... _clean_, as you can see in the photo. This needed to be aged. Tatty. Worn. The actual one in the film looks thicker and heavier, and the purchased one was thin, light, and wavy. However, there's a practical element: costumes are _hot_ and I was going to sweat in this. Might as well keep it light. 
@@ -203,36 +242,43 @@ I subjected the cloak to some fast wear-and-tear, including brushing it with var
 
 
 ### Sabatons
-These were a lot of effort for perhaps something not necessary. Impractical to wear, at least. But you can see sabatons in the film - or rather, I could, due to how closely I was watching. And this was also an opportunity to add some height - the actor who played the Witck King was a huge man, and I'm ... not. Some more height would be nice, really get that _looming_ feel. 
+These were a lot of effort for perhaps something not necessary. Impractical to wear, at least. But you can see sabatons in the film - or rather, I could, due to how closely I was watching. Briefly, in the full body shots from before, and snippets in the behind-the-scenes: 
+
+![groovy](/assets/sabaton.jpg){: .center}
+
+And this was also an opportunity to add some height - the actor who played the Witck King was a huge man, and I'm ... not. Some more height would be nice, really get that _looming_ feel. To give myself height, I started off by making a boot shape from some left over 7-ply wood, and holding my shoes in with plates of treeflex:
+
+![groovy](/assets/boot1.jpg){: .center}
+
+I wanted to not have an entirely rigid sole, hence the split pieces that would be loosely connected, so I could still bend my foot. There's next to no footage of sabatons from the film (maybe a tiny snippet), so I kinda just ... made sabatons from my imagination. Had to be able to get shoes in and out easily, so I designed them with a lot of pieces that could come apart:
+
+(photo)
+
+This was a lot of heating treeflex and pressing it against different parts of my shoe or leg, and then smoothing it out to make sure the pieces didn't have weird creases. I then bought two long leather straps and threaded them through holes made in each piece, to tie off at the ends. Takes a while, but works and looks nice and medieval"
+
 
 
 
 ### A stand
-The stand was honestly a rush job: some padding for the bottom spike to take the weight, coouple of sticks to ensure it sat upright, and a holder for the handle. I don't look at the stand much, it's not important.
+Far be it from me to just purchase a mannequin. I made a box-section ... cross? ... and bent the arms into the position I wanted:
 
+(photo)
+
+Duct-tape around my arms, subsequently ripped off (ouch), gave a relatively solid shape for the arms. Combining that with a lot of space-filling stuffing padded everything out nicely, including the head. 
 
 
 ### Final product
 And here's how it turned out!
 
-![More of a staff](/assets/final.jpg){: .center}
+(photo)
 
-I'm really pleased with this. A nice glossy sheen from that glue layer, but also has imperfections and cracks that sort of say aging and use has happened to this. If I made it again I think I would have done more experiments with materials at the start, but overall I have no real complaints. The actual mace head itself is hefty, but not unusably so; what adds the weight is the lever-arm force from the handle, since you can't grab the chain at the point. Go back and look at the shot from the film now and consider where The Witch King holds the handle himself ... and then behind the scenes they say an extra lifted it from below. Understandable. 
+And here it is on the stand:
 
-Let's compare to other versions found online ... 
+(photo)
 
-![More of a staff](/assets/google.jpg){: .center}
+I'm really pleased with this, the helmet especially. There aren't many people who would notice the other arm pieces I suspect, but the helmet is the centre piece, the main eye-draw, the, well, crown. It ended up _fantastic_, although I often forget my head is a good foot taller than it should be and door frames are annoying. Everything is annoying, frankly - I wore this to a halloween part and ended up taking half of it off for most of it, just to be able to eat, drink, and chat reasonably. Even then I had to watch out that I didn't accidentally stab people. But that helmet _looms_ and just looks so good. 
 
-Hey, I got pretty close! Shoulda looked at this earlier for inspiration, but was also very vindicating to know that I got that close by just looking at frames from the films.
-
-
-### Appendix: the templates
+I didn't make the sword, by the way. Purchased that online years ago, $70 or something. 
 
 
 
-
-
-
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/

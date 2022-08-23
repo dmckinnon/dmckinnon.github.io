@@ -31,7 +31,7 @@ There's not many clear shots, as ole Witchy is mostly hefting it at poor Eowyn, 
 ### Mock up and materials
 A quick comment about materials: this was mostly ad-hoc. My style is to figure out a broad idea at the start, and then sort out smaller details as time and project progresses, so I'm not locked into many tiny cascading decisions from the start. 
 
-First things first, let's get a good look at this thing, and figure out how big I should make it. I watched [several](https://www.youtube.com/watch?v=dQ_-rmuPZC4&t=77s&ab_channel=jullingen) [clips](https://www.youtube.com/watch?v=ZAO4t8672hc&ab_channel=Baronessa) from the film and behind the scenes over and over, frame by frame, to get an idea for the size, using people as a comparison. Eg. Peter Jackson is 5'7", and look at how big the spiky chunk is next to him - hat gives a good idea for size. 
+First things first, let's get a good look at this thing, and figure out how big I should make it. I watched [several](https://www.youtube.com/watch?v=dQ_-rmuPZC4&t=77s&ab_channel=jullingen) [clips](https://www.youtube.com/watch?v=ZAO4t8672hc&ab_channel=Baronessa) from the film and behind the scenes over and over, frame by frame, to get an idea for the size, using people as a comparison. Eg. Peter Jackson is 5'7", and look at how big the spiky chunk is next to him - that gives a good idea for size. 
 
 ![First attempt](/assets/pete.jpg){: .center}
 
