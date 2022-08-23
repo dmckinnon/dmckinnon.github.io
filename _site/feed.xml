@@ -1,4 +1,286 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-08-19T15:50:21-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">McKinnon Building</title><subtitle>The things I have built</subtitle><entry><title type="html">The Witch King’s Flail</title><link href="http://localhost:4000/The-Witch-King/" rel="alternate" type="text/html" title="The Witch King’s Flail" /><published>2022-08-17T10:58:35-07:00</published><updated>2022-08-17T10:58:35-07:00</updated><id>http://localhost:4000/The-Witch-King</id><content type="html" xml:base="http://localhost:4000/The-Witch-King/">&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=ZAO4t8672hc&amp;amp;ab_channel=Baronessa&quot;&gt;“Some people call it a mace, some people call it a morningstar … I ended up calling it damned heavy, cos it was … it was damned heavy&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-08-23T14:45:42-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">McKinnon Building</title><subtitle>The things I have built</subtitle><entry><title type="html">The Witch King’s Armour</title><link href="http://localhost:4000/The-Witch-King-Armour/" rel="alternate" type="text/html" title="The Witch King’s Armour" /><published>2022-08-17T10:58:35-07:00</published><updated>2022-08-17T10:58:35-07:00</updated><id>http://localhost:4000/The-Witch-King-Armour</id><content type="html" xml:base="http://localhost:4000/The-Witch-King-Armour/">&lt;p&gt;&lt;a href=&quot;&quot;&gt;“I wanted a … something like a crown of thorns. I don’t know if that’s suppose to signify anything”&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I actualyl started making the gauntlets for the Witch King back in 2018, and then put them aside for a while because it was difficult and I didn’t like how it was turning out. Came back to it late 2019 while I was doing the mace, and started on that notable helmet:&lt;/p&gt;
+
+&lt;p&gt;And then once that was done, got inspiration to finish the gauntlets, and do the cape, other scraps of armour, and polish the whole look off.&lt;/p&gt;
+
+&lt;p&gt;As with the &lt;a href=&quot;https://dmckinnon.github.io/The-Witch-King/&quot;&gt;flail&lt;/a&gt;, there are not many clear shots in the film - except for the helmet - and I did a lot of frame-by-frame watching, and guesswork - &lt;a href=&quot;https://www.youtube.com/watch?v=OdjGPV8X-l4&amp;amp;ab_channel=BOSSProductions&quot;&gt;here’s a compilation&lt;/a&gt; with most of the Witch-King scenes, and gee there’s not many clear still shots. Tried to not look at other people’s attempts too much, with one exception - I had started from a template of the gauntlets. Can’t remember where I got it from - sorry to whoever made it, you deserve the credit.&lt;/p&gt;
+
+&lt;h2 id=&quot;contents&quot;&gt;Contents&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;#materials&quot;&gt;Materials&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;#the-helmet&quot;&gt;The helmet&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;#the-gaunlets&quot;&gt;The gauntlets&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;#the-rest-of-the-arm&quot;&gt;The rest of the arm&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;#paint&quot;&gt;Painting&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;#the-cloak&quot;&gt;The cloak&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;#sabatons&quot;&gt;Sabatons&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;#a-stand&quot;&gt;A stand&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;#final-product&quot;&gt;Final product&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;materials&quot;&gt;Materials&lt;/h3&gt;
+&lt;p&gt;This was not as ad-hoc in terms of materials as other projects, but certainly it was in terms of design. Back in 2018 I had discovered &lt;a href=&quot;https://www.treeflx.com/store/c2/TreeFLX#/&quot;&gt;treeflx&lt;/a&gt;, and thought this would be perfect for armour - and whose armour to start with but The Witch King’s! I’m ambitious.&lt;/p&gt;
+
+&lt;p&gt;This stuff is wonderful - comes in thick sheets and its heat-moldable at reasonable temperatures. I would microwave it, use a rolling pin to flatten it out, repeat a few times until it was thin enough, and then draw on the surface with a marker and cut it out with scissors (I cut it fairly thin). Any offcuts can be heated up and rolled back together to make new sheets. Furthermore, anytime a piece goes badly, it can just be squished back together and rerolled and cut. If you cut too small, heat-add some more on. It’s amazing stuff.&lt;/p&gt;
+
+&lt;p&gt;At first I didn’t have the idea of making it that thin, so parts of the gauntlets are really really thick, which in retrospect probably slowed me down since I was having a hard time cutting and getting it right. Once I thought of making it really thin, that part became easy.&lt;/p&gt;
+
+&lt;p&gt;treeflx also gave me a really nice texture that appeared to be in the film too. Take a look at this closeup:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/eyes.jpg&quot; alt=&quot;spiky&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;and then a closeup of my painted treeflx:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/close_paint.jpg&quot; alt=&quot;spiky&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I’m not far from the correct texture. I suppose it’s due to the grainy nature of treeflx, and I didn’t do a thick layer of primer before painting - but that was deliberate. I wanted that texture.&lt;/p&gt;
+
+&lt;h4 id=&quot;templates&quot;&gt;Templates&lt;/h4&gt;
+&lt;p&gt;I kept all my templates, and can attach them at the end as images, with scale in the images. These came from either the gauntlet template I started with and adjusted slightly, or painstakingly watching the relevant scenes, drawing something, cutting, testing, redrawing, and so on. They aren’t perfect, if I did some of them again I’d probably tweak a bit, but they’re a decent starting point.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-helmet&quot;&gt;The helmet&lt;/h3&gt;
+&lt;p&gt;This was my favourite part of the entire build, as it’s just so iconic and noticeable, but also a difficult one to start - look at it:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/nazgul.jpg&quot; alt=&quot;spiky&quot; class=&quot;center&quot; /&gt;
+&lt;img src=&quot;/assets/head_and_shoulders.jpg&quot; alt=&quot;spiky&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Where do you start? 
+After much consideration, I broke it down into:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;a headband from one temple to the other around the back of the head&lt;/li&gt;
+  &lt;li&gt;a forehead piece that leads into that central spike, that also formed the upper halves of the eyes and had the nose bridge&lt;/li&gt;
+  &lt;li&gt;each cheek, which would form the lower half of each eye&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Each of these I could make separately and then heat-mold together at the end. This actually worked out quite well.&lt;/p&gt;
+
+&lt;h4 id=&quot;the-forehead-spike&quot;&gt;The Forehead Spike&lt;/h4&gt;
+&lt;p&gt;I rolled together two sheets to create a really long sheet as this spike was approximately a foot long (guessing and scaling down to my size). Simple to draw, and just had to make sure it didn’t taper too strongly. Here’s an initial version that mostly stayed the same:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/head_spike.jpg&quot; alt=&quot;spiky&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I used my finger and a butter knife while the treeflx was hot to fold it all around that centre crease, and just pressed it against my nose for the nose bridge. I think the only other changes after that were slightly thinning the spike at the top; otherwise, I hit close to bullseye first go.&lt;/p&gt;
+
+&lt;h4 id=&quot;the-band&quot;&gt;The Band&lt;/h4&gt;
+&lt;p&gt;Made a strip an inch or two wide, wrapped it around my head, cut it appropriately, pretty easy. Made sure to make this longer than felt necessary, since the front part of the helmet was supposed to sit out from my face a bunch, so I could cover my face in black cloth to give the illusion of an empty helmet that the film does so well. The spikes were two to three inches, cut from 15mm dowel and belt-sanded into spikes. Hot glue stuck them on nicely. They occasionally fall off, but are easy to stick back on so I haven’t bothered with anything stronger.&lt;/p&gt;
+
+&lt;h4 id=&quot;the-cheeks&quot;&gt;The Cheeks&lt;/h4&gt;
+&lt;p&gt;The cheeks took a lot of back and forth, especially for minor tweaking, in front of a mirror. One thing I like about treeflx is that you can write on it, so I would make changes, wear it a bit, see how I liked it, compare to the pictures I had, and then write down my notes exactly on the piece itself where the changes needed to be.&lt;/p&gt;
+
+&lt;p&gt;The cheeks are not flat pieces; they curve with the face a bit and have their own waves and so on. Templates only got me so far, but I think I started from a strong spot. Here you can see I’ve drawn some attempts, molded them back in, and cut new attempts:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/initial_cheek.jpg&quot; alt=&quot;cheeky&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This stage had a lot of size adjustment - how long do I make those cheek spikes? How far down and also in front of my face should they go? The recurved spikes back up - how close should they meet in the middle? Many question,and much close watching of various films clips happened. You can see my experiments with different lengths here, comapre the left and the right:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/front.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I eventually just picked something that seemed right to me - remember, I’m sizing this to my head - and went with it. Then came the finer detail. Take a look at the cheecks around the ear-level:&lt;/p&gt;
+
+&lt;p&gt;There’s these deep grooves that lead to a webbed/bat-wing style look. This was just many iterations of heating, molding by hand, cooling, checking, wearing, repeat. For those who want to try this at home, sorry I don’t have an exact method for you to follow. Here’s an in progress shot:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/grooves.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As an aside, you can see the history of the piece right there - previous lines and text squished in, previous pieces I used molded back into this cheek piece, and also notes for future changes on the band and the spike.&lt;/p&gt;
+
+&lt;p&gt;All of these pieces attached quite easily together with heat molding - just heat the treeflx join edges up, squish them together, squish it some more so there isn’t an obvious seam, and bam done.&lt;/p&gt;
+
+&lt;h4 id=&quot;final-before-painting&quot;&gt;Final before painting&lt;/h4&gt;
+&lt;p&gt;The black covering for my head is a sleeve of a shirt that I sewed one end shut on. Simple, does the job. Can’t see well, but there’s enough other impracticalities with this entire costume that I’m not stressed there. Gotta try not to stab someone in the face.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/spikes.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Looking back, I think my spikes are not as angled as the film prop:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/head_and_shoulders.jpg&quot; alt=&quot;spiky&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;But you know what, it’s probably ok. No one has called me out on this.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-gauntlets&quot;&gt;The gauntlets&lt;/h3&gt;
+&lt;p&gt;As I said at the beginning, I had originally found a template online for these and worked from that. I bought some basic black pleather gloves with long wrists online, and looking at the gauntlets from the film, things seemed obvious:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/nazgul.jpg&quot; alt=&quot;spiky&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/movie_gauntlet.jpg&quot; alt=&quot;spiky&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;They’re made of little spiky plates lined along the fingers, with some back-of-hand plates that are bigger, with a bit of a webbed bat-wing pattern. This was also clear from the templates:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/template1.jpg&quot; alt=&quot;spiky&quot; class=&quot;center&quot; /&gt;
+&lt;img src=&quot;/assets/template2.jpg&quot; alt=&quot;spiky&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I did a few iterations of the first spiky plate before settling on a design that was big enough to wrap around my finger, but not prohibitively big. Once I had that, it was just a matter of cutting them all out from a plate of treeflx and gluing them to my fingers.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/finger_curl.jpg&quot; alt=&quot;groovy&quot; class=&quot;left&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/hand_Start1.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/all_fingers.dng&quot; alt=&quot;groovy&quot; class=&quot;right&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As I said before, I wish I had thought of flattening the treeflx earlier, if only to make cutting easier. At least I was efficient in other ways:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/cutting.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This …. just took ages. You know what else takes ages? Watching all the Lord of the Rings films. At least I could do this in the background as I worked. One of the more difficult parts of this was I only had one hand to mold and glue - since the other hand had to be in the glove so things were pressed on in the right way while hot. Yes, I could have bought a fake hand … alas for hindsight.&lt;/p&gt;
+
+&lt;p&gt;Every so often I would check functionality - could I curl my hand without pieces breaking off, could I grip things, etc, just to make sure I wasn’t losing that.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/grip.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The knuckles and the back of the hand. Again, there’s many ribbed/webbed/whatever plates leading down the back of the hand, and this has proved difficult over the years in that whenever I take it out to wear it I inevitably have to reglue some part of this - the pieces are just not a nice shape to sit on the hand. Ah well.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/template3.jpg&quot; alt=&quot;spiky&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Cut from template, mold with two hands, stick to back of one hand, repeat.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/knuckles1.jpg&quot; alt=&quot;groovy&quot; class=&quot;left&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/knuckles2.dng&quot; alt=&quot;groovy&quot; class=&quot;right&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I worked all the way down to that flat piece on the wrist, which also hit the end of the glove and I figured that was a good stopped point for the gauntlets - at the time I wasn’t sure if I would do a wrist piece or not.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-rest-of-the-arm&quot;&gt;The rest of the arm&lt;/h3&gt;
+&lt;p&gt;This part involved the most guesswork. There’s probably less than 5 seconds &lt;em&gt;total&lt;/em&gt; where you can see the shoulder/upper arm/wrist armour of the Witch King &lt;em&gt;at all&lt;/em&gt;, let alone clearly. It’s in a few broad shots, where I think the entire character is completely CGI:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/full_body.jpg&quot; alt=&quot;groovy&quot; class=&quot;left&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/full_cgi.jpg&quot; alt=&quot;groovy&quot; class=&quot;right&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;These weren’t particularly helpful, so I didn’t overindex on them. Then there’s a few close ups where you can see the shoulders easier, as well as a separate shot I used for the wrist. Let’s start with the wrist.&lt;/p&gt;
+
+&lt;h4 id=&quot;the-wrist&quot;&gt;The wrist&lt;/h4&gt;
+&lt;p&gt;This is most clearly seen in the shot that pans down from behind, facing Eowyn, as W-K lifts his flail - “clearly seen”, yeah right.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/handle_forearm.jpg&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So again, I watched that scene &lt;em&gt;to death&lt;/em&gt;. Here’s my notes:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;goes from gauntlet to elbow&lt;/li&gt;
+  &lt;li&gt;there’s lines that curl around and along the forearm that are either sunken in or raised. I think raised.&lt;/li&gt;
+  &lt;li&gt;There’s that honking great elbow spike&lt;/li&gt;
+  &lt;li&gt;The elbow piece appears to be separate from the forearm&lt;/li&gt;
+  &lt;li&gt;a bunch of other detail like straps and connection points&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Good grief. I tried some experiments with a fluted piece near the start of the wrist, that would lead into this, but it didn’t feel right:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/fluted_wrist.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;First off, I made a decision: only one piece, no spearate elbow piece or wrist piece from the main forearm piece. This is already getting immensely complicated and elbows are a pain.
+I flattened out one large sheet, heated it up, and just straight up pressed it onto my arm. Not comfortable at all, but it’s not hot enough to burn me and it worked. The raised grooves were easy, just really thin cuts rolled into cylinders and heat-pressed on, taking care to keep them raised. I kinda winged the patterns a bit, cos we get to see so little. The elbow spike I made separately, and gave it some structure to make it more robust, and then heat-attached it to the end of the arm. Here’s the attempt thus far:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/forearm.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Those ridges need to be smoothed down, but otherwise I was quite happy! Again this was difficult since I could only use one hand at a time and I’m heavily right handed, but I made do.&lt;/p&gt;
+
+&lt;h4 id=&quot;shoulders&quot;&gt;Shoulders&lt;/h4&gt;
+&lt;p&gt;Let’s examine the few shreds of footage there are of the shoulders:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/head_and_shoulders.jpg&quot; alt=&quot;groovy&quot; class=&quot;left&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/nazgul.jpg&quot; alt=&quot;groovy&quot; class=&quot;right&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Notes:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;there’s a … bar? wall? That sticks out, at the closest line to the body&lt;/li&gt;
+  &lt;li&gt;Again, swirling ridges whose pattern I can guess at&lt;/li&gt;
+  &lt;li&gt;webbed bottom&lt;/li&gt;
+  &lt;li&gt;several plates below that. Possibly 3, maybe more&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I decided to just do three plates total, including the shoulder, cos it really started extending down my arm, and if all you see of these plates is the webbed ending then I might as well not make much of them, and they all have to squish onto my arm.&lt;/p&gt;
+
+&lt;p&gt;There’s also the question of how these will attach to my arm. I decided on straps and buckles, attached on the inside of all the pieces at the right points (somehow), and buckled under my arm. For the shoulder piece, theoretically it would also rest atop my shoulder and so stay on that way. There’s perhaps better wats, but this ended up working. I made my own straps from left-over pleather, by sewing long cylinders, sewing buckles onto the end, and then using small screws and washers to hold these to the armour. This final part was not great, but it meant they could rotate, instead of being glued in. Here’s a photo&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/strap1.jpg&quot; alt=&quot;groovy&quot; class=&quot;left&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/strap2.jpg&quot; alt=&quot;groovy&quot; class=&quot;right&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I started with the shoulder piece, as that was the biggest and probably the most defining. A large plate, rolled thin, heated and pressed against my own shoulder to get the basic shape. I padded this out to a nice rounded shape with an orange and my hands, as I felt it should be more filled than my scrawny lil shoulder, and more even. For the webbed end I just picked a design and cut it out:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/shoulder1.jpg&quot; alt=&quot;groovy&quot; class=&quot;right&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;That ridge that sticks out was a long thin strip that was heat-molded onto the end, and this took several goes to get it sticking strongly at a right angle. Another bar on top, and it was working pretty well. Again, all this was was major guesswork from a few tiny frames. The ridges I added last, and this was retrospectively a mistake, which I learned and fix for the other shoulder. I suppose one was going ot be a test case anyway, and I ended up liking the test case. The curved shape made it really hard to smooth the ridges out properly, which is so much easier on a flat surface. Regardless, I was happy with the final product:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/upper_arm.jpg&quot; alt=&quot;groovy&quot; class=&quot;right&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You’ll also note the next two pieces in that photo (and they’re all painted, I did not document this properly at the time). These followed fairly simply, in that I largely copied the ridges, the webbed end, etc, and just made sure to make them short so they would fit one under the other, and without going too far down my arm. I also made sure to not make anything too uniform (ridge placement, webbed end, etc), as I felt this armour exhibited a bit of … not haphazard design, but not the standard uniformity one expects of armour. I did left-right mirror every piece though.&lt;/p&gt;
+
+&lt;h4 id=&quot;bringing-it-all-together&quot;&gt;Bringing it all together&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/whole_arm.jpg&quot; alt=&quot;groovy&quot; class=&quot;right&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It felt so great to put this all on, it came together really well!&lt;/p&gt;
+
+&lt;h3 id=&quot;painting&quot;&gt;Painting&lt;/h3&gt;
+&lt;p&gt;I actually had decided on painting back when I started the gauntlets, in that i picked some spray paint colours and gave it go, and followed this theme when I finished each piece incrementally, as you can see in some of the above photos.&lt;/p&gt;
+
+&lt;p&gt;But as with the flail, I felt this was too … matte, and went with the glue treatment and a slightly different gray, something more worn and metallic. I think Home Depot called it “hammered steel”, which felt quite appropriate for armour.&lt;/p&gt;
+
+&lt;p&gt;Layer of new paint, layer of glue, and these pieces were looking schmicko:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/mace_and_helmet.jpg&quot; alt=&quot;groovy&quot; class=&quot;right&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;the-cloak&quot;&gt;The cloak&lt;/h3&gt;
+&lt;p&gt;I wanted a long black cloak with wide sleeves, and a hood. Someone online linked me to one they found online for general costume-ness, and they’d used this for their Witch-King build. Sounds good to me. Bought one, but it was too … &lt;em&gt;clean&lt;/em&gt;, as you can see in the photo. This needed to be aged. Tatty. Worn. The actual one in the film looks thicker and heavier, and the purchased one was thin, light, and wavy. However, there’s a practical element: costumes are &lt;em&gt;hot&lt;/em&gt; and I was going to sweat in this. Might as well keep it light.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/straight_clock.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I subjected the cloak to some fast wear-and-tear, including brushing it with various string wire brushes intended for cleaning up metal, slashing it a bit, sewing bits together to create intentional folds so it didn’t sit too straight, and then also weighing it down - I sewed steel ball bearings that I had lying around into the bottom hem, just to keep it from being too floaty.&lt;/p&gt;
+
+&lt;h3 id=&quot;sabatons&quot;&gt;Sabatons&lt;/h3&gt;
+&lt;p&gt;These were a lot of effort for perhaps something not necessary. Impractical to wear, at least. But you can see sabatons in the film - or rather, I could, due to how closely I was watching. Briefly, in the full body shots from before, and snippets in the behind-the-scenes:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/sabaton.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And this was also an opportunity to add some height - the actor who played the Witck King was a huge man, and I’m … not. Some more height would be nice, really get that &lt;em&gt;looming&lt;/em&gt; feel. To give myself height, I started off by making a boot shape from some left over 7-ply wood, and holding my shoes in with plates of treeflx:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/boot1.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I wanted to not have an entirely rigid sole, hence the split pieces that would be loosely connected, so I could still bend my foot. There’s next to no footage of sabatons from the film (maybe a tiny snippet), so I kinda just … made sabatons from my imagination. Had to be able to get shoes in and out easily, so I designed them with a lot of pieces that could come apart:&lt;/p&gt;
+
+&lt;p&gt;(photo)&lt;/p&gt;
+
+&lt;p&gt;This was a lot of heating treeflx and pressing it against different parts of my shoe or leg, and then smoothing it out to make sure the pieces didn’t have weird creases. I then bought two long leather straps and threaded them through holes made in each piece, to tie off at the ends. Takes a while, but works and looks nice and medieval”&lt;/p&gt;
+
+&lt;h3 id=&quot;a-stand&quot;&gt;A stand&lt;/h3&gt;
+&lt;p&gt;Far be it from me to just purchase a mannequin. I made a box-section … cross? … and bent the arms into the position I wanted:&lt;/p&gt;
+
+&lt;p&gt;(photo)&lt;/p&gt;
+
+&lt;p&gt;Duct-tape around my arms, subsequently ripped off (ouch), gave a relatively solid shape for the arms. Combining that with a lot of space-filling stuffing padded everything out nicely, including the head.&lt;/p&gt;
+
+&lt;h3 id=&quot;final-product&quot;&gt;Final product&lt;/h3&gt;
+&lt;p&gt;And here’s how it turned out!&lt;/p&gt;
+
+&lt;p&gt;(photo)&lt;/p&gt;
+
+&lt;p&gt;And here it is on the stand:&lt;/p&gt;
+
+&lt;p&gt;(photo)&lt;/p&gt;
+
+&lt;p&gt;I’m really pleased with this, the helmet especially. There aren’t many people who would notice the other arm pieces I suspect, but the helmet is the centre piece, the main eye-draw, the, well, crown. It ended up &lt;em&gt;fantastic&lt;/em&gt;, although I often forget my head is a good foot taller than it should be and door frames are annoying. Everything is annoying, frankly - I wore this to a halloween part and ended up taking half of it off for most of it, just to be able to eat, drink, and chat reasonably. Even then I had to watch out that I didn’t accidentally stab people. But that helmet &lt;em&gt;looms&lt;/em&gt; and just looks so good. Here’s a shot from a friend’s halloween party, and I &lt;em&gt;dined out&lt;/em&gt; on compliments all evening, including many repetitions of my favourite “Where’d you buy this … wait seriously? You &lt;em&gt;made&lt;/em&gt; this?!?!”&lt;/p&gt;
+
+&lt;p&gt;(jenna photo)&lt;/p&gt;
+
+&lt;p&gt;I didn’t make the sword, by the way. Purchased that online years ago, $70 or something.&lt;/p&gt;</content><author><name></name></author><category term="Projects" /><summary type="html">“I wanted a … something like a crown of thorns. I don’t know if that’s suppose to signify anything”</summary></entry><entry><title type="html">The Witch King’s Flail</title><link href="http://localhost:4000/The-Witch-King/" rel="alternate" type="text/html" title="The Witch King’s Flail" /><published>2022-08-17T10:58:35-07:00</published><updated>2022-08-17T10:58:35-07:00</updated><id>http://localhost:4000/The-Witch-King</id><content type="html" xml:base="http://localhost:4000/The-Witch-King/">&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=ZAO4t8672hc&amp;amp;ab_channel=Baronessa&quot;&gt;“Some people call it a mace, some people call it a morningstar … I ended up calling it damned heavy, cos it was … it was damned heavy&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Late 2019 I needed to burn some time and thought it would be fun to start making the flail of the Witch King of Angmar - specifically the version in the Lord of the Rings films:&lt;/p&gt;
 
@@ -98,6 +380,133 @@ You get a vague idea of the shape from the very few closeups we get, which also 
 
 &lt;h3 id=&quot;paint&quot;&gt;Paint&lt;/h3&gt;
 &lt;p&gt;Just went for a few layers of a nice classic metal gray. Tried a few different grays before finally settling on light and matte:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/full_painted.jpg&quot; alt=&quot;More of a staff&quot; class=&quot;left&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/full_painted2.jpg&quot; alt=&quot;More of a staff&quot; class=&quot;right&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;second-thoughts-more-paint-and-then-glue&quot;&gt;Second thoughts, more paint, and then glue&lt;/h4&gt;
+&lt;p&gt;It still didn’t look &lt;em&gt;quite&lt;/em&gt; right, and furthermore the spackle kept cracking. I was poking around online and saw some suggestions to handle similar issues and also get a nice shine to a final product: a layer of glue. Dries clear, and you’re essentially plastic coating. Worth a shot! (did not consider the possibility it might look bad)
+Painted that on over the paint, and yeah it turned out really well! Even the treeflex on the handle got the treatment.&lt;/p&gt;
+
+&lt;h3 id=&quot;a-stand&quot;&gt;A stand&lt;/h3&gt;
+&lt;p&gt;The stand was honestly a rush job: some padding for the bottom spike to take the weight, coouple of sticks to ensure it sat upright, and a holder for the handle. I don’t look at the stand much, it’s not important.&lt;/p&gt;
+
+&lt;h3 id=&quot;final-product&quot;&gt;Final product&lt;/h3&gt;
+&lt;p&gt;And here’s how it turned out!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/final.jpg&quot; alt=&quot;More of a staff&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I’m really pleased with this. A nice glossy sheen from that glue layer, but also has imperfections and cracks that sort of say aging and use has happened to this. If I made it again I think I would have done more experiments with materials at the start, but overall I have no real complaints. The actual mace head itself is hefty, but not unusably so; what adds the weight is the lever-arm force from the handle, since you can’t grab the chain at the point. Go back and look at the shot from the film now and consider where The Witch King holds the handle himself … and then behind the scenes they say an extra lifted it from below. Understandable.&lt;/p&gt;
+
+&lt;p&gt;Let’s compare to other versions found online …&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/google.jpg&quot; alt=&quot;More of a staff&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Hey, I got pretty close! Shoulda looked at this earlier for inspiration, but was also very vindicating to know that I got that close by just looking at frames from the films.&lt;/p&gt;</content><author><name></name></author><category term="Projects" /><summary type="html">“Some people call it a mace, some people call it a morningstar … I ended up calling it damned heavy, cos it was … it was damned heavy</summary></entry><entry><title type="html">The Witch King’s Flail</title><link href="http://localhost:4000/The-Witch-Kings-Flail/" rel="alternate" type="text/html" title="The Witch King’s Flail" /><published>2022-08-17T10:58:35-07:00</published><updated>2022-08-17T10:58:35-07:00</updated><id>http://localhost:4000/The-Witch-Kings-Flail</id><content type="html" xml:base="http://localhost:4000/The-Witch-Kings-Flail/">&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=ZAO4t8672hc&amp;amp;ab_channel=Baronessa&quot;&gt;“Some people call it a mace, some people call it a morningstar … I ended up calling it damned heavy, cos it was … it was damned heavy&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Late 2019 I needed to burn some time and thought it would be fun to start making the flail of the Witch King of Angmar - specifically the version in the Lord of the Rings films:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/film_mace.jpg&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;There’s not many clear shots, as ole Witchy is mostly hefting it at poor Eowyn, but you get the idea. I had already begun a bit of my Witch King costume, and needed a break, so this provided a related distraction.&lt;/p&gt;
+
+&lt;h2 id=&quot;contents&quot;&gt;Contents&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;#mock-up-and-materials&quot;&gt;Mock up and materials&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;#filling-out-the-skeleton&quot;&gt;Filling out the skeleton&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;#the-handle&quot;&gt;The handle&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;#smoothing&quot;&gt;Smoothing&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;#paint&quot;&gt;Paint&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;#a-stand&quot;&gt;A stand&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;#final-product&quot;&gt;Final product&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;mock-up-and-materials&quot;&gt;Mock up and materials&lt;/h3&gt;
+&lt;p&gt;A quick comment about materials: this was mostly ad-hoc. My style is to figure out a broad idea at the start, and then sort out smaller details as time and project progresses, so I’m not locked into many tiny cascading decisions from the start.&lt;/p&gt;
+
+&lt;p&gt;First things first, let’s get a good look at this thing, and figure out how big I should make it. I watched &lt;a href=&quot;https://www.youtube.com/watch?v=dQ_-rmuPZC4&amp;amp;t=77s&amp;amp;ab_channel=jullingen&quot;&gt;several&lt;/a&gt; &lt;a href=&quot;https://www.youtube.com/watch?v=ZAO4t8672hc&amp;amp;ab_channel=Baronessa&quot;&gt;clips&lt;/a&gt; from the film and behind the scenes over and over, frame by frame, to get an idea for the size, using people as a comparison. Eg. Peter Jackson is 5’7”, and look at how big the spiky chunk is next to him - that gives a good idea for size.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/pete.jpg&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The other part was to make a basic outline shape from cheap foam board. I cut out several cross sections and fit them together to make a 6-point star head at a particular size, before I realised it’s 8 points (retrospectively,I should have googled it because here it is, clear and obvious). But this is the sizing draft, so that doesn’t matter - and I decided that, in the spirit of Peter Jackson, it was roughly 50% too small. So let’s go bigger.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/draft.jpg&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;materials&quot;&gt;Materials&lt;/h4&gt;
+&lt;p&gt;I didn’t know how invested I’d get in this, and so went for the idea of “cheap and whatever I have lying around, plus cheap stuff from Home Depot” - so I used some massive 7-ply boards I had sitting around in the shed. Heavy stuff, but it worked. With my bigger cross sections, I sketched the outlines onto the wood and jigsaw’d these out. These then fit around a centre pole (53mm dowel from Home Depot) that slotted into the centre (photo). At this stage it fit really tight and not well, and was more of a mace on the end of an immense stick. A nice weapon, but not what I wanted.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/mace_on_stick.jpg&quot; alt=&quot;More of a staff&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This head felt about the right size, and weight too - I didn’t want some lightweight foam thing swaying in the breeze, I wanted you to &lt;em&gt;feel&lt;/em&gt; when you were lifting this. This had to feel real. And it did.&lt;/p&gt;
+
+&lt;h3 id=&quot;filling-out-the-skeleton&quot;&gt;Filling out the skeleton&lt;/h3&gt;
+&lt;p&gt;I needed to properly attach these ‘ribs’ to the central rod, and then fill it out - and probably reduce the weight a bit while I was at it, cos 7-ply was hefty stuff. It fits together as in the above photo, but not cleanly, and those edges are flat. Need to taper both the inside edges to fit together well, and the outside edges to provide more of a point. A handheld belt sander did the trick:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/sanded1.jpg&quot; alt=&quot;I dont like sand&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And then they slotted together nicely, bit of wood glue (a LOT of wood glue) and it held!
+So how to flesh it out?&lt;/p&gt;
+
+&lt;p&gt;Spray-on space-filling foam seemed the best option, though I weill admit I did not research options extensively. I went through four or five cans to get it to this stage&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/foam_mace.jpg&quot; alt=&quot;lotta foam&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;and then cut it down to something more resembling the final product. Did this with just a kitchen knife, shaping bit by bit until it looked and felt right. There was very little exactness after this, just comparing to photos and eyeballing it.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/foam_cut2.jpg&quot; alt=&quot;lotta foam&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The one difficult part was the spikes - take a look (photo) - they’re very … spiky, sure, but triangular. Or cones with edges. Very particular shape. I was careful to keep the foam like that. These spikes needed to hold the weight, as I noticed they were resting points, but also hold their shape. I played around with covering them in shells of thin cardboard, which bent quickly and easily, and then also thin-but-still-rigid shells of treeflex, which worked a lot better. You can see the different attempts on various spikes - card centre and right, treeflex on the left one:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/foam_cut1.jpg&quot; alt=&quot;PINK&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;the-handle&quot;&gt;The handle&lt;/h3&gt;
+&lt;p&gt;While the head gets built, I need to think about how the handle will attach and how to make it look proper. Here’s what it looks like in the film:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/handle_forearm.jpg&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Not super clear, but you can see some outlines of metal “wings” along the handle, it’s probably wrapped in leather, and there are some studs. It’s also gotta have a chain attach point, and be strong enough to hold the weight. I had some spare dowel left over after lopping off … four feet, so can use that as a base. But that felt a little too thin. Looking around the shed, I had some slightly wider PVC, which fit the dowel nicely. Alright! Got some caps, bolted the ring for the chain attach point through the cap into the dowel, got a chain from home depot, and we have a viable handle! Now it just needs to look … more Mordor.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/basic_handle.jpg&quot; alt=&quot;More of a staff&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The PVC was easy to cover in pleather, so I just sewed a cylinder of pleather, added the studs, and as a final step after covering the pipe I nailed it onto the pipe so it wouldn’t slide as I held the handle.&lt;/p&gt;
+
+&lt;p&gt;Let’s take a look at those metal wings then.
+You get a vague idea of the shape from the very few closeups we get, which also implies that I don’t need to be super exact (again, like at the start, I could have googled for other ideas, but for some reason I subconsciously decided to do this all from the films and no other sources). This seemed like a good chance to use treeflex again. I cut the fins out of thin treeflex for both ends, covered the caps, and just heat-molded the fins on:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/handle_treeflex_full.jpg&quot; alt=&quot;More of a staff&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Then it was just a matter of painting, and viola!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/full_painted_handle.jpg&quot; alt=&quot;More of a staff&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;smoothing&quot;&gt;Smoothing&lt;/h3&gt;
+&lt;p&gt;The foam was fairly rough and had little bubbles, so I needed to add something over the top to have a single smooth solid layer. This took a bit of consideration, and I hit upon something when trying spackling. I did several layers of this and it sunk in nicely. Did get crumbly once dried, but I forged on - maybe paint will fix that.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/cone_types.jpg&quot; alt=&quot;More of a staff&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Well, it got all spackled and there were some cracks, but let’s peg that down to artistic license - it’s looking pretty good shape-wise!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/spackled.jpg&quot; alt=&quot;More of a staff&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;paint&quot;&gt;Paint&lt;/h3&gt;
+&lt;p&gt;Just went for a few layers of a nice classic metal gray. Tried a few different grays before finally settling on light and matte:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/hanging.jpg&quot; alt=&quot;More of a staff&quot; class=&quot;left&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/full_painted.jpg&quot; alt=&quot;More of a staff&quot; class=&quot;left&quot; /&gt;&lt;/p&gt;
 
