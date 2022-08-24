@@ -85,6 +85,8 @@ You get a vague idea of the shape from the very few closeups we get, which also 
 
 ![More of a staff](/assets/handle_treeflex_full.jpg){: .center}
 
+![More of a staff](/assets/handle_end.jpg){: .center}
+
 Then it was just a matter of painting, and viola! 
 
 ![More of a staff](/assets/full_painted_handle.jpg){: .center}

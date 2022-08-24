@@ -45,7 +45,7 @@ treeflx also gave me a really nice texture that appeared to be in the film too. 
 
 and then a closeup of my painted treeflx:
 
-![spiky](/assets/close_paint.jpg){: .center}
+![spiky](/assets/texture2.jpg){: .center}
 
 I'm not far from the correct texture. I suppose it's due to the grainy nature of treeflx, and I didn't do a thick layer of primer before painting - but that was deliberate. I wanted that texture. 
 
@@ -259,19 +259,17 @@ And this was also an opportunity to add some height - the actor who played the W
 
 ![groovy](/assets/boot1.jpg){: .center}
 
-I wanted to not have an entirely rigid sole, hence the split pieces that would be loosely connected, so I could still bend my foot. There's next to no footage of sabatons from the film (maybe a tiny snippet), so I kinda just ... made sabatons from my imagination. Had to be able to get shoes in and out easily, so I designed them with a lot of pieces that could come apart:
+I wanted to not have an entirely rigid sole, hence the split pieces that would be loosely connected, so I could still bend my foot. There's next to no footage of sabatons from the film (maybe a tiny snippet), so I kinda just ... made sabatons from my imagination. Had to be able to get shoes in and out easily, so I designed them with a lot of pieces that could come apart. You can see the overlaps here:
 
-(photo)
+![groovy](/assets/sabaton_pieces.jpg){: .center}
 
-This was a lot of heating treeflx and pressing it against different parts of my shoe or leg, and then smoothing it out to make sure the pieces didn't have weird creases. I then bought two long leather straps and threaded them through holes made in each piece, to tie off at the ends. Takes a while, but works and looks nice and medieval"
+The toe spike is raised there and as soon as I did it people pointed out it looked stupid and not proper, so I later moved it down but don't have an unpainted photo. 
 
-
+This was a lot of heating treeflx and pressing it against different parts of my shoe or leg, and then smoothing it out to make sure the pieces didn't have weird creases. I then bought two long leather straps and threaded them through holes made in each piece, to tie off at the ends. Takes a while, but works and looks nice and medieval. 
 
 
 ### A stand
-Far be it from me to just purchase a mannequin. I made a box-section ... cross? ... and bent the arms into the position I wanted:
-
-(photo)
+Far be it from me to just purchase a mannequin. I made something akin to a crucifix out of 2mm box section steel and bent the arms into the position I wanted, so the head rested on the top of the cross, and the arms came off the sides. Unfortunately I did not take a photo of it at this stage, but it's not important.
 
 Duct-tape around my arms, subsequently ripped off (ouch), gave a relatively solid shape for the arms. Combining that with a lot of space-filling stuffing padded everything out nicely, including the head. 
 
@@ -279,15 +277,20 @@ Duct-tape around my arms, subsequently ripped off (ouch), gave a relatively soli
 ### Final product
 And here's how it turned out!
 
-(photo)
+![groovy](/assets/full1.jpg){: .center}
 
-And here it is on the stand:
+![groovy](/assets/full2.jpg){: .center}
 
-(photo)
+![groovy](/assets/full3.jpg){: .center}
 
-I'm really pleased with this, the helmet especially. There aren't many people who would notice the other arm pieces I suspect, but the helmet is the centre piece, the main eye-draw, the, well, crown. It ended up _fantastic_, although I often forget my head is a good foot taller than it should be and door frames are annoying. Everything is annoying, frankly - I wore this to a halloween part and ended up taking half of it off for most of it, just to be able to eat, drink, and chat reasonably. Even then I had to watch out that I didn't accidentally stab people. But that helmet _looms_ and just looks so good. Here's a shot from a friend's halloween party, and I _dined out_ on compliments all evening, including many repetitions of my favourite "Where'd you buy this ... wait seriously? You _made_ this?!?!" 
 
-(jenna photo)
+I'm _really_ pleased with this, the helmet especially. There aren't many people who would notice the other arm pieces I suspect, but the helmet is the centre piece, the main eye-draw, the, well, crown. It ended up _fantastic_, although I often forget my head is a good foot taller than it should be and door frames are annoying. Everything is annoying, frankly - I wore this to a halloween part and ended up taking half of it off for most of it, just to be able to eat, drink, and chat reasonably.
+
+![groovy](/assets/halloween1.jpg){: .center}
+
+![groovy](/assets/halloween2.jpg){: .center}
+
+ Even then I had to watch out that I didn't accidentally stab people. But that helmet _looms_ and just looks so good. Here's a shot from a friend's halloween party, and I _dined out_ on compliments all evening, including many repetitions of my favourite "Where'd you buy this ... wait seriously? You _made_ this?!?!" 
 
 I didn't make the sword, by the way. Purchased that online years ago, $70 or something. 
 
