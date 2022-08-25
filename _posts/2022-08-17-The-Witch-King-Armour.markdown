@@ -7,7 +7,7 @@ comments: true
 ---
 ["The spikes somehow evoke the crown of thorns. I don't know quite what that means"](https://youtu.be/HF2sQtH7WpE?t=84)
 
-I actualyl started making the gauntlets for the Witch King back in 2018, and then put them aside for a while because it was difficult and I didn't like how it was turning out. Came back to it late 2019 while I was doing the mace, and started on that notable helmet:
+I actually started making the gauntlets for the Witch King back in 2018, and then put them aside for a while because it was difficult and I didn't like how it was turning out. Came back to it late 2019 while I was doing the mace, and started on that notable helmet:
 
 And then once that was done, got inspiration to finish the gauntlets, and do the cape, other scraps of armour, and polish the whole look off. 
 
