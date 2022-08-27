@@ -7,11 +7,9 @@ comments: true
 ---
 ["The spikes somehow evoke the crown of thorns. I don't know quite what that means"](https://youtu.be/HF2sQtH7WpE?t=84)
 
-I actually started making the gauntlets for the Witch King back in 2018, and then put them aside for a while because it was difficult and I didn't like how it was turning out. Came back to it late 2019 while I was doing the mace, and started on that notable helmet:
+I first had the thought of making replica armour of the Witch-King of Angmar several years ago, made a start, faltered, put it aside ... and then came the pandemic and with it loads of time at home alone. So while the gauntlets were started in 2018, most of this happened in 2020 - and also in a bit of a weird order. I kept jumping around between parts, using [productive procrastination](https://solvingprocrastination.com/productive-procrastination/).
 
-And then once that was done, got inspiration to finish the gauntlets, and do the cape, other scraps of armour, and polish the whole look off. 
-
-As with the [flail](https://dmckinnon.github.io/The-Witch-King/), there are not many clear shots in the film - except for the helmet - and I did a lot of frame-by-frame watching, and guesswork - [here's a compilation](https://www.youtube.com/watch?v=OdjGPV8X-l4&ab_channel=BOSSProductions) with most of the Witch-King scenes, and gee there's not many clear still shots. Tried to not look at other people's attempts too much, with one exception - I had started from a template of the gauntlets. Can't remember where I got it from - sorry to whoever made it, you deserve the credit. 
+As with the [flail](https://dmckinnon.github.io/The-Witch-Kings-Flail/), there are not many clear shots in the film - except for the helmet - and I did a lot of frame-by-frame watching, and guesswork - [here's a compilation](https://www.youtube.com/watch?v=OdjGPV8X-l4&ab_channel=BOSSProductions) with most of the Witch-King scenes, and gee there's not many clear still shots. I tried to not look at other people's attempts too much so it was my own version as much as possible, with one exception - I had started from a template of the gauntlets. Can't remember where I got it from - sorry to whoever made it, you deserve the credit. 
 
 ## Contents
 - [Materials](#materials)  
@@ -32,6 +30,8 @@ As with the [flail](https://dmckinnon.github.io/The-Witch-King/), there are not 
 
 - [Final product](#final-product)
 
+- [Templates](#templates)
+
 ### Materials
 This was not as ad-hoc in terms of materials as other projects, but certainly it was in terms of design. Back in 2018 I had discovered [treeflx](https://www.treeflx.com/store/c2/TreeFLX#/), and thought this would be perfect for armour - and whose armour to start with but The Witch King's! I'm ambitious. 
 
@@ -39,11 +39,11 @@ This stuff is wonderful - comes in thick sheets and its heat-moldable at reasona
 
 At first I didn't have the idea of making it that thin, so parts of the gauntlets are really really thick, which in retrospect probably slowed me down since I was having a hard time cutting and getting it right. Once I thought of making it really thin, that part became easy. 
 
-treeflx also gave me a really nice texture that appeared to be in the film too. Take a look at this closeup:
+Treeflx also gave me a really nice texture that appeared to be in the film too. Take a look at this closeup:
 
 ![spiky](/assets/eyes.jpg){: .center}
 
-and then a closeup of my painted treeflx:
+and then a closeup of my painted treeflx (spoiler alert):
 
 ![spiky](/assets/texture2.jpg){: .center}
 
@@ -56,6 +56,8 @@ I kept all my templates, and can attach them at the end as images, with scale in
 This was my favourite part of the entire build, as it's just so iconic and noticeable, but also a difficult one to start - look at it:
 
 ![spiky](/assets/nazgul.jpg){: .center}
+
+
 ![spiky](/assets/head_and_shoulders.jpg){: .center}
 
 Where do you start? 
@@ -64,32 +66,30 @@ After much consideration, I broke it down into:
 - a forehead piece that leads into that central spike, that also formed the upper halves of the eyes and had the nose bridge
 - each cheek, which would form the lower half of each eye
 
-Each of these I could make separately and then heat-mold together at the end. This actually worked out quite well.
+Each of these I could make separately and then heat-mold together at the end. This strategy worked out quite well.
 
 #### The Forehead Spike
-I rolled together two sheets to create a really long sheet as this spike was approximately a foot long (guessing and scaling down to my size). Simple to draw, and just had to make sure it didn't taper too strongly. Here's an initial version that mostly stayed the same:
+I rolled together two sheets to create a really long sheet as this spike was approximately a foot long (guessing from the films and actor and scaling down to my size). Simple to draw, and just had to make sure it didn't taper too strongly. Here's an initial version that mostly stayed the same:
 
 ![spiky](/assets/head_spike.jpg){: .center}
 
 I used my finger and a butter knife while the treeflx was hot to fold it all around that centre crease, and just pressed it against my nose for the nose bridge. I think the only other changes after that were slightly thinning the spike at the top; otherwise, I hit close to bullseye first go. 
 
 #### The Band
-Made a strip an inch or two wide, wrapped it around my head, cut it appropriately, pretty easy. Made sure to make this longer than felt necessary, since the front part of the helmet was supposed to sit out from my face a bunch, so I could cover my face in black cloth to give the illusion of an empty helmet that the film does so well. The spikes were two to three inches, cut from 15mm dowel and belt-sanded into spikes. Hot glue stuck them on nicely. They occasionally fall off, but are easy to stick back on so I haven't bothered with anything stronger. 
+This was a strip an inch or two wide, wrapped it around my head, cut to an appropriate length; pretty easy. I made sure to make this longer than felt necessary, since the front part of the helmet was supposed to sit out from my face a bunch, so I could cover my face in black cloth to give the illusion of an empty helmet that the film does so well. The spikes were two to three inches, cut from 15mm dowel and belt-sanded into spikes. Hot glue stuck them on nicely - although hey occasionally fall off. They're at least easy to stick back on so I haven't bothered with anything stronger. 
 
 #### The Cheeks
-The cheeks took a lot of back and forth, especially for minor tweaking, in front of a mirror. One thing I like about treeflx is that you can write on it, so I would make changes, wear it a bit, see how I liked it, compare to the pictures I had, and then write down my notes exactly on the piece itself where the changes needed to be. 
+The cheeks took a lot of back and forth, especially for minor tweaking, in front of a mirror. One thing I like about treeflx is that you can write on it, so I would make changes, wear it a bit, see how I liked it, compare to the pictures I had, and then write down my notes exactly on the piece itself where the changes needed to be. You can find the template I started from at the bottom of this page.
 
 The cheeks are not flat pieces; they curve with the face a bit and have their own waves and so on. Templates only got me so far, but I think I started from a strong spot. Here you can see I've drawn some attempts, molded them back in, and cut new attempts:
 
 ![cheeky](/assets/initial_cheek.jpg){: .center}
 
-This stage had a lot of size adjustment - how long do I make those cheek spikes? How far down and also in front of my face should they go? The recurved spikes back up - how close should they meet in the middle? Many question,and much close watching of various films clips happened. You can see my experiments with different lengths here, comapre the left and the right:
+This stage had a lot of size adjustment - how long do I make those cheek spikes? How far down and also in front of my face should they go? The recurved spikes back up - how close should they meet in the middle? Many question, sand much close watching of various films clips happened. You can see my experiments with different lengths here, compare the left and the right:
 
 ![groovy](/assets/front.jpg){: .center}
 
-I eventually just picked something that seemed right to me - remember, I'm sizing this to my head - and went with it. Then came the finer detail. Take a look at the cheecks around the ear-level:
-
-There's these deep grooves that lead to a webbed/bat-wing style look. This was just many iterations of heating, molding by hand, cooling, checking, wearing, repeat. For those who want to try this at home, sorry I don't have an exact method for you to follow. Here's an in progress shot:
+I eventually just picked something that seemed right to me - remember, I'm sizing this to my head - and went with it. Then came the finer detail. Take a look at the cheeks around the ear-level: there's these deep grooves that lead to a webbed/bat-wing style look. This was just many iterations of heating, molding by hand, cooling, checking, wearing, repeat. For those who want to try this at home, sorry I don't have an exact method for you to follow. Here's an in progress shot:
 
 ![groovy](/assets/grooves.jpg){: .center}
 
@@ -99,7 +99,7 @@ All of these pieces attached quite easily together with heat molding - just heat
 
 
 #### Final before painting
-The black covering for my head is a sleeve of a shirt that I sewed one end shut on. Simple, does the job. Can't see well, but there's enough other impracticalities with this entire costume that I'm not stressed there. Gotta try not to stab someone in the face.
+The black covering for my head is a sleeve of a shirt that I sewed one end shut on. Simple, does the job. I certainly can't see well, but there's enough other impracticalities with this entire costume that I'm not stressed there - for example, gotta try not to stab someone in the face as I walk past them.
 
 ![groovy](/assets/spikes.jpg){: .center}
 
@@ -147,18 +147,18 @@ Every so often I would check functionality - could I curl my hand without pieces
 ![groovy](/assets/grip.jpg){: .center}
 
 
-The knuckles and the back of the hand. Again, there's many ribbed/webbed/whatever plates leading down the back of the hand, and this has proved difficult over the years in that whenever I take it out to wear it I inevitably have to reglue some part of this - the pieces are just not a nice shape to sit on the hand. Ah well. 
+The knuckles and the back of the hand came next - let's take a look at the templates: 
 
 ![spiky](/assets/template3.jpg){: .center}
 
-Cut from template, mold with two hands, stick to back of one hand, repeat. 
+Again, there's many ribbed/webbed/whatever plates leading down the back of the hand, and this has proved difficult over the years in that whenever I take it out to wear it I inevitably have to reglue some part of this - the pieces are just not a nice shape to sit on the hand. Ah well. Cut from template, mold with two hands, stick to back of one hand, repeat. 
 
 ![groovy](/assets/knuckles1.jpg){: .left}
 
 
 ![groovy](/assets/knuckles2.dng){: .right}
 
-I worked all the way down to that flat piece on the wrist, which also hit the end of the glove and I figured that was a good stopped point for the gauntlets - at the time I wasn't sure if I would do a wrist piece or not. 
+I worked all the way down to that flat piece on the wrist, which also hit the end of the glove and I figured that was a good stopping point for the gauntlets - at the time I wasn't sure if I would do a wrist piece or not. 
 
 
 ### The rest of the arm
@@ -210,7 +210,7 @@ Notes:
 
 I decided to just do three plates total, including the shoulder, cos it really started extending down my arm, and if all you see of these plates is the webbed ending then I might as well not make much of them, and they all have to squish onto my arm. 
 
-There's also the question of how these will attach to my arm. I decided on straps and buckles, attached on the inside of all the pieces at the right points (somehow), and buckled under my arm. For the shoulder piece, theoretically it would also rest atop my shoulder and so stay on that way. There's perhaps better wats, but this ended up working. I made my own straps from left-over pleather, by sewing long cylinders, sewing buckles onto the end, and then using small screws and washers to hold these to the armour. This final part was not great, but it meant they could rotate, instead of being glued in. Here's a photo
+There's also the question of how these will attach to my arm. I decided on straps and buckles, attached on the inside of all the pieces at the right points (somehow), and buckled under my arm. For the shoulder piece, theoretically it would also rest atop my shoulder and so stay on that way. There's perhaps better ways, but this ended up working. I made my own straps from left-over pleather, by sewing long cylinders, sewing buckles onto the end, and then using small screws and washers to hold these to the armour. This final part was not great, but it meant they could rotate, instead of being glued in. Here's a photo
 
 ![groovy](/assets/strap1.jpg){: .left}
 
@@ -221,7 +221,7 @@ I started with the shoulder piece, as that was the biggest and probably the most
 
 ![groovy](/assets/shoulder1.jpg){: .right}
 
-That ridge that sticks out was a long thin strip that was heat-molded onto the end, and this took several goes to get it sticking strongly at a right angle. Another bar on top, and it was working pretty well. Again, all this was was major guesswork from a few tiny frames. The ridges I added last, and this was retrospectively a mistake, which I learned and fix for the other shoulder. I suppose one was going ot be a test case anyway, and I ended up liking the test case. The curved shape made it really hard to smooth the ridges out properly, which is so much easier on a flat surface. Regardless, I was happy with the final product:
+That ridge that sticks out was a long thin strip that was heat-molded onto the end, and this took several goes to get it sticking strongly at a right angle. Another bar on top, and it was working pretty well. Again, all this was was major guesswork from a few tiny frames. The ridges I added last, and this was retrospectively a mistake, so I did this differently for the other shoulder. I suppose one was going to be a test case anyway, and I ended up liking the test case. The curved shape made it really hard to smooth the ridges out properly, which is so much easier on a flat surface. Regardless, I was happy with the final product:
 
 ![groovy](/assets/upper_arm.jpg){: .right}
 
@@ -255,7 +255,7 @@ These were a lot of effort for perhaps something not necessary. Impractical to w
 
 ![groovy](/assets/sabaton.jpg){: .center}
 
-And this was also an opportunity to add some height - the actor who played the Witck King was a huge man, and I'm ... not. Some more height would be nice, really get that _looming_ feel. To give myself height, I started off by making a boot shape from some left over 7-ply wood, and holding my shoes in with plates of treeflx:
+And this was also an opportunity to add some height - the actor who played the Witch King was a huge man, and I'm ... not. Some more height would be nice, really get that _looming_ feel. To give myself height, I started off by making a boot shape from some left over 7-ply wood, and holding my shoes in with plates of treeflx:
 
 ![groovy](/assets/boot1.jpg){: .center}
 
@@ -294,5 +294,32 @@ I'm _really_ pleased with this, the helmet especially. There aren't many people 
 
 I didn't make the sword, by the way. Purchased that online years ago, $70 or something. 
 
+### Templates
+Below are the templates I used for various parts. Firstly, the cheek template:
+
+![groovy](/assets/cheek_template.jpg){: .center}
+
+The upper shoulder piece, both front-on and side on:
+
+![groovy](/assets/shoulder_template.jpg){: .center}
+
+
+![groovy](/assets/side_shoulder_template.jpg){: .center}
+
+The remaining upper arm pieces:
+
+![groovy](/assets/arm_template.jpg){: .center}
+
+Working down, the wrist and hand templates:
+
+![groovy](/assets/hand_templates.jpg){: .center}
+
+The two types of finger piece - the tip and the pieces along the finger:
+
+![groovy](/assets/finger_templates.jpg){: .center}
+
+And the slightly different template I made for my thumb:
+
+![groovy](/assets/thumb_template.jpg){: .center}
 
 
