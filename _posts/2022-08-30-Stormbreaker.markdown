@@ -66,7 +66,20 @@ A good start, I think. Next came the longer part of the hammer, and this got tri
 
 And then thin triangles for the corners. My measuring and cutting inaccuracies started to show here, and I had to grind some pieces down or add more weld than I preferred to make up the difference. 
 
+#### The base plates
+The base plates for both hammer and axe, or rather the plates that would connect together around the central handle, were made exactly the same. I made the base plate for the hammer first, and copied this for the axe. This particular part of the whole head is not particularly clear, but we do get a glimpse or two:
 
+photo
+
+I saw this as an irregular but symmetric octagon, with edges extruded in at the top and bottom:
+
+drawing
+
+This was measured out, cut out, and then I welded a raised edge to the inward-facing side, with a gap for the handle:
+
+photo
+
+I could have not done this, I suppose, and just welded a flat side panel the whole way round when I connected the two base plates later. 
 
 ### The axe
 Unfortunately by the time I got to this Home Depot was sold out of 12"x24" steel sheets, had no larger size, and the company (Everbilt?) said they were no longer making these. Real shame, cos the way I chose to do the axe blade made this more difficult. Let's look at the axe:
@@ -92,6 +105,8 @@ This worked. It meant the steel was very dented, and it was more of a curve than
 
 The final thing the axe blade needed was top and bottom panels to enclose it.
 
+- describe the error in the final thing
+
 #### Extra detail
 But it's not _just_ an axe blade, there's extra detail on top. These patterns:
 
@@ -99,7 +114,12 @@ photo
 
 Difficult to get a clear picture of, but I had a rough idea. A few sketches later and I basically decided upon what I wanted:
 
+#### The errors
+Just a comment on all the errors that accumulated during the axe construction as opposed to the hammer. The hammer was quite precise - if I could have cut every piece on a machine, I'm sure it would have fit together really well. In contrast, the axe was not. Firstly, I did not have perfectly flat pieces due to welding two panels together to cut the blade from, and then they were curved shapes and I didn't align them well. This meant that any further pieces were welded awkwardly and I just angle-grinded edges down to fit, etc, like the blade edge. There were also gaps where I could grind everything down _that much_, so I filled the gaps in with other steel, or just left them in some cases. Certainly for some of the extra detail it was hard to get a grinder into some of the smaller areas. I think overall I did a good job of hiding these errors, and the bigger picture tends to draw the eye rather than the final detail, but still - I wish I had done this more carefully. 
+
 #### The base plate
+See 'The base plate' heading under 'The Hammer'. I did the same here. It was more difficult to weld down, as there were more errors along the axe base edge than most others - for example, one side of the axe had a tapered edge, due to ... just accumulated errors. I ground it all down as flat as I could and welded it as centrally as possible.
+
 
 ### The handle
 The handle was conceptually simple - I got another 53mm dowel from Home Depot, the same as I'd used for the Witch-King's flail handle (link), and this ... was just about the right size I wanted straight away. It also had to be made of wood. Look at the handle from the film:
@@ -142,7 +162,7 @@ Lead came to mind. I bought a large fishing sinker, 7lbs of lead or so. How to a
 
 photo
 
-This lowered the centre of mass to almost a comfortable point. Retrospectively, I should have gone easier on the supports in the head. I probably could not have used a much lighter steel, since the welder just sliced straight through the 22 gauge, and 20 gauge and 18 gauge just weren't sold, but I could have used less steel - the supports did not need to be as strong as they were. I didn't want to go much heavier on the counterweight since I still needed to be able to lift this entire thing _at all_.
+This lowered the centre of mass to almost a comfortable point. Retrospectively, I should have gone easier on the supports in the head. I probably could not have used a much lighter steel, since the welder just sliced straight through the 22 gauge, and 20 gauge and 18 gauge just weren't sold at Home Depot, but I could have used less steel - the supports did not need to be as strong as they were. I didn't want to go much heavier on the counterweight since I still needed to be able to lift this entire thing _at all_.
 
 ### Painting
 
@@ -187,13 +207,13 @@ photo
 
 photo
 
-As I've said, the centre of mass is a bit of a problem; less steel should have been used. Also perhaps a darker stain, and more careful measuring. Finally, a computer-aided plasma cutter would have given me much more precise pieces. All those nitpicks aside, this was a lot of fun to make. I really enjoyed the wood and metal work, nothing fiddly with costumes or fitting to my shoulders or head, no foam. 
+As I've said, the centre of mass is a bit of a problem; less steel should have been used. The head is about 13kgs alone, and the entire thing at about 16kgs. Other post-build considerations I have are perhaps a darker stain on the wood for the handle, and more careful measuring/cutting for the easy-to-measure parts like the hammer end. Finally, a computer-aided plasma cutter would have given me much more precise pieces. All those nitpicks aside, this was a lot of fun to make. I really enjoyed the wood and metal work, nothing fiddly with costumes or fitting to my shoulders or head, no foam. 
 
 Let's compare to some other designs I found online - I tried to not bias myself by looking at these too much beforehand or during:
 
 photo
 
-A lot of people seem to do a less branchy handle, or a curved handle. I don't understand why; the film makes it pretty clear. But they do tend to get the head more accurate - I wish I could have achieved more detail there, it is the centrepiece afterall.
+A lot of people seem to do a less branchy handle, or a curved handle. I don't understand why; the film makes it pretty clear. But they do tend to get the head more accurate - I wish I could have achieved more detail there, it is the centrepiece after all.
 
 ### Templates
 I don't really have templates for this, aside from half the axe blade:
