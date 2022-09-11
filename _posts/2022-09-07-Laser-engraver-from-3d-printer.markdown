@@ -53,7 +53,9 @@ and we're all wired up to test the basic motion. I'll cover the laser later, but
 #### Marlin
 Marlin is open-source firmware the whole class of 3d printers/laser engravers/CNC machines that can run on a multitude of boards, including Arduino. It's well documented, well supported, well used, so it seemed like an easy and obvious choice. This is what will read from the SD card, and convert from the gcode (the instructions on how to print/engrave etc) to actual motor movements, laser strength, etc. 
 
-This needed to be configured specifically for my setup, in that I needed to tell it I had a laser (instead of a 3d printer extruder, or a CNC spindle), which pin powered the laser, and so on. Here are the changes I made to the code:
+This needed to be configured specifically for my setup, in that I needed to tell it I had a laser (instead of a 3d printer extruder, or a CNC spindle), which pin powered the laser, and so on. One of Marlin's nice features is that There are two headers, Configuration.h and Configuration_Adv.h, that hold _all_ the configurable parameters for any way to run Marlin on all supported firmware, and _only_ those files need to be touched - that is, you don't need to mess around with the actual code itself. It's just a matter of finding the variables you need, setting them, and then compiling and uploaded, no actual code need be written. 
+
+Here are the changes I made to the configuration headers:
 
 (code)
 
@@ -89,3 +91,58 @@ Laser glass, carboard sides, fan.
 I broke this down into several stages. Firstly, I needed to check that the new control board could at the very least move the motors. Lasers turn on and off - they're simple. Motors have to be calibrated, have to go the expected direction, and each motor needs to be connected to the expected axis output. Secondly, the limit switches to stop the motors going too far. Thirdly, the laser. The simplest of the wiring, but hardest part of the firmware. Finally, consistent power to the board and to fans. 
 
 #### Motors
+The RAMPS wiki has [reasonably clear instructions](https://reprap.org/wiki/RAMPS_1.4#Drivers) on installing the stepper drivers, and configuring the step resolution pins. I used the default pin header settings for step resolution, and made sure I slotted in the three [DRV8825 drivers](https://reprap.org/wiki/DRV8825) I needed for X, Y nd Z:
+
+photo
+
+Each stepper on the printer frame was a 4 wire, not a 6 wire, which works with RAMPS, and the board is well labelled:
+
+photo
+
+Furthermore, the printer's wires were already labelled too, so I knew which stepper was X, which was Y, and, well, the Z steppers were obvious - these came in a pair that were wired to the same header, so that the vertical movements either side of the gantry were precisely the same. The only area for confusion was which wires on the header were 1 or 2, A or B. I plugged them in, ran the motors back and forth using on screen controls, and eventually got the directions figured out. 
+
+The next step after getting the directions correct was to calibrate the steppers. What does this mean? They move. Surely that's done? 
+
+Well, no. The steppers can turn, certainly, and could do everything they needed to in theory. But the firmware needs to know how many steps of the motor corresponds to a linear movement of 1mm - that is, the motors' steps per mm value. A stepper motor's minimum movement is, well, [a single step](https://www.monolithicpower.com/en/stepper-motors-basics-types-uses#:~:text=The%20basic%20working%20principle%20of,rotor%20aligns%20with%20this%20field.), which corresponds to some small constant rotation of the axle. This concept is constant across stepper motors. So I could have plugged any 4-wire stepper in there, and the firmware might say "move 3 steps" and it does it. But how far did that physically move the laser, or the bed, or the gantry? This is a function of a whole host of things. So I needed to figure out how many steps it takes these motors to move the bed, the head, or the gantry 1mm. 
+
+To do this, I checked the existing value of steps/mm per axis - let's use X, the bed movement, but I did this for all of them. I then measured where the bed was with respect to the edge of the frame with calipers, to be really precise. Next, I used the on-screen controls to move the bed by 10mm - or what it _thought_ would be 10mm. Then I measured where the bed was with respect to its previous position - had it moved precisely 10mm? If so, the steps/mm value was correct. In this case, it was way off, so I need a new value. [This website](https://www.maxzprint.com.au/stepps-per-mm-calculator/#:~:text=To%20find%20the%20current%20steps,Y%2C%20X%20and%20E%20axis.) has a handy calculator for what the new value needs to be in this situation, based on the error measured, but the math is simple regardless. Put in the new value, and try again. A few iterations of this process, and my steppers were calibrated. 
+
+Something I discovered later was that the steppers were getting quite hot - apparently it's normal and ok that they hit 60 degrees celsius - so I also tweaked the current they used. This is done by [rotating the potentiometer on-board the DRV](http://bootsindustries.com/pots-calibration-ramps-1-4/). One explanatory youtube video later, and some minor tuning, and this setup was good. 
+
+#### The limit switches
+There's a limit switch for the bed:
+
+photo
+
+a limit switch for the head:
+
+photo
+
+and a limit switch for the gantry:
+
+photo:
+
+WHen the printer/engraver starts, it returns each axis to its home position - 0,0,0 - at the limit switches. Given that it also knows how long each axis is, and its now certain of where each axis is, it can accurately proceed with the print. It cannot know this beforehand as the steppers can be moved by hand when they are off, so I could have moved the bed and the stepper would have no knowledge of where the bed is - leading to an inaccurate job. 
+
+Thankfully, RAMPS has a well-labelled limit switch section:
+
+photo
+
+the only difficulty was the fact that these limit switches only had two wires, and these endpoints had three wires. How to wire it up? Well, trial and error. I tried them as-is: plugged them in, hit the switch, checked the behaviour in software, saw it was incorrect, rewired, repeat. Once I got one worked, the others just had to mimic that. While the switches do have three wires, I only need to record a "closed" or "hit" event, so two suffice. 
+
+#### The Laser
+RAMPS has three 12v pins for powering things like extruder fans, lasers, spindles, and other high power devices: D8, D9, D10. These are PWM pins as well, so instead of just being all or nothing they can vary the voltage output. From what I read of Marlin and RAMPS, it was pretty standard to connect a laser to D9, activate the laser in firmware, and then you're good to go. The laser just has power pins, as all it needs to do is be on or off at different power levels - it has its own internal fan that will activate if the unit gets too hot. 
+
+photo
+
+However, the laser wasn't working on this configuration - that is, I could turn it on or off, but there was no variable power. The pin obviously delivered power - why not PWM? Did I have the wrong code settings? After a lot of reading through the configuration paramters and RepRap forums and trying different pins, I realised a) D9 on my board simply didn't have working PWM, and b) I'd actually been using the incorrect activation gcode commands. I reconnected the laser to D10, assigned it to D10 in the code, and it worked!
+
+photo
+
+#### Fans
+need to actually add these to the case
+
+#### Arduino power
+
+
+
