@@ -42,9 +42,9 @@ I made a foamboard mock-up to get an idea for size and also the structure I want
 
 ![First attempt](/assets/chris_norton.jpg){: .center}
 
-Where we see it right next to his head. Chris is a big bloke, and probably has a big head, but this still involves estimation. The other is from Avengers: Endgame, where Thor cracks a beer open on the blade:
+Where we see it right next to his head. Chris is a big bloke, and probably has a big head, but this still involves estimation. The other is from Avengers: Endgame, where Thor cracks a beer open on the blade (it's not very clear, this is a very quick shot, and I had to go through frame by frame):
 
-(endgame)
+![First attempt](/assets/beer.jpg){: .center}
 
 And this is very useful - I know exactly how big a beer bottle is, and this involves little perspective, so I can measure how many beer bottles tall the axe is. From this I can also tell the relative size of the hammer to axe, whose size I know in beer bottles ... bam done. 
 Here's the final foamboard/cardboard mockup:
@@ -56,39 +56,40 @@ And from this I learnt what sort of supports I'd want, what size I was dealing w
 ### The hammer
 The hammer seemed the easiest starting point since it's all flat planes and angled joints, no curves. Looking back, I wish I had a plasma cutting table; it would have meant I could CAD-model all this up, export the design, and slice all the pieces. Alas, I did not, so I measured and manually cut each piece with powered metal shears. This worked alright, but certainly was not exact. Another construction option would be 3D printing - and now I have a 3D printer large enough, though I didn't at the time - although this would run against my desire to have an appropriate weight. 
 
-I started with a pair of octagons and welded them together with vertical support pieces. 
+I started with a pair of octagons and welded them together with vertical support pieces, to make the far end of the hammer: 
 
-photo
+![First attempt](/assets/octagon1.jpg){: .center}
 
-In retrospect these probably didn't need to be as thick or strong, but I was worried this would be too light and didn't want to skimp. I also didn't want the slightest bump to dent it. From there, the angled sides, to make the back of the hammer. Here's the film:
+In retrospect these probably didn't need to be as thick or strong, but I was worried this would be too light and didn't want to skimp. I also didn't want the slightest bump to dent it (got a bit overzealous there). From there, the angled sides, to finish off the end of the hammer. The Avengers films only give quick-motion shots but I could glean enough of the shape as it appeared symmetric and regular:
 
-photo
+![First attempt](/assets/hammer_end.jpg){: .center}
 
 And compared to mine:
 
-photo
+![First attempt](/assets/hammer_end_mine.jpg){: .center}
 
-At this stage, cutting with shears wasn't too awful; I would err on the side of a piece being too big, and then grind it down to more precisely fit into its spot, but errors did propagate when I did not have four sides to constrain me. 
+At this stage, cutting with shears wasn't too awful; I would err on the side of a piece being too big, and then grind it down to more precisely fit into its spot, but errors did propagate when I did not have four sides to constrain me. That circular piece in the centre would be added later - I wanted this to be able to sit flat on my bench for now to make other construction easier. It was, all in all, a good start, and gave me confidence that this approach was working. 
 
-photo
+Next came the longer part of the hammer, and this got trickier cos it has those triangular divets running down the length on two of the sides. I preemptively cut those into my octagonal hammer end, as I figured this would be easier without sides. Then I added supports and long side pieces - big rectangles, really, as the taper only occurs towards the radial axis of the hammer:
 
-A good start, I think. Next came the longer part of the hammer, and this got trickier cos it has those triangular divets running down the length on two of the sides. I preemptively cut those into my octagonal hammer end, as I figured this would be easier without sides. Then I added supports and long side pieces - big rectangles, really, as the taper only occurs towards the radial axis of the hammer:
+![First attempt](/assets/hammer_sides.jpg){: .center}
 
+And then welding long thin triangles for the corners. My measuring and cutting inaccuracies started to show here, and I had to grind some pieces down or add more weld than I preferred to make up the difference. I originally tried to make the wedge insets from 22-gauge steel, but this proved too thin to reasonably weld, so I just made a long right angle piece from the 16-gauge and welded it in.
+I started to really notice the weight at this stage. Finally, once I knew I didn't need to sit it on the end of the hammer any more, I added the circular piece on the end. I'm pretty sure actual Stormbreaker has Viking runes inscribed there or something; I just went with a plain piece. I cut out a circle and a curved strip, and hammered the curved strip to make the circle raised off the end with a bevelled edge. This was very hard to get even and symmetric, but it's one of those things where you only notice inaccuracies if you look closely, and looking at the whole you just notice that it's there:
 
-And then welding long thin triangles for the corners. My measuring and cutting inaccuracies started to show here, and I had to grind some pieces down or add more weld than I preferred to make up the difference. I originally tried to make the wedge insets from 22-gauge steel, but this proved too thin to reasonably weld, so I just made a long right angle piece from the 16-gauge and welded it in. I kept angle grinding my weld joins along the way, so with a bit more cleaning it looked like this:
-
-photo
-
-I started to really notice the weight at this stage. 
+![First attempt](/assets/circle.jpg){: .center}
 
 #### Side trim
 Look closely at the hammer:
 
-photo
+![First attempt](/assets/forge_hammer.jpg){: .center}
 
-That edging around the wide end is what I turned my attention to next. How to achieve this? I could weld flat pieces of steel, but then you have an awkward weld line, as opposed to a direct edge. I tried a raised box section of 22-gauge, but a) this looked bad as it was too raised, and b) 22-gauge was too thin to weld. I eventually hit upon a very different idea: wood. I had a large piece of thin ... not chip board, but pulp board? Like the backing for a desk. It was 3mm thick or so, so not too raised, and easy to attach: I glued it. It was pretty easy to cut out the shapes I want, glue them on, and the idea was that they just wouldn't get nudged too much so glue would be enough. 
+That edging around the wide end is what I turned my attention to next. How to achieve this? I could weld flat pieces of steel, but then you have an awkward weld line, as opposed to a direct edge. I tried a raised box section of 22-gauge, but a) this looked bad as it was too raised, and b) 22-gauge was too thin to weld. 
 
-photo
+
+I cut this off and left the idea on the shelf for a while, getting on with other parts of the build, and then eventually hit upon something else: wood. I had a large piece of thin ... not chip board, but pulp board? Like the backing for a desk. It was 3mm thick or so, so not too raised, and easy to attach: I glued it. It was pretty easy to cut out the shapes I want, glue them on, and the idea was that they just wouldn't get nudged too much so glue would be enough. 
+
+![First attempt](/assets/wood.jpg){: .center}
 
 Let's see how it looks covered in paint.
 
@@ -111,14 +112,17 @@ I could have just not done this, I suppose, and just welded a flat side panel th
 ### The axe
 Unfortunately by the time I got to this Home Depot was sold out of 12"x24" steel sheets, had no larger size, and the company (Everbilt?) said they were no longer making these. Real shame, cos the way I chose to do the axe blade made this more difficult. Let's look at the axe:
 
+![First attempt](/assets/closeup_forge.jpg){: .center}
 
+This was fairly long from base to blade, and tall from tip to tip. I had the idea of cutting it down the middle, so each side was two pieces, with a straight edge and a curve. Here's my template:
 
-This was fairly long, but also tall. I had th eidea of cutting it down the middle, so each side was two pieces, with a straight edge and a curve. Here's my template:
 
 
 But this is too big for one 12"x12" sheet of steel, and I had no bigger since the 24x12's were out of stock and no longer being sold. What to do? 
 
-I welded two sheets together along one side. This made things a bit wonky, as it didn't weld flat, but ... what else was I to do? Having done that, I could actually fit both the top and the bottom half of an axe side onto one of these sheets, so I cut those out - with an angle grinder, due to the curve, not shears - and welded them together. Now I have the two side of the axe blade. I wanted internal supports so it held the shape, so several rectangles were welded on the inside, and a curve at the line where I wanted teh blade taper to begin.
+I welded two sheets together along one side. This made things a bit wonky, as it didn't weld flat, but ... what else was I to do? Having done that, I could actually fit both the top and the bottom half of an axe side onto one of these sheets, so I cut those out - with an angle grinder, due to the curve, not shears - and welded them together. Now I have the two side of the axe blade. I wanted internal supports so it held the shape, so several rectangles were welded on the inside, and a curve at the line where I wanted the blade taper to begin - this was about 15cm from the edge:
+
+photo
 
 To get the wedge shape iconic to axes, I first thought of bending the steel with a mold or something since my metal bender vice grip would have been awkward with that curve:
 
@@ -137,9 +141,9 @@ and then the extra detailing.
 #### Extra detail
 But it's not _just_ an axe blade, there's extra detail on top. These patterns, in particular:
 
-photo
+![First attempt](/assets/closeup_lot.jpg){: .center}
 
-Difficult to get a clear picture of, but I had a rough idea. A few sketches later and I basically decided upon what I wanted:
+Difficult to get a clear picture of before Thor 4 was released, but I had a rough idea. A few sketches later and I basically decided upon what I wanted:
 
 photo
 
