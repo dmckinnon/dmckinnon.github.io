@@ -91,23 +91,24 @@ I cut this off and left the idea on the shelf for a while, getting on with other
 
 ![First attempt](/assets/wood.jpg){: .center}
 
-Let's see how it looks covered in paint.
-
+Maybe it'll look good enough covered in paint?
 
 #### The base plates
-The base plates for both hammer and axe, or rather the plates that would connect together around the central handle, were made exactly the same. I made the base plate for the hammer first, and copied this for the axe. This particular part of the whole head is not particularly clear, but we do get a glimpse or two:
+The base plates for both hammer and axe, or rather the plates that would connect together around the central handle, were made exactly the same. I made the base plate for the hammer first, and copied this for the axe (no template, just measurements, but they were easy measurements and straight edges). This particular part of the whole head is not particularly clear, but we do get a glimpse or two:
 
-photo
+![First attempt](/assets/closeup_forge.jpg){: .center}
 
-I saw this as an irregular but symmetric octagon, with edges extruded in at the top and bottom:
+I saw this as an irregular but symmetric octagon, with the edges inset at the top and bottom:
 
-drawing
+![First attempt](/assets/baseplateshape.jpg){: .center}
 
-This was measured out, cut out, and then I welded a raised edge to the inward-facing side, with a gap for the handle:
+This was measured, cut out, and then I welded a raised edge to the inward-facing side, with a gap for the handle:
 
-photo
+![First attempt](/assets/basepalte1.jpg){: .center}
 
-I could have just not done this, I suppose, and just welded a flat side panel the whole way round when I connected the two base plates later. 
+I could have just not done this, I suppose, and just welded a flat side panel the whole way round when I connected the two base plates later. I think the reason I had this was that each plate in the film has some small thickness, with a thicker part connecting the two that starts attached to the axe-half:
+
+![First attempt](/assets/realclose.jpg){: .center}
 
 ### The axe
 Unfortunately by the time I got to this Home Depot was sold out of 12"x24" steel sheets, had no larger size, and the company (Everbilt?) said they were no longer making these. Real shame, cos the way I chose to do the axe blade made this more difficult. Let's look at the axe:
@@ -116,25 +117,25 @@ Unfortunately by the time I got to this Home Depot was sold out of 12"x24" steel
 
 This was fairly long from base to blade, and tall from tip to tip. I had the idea of cutting it down the middle, so each side was two pieces, with a straight edge and a curve. Here's my template:
 
-
+![First attempt](/assets/axe_template.jpg){: .center}
 
 But this is too big for one 12"x12" sheet of steel, and I had no bigger since the 24x12's were out of stock and no longer being sold. What to do? 
 
 I welded two sheets together along one side. This made things a bit wonky, as it didn't weld flat, but ... what else was I to do? Having done that, I could actually fit both the top and the bottom half of an axe side onto one of these sheets, so I cut those out - with an angle grinder, due to the curve, not shears - and welded them together. Now I have the two side of the axe blade. I wanted internal supports so it held the shape, so several rectangles were welded on the inside, and a curve at the line where I wanted the blade taper to begin - this was about 15cm from the edge:
 
-photo
+![First attempt](/assets/wedge.jpg){: .center}
 
 To get the wedge shape iconic to axes, I first thought of bending the steel with a mold or something since my metal bender vice grip would have been awkward with that curve:
 
-photo
+![First attempt](/assets/clamps.jpg){: .center}
 
 This, simply put, failed. That's not how you bend steel. My next idea was simpler: smack it with a hammer. A lot. 
 
-photo?
+![First attempt](/assets/hammered.jpg){: .center}
 
 This worked. It meant the steel was very dented, and it was more of a curve than a wedge, perhaps more polynomial than I'd prefer, but it worked and the blade edges were close enough together such that I could weld them. I used the slanted bits of wood from the mold to provide flat and heat-distanced surfaces for the clamps, and welded the two halves together. Getting there! Just need top and bottom panels
 
-photo
+![First attempt](/assets/sides.jpg){: .center}
 
 and then the extra detailing.
 
@@ -145,7 +146,7 @@ But it's not _just_ an axe blade, there's extra detail on top. These patterns, i
 
 Difficult to get a clear picture of before Thor 4 was released, but I had a rough idea. A few sketches later and I basically decided upon what I wanted:
 
-photo
+photo - drawing?
 
 I deliberately didn't do those top and bottom patterns. Why? I thought long and hard about how to do them - a little raised triangle? Weld a flat piece on, grind off the weld mostly? Or copy the wood idea from the hammer? None of it sounded right in my head, and given that I'd beaten the blade into its curve with a hammer, I wasn't working with a nice surface. So I skipped this, but sometimes wish I hadn't. 
 
@@ -164,6 +165,8 @@ Just a comment on all the errors that accumulated during the axe construction as
 
 #### The base plate
 See [the same from the hammer](#the-base-plates). I did the same here. It was more difficult to weld down, as there were more errors along the axe base edge than most others - for example, one side of the axe had a tapered edge, due to ... just accumulated errors. I ground it all down as flat as I could and welded it as centrally as possible.
+
+![First attempt](/assets/axe_baseplate_errors.jpg){: .center}
 
 
 ### The handle
