@@ -6,7 +6,9 @@ categories: Projects
 comments: true
 ---
 ["A King's weapon. Meant to be the greatest in Asgard. In theory it could even summon the Bifrost."](https://www.youtube.com/watch?v=c-B5TDvZN9I&ab_channel=ArakkalAbuEdits)
+
 ["It have a name?"](https://www.youtube.com/watch?v=c-B5TDvZN9I&ab_channel=ArakkalAbuEdits)
+
 ["Stormbreaker"](https://www.youtube.com/watch?v=c-B5TDvZN9I&ab_channel=ArakkalAbuEdits)
 
 The pandemic was still going strong in mid-2020, and after [the Witch-King's Flail](https://dmckinnon.github.io/The-Witch-Kings-Flail/) I discovered I quite enjoyed making movie weapons, the bigger the better. The obvious next choice was Stormbreaker, Thor's axe from Avengers: Infinity War. 
@@ -104,7 +106,7 @@ I saw this as an irregular but symmetric octagon, with the edges inset at the to
 
 This was measured, cut out, and then I welded a raised edge to the inward-facing side, with a gap for the handle:
 
-![First attempt](/assets/basepalte1.jpg){: .center}
+![First attempt](/assets/baseplate1.jpg){: .center}
 
 I could have just not done this, I suppose, and just welded a flat side panel the whole way round when I connected the two base plates later. I think the reason I had this was that each plate in the film has some small thickness, with a thicker part connecting the two that starts attached to the axe-half:
 
@@ -148,15 +150,21 @@ Difficult to get a clear picture of before Thor 4 was released, but I had a roug
 
 photo - drawing?
 
-I deliberately didn't do those top and bottom patterns. Why? I thought long and hard about how to do them - a little raised triangle? Weld a flat piece on, grind off the weld mostly? Or copy the wood idea from the hammer? None of it sounded right in my head, and given that I'd beaten the blade into its curve with a hammer, I wasn't working with a nice surface. So I skipped this, but sometimes wish I hadn't. 
+I deliberately didn't do those top and bottom patterns. Why? I thought long and hard about how to do them - a little raised triangle? There were shots from other angles that show it raised. Weld a flat piece on, grind off the weld mostly? Or copy the wood idea from the hammer? None of it sounded right in my head, and given that I'd beaten the blade into its curve with a hammer, I wasn't working with a nice surface. So I skipped this, but sometimes wish I hadn't. Perhaps I should have just dremel-engraved the lines in. I suppose I can go back at do that at any point. 
 
-After some guessing and measuring, I figured out the dimensions of the pattern: raised about 20mm from the flat of the blade at the base, going all the way to flat against it at the blade edge. I cut out these guide rails after some careful measurement, lay them down, and then welded the tops on. You can see in these shots the notes and measurements I was drawing all over the axe head; thankfully the paint covered all this later:
+After some guessing and measuring, I figured out the dimensions of the pattern: raised about 20mm from the flat of the blade at the base, going all the way to flat against it at the blade edge. I cut out these guide rails after some careful measurement, lay them down, and then welded the tops on.
 
-photo
+![First attempt](/assets/axe_detail1.jpg){: .center}
+
+
+You can see in these shots the notes and measurements I was drawing all over the axe head; thankfully the paint covered all this later.
+
+![First attempt](/assets/axe_detail2.jpg){: .center}
+
 
 Unfortunately, I must have ... I'm not sure really, stetched? Angled? Mismeasured something somewhere? I did something wrong, and they didn't align at the blade edge - off by about 10mm. Not a huge error, only noticeable when looking head on, but still, an egregious error that was easy to avoid. This aside, once everything was semi-spot-welded on, I just had some intense grinding to do. Some of these spots were quite difficult to grind, like these trapezoidal pieces:
 
-photo
+![First attempt](/assets/axe_detail3.jpg){: .center}
 
 and they ended up not looking great, but this can be excused by the fact that the branches should be wrapping tight and close here, and therefore drawing attention from minutiae. 
 
@@ -170,19 +178,17 @@ See [the same from the hammer](#the-base-plates). I did the same here. It was mo
 
 
 ### The handle
-The handle was conceptually simple - I got another 53mm dowel from Home Depot, the same as I'd used for the Witch-King's flail handle (link), and this ... was just about the right size I wanted straight away. It also had to be made of wood. Look at the handle from the film:
+The handle was conceptually simple - I got another 53mm x 1.2m dowel from Home Depot, the same as I'd used for [the Witch-King's flail handle](https://dmckinnon.github.io/The-Witch-Kings-Flail/#the-handle), and this ... was just about the right size I wanted straight away. It also had to be made of wood. Look at the handle from the film:
 
-(photo)
+![First attempt](/assets/forge1.jpg){: .center}
 
-it's made from a bunch of vines and branches twisted together and thickening. Instead of actually weaving all this, or heaven forbid growing it naturally, I decided to start from a single wooden pole and carve these designs into it to give it that look. I bought a few wood carving tools and got started:
+it's made from a bunch of vines and branches twisted together and thickening. Instead of actually weaving all this, or, heaven forbid, growing it naturally, I decided to start from a single wooden pole and carve these designs into it to give it that look. I bought a few wood carving tools and got started:
 
-photo
+![First attempt](/assets/wood_carving1.jpg){: .center}
 
 Unfortunately I didn't realise a dremel could do all this a lot quicker, but retrospectively I still like that I did it this way: it's slower and allowed me to plan it more as I went without making a sudden drastic mistake, which is easier with a machine tool. I let the pattern emerge more naturally, as opposed to planning the whole thing ahead; I'd decide on the next few inches at a time, just letting the "branches" twist and flow throughout the design. 
 
-Once this was complete, I did another pass of sanding down splinters and deepening the rifts between branches to solidify the look - some of this I did with a dremel, as well as smoothing, but with a light touch. 
-
-
+Once this was complete, I did another pass of sanding down splinters and deepening the rifts between branches to solidify the look - some of this I did with a dremel, as well as some of the smoothing, but with a light touch. 
 
 
 ### Attaching it all together
@@ -193,36 +199,41 @@ First I had to attach the two top pieces together, and then attach the handle ..
 It actually ended up being easier to attach everything at once.
 
 #### Attaching the handle to the head
-The handle had to not move at all from the head. I originally had an idea of it being detachable, so it would be easy to transport, but ... that just proved to be too annoying. So I wanted to rigidly attach the handle between the hammer and axe as rigidly as possible. I squeezed it all together with clamps and welded some supports between the two sides, and then addeds screws through those into the handle, with an extra support across the top and a massive 10mm bolt to really hold it in. This held, but had an awful centre of mass. I could really only hold it directly upright:
+The handle had to not move at all from the head. I originally had an idea of it being detachable, so it would be easy to transport, but ... that just proved to be too annoying. So I wanted to rigidly attach the handle between the hammer and axe as rigidly as possible. I squeezed it all together with clamps and welded some supports between the two sides.
+
+![First attempt](/assets/connecting.jpg){: .center}
+
+For extra security screws were added through those into the handle, with a support across the top and a massive 10mm bolt to really hold it in. This held, but had an awful centre of mass. I could really only carry it directly upright:
 
 ![First attempt](/assets/head_handle.jpg){: .center}
 
+Finally, some panels to cover the sides:
 
-Now all I needed was to add "branches" flowing from the dowel up and around the head. Timber doesn't flow easily, funnily enough, but can be carved. I bought an YxY beam and cut a few blocks off, and carved out the shape of the sides and top of the head from these with a router bit on a dremel:
+![First attempt](/assets/side_panels.jpg){: .center}
 
-photo
+You might ask, "Why have these side panels if they'll just be covered with wood?" Good question - they weren't going to be completely covered. The branches around the head ideally were going to have gaps and spots where you could see through, so I wanted metal below that. Now all I needed was to add the "branches" flowing from the dowel up and around the head. Timber doesn't flow easily, funnily enough, but can be carved. I bought a 6'x6'x48' beam and cut a few blocks off, then fit some shaped blocks around the outside of the head:
+
+![First attempt](/assets/wooden_head_blocks.jpg){: .center}
 
 These were clamped and glued around the head so they weren't going anywhere, and then the real work began: carving the patterns out of this block. Again, they emerged semi-organically, working from the patterns I'd made each side in the handle. There were a few air gaps that I don't like, but it largely went well. Several router bits for the dremel later:
 
-photo
+![First attempt](/assets/wood_carving2_.jpg){: .center}
 
-photo
-
-photo
+![First attempt](/assets/wood_carving3_.jpg){: .center}
 
 And I had what felt close to accurate! Any gaps were patched with wood putty, which stood out at first but once stained faded into the same colour. 
 
 ### The counterweight
-Everything being attached threw a particular problem into sharp relief: the head was roughly 13kgs, and the handle was ... 500g at best. Less, maybe. So the centre of mass was basically inside the handle, and this had incredible lever arm force wherever you held the handle. I needed a counterweight to be able to hold it in any way that wasn't direclty upright. But what's super heavy? I need to counteract 13kgs, and shift the balance point to a comfortable holding spot on the handle, perhaps twenty centimetres lower than the head. 
+Everything being attached threw a particular problem into sharp relief: the head was roughly 13kgs, and the handle was ... 500g at best. Less, maybe. So the centre of mass was basically inside the handle, and this had incredible lever arm force wherever you held the handle. I needed a counterweight to be able to hold it in any way that wasn't directly upright. But what's super heavy? I need to counteract 13kgs, and shift the balance point to a comfortable holding spot on the handle, perhaps twenty centimetres lower than the head. Furthermore, there wasn't a lot of room to fit a counterweight reasonably, so any counterweight needed to be very dense. 
 
-Lead came to mind. I bought a large fishing sinker, 7lbs of lead or so. How to attach this? Well, the melting point of lead is 327 degrees Celsius, and while wood ignites at about 300 degrees Celsius, it needs a good environment to sustain a burn ... and I'd also felt that the end of the handle needed to look thicker anyway. So I cut another block off the thick beam I had, and drilled and dremeled out the centre to make a) a pit for the sinker to fit in, and b) a hole just wide enough to jam the handle in and attach this tightly:
+Lead came to mind, as a compromise between density and cost (platinum may be better for density but is $$$$$$). I bought a large fishing sinker, 7lbs of lead or so. How to attach this? Well, the melting point of lead is 327 degrees Celsius, and while wood ignites at about 300 degrees Celsius, it needs a good environment to sustain a burn ... and I'd also felt that the end of the handle needed to look thicker anyway. So I cut another block off the thick beam I had, and drilled and carved out the centre to make a) a pit for the sinker to fit in, and b) a hole just wide enough to jam the handle in and attach this tightly:
 
-photo
+![First attempt](/assets/block_end.jpg){: .center}
 
 
 The lead melted easily and was poured into this block, and then I shoved the handle in, screwed and glued it in. The wood block burnt a bit on the inside but didn't catch further, presumably because a) there wasn't much oxygen when I kept pouring lead in, and b) it was outside and cold; the lead cooled quite quickly. Finally, branch patterns were added to this block:
 
-photo
+![First attempt](/assets/block_end_branches.jpg){: .center}
 
 This lowered the centre of mass to almost a comfortable point. Retrospectively, I should have gone easier on the supports in the head. I probably could not have used a much lighter steel, since the welder just sliced straight through the 22 gauge, and 20 gauge and 18 gauge just weren't sold at Home Depot, but I could have used less steel - the supports did not need to be as strong as they were. I didn't want to go much heavier on the counterweight since I still needed to be able to lift this entire thing _at all_.
 
@@ -231,27 +242,21 @@ This lowered the centre of mass to almost a comfortable point. Retrospectively, 
 #### The head
 This involved a bunch of tests between matte and shiny metal grey:
 
-photo
+![First attempt](/assets/matte_shiny.jpg){: .center}
 
-photo
-
-before I settled on the shiny metallic silver:
-
-photo
-
-I had done a layer of cold gal first, just to make sure it would last. 
-
+before I settled on the shiny metallic silver - it felt more true to the movie version, which looked to me very shiny and reflective and "ideal" rather than old, used, worn metal - I suppose this makes sense, given that in Infinity War at least it was used about five minutes after forging, so it's about as new as it gets. I had done a layer of cold gal first, just to make sure it would last. 
 
 #### The handle
 The handle was stained, rather than painted; the wood I used was a rather light colour, and I wanted a much deeper brown to match Groot's arm:
 
-photo
+![First attempt](/assets/groot.jpg){: .center}
+
 
 So I just did layer after layer of a particular stain:
 
-photo
+![First attempt](/assets/stained.jpg){: .center}
 
-I think I should have gone darker, but this still looks good and nice and woody. 
+I think I should have gone with a darker brown, but this still looks good and nice and tree-woody. 
 
 
 ### A stand
@@ -263,17 +268,27 @@ photo
 ### Final product
 And here's how it turned out!
 
-photo
+![First attempt](/assets/final1.jpg){: .center}
 
-photo
 
-photo
+![First attempt](/assets/final2.jpg){: .center}
+
+
+// photo in the stand
 
 As I've said, the centre of mass is a bit of a problem; less steel should have been used. The head is about 13kgs alone, and the entire thing at about 16kgs. Other post-build considerations I have are perhaps a darker stain on the wood for the handle, and more careful measuring/cutting for the easy-to-measure parts like the hammer end. Finally, a computer-aided plasma cutter would have given me much more precise pieces. All those nitpicks aside, this was a lot of fun to make. I really enjoyed the wood and metal work, nothing fiddly with costumes or fitting to my shoulders or head, no foam. 
 
-Let's compare to some other designs I found online - I tried to not bias myself by looking at these too much beforehand or during:
+Let's compare to some other designs I found online - I tried to not bias myself by looking at these too much beforehand or during.
 
-photo
++ There's this from The Hacksmith:
+
++ Frankly Built gave it a crack with 3D printing the whole thing - I bet his is much lighter and easier to transport:
+
++ Frankly Built then unboxed this oen from Hasbro:
+
++ Here's a toy one from Amazon:
+
+
 
 A lot of people seem to do a less branchy handle, or a curved handle. I don't understand why; the film makes it pretty clear the handle is relatively straight and made from wood-based branches. But they do tend to get the head more accurate - I wish I could have achieved more detail there, it is the centrepiece after all.
 
