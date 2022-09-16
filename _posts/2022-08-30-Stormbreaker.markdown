@@ -72,6 +72,8 @@ And compared to mine:
 
 At this stage, cutting with shears wasn't too awful; I would err on the side of a piece being too big, and then grind it down to more precisely fit into its spot, but errors did propagate when I did not have four sides to constrain me. That circular piece in the centre would be added later - I wanted this to be able to sit flat on my bench for now to make other construction easier. It was, all in all, a good start, and gave me confidence that this approach was working. 
 
+![First attempt](/assets/octagon_compare.jpg){: .center}
+
 Next came the longer part of the hammer, and this got trickier cos it has those triangular divets running down the length on two of the sides. I preemptively cut those into my octagonal hammer end, as I figured this would be easier without sides. Then I added supports and long side pieces - big rectangles, really, as the taper only occurs towards the radial axis of the hammer:
 
 ![First attempt](/assets/hammer_sides.jpg){: .center}
@@ -80,6 +82,8 @@ And then welding long thin triangles for the corners. My measuring and cutting i
 I started to really notice the weight at this stage. Finally, once I knew I didn't need to sit it on the end of the hammer any more, I added the circular piece on the end. I'm pretty sure actual Stormbreaker has Viking runes inscribed there or something; I just went with a plain piece. I cut out a circle and a curved strip, and hammered the curved strip to make the circle raised off the end with a bevelled edge. This was very hard to get even and symmetric, but it's one of those things where you only notice inaccuracies if you look closely, and looking at the whole you just notice that it's there:
 
 ![First attempt](/assets/circle.jpg){: .center}
+
+![First attempt](/assets/circle_closeup.jpg){: .center}
 
 #### Side trim
 Look closely at the hammer:
@@ -146,6 +150,8 @@ But it's not _just_ an axe blade, there's extra detail on top. These patterns, i
 
 ![First attempt](/assets/closeup_lot.jpg){: .center}
 
+![First attempt](/assets/endgame_axe.jpg){: .center}
+
 Difficult to get a clear picture of before Thor 4 was released, but I had a rough idea. A few sketches later and I basically decided upon what I wanted:
 
 photo - drawing?
@@ -162,7 +168,14 @@ You can see in these shots the notes and measurements I was drawing all over the
 ![First attempt](/assets/axe_detail2.jpg){: .center}
 
 
-Unfortunately, I must have ... I'm not sure really, stetched? Angled? Mismeasured something somewhere? I did something wrong, and they didn't align at the blade edge - off by about 10mm. Not a huge error, only noticeable when looking head on, but still, an egregious error that was easy to avoid. This aside, once everything was semi-spot-welded on, I just had some intense grinding to do. Some of these spots were quite difficult to grind, like these trapezoidal pieces:
+![First attempt](/assets/axe_writing.jpg){: .center}
+
+Unfortunately, I must have ... I'm not sure really, stetched? Angled? Mismeasured something somewhere? I did something wrong, and they didn't align at the blade edge - off by about 10mm. Not a huge error, only noticeable when looking head on, but still, an egregious error that was easy to avoid. 
+
+![First attempt](/assets/errors.jpg){: .center}
+
+
+This aside, once everything was semi-spot-welded on, I just had some intense grinding to do. Some of these spots were quite difficult to grind, like these trapezoidal pieces:
 
 ![First attempt](/assets/axe_detail3.jpg){: .center}
 

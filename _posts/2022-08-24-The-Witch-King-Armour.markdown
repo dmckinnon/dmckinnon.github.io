@@ -269,7 +269,9 @@ This was a lot of heating treeflx and pressing it against different parts of my 
 
 
 ### A stand
-Far be it from me to just purchase a mannequin. I made something akin to a crucifix out of 2mm box section steel and bent the arms into the position I wanted, so the head rested on the top of the cross, and the arms came off the sides. Unfortunately I did not take a photo of it at this stage, but it's not important.
+Far be it from me to just purchase a mannequin. I made something akin to a crucifix out of 2mm box section steel and bent the arms into the position I wanted, so the head rested on the top of the cross, and the arms came off the sides.
+
+![groovy](/assets/witch_king_stand.jpg){: .center}
 
 Duct-tape around my arms, subsequently ripped off (ouch), gave a relatively solid shape for the arms. Combining that with a lot of space-filling stuffing padded everything out nicely, including the head. 
 
