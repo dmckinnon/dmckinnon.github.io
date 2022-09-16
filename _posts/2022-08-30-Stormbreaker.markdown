@@ -148,8 +148,6 @@ and then the extra detailing.
 #### Extra detail
 But it's not _just_ an axe blade, there's extra detail on top. These patterns, in particular:
 
-![First attempt](/assets/closeup_lot.jpg){: .center}
-
 ![First attempt](/assets/endgame_axe.jpg){: .center}
 
 Difficult to get a clear picture of before Thor 4 was released, but I had a rough idea. A few sketches later and I basically decided upon what I wanted:
@@ -293,23 +291,29 @@ As I've said, the centre of mass is a bit of a problem; less steel should have b
 
 Let's compare to some other designs I found online - I tried to not bias myself by looking at these too much beforehand or during.
 
-+ There's this from The Hacksmith:
++ There's this from The Hacksmith, who also clearly did body prep for the role:
+
+![First attempt](/assets/hacksmith.jpg){: .center}
 
 + Frankly Built gave it a crack with 3D printing the whole thing - I bet his is much lighter and easier to transport:
 
+![First attempt](/assets/frank_built.jpg){: .center}
+
 + Frankly Built then unboxed this oen from Hasbro:
+
+![First attempt](/assets/hasbro.jpg){: .center}
 
 + Here's a toy one from Amazon:
 
+![First attempt](/assets/amazon.jpg){: .center}
 
-
-A lot of people seem to do a less branchy handle, or a curved handle. I don't understand why; the film makes it pretty clear the handle is relatively straight and made from wood-based branches. But they do tend to get the head more accurate - I wish I could have achieved more detail there, it is the centrepiece after all.
+A lot of people seem to do a less branchy handle, or a curved handle. I don't understand why; the film makes it pretty clear the handle is relatively straight and made from wood-based branches - maybe it's something from the comics? But they do tend to get the head more accurate - I wish I could have achieved more detail there, it is the centrepiece after all. That Hasbro one appears to be the most accurate, except perhaps in size - perhaps I should have bought one and modelled from that instead of going from blurry film frames. Hacksmith used more ropey-lloking stuff to make the branches at the top, and I think that's a good idea. Theirs was ~47kgs though; at least I can carry mine reasonably. 
 
 
 #### Opinion after watching Thor 4
 As can be seen, Stormbreaker does not have many clear shots in Avengers: Infinity War or Endgame. However, there are many slow, well-focused close ups in Thor: Love and Thunder:
 
-photo
+![First attempt](/assets/closeup_lot.jpg){: .center}
 
 photo
 
