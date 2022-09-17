@@ -1,15 +1,15 @@
 ---
 layout: post
 title:  "Stormbreaker"
-date:   2022-06-01 10:58:35 -0700
+date:   2021-06-01 10:58:35 -0700
 categories: Projects
 comments: true
 ---
-["A King's weapon. Meant to be the greatest in Asgard. In theory it could even summon the Bifrost."](https://www.youtube.com/watch?v=c-B5TDvZN9I&ab_channel=ArakkalAbuEdits)
 
-["It have a name?"](https://www.youtube.com/watch?v=c-B5TDvZN9I&ab_channel=ArakkalAbuEdits)
-
+["A King's weapon. Meant to be the greatest in Asgard. In theory it could even summon the Bifrost."](https://www.youtube.com/watch?v=c-B5TDvZN9I&ab_channel=ArakkalAbuEdits)  
+["It have a name?"](https://www.youtube.com/watch?v=c-B5TDvZN9I&ab_channel=ArakkalAbuEdits)  
 ["Stormbreaker"](https://www.youtube.com/watch?v=c-B5TDvZN9I&ab_channel=ArakkalAbuEdits)
+
 
 The pandemic was still going strong in mid-2020, and after [the Witch-King's Flail](https://dmckinnon.github.io/The-Witch-Kings-Flail/) I discovered I quite enjoyed making movie weapons, the bigger the better. The obvious next choice was Stormbreaker, Thor's axe from Avengers: Infinity War. 
 
@@ -150,9 +150,8 @@ But it's not _just_ an axe blade, there's extra detail on top. These patterns, i
 
 ![First attempt](/assets/endgame_axe.png) 
 
-Difficult to get a clear picture of before Thor 4 was released, but I had a rough idea. A few sketches later and I basically decided upon what I wanted:
-
-(add drawing)
+Difficult to get a clear picture of before Thor 4 was released, but I had a rough idea. A few sketches later and I basically decided upon what I wanted:  
+<img align="center" width="50%" src="/assets/stormbreaker_notes2.jpg"  style="transform:rotate(270deg);">
 
 I deliberately didn't do those top and bottom patterns. Why? I thought long and hard about how to do them - a little raised triangle? There were shots from other angles that show it raised. Weld a flat piece on, grind off the weld mostly? Or copy the wood idea from the hammer? None of it sounded right in my head, and given that I'd beaten the blade into its curve with a hammer, I wasn't working with a nice surface. So I skipped this, but sometimes wish I hadn't. Perhaps I should have just dremel-engraved the lines in. I suppose I can go back at do that at any point. 
 
@@ -273,7 +272,7 @@ I think I should have gone with a darker brown, but this still looks good and ni
 ### A stand
 As with my previous stands (links), this was a quick and dirty low effort stand, as it's not the centre of attention. The only consideration was that the axe had to hang from this, and the stand had to support the weight. I settled for a couple of braced steel beams, with supports between them:
 
-photo
+![First attempt](/assets/just_stand.jpg)
 
 
 ### Final product
@@ -285,7 +284,7 @@ And here's how it turned out!
 ![First attempt](/assets/final2.jpg) 
 
 
-(add photo in stand)
+![First attempt](/assets/on_stand.jpg)
 
 As I've said, the centre of mass is a bit of a problem; less steel should have been used. The head is about 13kgs alone, and the entire thing at about 16kgs. Other post-build considerations I have are perhaps a darker stain on the wood for the handle, and more careful measuring/cutting for the easy-to-measure parts like the hammer end. Finally, a computer-aided plasma cutter would have given me much more precise pieces. All those nitpicks aside, this was a lot of fun to make. I really enjoyed the wood and metal work, nothing fiddly with costumes or fitting to my shoulders or head, no foam. 
 
@@ -323,12 +322,17 @@ And after watching this I'm all the more impressed, even if I am saying that mys
 
 
 ### Templates
-I don't really have templates for this, aside from half the axe blade:
+Alas, I lost my axeblade template, but here are my written notes with dimensions, along with some photos with a measuring tape:
 
-photo
+<img width="50%" src="/assets/stormbreaker_notes1.jpg"  style="transform:rotate(270deg);">
 
-but I suppose it's easy to make, or at least have photos of a tape measure along various parts:
+<img align="center" width="50%" src="/assets/stormbreaker_notes2.jpg"  style="transform:rotate(270deg);">
 
-photos
+<img align="center" width="50%" src="/assets/stormbreaker_notes3.jpg"  style="transform:rotate(270deg);">
 
+<img align="center" width="50%" src="/assets/measurement1.jpg"  style="transform:rotate(270deg);">
+
+<img align="center" width="50%" src="/assets/measurement2.jpg"  style="transform:rotate(90deg);">
+
+<img align="center" width="50%" src="/assets/measurement3.jpg"  style="transform:rotate(90deg);">
 
