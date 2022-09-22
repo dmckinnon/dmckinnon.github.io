@@ -86,6 +86,33 @@ It was starting to get late though and combined with my head being the way it wa
 photo. 
 
 #### Kit Carson and Challenger 
+These come as a pair - Kit Carson is easiest to do via the peak of Challenger, and Challenger was at least a class 2 scramble, although it got dodgier than that at times. Our original schedule had us camping at Willows Lake and summitting the next day, but weather shuffled that around and we decided to do it all in a single day - approximately 15 miles, from ~8000 feet to 14k and back. I was apprehensive. 
+
+We started at 5am from the trailhead, heading up to Willows, packed as light as possible:
+
+photo
+
+It was phenomenal to see the sun slowly rise over the plateau below:
+
+photo
+
+photo
+
+Willows Lake also looked incredible:
+
+photo
+
+and then we finally reached the valley where the approach to Challenger would start. Here's where we had to go:
+
+drawn-on photo
+
+It's hard to tell from the photo what this involves. At first it was just a steep climb up grassy rock. Then it very quickly evolved into a rocky scramble over a lot of loose rocks in scree - bigger than gravel, so definite danger to anyone below, and difficult to get a good foothold on. This took hours of slow going, but finally I got past it. Joe took a wrong turn, saw grey clouds incoming, and decided that it was better to live to hike another day than risk a thunderstorm on a 14er. I thought I was closer to the top than I actually was, and kept going - potentially rather stupid. As it turned out, the clouds moved a different direction, and we got barely a breeze at the top, amidst blue skies. The loose rock stopped at a saddle point, and it became a ridge traverse to the summit:
+
+photo
+
+Oh, the views. Here's Blanca and Great Sand Dunes National Park:
+
+photo
 
 #### Great Sand Dunes?
 
