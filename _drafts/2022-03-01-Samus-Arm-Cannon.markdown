@@ -107,7 +107,11 @@ I redesigned the arm and the barrel to fix both these problems: the barrel got a
 
 photo
 
-This would hold any balls in the barrel at bay as it curved forward, only letting one drop when fully back. I created a servo mount that accomodated this, gave it a test, and it worked! A bit. The end part needed to be thicker, otherwise it would attempt to push the ball and just bend to one side due to the plastic being weak. The other thing that happened was the arm would occasionally come off the servo. 
+This would hold any balls in the barrel at bay as it curved forward, only letting one drop when fully back. I created a servo mount that accomodated this, gave it a test, and it worked! A bit. The end part needed to be thicker, otherwise it would attempt to push the ball and just bend to one side due to the plastic being weak. The other thing that happened was the arm would occasionally come off the servo. So I made the arm thicker, and designed a support to sit on the other side of the arm, mounted via bearing to the flywheel base. Finally, this worked:
+
+photo
+
+Now I could get on with the rest of the barrel (I know that the above photo has a fair bit of barrel in it, as there were multiple designs and test prints happening simultaneously for efficiency). 
 
 
 #### Circuit board mounts and access
