@@ -45,6 +45,8 @@ before walking down a canyon to The Organ, which didn't feel rightly named; it w
 #### Canyonlands
 
 
+
+
 ### Colorado
 Colorado, as I only learnt in recent years, has loads and loads of "14ers" - mountains with over 14 000 feet of elevation (and over 300 feet of prominence?) - which is about 4260 metres. This is definitely enough to get altitude sickness to kick in; indeed, I'd had this before when summitting Mt Rainier (4392m), Mauna Kea (4207m - technically a 13er not a 14er), and Mt Adams (3700m). So it was with apprehension that I went to Colorado with [Joe](www.josephdegol.com) to bag Blanca Peak, Ellingwood Peak, Kit Carson, Challenger peak, and as a stretch goal, Crestone, all above 4260 metres. 
 
@@ -114,5 +116,64 @@ Oh, the views. Here's Blanca and Great Sand Dunes National Park:
 
 photo
 
-#### Great Sand Dunes?
+Kit Carson peak, and the Crestones:
+
+photo
+
+and the valley we came up from:
+
+photo
+
+Given the time it took to get up, and would take to get down, and knowing that Kit Carson was similar, I decided to not do Kit Carson too - it would have added a good three hours, and a lot of uncomfortable class 3 scrambling on loose rock. So I headed back, and the way out looked even better in the light:
+
+photo
+
+#### Great Sand Dunes
+This entire thing is so bizarre. I get it, there are proper geological or geographical explanations, but it honestly looks like someone just went to the base of a mountain range in the middle of empty scrublands, and just dumped a million tonnes of sand on the ground. There's scrub, and there's mountains, and then suddenly - sand dunes!
+
+photo
+
+They're huge though - the biggest at 231m, and it doesn't stand out by a huge amount. We took a sand sled with us
+
+photo
+
+and climbed and sledded down. It was raining, so this wasn't great, but we made the most of it. What weirded me out the most was that a sand sled is a thing in itself - like people didn't use boohie boards and run and jump and slide, they used sand sleds, and sat on them and kicked off. Vastly inferior, in my books. Still, great views, before the rain came:
+
+photo
+
+#### Crestone 
+This was the final peak we had planned to do, and it was also the hardest - a several hundred metre class 3 scramble awaited us: The Red Wall. Unfortunately, the weather was still quite bad, with thunderstorms expected and some snow and sleet predicted for Crestone. After waiting it out for a good half day, the rain moved on, and we hiked up another offroad-vehicle trail to South Colony Lake, with the occasional view of Humboldt, the back-up plan:
+
+photo
+
+The wind was howling like nothing else, but no rain, so we set up camp behind a nice windbreak of trees ... and it started raining just we we finished dinner. 
+
+The wind howled all night but at least the rain abated, and the next day we were greeted with clear skies, as predicted. Broken Hand Pass was the first hurdle, but it was mostly class 2 - our fear was that ice or snow would be on the Red Wall. Broken Hand Pass passed without difficulty, and the view only improved:
+
+photo
+
+and we walked the valley on the other side to The Red Wall:
+
+photo
+
+An imposing climb, and one that really hides its length (height?). It just went _on_ and _on_, unreleting. Furthermore, there was an iced-over waterfall down half of it, with spots of ice all over. THese weren't hard to avoid, but it definitely added some caution to the entire venture. 
+
+After an hour and a half, or what felt like an eternity ... the summit:
+
+photo
+
+The clouds had returned. We waited and waited, and occasionally a gap opened in the clouds to give us views of Humboldt:
+
+photo
+
+Great Sand Dunes:
+
+photo
+
+and even Challenger and Kit Carson
+
+photo
+
+
+
 
