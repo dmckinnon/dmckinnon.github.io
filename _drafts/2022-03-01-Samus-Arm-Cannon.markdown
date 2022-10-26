@@ -111,14 +111,106 @@ This would hold any balls in the barrel at bay as it curved forward, only lettin
 
 photo
 
-Now I could get on with the rest of the barrel (I know that the above photo has a fair bit of barrel in it, as there were multiple designs and test prints happening simultaneously for efficiency). 
+Now I could get on with the rest of the barrel (I know that the above photo has a fair bit of barrel in it, as there were multiple designs and test prints happening simultaneously for efficiency). The rest of the barrel was mostly just length, to hold as many as I could - in fact, I probably could have and should have extended it further than I did, but I didn't want it to cross another print boundary - it was already crossing one, and each interface was potential for trouble. Such worries were never realised, but I wanted to keeo this simple. I stopped the barrel just before the elbow section of the gun, and designed a cap that would fit on the end and hold itself in with some notches on the side:
+
+photo
+
+This way, if I needed to replace the spring, or work on any other parts, I could remove the entire spring piece by just popping off the end cap. This held the spring in, but not well - a small jostle could make it pop off vertically, and have the spring shoot out. I tried designing thicker caps, or ones that held around the circular shape as well as were notched, but since these were SLA-printed, they were very brittle. Any designs that were FDM-printed though either didn't have the detail, or were similarly brittle due to the FDM layers. So I kept an SLA-cap and just glued it in with hot glue, since this can be pulled off:
+
+photo
+
+The barrel also needed to be reloadable in a way that didn't involve getting the spring out, as the spring was a nightmare to put back in. I designed a hole in one side near the end, and a notch. This notch would hold what I called the 'spring train' - a flat circle that attached to the front of the spring, to press against the balls. So that I could pull it back and lock it into the notch, I added a T-shape to the top of this circle, that would poke up through the slot that ran the length of the barrel. With this, I could control where the spring was with my hand, pull it back to the notch, or whatever else. 
+
+photo of t shape
+
+photo of hole
+
+It's difficult to show this on the proper gun, and I don't have a spare spring, but I got come rough video of what reloading looks like. It's slow and awkward, but I can reload - an easy way to store the balls I've fired at a halloween party, for example. 
+
+That was all the modelling required to have the basics of the nerf gun - there's more to fit any electronics required, but that's the next section. 
 
 
 #### Circuit board mounts and access
+I'd always envisioned having a panel I could remove to access a display and some control buttons - after all, I might want to deactivate the nerf gun, so that no one could fire it as I passed it around, or lower LED brightness, or even control nerf gun power. Or even just visualise live data about the gun - battery voltage, nerf balls remaining, etc. Samus' gun never has a screen on it, in any of the games, so this had to be hideable - hence a removable panel. I opted for one of the ellipsoidal panels that sat either side, choosing the one that meant I would twist my arm toward me (this felt more comfortable):
+
+photo
+
+This was easy to slice off in CAD about half a millimetre before the internal ceiling of the gun, so that the sliced-off piece had a raised bevel:
+
+photo
+
+To hold the piece on, but allow it to be removed, I bought some small circular magnets and made holes for these - these would just be friction-fitted in. The holes that actually printed in the test version were too small, which meant I had to slowly dremel them out to make the big enough for the magnets. On the bright side, this meant that I could made the holes _just_ as big as needed, and no bigger - an excellent friction fit. 
+
+So now I have access to where I want to have a display, and a bit of a cubby hole in which to store some of the electronics - the ellipsoid on the other side can hold some more. Let's take stock of what I need:
++ a display that fits within this ellipse
++ some sort of programmable chip board with IO pins
++ a battery
++ a motor driver
++ LEDs
++ buttons
+
+That's actually quite a lot. At first I wanted a [Raspberry Pi](), but the original raspberry pi size - about a credit card in surface area - was too big to fit in the ellipse. Hmm. What about a smaller Raspberry pi - the [Raspberry Pi Zero]()? No, that was out of stock everywhere .... what else ... 
+
+I spent some time thinking and came across some very slim arduinos on Adafruit.com: the [Feather series]() - and these came with displays the same size, that included three buttons! Perfect! The datasheets also have the circuit board dimensions and the spacing between the screw holes in the circuit board, so I modelled some rails across the ellipsoid to hold the board. 
+
+Alright, we've mounted display and microchip. What next? I need to be able to detect whether the panel has been removed. [Hall effect sensors]() detect the presence or absence of a magnetic field, and I already knew I could mount little magnets int eh panel lid - another magnet hole was mounted, and you can read the rest of the magnetic field detection story in  the [Electronics]() section. 
+
+Next, a battery. I wanted to use 12v for the motors, since the nerf gun was originally powered by 9v and 12v was close enough and would give me good power - this was also easy to achieve with a 3S LiPo battery, and I had a LiPo charging setup. Perfect! This was my chosen battery:
+
+photo
+
+Looking for a good spot on the gun to mount it, I decided this arrow shape would work:
+
+photo
+
+But as it stood, it wasn't protruding enough. Turns out the battery would have fit regardless, as this ended up being roomy, but I don't regret these decision - roomier is easier than tight. I extruded the whole shapeso that the battery could fit entirely within it, and then extended it down the arm towards the tip more:
+
+photos
+
+This meant it crossed the boundary to the next piece, but that was ok - nothing mechanical happening here, just squishing a battery in. I wanted a snug fit, so the battery wouldn't move, so I made it just big enough - LiPo pouches have some squish to them, and this worked out:
+
+photo
+
+For the LEDs, I considered modelling some little square slots to fit the square LEDs of the strip, so that these would be flush with the inside of the barrel ... but that's a lot of effect. So nothing was modelled for the LEDs. They can just be glued down. 
+
+Finally, a motor driver. I used the [Something-Something mtor driver](link), which ... just fit almost perfectly into the opposite ellipsoid, straight off the bat!
+
+photo
+
+I did have to remove the heatsink for this. Hmm ... do I really _need_ all that heatsink? This board was taking in raw 12v from the LiPo, and pumping an amount proportional to my PWM signal into the motors. These motors were spinning up whenever I chose to fire, and then going back to zero. Assuming I fired rarely, and seeing that the datasheet for this driver allowed for (checks notes) _40 amps_ to go through ... yeah I think I can remove most of the heatsink. I cut the blades off to make it flat, and just glued the motor driver down, no modelling needed. Perfect. 
+
+For the rest fo the Electronics discussion, skip to the next section (some of this is repeated). For the final modelling, keep reading.
 
 #### Fitting my arm
+I've already discussed needed to lock in a relative rotation of my arm to the cannon, and the other thing I needed to make sure of was that this entire package was long enough - from cone to elbow end, I needed to fit the nerf gun flywheels and my fist to elbow, without this being too long. Too short wasn't great, but also didn't ruin the entire look. I measured the length of the flywheel piece, the length of my arm, added some estra, and then extended the middle bit. 
 
 #### Extra detail
+Finally, the [greeblies]() - the little bits of extra detail that strictly and functionally are not necessary, but really are the icing on the cake. You don't notice when they are there, but you tend to notice when they are not. I was working from this model of the cannon:
+
+photo
+
+and comparing to my model, it has more underside detail:
+
+photo of comaprison. 
+
+I defintiely did and do not have the skill to model a lot of that, but I can attempt to approximate it. I ended up going for:
++ those thin shallow grooves
++ the ellipsoidal holes in the sides (air vents?)
++ the raised hexagons
++ the circular knob at the end
++ the holes in the triangular flares
+
+I could talk about the modelling process, but ... I just modelling them. Here's how I did:
+
+photos
+photos
+photos of actual result
+
+I really think this made a difference. It really does add that extra bit of realism to it all, even if the purpose isn't obvious ... or existant. 
+
+#### Printing
+As you have seen in the pictures above, I 
+
 
 ### Electronics
 
