@@ -209,12 +209,51 @@ photos of actual result
 I really think this made a difference. It really does add that extra bit of realism to it all, even if the purpose isn't obvious ... or existant. 
 
 #### Printing
-As you have seen in the pictures above, I 
+As you have seen in the pictures above, I had many test prints, especially of the trickier mounting pieces for the flywheel and the servo. Some parts were cut down to print only the necessary changes and a bit of support structure, others I printed in entirety again and again, though these tended to be the smaller ones. Finally, once everything was locked down, I printed each piece in white PLA and started screwing it together and mounting all the components inside. The white PLA was so that the LEDs would shine through without the colour being affected - I wanted a nice yellow on the gun, and if the PLA was red then this would absorb some and reflect some internally. White also let the most light through (the elbow piece was printed in red, but it had no LEDs shining through, so this didn't matter). 
+
+The mid-arm pieces were sliced up into several pieces and printed separately; I tried one whole piece, but it messed up 90% of the way through and I lost all that time and filament, so I decided to play it safe after that and print smaller pieces, even though that meant more screw holes and more screws. The elbow piece stayed one solid chunk, as it was harder to divide up, but it printed successfully both times I tried. Here's some of my duds:
+
+photo
+
+I forgot to count, but probably went through five kilos of PLA to get all this?
 
 
 ### Electronics
+As I said in [Circuit board mounts and access](#circuit-board-mounts-and-access), there's a bunch of things I wanted to have in this:
++ a display that fits within this ellipse
++ some sort of programmable chip board with IO pins
++ a battery
++ a motor driver
++ LEDs
++ buttons
++ a servo
+
+There are a few things I know off the bat:
++ I need a PWM pin to drive the motor driver - both motors will take the same signal, and just splin in opposite ways due to wiring
++ a servo for the trigger would require a single PWM pin as well
++ the LEDs are [Neopixels](), which means I need a single digital pin to drive them
++ the display will probably be SPI-controlled, so I need SPI pins on the arduino
++ I want at least four buttons, which means four digital input pins. 
+
+
+I also wanted to be able to read battery cell voltage (three cells, so three analog input pins). I'll get to what happened to this later - let's start with the discussion of the control board.
 
 #### How many arduinos?
+As previously stated, I originally wanted to use a Raspberry pi. Why? Well, for a start I already had a few on hand, plus touch screen displays for them that fit on top. This would mean I wouldn't need any physical buttons to control the display and I could have a fancy scifi-looking hi tech display. As I also said in the modelling section, I discovered that this would not fit ... unfortunately, I discovered this fact _after_ I had already begun the wiring. Alas. Planning ahead is a good idea. 
+
+So I found Adafruit's [Feather series](), which has a really nice form factor of display, and had an Arduino that contained all the pins I needed - SPI for the display, two PWMs, some digital input and some analog input. So I coded up each part and tested them separately, like any good software developer, and they all worked (with tweaking and cursing):
+
+photos of LEDs?
+
+And then I turned on two components at once - LEDs and servo - and it didn't work. Why not? Wasn't sure. Tried display and servo. Tried display and LEDs ... nothing. Why?
+
+Well, as I had forgotten, servo control is implemented on the arduino by use of interrupts. The SPI protocol uses precise timing, which can be ruined by .. well, by being interrupted by interrupts. It's their purpose. Neopixels are also driven with precise timing ... less precise than SPI, but can still be ruined by interrupts. Servo control can also be ruined by turning _off_ interrupts. 
+
+Alright, how do we reconcile this? Well, Adafruit has a handy blog post about DMA-driven Neopixels - essentially we can use a hardware block on the chip to drive the LEDs, freeing up software for the interrupts for the servo. But that leaves the display unimplemented. 
+
+I hummed and hawed about this at length, and eventually settled on .. just using two arduinos. The cost came out to about what I might spend on a bigger chip that could do all three. So I would ahve one Feather with the dislay, and it would send commands over serial to a secondary arduino that would power the servo, the motors (PWM signals won't interrupt anything), and the lights. Why won't serial be messed up by the servo? Well, it will be operating infrequently - I'll only use serial to tell the secondary arduino any values to use - motor power, light colour, light brightness, and it will set those values internally. Secondly, I used a baud rate (bits per second) of 9600, which is really really slow for the arduinos, so it probably could get interrupted and not even notice. 
+
+Now to code up this split design: 
 
 #### 
 
