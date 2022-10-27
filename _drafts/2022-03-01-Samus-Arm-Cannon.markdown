@@ -5,8 +5,9 @@ date:   2022-03-01 10:58:35 -0700
 categories: Projects
 comments: true
 ---
-photo with cannon circled
 
+
+photo with cannon circled
 
 
 This all started from a silly lunch conversation at work where we ended up brainstorming what one could reasonably fit into an arm-cannon-sized prop that would be useful outside fighting aliens - I'd suggested a fold out broom and vacuum (roombas can be quite compact; why not this?), someone else said a windex spray cannister, someone said a flamethrower ... and then I found a really well made [complete model online]() and thought ... yeah, I could actually make this. I decided to start with adding a Nerf gun as the main feature before anything else fancy, and then later decided not to add anything else or do other versions as these were really hard to make. The vacuum cleaner-combined-broom-combined-windex would be fun though.
@@ -234,6 +235,7 @@ There are a few things I know off the bat:
 + the LEDs are [Neopixels](), which means I need a single digital pin to drive them
 + the display will probably be SPI-controlled, so I need SPI pins on the arduino
 + I want at least four buttons, which means four digital input pins. 
++ I want a hall effect sensor, so that's another digital input
 
 
 I also wanted to be able to read battery cell voltage (three cells, so three analog input pins). I'll get to what happened to this later - let's start with the discussion of the control board.
@@ -253,9 +255,27 @@ Alright, how do we reconcile this? Well, Adafruit has a handy blog post about DM
 
 I hummed and hawed about this at length, and eventually settled on .. just using two arduinos. The cost came out to about what I might spend on a bigger chip that could do all three. So I would ahve one Feather with the dislay, and it would send commands over serial to a secondary arduino that would power the servo, the motors (PWM signals won't interrupt anything), and the lights. Why won't serial be messed up by the servo? Well, it will be operating infrequently - I'll only use serial to tell the secondary arduino any values to use - motor power, light colour, light brightness, and it will set those values internally. Secondly, I used a baud rate (bits per second) of 9600, which is really really slow for the arduinos, so it probably could get interrupted and not even notice. 
 
-Now to code up this split design: 
+Now to code up this split design. It's mostly one way communication, so the screen half just pulls the values saved from EEPROM and renders these, and then the buttons control a cursor on the screen to select the values and increase or decrease them. When the values - cannon power (0-255), cannon brightness (0-255), and optimistically suit LED brightness in case I get round to it (0-255) are changed, whatever changed is sent over serial with a control character to say what changed. Finally, the display arduino reads from the Hall Effect sensor that is mounted to sit beneath the panel magnet:
 
-#### 
+photo
+
+This is a binary signal, normally pulled to digital high but gets pulled low when the hall effect sensor is in the presence of a magnetic field. It's a simpe process to check this every half a second, and if there is a magnetic field present, display nothing on the screen. This allows the display to sleep, which saves power. 
+
+photo
+
+Back to the messages, control arduino will receive the serial message, determine from the control character which value is to be updated, and then read the next byte for the value and save it locally. The rest of the logic is either on LED control, or servo and motor control:
+
++ The LEDs are updated every loop, and run through one of three patterns. There's a slow pulsing pattern, with a bright spike amidst dull LEDs that travels forwards down the gun, and this is the base state. There's the 'charging' pulse - multiple fast pulses travelling back up the arm - which occurs when the fire button is held down. And finally, there's the firing pattern, a single big pulse that travels down the gun and 'out' the front with the nerf ball, which then transitions back to the base state.
++ The firing button on the handgrip controls the servos and motors. These do nothing when the button is not pressed. When the button is held down, the motors spin up, ready to fire. When the button is released, the servo actuates forward, pushing the chambered ball into the flywheels, and then moves back. The code waits a hundred milliseconds to allow the firing to happen before spinning the motors down. 
+
+All this code can be viewed in the [Samus repo]() on my github.
+
+#### Other circuitry
+So we have our arduinos, we have our motors, what else do we need? Like I hinted to earlier, I did want to attempt a battery voltage reader, and made a voltage divider from resistors to read the voltage of each cell, but unfortunately this read values that were really off and after some circuit debugging I abandoned it. So all I needed was a voltage regulator to bring the 12v battery down to 5v to power the lights, arduinos, and servo (it was 1.5 amps, which is easily enough), and then a level switcher to go from the 3.3v feather arduino to the 5v control arduino. This was all awkwardly soldered onto a circuit board that sat below the battery, glued onto the plastic:
+
+photo:
+
+Yes, this is a horrible mishmash of wires, and the circuit went through several designs. I tried to glue a lot of the wires down, but it was hard to get a glue gun in there after the elbow piece. If I did this again, I would design my own circuit board that held everything necessary, and then model wire clips into the sides of the piece to hold eerything out of the way.  
 
 ### Paint
 Given that this was 3D printed, I had to sand the surface smooth before painting, otherwise you get these print artefacts where you can see the layer lines. First a 60 grit pass, then 120 grit, then 240 grit to polish it off. This was particularly difficult around the little edges, nooks, and crannies, but I got most of it:
@@ -274,14 +294,42 @@ Finally, I experimented with a green underlayer, a yellow underlayer, before set
 
 photo
 
-The yellow channels did need some fixing here and there since my masking tape was not perfect. I did this with some yellow paint and a thin paint brush
+The yellow channels did need some fixing here and there since my masking tape was not perfect. I did this with some yellow paint and a thin paint brush.
+Unfortunately, I was too rash with the green; you really need to be patient with these paints. It looks like barely anything goes on, but then it starts to run easily, and there's a few spots where i should have been lighter and just done more layers:
+
+photo
+
+photo
+
+
+and then some areas where I probably could go back and do another layer. Ah well ... at least I can - I could sand off some of the dripped spots, tape everything around, and try again. 
 
 
 
 ### Final product
 And here's how it turned out!
 
+photo
+photo
+photo
 
+Here's [a clip on youtube of me firing it](): you can see the light effects at the gun end.
+
+I'm _really_ proud of this, it turned out so well. The final green and yellow work really well, and it fits on my arm so nicely! My biggest complaints are with the mechanical systems inside:
++ the spring end cap can come off easily, and cause the spring to pop out
++ sometimes the servo can get stuck, or balls pop out and don't fire, and it needs adjusting or a good smack
++ the wiring gets in the way a lot and makes a lot of things hard
++ it's difficult to upgrade - despite the fact that I can take it apart, the paint has covered the seams nicely, so any changes would ruin this
+
+All that aside, I wore this at a halloween party and it didn't feel awkward. It's not too heavy, it's not too big, and it's easy to slide off and put to one side.
+
+Let's compare to a few of the video games:
+
+photo 
+
+photo
+
+My colours might be a bit off, and I have small details off, like the greeblies. Mine also cannot open the front hatches for missiles, but that at least was deliberate. It looks about the right length, proportionally. 
 
 ### Models
 There's really only one model available online that I used for this, and I've already linked it multiple times but here it is again, explicitly: 
