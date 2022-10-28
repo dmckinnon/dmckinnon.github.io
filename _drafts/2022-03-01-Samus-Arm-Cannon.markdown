@@ -7,10 +7,14 @@ comments: true
 ---
 
 
-photo with cannon circled
+![First attempt](/assets/cannon/samus_gun_circled.png){: .center}
 
 
-This all started from a silly lunch conversation at work where we ended up brainstorming what one could reasonably fit into an arm-cannon-sized prop that would be useful outside fighting aliens - I'd suggested a fold out broom and vacuum (roombas can be quite compact; why not this?), someone else said a windex spray cannister, someone said a flamethrower ... and then I found a really well made [complete model online]() and thought ... yeah, I could actually make this. I decided to start with adding a Nerf gun as the main feature before anything else fancy, and then later decided not to add anything else or do other versions as these were really hard to make. The vacuum cleaner-combined-broom-combined-windex would be fun though.
+This all started from a silly lunch conversation at work where we ended up brainstorming what one could reasonably fit into an arm-cannon-sized prop that would be useful outside fighting aliens - I'd suggested a fold out broom and vacuum (roombas can be quite compact; why not this?), someone else said a windex spray cannister, someone said a flamethrower ... and then I found a really well made [complete model online](https://www.thingiverse.com/thing:4546853) and thought ... yeah, I could actually make this:
+
+![First attempt](/assets/cannon/original_model.png){: .center}
+
+I decided to start with adding a Nerf gun as the main feature before anything else fancy, and then later decided not to add anything else or do other versions as these were really hard to make. The vacuum cleaner-combined-broom-combined-windex would be fun though.
 
 ## Contents
 - [Materials](#materials)  
@@ -26,17 +30,17 @@ This all started from a silly lunch conversation at work where we ended up brain
 - [Models](#models)
 
 ### Materials
-Given that I'd found the model on [Thingiverse]() I was always going to 3D print the main structure of the cannon, and I typically use PLA; the question remained for what to do about all the other parts. I had originally thought to use a [Raspberry Pi]() for the brains; this would let me have a nice touch screen interface in the cannon for controlling things like nerf gun power, lights, reading battery levels, etc - this turned out to not work (read on in [Modelling and printing](#modelling-and-printing) and [Electronics](#electronics) sections). 
+Given that I'd found the model on [Thingiverse](https://www.thingiverse.com/thing:4546853) I was always going to 3D print the main structure of the cannon, and I typically use PLA; the question remained for what to do about all the other parts. I had originally thought to use a [Raspberry Pi](https://opensource.com/resources/raspberry-pi) for the brains; this would let me have a nice touch screen interface in the cannon for controlling things like nerf gun power, lights, reading battery levels, etc - this turned out to not work (read on in [Modelling and printing](#modelling-and-printing) and [Electronics](#electronics) sections). 
 
-I bought a make-model nerf gun to use inside, and there was one reason with two main advantages behind it for this choice: it was a flywheel ball-based nerf gun. Normally nerf guns fire small foam darts, using either a spring or a blast of compressed air. A spring mechanism would have required the spring to sit behind the point of firing, adding an extra six inches or so onto the length already needed. Compressed air could have been piped from further down my arm, but would have needed either cannisters or some mechanical motion to recompress the air, which I expected to be difficult. Then there's the darts - normally these are stored vertically in a clip:
+I bought a [NERF Rival Charger MXX-1200](https://www.amazon.com/NERF-MXX-1200-Motorized-12-Round-Capacity/dp/B07VXBGFJV) nerf gun to use inside, and there was one reason with two main advantages behind it for this choice: it was a flywheel ball-based nerf gun. Normally nerf guns fire small foam darts, using either a spring or a blast of compressed air. A spring mechanism would have required the spring to sit behind the point of firing, adding an extra six inches or so onto the length already needed. Compressed air could have been piped from further down my arm, but would have needed either cannisters or some mechanical motion to recompress the air, which I expected to be difficult. Then there's the darts - normally these are stored vertically in a clip:
 
-photo
+![First attempt](/assets/cannon/nerf_clip.png){: .center}
 
 and this would not fit easily into the arm cannon. I could stack them end-to-end, but they'd then need to be shifted sideways at some point. 
 
-The Nerf Gun used these little foam balls
+The Nerf Gun used these little foam balls, about two and a half centimetres diameter,
 
-photo
+![First attempt](/assets/cannon/nerf_ball.png){: .center}
 
 which meant that I could store them in a pipe running down the length of the cannon next to my arm, and that they could then roll into the firing point easily - no need to stack one direction, and then move in a different direction. Tis would be much easier to design. 
 
@@ -48,24 +52,24 @@ This propels the balls by having the trigger activate the flywheels, spinning th
 
 The last material consideration was lights - I wanted LEDs in this, as the arm cannon glows in the games
 
-photos
+![First attempt](/assets/cannon/prime_glow.png){: .center}
 
 and has particular effects when charging, firing, etc. From the games I could see that it's typically an orange glow, pulsing along those inset channels. The model I used had these, so I thought to mount LEDs on the inside of the cannon, and the sparse structure of the 3D print should allow enough light through whilst also dispersing it from being points to being a general smudge. [Neopixels]() was the easiest route - these are technically just WS2812 LEDs on a flexible copper backing, but with considerable software support for raspberry pi and arduino. 
 
 All the pieces seemed in place to me, so time to start modelling.
 
 ### Modelling and printing
-I started to model this in [Tinkercad](), which, while it's a great program, was an outright mistake. It does not give me the fine-grained control I need for a model this complicated. So I soon moved to Fusion360, an absolute beast of a program that I still barely understand, but could do considerably more in. This allowed me to easily slice the model into its different sections: the front piece, the cone, three sections of tube, and the elbow piece:
+I started to model this in [Tinkercad](www.tinkercad.com), which, while it's a great program, was an outright mistake. It does not give me the fine-grained control I need for a model this complicated. So I soon moved to [Fusion360](https://www.autodesk.com/products/fusion-360/overview), an absolute beast of a program that I still barely understand, but could do considerably more in. This allowed me to easily slice the model into its different sections: the front piece, the cone, three sections of tube, and the elbow piece:
 
-photo
+photo, screenshot from fusion
 
-This would make both printing and prototyping easier - smaller prints, quicker turnaround, and less wasted pieces. As I modelled other parts I added screw-based joins between these pieces so they could easily come apart if needed. 
+This would make both printing and prototyping easier - smaller prints, quicker turnaround, and fewer wasted prints. As I modelled other parts I added screw-based joins between these pieces so they could easily come apart if needed. 
 
 First thing to sort out was sizing - the arm cannong comes up to Samus' right elbow, so this needs to fit my entire right forearm and hand, and then also have room for the nerf gun at the front. I measured my arm length with my hand in a fist (I had always imagined that there would be a crossbar I would hold to keep the cannon on, and have controls on), the length of the nerf gun flywheel piece, added a couple of ball-diameters to account for room for the barrel coming in and a firing mechanism, and then decided that this should all fit in the main tube - the cone and smaller tube at the front would just be for lighting and the balls flying through on their way out:
 
 photo of pieces
 
-This was also the easiest piece to stretch without stretching any existing detail beyond recognition. Next in sizing was diameter - again, this has to fit my forearm and the nerf gun, so it needs to be wide enough. I went to Home Depot's PVC pipe section and stuck my arm in different PVC pipes to see how tight various diameters fit, how much motion I had, how much a closed fist rubbed against the sides, and so on. 4" was an almost perfect fit, so I scaled the model up to that and started some test prints.
+The middle tube piece was also the easiest piece to stretch without stretching any existing detail beyond recognition. Next in sizing was diameter - again, this has to fit my forearm and the nerf gun, so it needs to be wide enough. I went to Home Depot's PVC pipe section and stuck my arm in different PVC pipes to see how tight various diameters fit, how much motion I had, how much a closed fist rubbed against the sides, and so on. 4" was an almost perfect fit, so I scaled the model up to that and started some test prints. If you intend to make a similar model, I recommend this method of finding out the right size for you. 
 
 #### The nerf gun
 The hardest thing to fit was always going to be the nerf gun flywheel, and I wasn't sure how best to do this, so I printed a test cone piece and sat around measuring and modelling:
@@ -186,9 +190,9 @@ For the rest fo the Electronics discussion, skip to the next section (some of th
 I've already discussed needed to lock in a relative rotation of my arm to the cannon, and the other thing I needed to make sure of was that this entire package was long enough - from cone to elbow end, I needed to fit the nerf gun flywheels and my fist to elbow, without this being too long. Too short wasn't great, but also didn't ruin the entire look. I measured the length of the flywheel piece, the length of my arm, added some estra, and then extended the middle bit. 
 
 #### Extra detail
-Finally, the [greeblies]() - the little bits of extra detail that strictly and functionally are not necessary, but really are the icing on the cake. You don't notice when they are there, but you tend to notice when they are not. I was working from this model of the cannon:
+Finally, the [greeblies]() - the little bits of extra detail that strictly and functionally are not necessary, but really are the icing on the cake. You don't notice when they are there, but you tend to notice when they are not. I was working from [this model of the cannon](https://sketchfab.com/3d-models/samus-arm-cannon-61c8c52a8a03435caa9792df25d2d4eb):
 
-photo
+![First attempt](/assets/cannon/fancy_gun_model.png){: .center}
 
 and comparing to my model, it has more underside detail:
 
@@ -270,6 +274,17 @@ Back to the messages, control arduino will receive the serial message, determine
 
 All this code can be viewed in the [Samus repo]() on my github.
 
+#### LED mounting
+The LEDs were mounted right up against the tube, so they glowed through the white PLA. I had them loosely wired to test and develop the patterns
+
+![First attempt](/assets/cannon/LED_test.jpg){: .center}  
+
+![First attempt](/assets/cannon/LED_test2.jpg){: .center}
+
+and then later either hot glued them down individually, or mounted them to a printed rigid bar that was glued down so they would fit:
+
+ptoho
+
 #### Other circuitry
 So we have our arduinos, we have our motors, what else do we need? Like I hinted to earlier, I did want to attempt a battery voltage reader, and made a voltage divider from resistors to read the voltage of each cell, but unfortunately this read values that were really off and after some circuit debugging I abandoned it. So all I needed was a voltage regulator to bring the 12v battery down to 5v to power the lights, arduinos, and servo (it was 1.5 amps, which is easily enough), and then a level switcher to go from the 3.3v feather arduino to the 5v control arduino. This was all awkwardly soldered onto a circuit board that sat below the battery, glued onto the plastic:
 
@@ -282,7 +297,7 @@ Given that this was 3D printed, I had to sand the surface smooth before painting
 
 photo
 
-Then an undercoat layer. I was going off [Frankly Built's]() painting guide to start - automotive primer, then a base colour layer, then automotive metallic finish. It was difficult finding the right undercoat colour for the metallic green I was using, since these automotive metallic finishes let some undercoat colour through, but not much - eg. for other builds I did gold underneath with a red finish, that mostly looks red but at certain angles you can see the gold combine in with a really nice effect. The primer at least covered most of the sanding imperfections
+Then an undercoat layer. I was going off [Frankly Built's](https://youtu.be/wEHG-zrrdW0?t=549) painting guide to start - automotive primer, then a base colour layer, then automotive metallic finish. It was difficult finding the right undercoat colour for the metallic green I was using, since these automotive metallic finishes let some undercoat colour through, but not much - eg. for other builds I did gold underneath with a red finish, that mostly looks red but at certain angles you can see the gold combine in with a really nice effect. The primer at least covered most of the sanding imperfections
 
 photo
 
@@ -329,7 +344,9 @@ photo
 
 photo
 
-My colours might be a bit off, and I have small details off, like the greeblies. Mine also cannot open the front hatches for missiles, but that at least was deliberate. It looks about the right length, proportionally. 
+My colours might be a bit off, and I have small details off, like the greeblies. Mine also cannot open the front hatches for missiles, but that at least was deliberate. It looks about the right length, proportionally.The original model I worked from had a more ... dull? Used? Aged? green, which I think works well too:
+
+
 
 ### Models
 There's really only one model available online that I used for this, and I've already linked it multiple times but here it is again, explicitly: 
