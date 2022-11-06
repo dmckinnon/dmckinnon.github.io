@@ -121,13 +121,13 @@ Unfortunately by the time I got to this Home Depot was sold out of 12"x24" steel
 
 ![First attempt](/assets/stormbreaker/closeup_forge.jpg) 
 
-This was fairly long from base to blade, and tall from tip to tip. I had the idea of cutting it down the middle, so each side was two pieces, with a straight edge and a curve. Here's my template:
+This was fairly long from base to blade, and tall from tip to tip. I had the idea of cutting it down the middle, so each side was two pieces, with a straight edge and a curve. But this was too big for one 12"x12" sheet of steel, and I had no bigger since the 24x12's were out of stock and no longer being sold. What to do? 
+
+I welded two sheets together along one side. This made things a bit wonky, as it didn't weld flat, but ... what else was I to do? Having done that, I could actually fit both the top and the bottom half of an axe side onto one of these sheets, so I cut those out - with an angle grinder, due to the curve, not shears - and welded them together. You can see the result here, along with my paper template:
 
 ![First attempt](/assets/stormbreaker/axe_template.jpg) 
 
-But this is too big for one 12"x12" sheet of steel, and I had no bigger since the 24x12's were out of stock and no longer being sold. What to do? 
-
-I welded two sheets together along one side. This made things a bit wonky, as it didn't weld flat, but ... what else was I to do? Having done that, I could actually fit both the top and the bottom half of an axe side onto one of these sheets, so I cut those out - with an angle grinder, due to the curve, not shears - and welded them together. Now I have the two side of the axe blade. I wanted internal supports so it held the shape, so several rectangles were welded on the inside, and a curve at the line where I wanted the blade taper to begin - this was about 15cm from the edge:
+Now I have the two sides of the axe blade. I wanted internal supports so it held the shape, so several rectangles were welded on the inside, and a curve at the line where I wanted the blade taper to begin - this was about 15cm from the edge:
 
 ![First attempt](/assets/stormbreaker/wedge.jpg) 
 
@@ -152,9 +152,7 @@ But it's not _just_ an axe blade, there's extra detail on top. These patterns, i
 
 Difficult to get a clear picture of before Thor 4 was released, but I had a rough idea. A few sketches later and I basically decided upon what I wanted:  
 
-<img align="middle" width="50%" src="/assets/stormbreaker/stormbreaker_notes2.jpg"  style="transform:rotate(270deg);">
-
-
+![First attempt](/assets/stormbreaker/stormbreaker_notes2.jpg) 
 
 I deliberately didn't do those top and bottom patterns. Why? I thought long and hard about how to do them - a little raised triangle? There were shots from other angles that show it raised. Weld a flat piece on, grind off the weld mostly? Or copy the wood idea from the hammer? None of it sounded right in my head, and given that I'd beaten the blade into its curve with a hammer, I wasn't working with a nice surface. So I skipped this, but sometimes wish I hadn't. Perhaps I should have just dremel-engraved the lines in. I suppose I can go back at do that at any point. 
 
@@ -170,7 +168,7 @@ You can see in these shots the notes and measurements I was drawing all over the
 
 ![First attempt](/assets/stormbreaker/axe_writing.jpg) 
 
-Unfortunately, I must have ... I'm not sure really, stetched? Angled? Mismeasured something somewhere? I did something wrong, and they didn't align at the blade edge - off by about 10mm. Not a huge error, only noticeable when looking head on, but still, an egregious error that was easy to avoid. 
+Unfortunately, I must have ... I'm not sure really, stetched? Angled? Mismeasured something somewhere? I did something wrong, and the raised lines didn't align at the blade edge - off by about 10mm. Not a huge error, only noticeable when looking head on, but still, an egregious error that was easy to avoid. It's difficult to see in this picture but I've tried to point it out with arrows:
 
 ![First attempt](/assets/stormbreaker/errors.jpg) 
 
@@ -239,7 +237,7 @@ And I had what felt close to accurate! Any gaps were patched with wood putty, wh
 ### The counterweight
 Everything being attached threw a particular problem into sharp relief: the head was roughly 13kgs, and the handle was ... 500g at best. Less, maybe. So the centre of mass was basically inside the handle, and this had incredible lever arm force wherever you held the handle. I needed a counterweight to be able to hold it in any way that wasn't directly upright. But what's super heavy? I need to counteract 13kgs, and shift the balance point to a comfortable holding spot on the handle, perhaps twenty centimetres lower than the head. Furthermore, there wasn't a lot of room to fit a counterweight reasonably, so any counterweight needed to be very dense. 
 
-Lead came to mind, as a compromise between density and cost (platinum may be better for density but is $$$$$$). I bought a large fishing sinker, 7lbs of lead or so. How to attach this? Well, the melting point of lead is 327 degrees Celsius, and while wood ignites at about 300 degrees Celsius, it needs a good environment to sustain a burn ... and I'd also felt that the end of the handle needed to look thicker anyway. So I cut another block off the thick beam I had, and drilled and carved out the centre to make a) a pit for the sinker to fit in, and b) a hole just wide enough to jam the handle in and attach this tightly:
+Lead came to mind, as a compromise between density and cost (platinum may be better for density but is _expensive_). I bought a large fishing sinker, 7lbs of lead (they were sold in lbs, not kgs, alas). How to attach this? Well, the melting point of lead is 327 degrees Celsius, and while wood ignites at about 300 degrees Celsius, it needs a good environment to sustain a burn ... and I'd also felt that the end of the handle needed to look thicker anyway. So I cut another block off the thick beam I had, and drilled and carved out the centre to make a) a pit for the sinker to fit in, and b) a hole just wide enough to jam the handle in and attach this tightly:
 
 ![First attempt](/assets/stormbreaker/block_end.jpg) 
 
@@ -257,7 +255,7 @@ This involved a bunch of tests between matte and shiny metal grey:
 
 ![First attempt](/assets/stormbreaker/matte_shiny.jpg) 
 
-before I settled on the shiny metallic silver - it felt more true to the movie version, which looked to me very shiny and reflective and "ideal" rather than old, used, worn metal - I suppose this makes sense, given that in Infinity War at least it was used about five minutes after forging, so it's about as new as it gets. I had done a layer of cold gal first, just to make sure it would last. 
+before I settled on the shiny metallic silver - it felt more true to the movie version, which looked to me very shiny and reflective and "ideal" rather than old, used, worn metal - I suppose this makes sense, given that in Infinity War at least it was used about five minutes after forging, so it's about as new as it gets. I had done a cold galvanising layer first, just to make sure it would last. 
 
 #### The handle
 The handle was stained, rather than painted; the wood I used was a rather light colour, and I wanted a much deeper brown to match Groot's arm:
@@ -273,7 +271,7 @@ I think I should have gone with a darker brown, but this still looks good and ni
 
 
 ### A stand
-As with my previous stands (links), this was a quick and dirty low effort stand, as it's not the centre of attention. The only consideration was that the axe had to hang from this, and the stand had to support the weight. I settled for a couple of braced steel beams, with supports between them:
+As with my [previous](https://dmckinnon.github.io/The-Witch-King-Armour/#a-stand) [stands](https://dmckinnon.github.io/The-Witch-Kings-Flail/#a-stand), this was a quick and dirty low effort stand, as it's not the centre of attention. The only consideration was that the axe had to hang from this, and the stand had to support the weight. I settled for a couple of braced steel beams, with supports between them:
 
 <img align="middle" width="50%" src="/assets/stormbreaker/just_stand.jpg">
 
@@ -310,7 +308,7 @@ Let's compare to some other designs I found online - I tried to not bias myself 
 <img align="center" width="50%" src="/assets/stormbreaker/amazon.jpg">
 
 
-A lot of people seem to do a less branchy handle, or a curved handle. I don't understand why; the film makes it pretty clear the handle is relatively straight and made from wood-based branches - maybe it's something from the comics? But they do tend to get the head more accurate - I wish I could have achieved more detail there, it is the centrepiece after all. That Hasbro one appears to be the most accurate, except perhaps in size - perhaps I should have bought one and modelled from that instead of going from blurry film frames. Hacksmith used more ropey-lloking stuff to make the branches at the top, and I think that's a good idea. Theirs was ~47kgs though; at least I can carry mine reasonably. 
+A lot of people seem to do a less branchy handle, or a curved handle. I don't understand why; the film makes it pretty clear the handle is relatively straight and made from wood-based branches - maybe it's something from the comics? But they do tend to get the head more accurate - I wish I could have achieved more detail there, it is the centrepiece after all. That Hasbro one appears to be the most accurate, except perhaps in size - perhaps I should have bought one and modelled from that instead of going from blurry film frames. Hacksmith used more ropey-looking stuff to make the branches at the top, and I think that's a good idea. Theirs was ~47kgs though; at least I can carry mine reasonably. 
 
 
 #### Opinion after watching Thor 4
