@@ -40,13 +40,13 @@ I bought a [NERF Rival Charger MXX-1200](https://www.amazon.com/NERF-MXX-1200-Mo
 
 and this would not fit easily into the arm cannon. I could stack them end-to-end, but they'd then need to be shifted sideways at some point. 
 
-The Nerf Gun used these little foam balls, about two and a half centimetres diameter,
+The flywheel Nerf Gun used these little foam balls, about two and a half centimetres diameter,
 
 ![First attempt](/assets/cannon/nerf_ball.png){: .center}
 
 which meant that I could store them in a pipe running down the length of the cannon next to my arm, and that they could then roll into the firing point easily - no need to stack one direction, and then move in a different direction. This would be much easier to design. 
 
-+ Secondly, the flywheel:
++ Secondly, take a closer look at the flywheel:
 
 ![First attempt](/assets/cannon/flywheel.png){: .center}
 
@@ -56,7 +56,7 @@ The last material consideration was lights - I wanted LEDs in this, as the arm c
 
 ![First attempt](/assets/cannon/prime_glow.png){: .center}
 
-and has particular effects when charging, firing, etc. From the games I could see that it's typically an orange glow, pulsing along those inset channels. The model I used had these, so I thought to mount LEDs on the inside of the cannon, and the sparse structure of the 3D print should allow enough light through whilst also dispersing it from being points to being a general smudge. [Neopixels](https://www.adafruit.com/category/168) were the easiest route - these are technically just WS2812 LEDs on a flexible copper backing, but with considerable software support for raspberry pi and arduino. 
+and has particular effects when charging, firing, etc. From the games I could see that it's typically an orange glow, pulsing along those inset channels. The model I used had these channels, so I thought to mount LEDs on the inside of the cannon and the sparse structure of the 3D print should allow enough light through whilst also dispersing it from being points to being a general smudge. [Neopixels](https://www.adafruit.com/category/168) were the easiest route - these are technically just WS2812 LEDs on a flexible copper backing, but with considerable software support for raspberry pi and arduino. 
 
 All the pieces seemed in place to me, so time to start modelling.
 
@@ -67,7 +67,7 @@ I started to model this in [Tinkercad](www.tinkercad.com), which, while it's a g
 
 This would make both printing and prototyping easier - smaller prints, quicker turnaround, and fewer wasted prints. As I modelled other parts I added screw-based joins between these pieces so they could easily come apart if needed. 
 
-First thing to sort out was sizing - the arm cannon comes up to Samus' right elbow, so this needs to fit my entire right forearm and hand, and then also have room for the nerf gun at the front. I measured my arm length with my hand in a fist (I had always imagined that there would be a crossbar I would hold to keep the cannon on, and have controls on), the length of the nerf gun flywheel piece, added a couple of ball-diameters to account for room for the barrel coming in and a firing mechanism, and then decided that this should all fit in the main tube - the cone and smaller tube at the front would just be for lighting and the balls flying through on their way out. The middle tube piece was also the easiest piece to stretch without stretching any existing detail beyond recognition. Next in sizing was diameter - again, this has to fit my forearm and the nerf gun, so it needs to be wide enough. I went to Home Depot's PVC pipe section and stuck my arm in different PVC pipes to see how tight various diameters fit, how much motion I had, how much a closed fist rubbed against the sides, and so on. 4" was an almost perfect fit, so I scaled the model up to that and started some test prints. If you intend to make a similar model, I recommend this method of finding out the right size for you. 
+First thing to sort out was sizing - the arm cannon comes up to Samus' right elbow, so this needs to fit my entire right forearm and hand, and then also have room for the nerf gun at the front. I measured my arm length with my hand in a fist (I had always imagined that there would be a crossbar I would hold to keep the cannon on, and have controls on), the length of the nerf gun flywheel piece, added a couple of ball-diameters to account for room for the barrel coming in and a firing mechanism, and then decided that this should all fit in the main tube - the cone and smaller tube at the front would just be for lighting and the balls flying through on their way out. The middle tube piece was also the easiest piece to stretch without stretching any existing detail beyond recognition. Next in sizing was diameter - again, this has to fit my forearm and the nerf gun, so it needs to be wide enough. I went to Home Depot's PVC pipe section and stuck my arm in different PVC pipes to see how tight various diameters fit, how much motion I had, how much a closed fist rubbed against the sides, and so on. 4" was an almost perfect fit on my arm, so I scaled the model up to that and started some test prints. If you intend to make a similar model, I recommend this method of finding out the right size for you. 
 
 #### The nerf gun
 The hardest thing to fit was always going to be the nerf gun flywheel, and I wasn't sure how best to do this, so I printed a test cone piece and sat around measuring and modelling:
@@ -78,7 +78,7 @@ Perhaps I should have modelled the actual flywheel, but at this stage that was p
 
 ![First attempt](/assets/cannon/final_cone.png){: .center}
 
-The slots labelled '1' held the rods coming off my flywheel in the same way the real nerf gun had, and the box labelled '2' supported the flywheel from behind. Combined with similar rods to '1' but further back along the cannon, these all made sure the flywheel wouldn't move anywhere while firing. With this properly supported, I moved on to start modelling a barrel to lead into the flywheel and the firing mechanism. There was some consideration into the relative rotation of the flywheel to the cannon tube, since the cannon tube had the inset channels (lablled '3') and I wanted to stick LEDs on the inside to shine through those. To achieve this I had to make sure that the flywheel supports did not get in the way of where I wanted LEDs. This worked well, until I actually tried to fit the LEDs in there and realised they sat _just_ below the actual wheels - and by just I mean the wheels scraped them until I got in there with a file and filed the wheel edges down. Could have decided this better, or alternatively just modelled a trench for the LEDs to sit in opposite the inset channels. It was getting very thin already, and ... I thought of this idea too late. Ah well. I'll further discuss the final LED mounting later. Back to the cannon. 
+The slots labelled '1' held the rods coming off my flywheel in the same way the real nerf gun had, and the box labelled '2' supported the flywheel from behind. Combined with similar rods to '1' but further back along the cannon, these pieces all made sure the flywheel wouldn't move anywhere while firing. With this properly supported, I moved on to start modelling a barrel to lead into the flywheel and the firing mechanism. Some consideration went into the relative rotation of the flywheel to the cannon tube, since the cannon tube had the inset channels (lablled '3') and I wanted to stick LEDs on the inside to shine through those. To achieve this I had to make sure that the flywheel supports did not get in the way of where I wanted LEDs. This worked well, until I actually tried to fit the LEDs in there and realised they sat _just_ below the actual wheels - and by just I mean the wheels scraped them until I got in there with a file and filed the wheel edges down. I probably could have planned that better, or alternatively just modelled a trench for the LEDs to sit in opposite the inset channels. The tube shell was getting very thin already, and ... I thought of this idea too late. Ah well. I'll further discuss the final LED mounting later. Back to the cannon. 
 
 Once I was working on adding the barrel for the nerf balls in and the supports for the flywheel onto the first part of the tube, I had to decide the relative rotation of the cone to the main tube. The reason for this is my arm had to fit down there, and my elbow locked the elbow piece into place, so the entire cannon couldn't rotate relative to my arm. The back half of the cannon tube had exterior designs that carried across multiple pieces, so it had a locked rotation too, relative to the final elbow piece. The front half of the tube did not, but I did want an inset channel aligned with the screen that would eventually sit atop the elbow piece. And given the shape of my arm, the barrel had to fit down the underside of my wrist, and curve up towards my hand, or on top of the wrist and curve over the fist down into the flywheel. I eventually settled on under the wrist, and modelled a cylinder a bit bigger than a nerf ball that ran down the tube and curved into the feeder point on the flywheel:
 
@@ -94,7 +94,7 @@ Let's go over my design. Here's all the components:
 
 ![First attempt](/assets/cannon/firing.png){: .center}
 
-The support had to be designed in conjunction with the arm, as the arm length affected where the servo would sit. I sliced a slit with a dremel and hacksaw down the middle of the flywheel piece to accomodate a rotating arm from the servo, and made it thicker and longer than necessary - the ball would still easily be supported. The main part of the support was a brace around the servo, and what remained was any extension required to precisely place it, so I came back to this after designing the arm. For the arm, I went through a few different designs:
+The support had to be designed in conjunction with the arm, as the arm length affected where the servo would sit. I sliced a slit with a dremel and hacksaw down the middle of the flywheel piece to accomodate a rotating arm from the servo, and made it thicker and longer than necessary - the ball would still easily be supported. The main part of the support was a brace around the servo, and what remained was any extension required to precisely place it, so I came back to this after designing the servo arm. I went through a few different designs for the servo arm on paper,
 
 ![First attempt](/assets/cannon/paper1.jpg){: .center}  
 
@@ -120,7 +120,7 @@ That was all the modelling required to have the basics of the nerf gun - there's
 
 
 #### Circuit board mounts and access
-I'd always envisioned having a panel I could remove to access a display and some control buttons - after all, I might want to deactivate the nerf gun, so that no one could fire it as I passed it around, or lower LED brightness, or even control nerf gun power. Or even just visualise live data about the gun - battery voltage, nerf balls remaining, etc. Samus' gun never has a screen on it, in any of the games, so this had to be hideable - hence a removable panel. I opted for one of the ellipsoidal panels that sat either side, choosing the one that meant I would twist my arm toward me (this felt more comfortable):
+I'd always envisioned having a panel I could remove to access a display and some control buttons - after all, I might want to deactivate the nerf gun, so that no one could fire it as I passed it around, or lower LED brightness, or even control nerf gun power. Or maybe even just visualise live data about the gun - battery voltage, nerf balls remaining, etc. Samus' gun never has a screen on it, in any of the games, so this had to be hideable - hence a removable panel. I opted for one of the elliptical panels that sat either side, choosing the one that meant I would twist my arm toward me (this felt more comfortable):
 
 ![First attempt](/assets/cannon/elbow_cap.png){: .center}
 
@@ -128,7 +128,7 @@ This was easy to slice off in CAD about half a millimetre before the internal ce
 
 ![First attempt](/assets/cannon/access.png){: .center}
 
-So now I have access to where I want to have a display, and a bit of a cubby hole in which to store some of the electronics - the ellipsoid on the other side can hold some more. Let's take stock of what I need:
+So now I have access to where I want to have a display, and a bit of a cubby hole in which to store some of the electronics - the ellipse on the other side can hold some more. Let's take stock of what I need:
 + a display that fits within this ellipse
 + some sort of programmable chip board with IO pins
 + a battery
@@ -138,11 +138,15 @@ So now I have access to where I want to have a display, and a bit of a cubby hol
 
 That's actually quite a lot. At first I wanted a Raspberry Pi, but the original raspberry pi size - about a credit card in surface area - was too big to fit in the ellipse. Hmm. What about a smaller Raspberry pi - the [Raspberry Pi Zero](https://www.raspberrypi.com/products/raspberry-pi-zero/)? No, that was out of stock everywhere .... what else ... 
 
-I spent some time thinking and came across some very slim arduinos on Adafruit.com: the [Feather series](https://learn.adafruit.com/adafruit-feather) - and these came with displays the same size, that included three buttons! Perfect! The datasheets also have the circuit board dimensions and the spacing between the screw holes in the circuit board, so I modelled some rails across the ellipsoid to hold the board. 
+I spent some time thinking and came across some very slim arduinos on Adafruit.com: the [Feather series](https://learn.adafruit.com/adafruit-feather) - and these came with displays the same size, that included three buttons! Perfect! The datasheets also have the circuit board dimensions and the spacing between the screw holes in the circuit board, so I modelled some rails across the ellipse to hold the board. 
 
 Alright, we've mounted display and microchip. What next? I need to be able to detect whether the panel has been removed. [Hall effect sensors](https://en.wikipedia.org/wiki/Hall_effect_sensor) detect the presence or absence of a magnetic field, and I already knew I could mount little magnets int eh panel lid - another magnet hole was mounted, and you can read the rest of the magnetic field detection story in  the [Electronics](#electronics) section. 
 
-Next, a battery. I wanted to use 12v for the motors, since the nerf gun was originally powered by 9v and 12v was close enough and would give me good power - this was also easy to achieve with a 3S LiPo battery, and I had a LiPo charging setup. Perfect! [This was my chosen battery](https://www.amazon.com/gp/product/B07W7CW6NV/ref=ppx_od_dt_b_asin_title_s00?ie=UTF8&psc=1): a 3 cell 2200maH LiPo - this would deliver 12v and all the amperage I would need for lights and the occasional motor spin-up. Looking for a good spot on the gun to mount it, I decided the arrow shape would work. But as it stood, it wasn't protruding enough. Turns out the battery would have fit regardless, as this ended up being roomy, but I don't regret these decision - roomier is easier than tight. I extruded the whole shapeso that the battery could fit entirely within it, and then extended it down the arm towards the tip more. This meant it crossed the boundary to the next piece, but that was ok - nothing mechanical happening here, just squishing a battery in. I wanted a snug fit, so the battery wouldn't move, so I made it just big enough - LiPo pouches have some squish to them, and this worked out:
+Next, a battery. I wanted to use 12v for the motors, since the nerf gun was originally powered by 9v and 12v was close enough and would give me good power - this was also easy to achieve with a 3S LiPo battery, and I had a LiPo charging setup. Perfect! [This was my chosen battery](https://www.amazon.com/gp/product/B07W7CW6NV/ref=ppx_od_dt_b_asin_title_s00?ie=UTF8&psc=1): a 3 cell 2200maH LiPo - this would deliver 12v and all the amperage I would need for lights and the occasional motor spin-up. Looking for a good spot on the gun to mount it, I decided the arrow shape in the side near the elbow would work, pointed out here on both inside and outside with the red arrow:
+
+![First attempt](/assets/cannon/battery_holder.png){: .center}  
+
+But as it stood, it wasn't protruding enough. Turns out the battery would have fit regardless, as this ended up being roomy, but I don't regret the decision to expand - roomier is easier than tight. I extruded the whole shape so that the battery could fit entirely within it, and then extended it down the arm towards the tip more. This meant it crossed the boundary to the next piece, but that was ok - nothing mechanical happening here, just squishing a battery in. I wanted a snug fit, so the battery wouldn't move, so I made it _just_ big enough - LiPo pouches have some squish to them, and this worked out:
 
 ![First attempt](/assets/cannon/battery.jpg){: .center}
 
@@ -166,7 +170,7 @@ and comparing to my model, it has more underside detail.
 
 I defintiely did and do not have the skill to model a lot of that, but I can attempt to approximate it. I ended up going for:
 + those thin shallow grooves
-+ the ellipsoidal holes in the sides (air vents?)
++ the elliptical holes in the sides (air vents?)
 + the raised hexagons
 + the circular knob at the end
 + the holes in the triangular flares
@@ -177,7 +181,7 @@ I could talk about the modelling process, but ... I just modelled them. Here's w
 
 ![First attempt](/assets/cannon/greeblies.jpg){: .center}  
 
-I really think this made a difference. It really does add that extra bit of realism to it all, even if the purpose isn't obvious ... or existant. 
+I really think this made a difference. It really does add that extra bit of realism to it all, even if the purpose isn't obvious ... or existant at all. 
 
 #### Printing
 As you have seen in the pictures above, I had many test prints, especially of the trickier mounting pieces for the flywheel and the servo. Some parts were cut down to print only the necessary changes and a bit of support structure, others I printed in entirety again and again, though these tended to be the smaller ones. Finally, once everything was locked down, I printed each piece in white PLA and started screwing it together and mounting all the components inside. The white PLA was so that the LEDs would shine through without the colour being affected - I wanted a nice yellow on the gun, and if the PLA was red then this would absorb some and reflect some internally. White also let the most light through (the elbow piece was printed in red, but it had no LEDs shining through, so this didn't matter). 

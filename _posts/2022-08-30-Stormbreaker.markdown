@@ -11,7 +11,7 @@ comments: true
 ["Stormbreaker"](https://www.youtube.com/watch?v=c-B5TDvZN9I&ab_channel=ArakkalAbuEdits)
 
 
-The pandemic was still going strong in mid-2020, and after [the Witch-King's Flail](https://dmckinnon.github.io/The-Witch-Kings-Flail/) I discovered I quite enjoyed making movie weapons, the bigger the better. The obvious next choice was Stormbreaker, Thor's axe from Avengers: Infinity War. 
+The pandemic was still going strong in mid-2020, and after [the Witch-King's Flail](https://dmckinnon.github.io/The-Witch-Kings-Flail/) I discovered I quite enjoyed making movie weapons: the bigger the better. The obvious next choice was Stormbreaker, Thor's axe from Avengers: Infinity War. 
 
 ![First attempt](/assets/stormbreaker/Thor.png) 
 
@@ -37,14 +37,14 @@ Despite the ordering of contents below, I made a lot of these parts in parallel 
 - [Templates](#templates)
 
 ### Materials
-Much like the Witch-King's flail, I did not want this to be some lightweight foam thing that could bounce around willy nilly, I wanted it to _feel_ proper, and also be as life-sized as possible. So the obvious materials choices were some sort of metal, with a wooden handle. What sort of metal? Aluminium would be relatively lightweight, but difficult to attach - it's hard to weld, and adding rivet joints everywhere would be difficult and also ruin the look. Steel would be hard to rivet, but easy to weld - and probably give me the weight I want. Some experiments led me to choose 16 gauge steel, as Home Depot sells 12"x12" and 12"x24" sheets of weldable steel in 22 gauge and 16 gauge. I'm not a particularly skilled welder, so I went for a flux-core arc welder, to avoid having the extra gas tanks. Probably should have gone a MiG in retrospect, but oh well. 
+Much like the Witch-King's flail, I did not want this to be some lightweight foam thing that could bounce around willy nilly - I wanted it to _feel_ proper, and also be as life-sized as possible. So the obvious material choice was some sort of metal, with a wooden handle. What sort of metal? Aluminium would be relatively lightweight, but difficult to attach - it's hard to weld, and adding rivets or screws everywhere would be difficult and also ruin the look. Steel would be harder to rivet or screw due to the drilling, but easy to weld - and probably give me the weight I want. Some experiments led me to choose 16 gauge steel, as Home Depot sells 12"x12" and 12"x24" sheets of weldable steel in 22 gauge and 16 gauge. I'm not a particularly skilled welder, so I went for a flux-core arc welder, to avoid having the extra gas tanks. Probably should have gone a MiG in retrospect, but oh well. 
 
 #### Sizing
-I made a foamboard mock-up to get an idea for size and also the structure I wanted - considering the shape and weight this thing probably needs internal supports and so on. There's a few shots I used for size. The obvious one is above in the introduction, with Hemsworth holding it, but that invovles perspective and makes it not that obvious to discern the size. There are other closer shots, like [the forging scene](https://www.youtube.com/watch?v=egvRCdbsBKM&ab_channel=MoviesClips), but the best two are firstly from a [Graham Norton interview](https://youtu.be/oOUtYKcHY8M?t=77):
+I made a foamboard mock-up to get an idea for size and also the structure I wanted - considering the shape and weight this thing probably needs internal supports and so on. There's a few shots from the Avengers films I used for size. The obvious one is above in the introduction, with Hemsworth holding it, but that invovles perspective and makes it difficult to discern the size. There are other closer shots, like [the forging scene](https://www.youtube.com/watch?v=egvRCdbsBKM&ab_channel=MoviesClips), but the best two are firstly from a [Graham Norton interview](https://youtu.be/oOUtYKcHY8M?t=77):
 
 ![First attempt](/assets/stormbreaker/chris_norton.jpg) 
 
-Where we see it right next to his head. Chris is a big bloke, and probably has a big head, but this still involves estimation. The other is from Avengers: Endgame, where Thor cracks a beer open on the blade (it's not very clear, this is a very quick shot, and I had to go through frame by frame):
+We get to see the axe right next to his head. Chris is a big bloke, and probably has a big head, but this still involves estimation. The other is from Avengers: Endgame, where Thor cracks a beer open on the blade (it's not very clear, this is a very quick shot, and I had to go through frame by frame):
 
 ![First attempt](/assets/stormbreaker/beer.jpg) 
 
@@ -56,42 +56,41 @@ Here's the final foamboard/cardboard mockup:
 And from this I learnt what sort of supports I'd want, what size I was dealing with, etc. Let's get started. 
 
 ### The hammer
-The hammer seemed the easiest starting point since it's all flat planes and angled joints, no curves. Looking back, I wish I had a plasma cutting table; it would have meant I could CAD-model all this up, export the design, and slice all the pieces. Alas, I did not, so I measured and manually cut each piece with powered metal shears. This worked alright, but certainly was not exact. Another construction option would be 3D printing - and now I have a 3D printer large enough, though I didn't at the time - although this would run against my desire to have an appropriate weight. 
+The hammer seemed the easiest starting point since it's all flat planes and angled joints, no curves. Looking back, I wish I had a plasma cutting table; it would have meant I could CAD-model all this up, export the design, and slice all the pieces. Alas, I did not, so I measured and manually cut each piece with powered metal shears. This worked alright, but was hardly machine-precision. Another construction option would be 3D printing - and I have a 3D printer large enough, though I didn't at the time - although this would run against my desire to have an appropriate weight. 
 
 I started with a pair of octagons and welded them together with vertical support pieces, to make the far end of the hammer: 
 
 ![First attempt](/assets/stormbreaker/octagon1.jpg) 
 
-In retrospect these probably didn't need to be as thick or strong, but I was worried this would be too light and didn't want to skimp. I also didn't want the slightest bump to dent it (got a bit overzealous there). From there, the angled sides, to finish off the end of the hammer. The Avengers films only give quick-motion shots but I could glean enough of the shape as it appeared symmetric and regular:
+In retrospect these probably didn't need to be as thick or strong, but I was worried this would be too light and didn't want to skimp. I also didn't want the slightest bump to dent it (got a bit overzealous there). From there I made the the angled sides, to finish off the end of the hammer. The Avengers films only give quick-motion shots but I could glean enough of the shape as it appeared symmetric and regular:
 
 ![First attempt](/assets/stormbreaker/hammer_end.jpg) 
 
-And compared to mine:
+Let's compare to mine:
 
 ![First attempt](/assets/stormbreaker/hammer_end_mine.jpg) 
 
-At this stage, cutting with shears wasn't too awful; I would err on the side of a piece being too big, and then grind it down to more precisely fit into its spot, but errors did propagate when I did not have four sides to constrain me. That circular piece in the centre would be added later - I wanted this to be able to sit flat on my bench for now to make other construction easier. It was, all in all, a good start, and gave me confidence that this approach was working. 
+At this stage, cutting with shears wasn't too awful; I would err on the side of a piece being too big, and then grind it down to more precisely fit into its spot, but errors did propagate when I did this for several pieces in a row. That circular piece in the centre of the hammer end would be added later - I wanted this to be able to sit flat on my bench for now to make other construction easier. It was, all in all, a good start, and gave me confidence that this approach was working. 
 
 ![First attempt](/assets/stormbreaker/octagon_compare.jpg) 
 
-Next came the longer part of the hammer, and this got trickier cos it has those triangular divets running down the length on two of the sides. I preemptively cut those into my octagonal hammer end, as I figured this would be easier without sides. Then I added supports and long side pieces - big rectangles, really, as the taper only occurs towards the radial axis of the hammer:
+Next came the longer part of the hammer, and this got trickier cos it has those triangular divets running down the length on two of the sides. I preemptively cut side slits into my octagonal hammer end, as I figured this would be easier without sides. Then I added supports and long side pieces - big rectangles, really, as the hammer sides taper towards the radial axis of the hammer:
 
 ![First attempt](/assets/stormbreaker/hammer_sides.jpg) 
 
-And then welding long thin triangles for the corners. My measuring and cutting inaccuracies started to show here, and I had to grind some pieces down or add more weld than I preferred to make up the difference. I originally tried to make the wedge insets from 22-gauge steel, but this proved too thin to reasonably weld, so I just made a long right angle piece from the 16-gauge and welded it in.
-I started to really notice the weight at this stage. Finally, once I knew I didn't need to sit it on the end of the hammer any more, I added the circular piece on the end. I'm pretty sure actual Stormbreaker has Viking runes inscribed there or something; I just went with a plain piece. I cut out a circle and a curved strip, and hammered the curved strip to make the circle raised off the end with a bevelled edge. This was very hard to get even and symmetric, but it's one of those things where you only notice inaccuracies if you look closely, and looking at the whole you just notice that it's there:
+Finally, I welded in long thin triangles for the corners. My measuring and cutting inaccuracies started to show here, and I had to grind some pieces down or add more weld than I preferred to make up the difference. I originally tried to make the wedge insets from 22-gauge steel, but this proved too thin to reasonably weld - the welder acted as a plasma cutter and sliced through - so I changed to 16-gauge.
+I started to really notice the weight at this stage, but carried on, figuring it would feel different on the end of a stick (i I was right, but not in a good way). The final part of the basic hammer shape was the circle on the end, and now that I knew I didn't need to sit it on the end of the hammer any more, I could add it. I'm pretty sure actual Stormbreaker has Viking runes inscribed there or something; I just went with a plain piece. I cut out a circle and a curved strip, and hammered the curved strip to make the circle raised off the end with a bevelled edge. This was very hard to get even and symmetric, but it's one of those things where you only notice inaccuracies if you look closely, and looking at the whole you just notice that it's there:
 
 ![First attempt](/assets/stormbreaker/circle.jpg) 
 
 ![First attempt](/assets/stormbreaker/circle_closeup.jpg) 
 
 #### Side trim
-Look closely at the hammer:
+Let's look closely at the hammer:
 
 ![First attempt](/assets/stormbreaker/forge_hammer.jpg) 
 
-That edging around the wide end is what I turned my attention to next. How to achieve this? I could weld flat pieces of steel, but then you have an awkward weld line, as opposed to a direct edge. I tried a raised box section of 22-gauge, but a) this looked bad as it was too raised, and b) 22-gauge was too thin to weld. 
-
+That edging around the wide end is what I turned my attention to next. How could I achieve this? I could weld flat pieces of steel, but then you have an awkward weld line, as opposed to a direct edge. I tried a raised box section of 22-gauge, but a) this looked bad as it was too raised, and b) 22-gauge was too thin to weld. 
 
 I cut this off and left the idea on the shelf for a while, getting on with other parts of the build, and then eventually hit upon something else: wood. I had a large piece of thin ... not chip board, but pulp board? Like the backing for a desk. It was 3mm thick or so, so not too raised, and easy to attach: I glued it. It was pretty easy to cut out the shapes I want, glue them on, and the idea was that they just wouldn't get nudged too much so glue would be enough. 
 
@@ -127,7 +126,7 @@ I welded two sheets together along one side. This made things a bit wonky, as it
 
 ![First attempt](/assets/stormbreaker/axe_template.jpg) 
 
-Now I have the two sides of the axe blade. I wanted internal supports so it held the shape, so several rectangles were welded on the inside, and a curve at the line where I wanted the blade taper to begin - this was about 15cm from the edge:
+Now I have the two sides of the axe blade. I wanted internal supports so it held the shape, so I welded several rectangles on the inside, and a curve at the line where I wanted the blade taper to begin - this was about 15cm from the edge:
 
 ![First attempt](/assets/stormbreaker/wedge.jpg) 
 
@@ -139,7 +138,7 @@ This, simply put, failed. That's not how you bend steel. My next idea was simple
 
 ![First attempt](/assets/stormbreaker/hammered.jpg) 
 
-This worked. It meant the steel was very dented, and it was more of a curve than a wedge, perhaps more polynomial than I'd prefer, but it worked and the blade edges were close enough together such that I could weld them. I used the slanted bits of wood from the mold to provide flat and heat-distanced surfaces for the clamps, and welded the two halves together. Getting there! Just need top and bottom panels
+This worked. It meant the steel was very dented, and it was more of a curve than a wedge, perhaps more quadratically-curved than the nice linear edge I'd prefer, but it worked and the blade edges were close enough together such that I could weld them. I used the slanted bits of wood from the mold to provide flat and heat-distanced surfaces for the clamps, and welded the two halves together. Getting there! Just need top and bottom panels
 
 ![First attempt](/assets/stormbreaker/sides.jpg) 
 
@@ -154,7 +153,7 @@ Difficult to get a clear picture of before Thor 4 was released, but I had a roug
 
 ![First attempt](/assets/stormbreaker/stormbreaker_notes2.jpg) 
 
-I deliberately didn't do those top and bottom patterns. Why? I thought long and hard about how to do them - a little raised triangle? There were shots from other angles that show it raised. Weld a flat piece on, grind off the weld mostly? Or copy the wood idea from the hammer? None of it sounded right in my head, and given that I'd beaten the blade into its curve with a hammer, I wasn't working with a nice surface. So I skipped this, but sometimes wish I hadn't. Perhaps I should have just dremel-engraved the lines in. I suppose I can go back at do that at any point. 
+I deliberately didn't do those top and bottom patterns at the blade of the axe. Why? I thought long and hard about how to do them - a little raised triangle? There were shots from other angles that show it raised. Weld a flat piece on, grind off the weld mostly? Or copy the wood idea from the hammer? None of it sounded right in my head, and given that I'd beaten the blade into its curve with a hammer, I wasn't working with a nice surface. So I skipped this, but sometimes wish I hadn't. Perhaps I should have just dremel-engraved the lines in. I suppose I can go back at do that at any point. 
 
 After some guessing and measuring, I figured out the dimensions of the pattern: raised about 20mm from the flat of the blade at the base, going all the way to flat against it at the blade edge. I cut out these guide rails after some careful measurement, lay them down, and then welded the tops on.
 
@@ -193,7 +192,7 @@ The handle was conceptually simple - I got another 53mm x 1.2m dowel from Home D
 
 ![First attempt](/assets/stormbreaker/forge1.jpg) 
 
-it's made from a bunch of vines and branches twisted together and thickening. Instead of actually weaving all this, or, heaven forbid, growing it naturally, I decided to start from a single wooden pole and carve these designs into it to give it that look. I bought a few wood carving tools and got started:
+It's made from a bunch of vines and branches twisted together and thickening. Instead of actually weaving all this, or, heaven forbid, growing it naturally, I decided to start from a single wooden pole and carve these designs into it to give it that look. I bought a few wood carving tools and got started:
 
 ![First attempt](/assets/stormbreaker/wood_carving1.jpg) 
 
@@ -287,7 +286,7 @@ And here's how it turned out!
 
 ![First attempt](/assets/stormbreaker/on_stand.jpg)
 
-As I've said, the centre of mass is a bit of a problem; less steel should have been used. The head is about 13kgs alone, and the entire thing at about 16kgs. Other post-build considerations I have are perhaps a darker stain on the wood for the handle, and more careful measuring/cutting for the easy-to-measure parts like the hammer end. Finally, a computer-aided plasma cutter would have given me much more precise pieces. All those nitpicks aside, this was a lot of fun to make. I really enjoyed the wood and metal work, nothing fiddly with costumes or fitting to my shoulders or head, no foam. 
+As I've said, the centre of mass is a bit of a problem; I should have used less steel. The head is about 13kgs alone, and the entire thing at about 16kgs. Other post-build considerations I have are perhaps a darker stain on the wood for the handle, and more careful measuring/cutting for the easy-to-measure parts like the hammer end. Finally, a computer-aided plasma cutter would have given me much more precise pieces. All those nitpicks aside, this was a lot of fun to make. I really enjoyed the wood and metal work, nothing fiddly with costumes or fitting to my shoulders or head, no foam. 
 
 Let's compare to some other designs I found online - I tried to not bias myself by looking at these too much beforehand or during.
 
