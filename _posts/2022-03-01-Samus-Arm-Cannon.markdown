@@ -184,7 +184,7 @@ I could talk about the modelling process, but ... I just modelled them. Here's w
 I really think this made a difference. It really does add that extra bit of realism to it all, even if the purpose isn't obvious ... or existant at all. 
 
 #### Printing
-As you have seen in the pictures above, I had many test prints, especially of the trickier mounting pieces for the flywheel and the servo. Some parts were cut down to print only the necessary changes and a bit of support structure, others I printed in entirety again and again, though these tended to be the smaller ones. Finally, once everything was locked down, I printed each piece in white PLA and started screwing it together and mounting all the components inside. The white PLA was so that the LEDs would shine through without the colour being affected - I wanted a nice yellow on the gun, and if the PLA was red then this would absorb some and reflect some internally. White also let the most light through (the elbow piece was printed in red, but it had no LEDs shining through, so this didn't matter). 
+As you have seen in the pictures above, I had many test prints - especially of the trickier mounting pieces for the flywheel and the servo. Some parts were cut down to test-print only the necessary changes and a bit of support structure, others I printed in entirety again and again (though these tended to be smaller parts). Finally, once everything was locked down, I printed each piece again in white PLA and started screwing it together and mounting all the components inside. The white PLA was so that the LEDs would shine through without the colour being affected - I wanted a nice yellow on the gun, and if the PLA was red then this would absorb some and reflect some internally. White also let the most light through (the elbow piece was printed in red, but it had no LEDs shining through, so this didn't matter). 
 
 The mid-arm pieces were sliced up into several pieces and printed separately; I tried one whole piece, but it messed up 90% of the way through and I lost all that time and filament, so I decided to play it safe after that and print smaller pieces, even though that meant more screw holes and more screws. The elbow piece stayed one solid chunk, as it was harder to divide up, but it printed successfully both times I tried. Here's some of my duds:
 
@@ -194,8 +194,8 @@ I forgot to count, but probably went through five kilos of PLA to get all this?
 
 
 ### Electronics
-As I said in [Circuit board mounts and access](#circuit-board-mounts-and-access), there's a bunch of things I wanted to have in this:
-+ a display that fits within this ellipse
+As I said in [Circuit board mounts and access](#circuit-board-mounts-and-access), there's a bunch of electronics I wanted to have in this:
++ a display that fits within the ellipse
 + some sort of programmable chip board with IO pins
 + a battery
 + a motor driver
@@ -209,7 +209,7 @@ There are a few things I know off the bat:
 + the LEDs are [Neopixels](https://www.adafruit.com/category/168), which means I need a single digital pin to drive them
 + the display will probably be SPI-controlled, so I need SPI pins on the arduino
 + I want at least four buttons, which means four digital input pins. 
-+ I want a hall effect sensor, so that's another digital input
++ I want a hall effect sensor so I know when the cap is off or on, so that's another digital input
 
 
 I also wanted to be able to read battery cell voltage (three cells, so three analog input pins). I'll get to what happened to this later - let's start with the discussion of the control board.
@@ -227,18 +227,19 @@ Well, as I had forgotten, servo control is implemented on the arduino by use of 
 
 Alright, how do we reconcile this? Well, Adafruit has a handy blog post about DMA-driven Neopixels - essentially we can use a hardware block on the chip to drive the LEDs, freeing up software for the interrupts for the servo. But that leaves the display unimplemented. 
 
-I hummed and hawed about this at length, and eventually settled on .. just using two arduinos. The cost came out to about what I might spend on a bigger chip that could do all three. So I would have one Feather with the dislay, and it would send commands over serial to a secondary arduino that would power the servo, the motors (PWM signals won't interrupt anything), and the lights. Why won't serial be messed up by the servo? Well, it will be operating infrequently - I'll only use serial to tell the secondary arduino any values to use - motor power, light colour, light brightness, and it will set those values internally. Secondly, I used a baud rate (bits per second) of 19200, which is really really slow for the arduinos, so it probably could get interrupted and not even notice. 
+I hummed and hawed about this at length, and eventually settled on .. just using two arduinos. The cost came out to about what I might spend on a bigger chip that could do all three anyway. So I would have one Feather with the dislay, and it would send commands over serial to a secondary arduino that would power the servo, the motors (PWM signals won't interrupt anything), and the lights. Why won't serial be messed up by the servo? Well, it will be operating infrequently - I'll only use serial to tell the secondary arduino any values to use - motor power, light colour, light brightness, and it will set those values internally. Secondly, I used a baud rate (bits per second) of 19200, which is really really slow for the arduinos, so it probably could get interrupted and not even notice. 
 
-Now to code up this split design. It's mostly one way communication, so the screen half just pulls the values saved from EEPROM and renders these, and then the buttons control a cursor on the screen to select the values and increase or decrease them. When the values - cannon power (0-255), cannon brightness (0-255), and optimistically suit LED brightness in case I get round to it (0-255) are changed, whatever changed is sent over serial with a control character to say what changed, and on the other end these are saved into memory to load next time on boot. Finally, the display arduino reads from the Hall Effect sensor that is mounted to sit beneath the panel magnet:
+Now to code up this split design - it's mostly one way communication, so the screen half just pulls the values saved from EEPROM and renders these, and then the buttons control a cursor on the screen to select the values and increase or decrease them. When the values - cannon power (0-255), cannon brightness (0-255), and optimistically suit LED brightness in case I get round to it (0-255) are changed, whatever changed is sent over serial with a control character to say what changed, and on the other end these are saved into memory to load next time on boot. 
+The rest of the logic is either on LED control, or servo and motor control:
+
++ The LEDs are updated every loop, and run through one of three patterns. There's a slow pulsing pattern, with a bright spike amidst dull LEDs that travels forwards down the gun, and this is the base state. There's the 'charging' pulse - multiple fast pulses travelling back up the arm - which occurs when the fire button is held down. And finally, there's the firing pattern, a single big pulse that travels down the gun and 'out' the front with the nerf ball, which then transitions back to the base state.
++ The firing button on the handgrip controls the servos and motors. These do nothing when the button is not pressed. When the button is held down, the motors spin up, ready to fire. When the button is released, the servo actuates forward, pushing the chambered ball into the flywheels, and then moves back. The code waits a hundred milliseconds to allow the firing to happen before spinning the motors down. 
+
+Finally, the display arduino reads from the Hall Effect sensor that is mounted to sit beneath the panel magnet:
 
 ![First attempt](/assets/cannon/magnet.jpg){: .center}
 
 This is a binary signal, normally pulled to digital high but gets pulled low when the hall effect sensor is in the presence of a magnetic field. It's a simple process to check this every half a second, and if there is a magnetic field present, display nothing on the screen. This allows the display to sleep, which saves power. 
-
-Back to the messages, the control arduino will receive the serial message, determine from the control character which value is to be updated, and then read the next byte for the value and save it locally. The rest of the logic is either on LED control, or servo and motor control:
-
-+ The LEDs are updated every loop, and run through one of three patterns. There's a slow pulsing pattern, with a bright spike amidst dull LEDs that travels forwards down the gun, and this is the base state. There's the 'charging' pulse - multiple fast pulses travelling back up the arm - which occurs when the fire button is held down. And finally, there's the firing pattern, a single big pulse that travels down the gun and 'out' the front with the nerf ball, which then transitions back to the base state.
-+ The firing button on the handgrip controls the servos and motors. These do nothing when the button is not pressed. When the button is held down, the motors spin up, ready to fire. When the button is released, the servo actuates forward, pushing the chambered ball into the flywheels, and then moves back. The code waits a hundred milliseconds to allow the firing to happen before spinning the motors down. 
 
 All this code can be viewed in the [Samus repo](https://github.com/dmckinnon/samus_arduino_code) on my github.
 
@@ -254,18 +255,18 @@ and then later either hot glued them down individually, or mounted them to a pri
 ![First attempt](/assets/cannon/led_bar.png){: .center}
 
 #### Other circuitry
-So we have our arduinos, we have our motors, what else do we need? Like I hinted to earlier, I did want to attempt a battery voltage reader, and made a voltage divider from resistors to read the voltage of each cell, but unfortunately this read values that were really off and after some circuit debugging I abandoned it. So all I needed was a voltage regulator to bring the 12v battery down to 5v to power the lights, arduinos, and servo (it was 1.5 amps, which is easily enough), and then a level switcher to go from the 3.3v feather arduino to the 5v control arduino. This was all awkwardly soldered onto a circuit board that sat below the battery, glued onto the plastic:
+So we have our arduinos, we have our motors, what else do we need? Like I hinted to earlier, I did want to attempt a battery voltage reader, and made a voltage divider from resistors to read the voltage of each cell. Unfortunately this read values that were really off and after some circuit debugging and attempted calibration I abandoned it. So all I needed was a voltage regulator to bring the 12v battery down to 5v to power the lights, arduinos, and servo (it was 1.5 amps, which is easily enough), and then a level switcher to go from the 3.3v feather arduino to the 5v control arduino. This was all awkwardly soldered onto a circuit board that sat below the battery, glued onto the plastic:
 
 ![First attempt](/assets/cannon/mess_of_wires.jpg){: .center}
 
 Yes, this is a horrible mishmash of wires, and the circuit went through several designs. I tried to glue a lot of the wires down, but it was hard to get a glue gun in there after the elbow piece. If I did this again, I would design my own circuit board that held everything necessary, and then model wire clips into the sides of the piece to hold eerything out of the way.  
 
 ### Paint
-Given that this was 3D printed, I had to sand the surface smooth before painting, otherwise you get these print artefacts where you can see the layer lines. First a 60 grit pass, then 120 grit, then 240 grit to polish it off. This was particularly difficult around the little edges, nooks, and crannies, but I got most of it.
+Given that this was 3D printed, I had to sand the surface smooth before painting - otherwise you get print artefacts where you can see the layer lines. First a 60 grit pass, then 120 grit, then 240 grit to polish it off. This was particularly difficult around the little edges, nooks, and crannies, but I got most of it.
 
 ![First attempt](/assets/cannon/sanding2.png){: .center}
 
-Then an undercoat layer. I was going off [Frankly Built's](https://youtu.be/wEHG-zrrdW0?t=549) painting guide to start - automotive primer, then a base colour layer, then automotive metallic finish. It was difficult finding the right undercoat colour for the metallic green I was using, since these automotive metallic finishes let some undercoat colour through, but not much - eg. for other builds I did gold underneath with a red finish, that mostly looks red but at certain angles you can see the gold combine in with a really nice effect. The primer at least covered most of the sanding imperfections
+Then came the undercoat layer. I was going off [Frankly Built's](https://youtu.be/wEHG-zrrdW0?t=549) painting guide to start - automotive primer, then a base colour layer, then automotive metallic finish. It was difficult finding the right undercoat colour for the metallic green I was using, since these automotive metallic finishes let some undercoat colour through, but not much - eg. for other builds I did gold underneath with a red finish, that mostly looks red but at certain angles you can see the gold combine in with a really nice effect. The primer at least covered most of the sanding imperfections:
 
 ![First attempt](/assets/cannon/priming.png){: .center}
 
