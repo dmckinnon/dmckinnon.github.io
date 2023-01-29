@@ -1,4 +1,672 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-08-27T15:38:26-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">McKinnon Building</title><subtitle>The things I have built</subtitle><entry><title type="html">The Witch King’s Armour</title><link href="http://localhost:4000/The-Witch-King-Armour/" rel="alternate" type="text/html" title="The Witch King’s Armour" /><published>2022-08-17T10:58:35-07:00</published><updated>2022-08-17T10:58:35-07:00</updated><id>http://localhost:4000/The-Witch-King-Armour</id><content type="html" xml:base="http://localhost:4000/The-Witch-King-Armour/">&lt;p&gt;&lt;a href=&quot;https://youtu.be/HF2sQtH7WpE?t=84&quot;&gt;“The spikes somehow evoke the crown of thorns. I don’t know quite what that means”&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-11-04T20:42:36-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">McKinnon Building</title><subtitle>The things I have built</subtitle><entry><title type="html">Samus’ Arm Cannon</title><link href="http://localhost:4000/Samus-Arm-Cannon/" rel="alternate" type="text/html" title="Samus’ Arm Cannon" /><published>2022-03-01T09:58:35-08:00</published><updated>2022-03-01T09:58:35-08:00</updated><id>http://localhost:4000/Samus-Arm-Cannon</id><content type="html" xml:base="http://localhost:4000/Samus-Arm-Cannon/">&lt;p&gt;&lt;img src=&quot;/assets/cannon/samus_gun_circled.png&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This all started from a silly lunch conversation at work where we ended up brainstorming what one could reasonably fit into an arm-cannon-sized prop that would be useful outside fighting aliens - I’d suggested a fold out broom and vacuum (roombas can be quite compact; why not this?), someone else said a windex spray cannister, someone said a flamethrower … and then I found a really well made &lt;a href=&quot;https://www.thingiverse.com/thing:4546853&quot;&gt;complete model online&lt;/a&gt; and thought … yeah, I could actually make this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/cannon/original_model.png&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I decided to start with adding a Nerf gun as the main feature before anything else fancy, and then later decided not to add anything else or do other versions as these were really hard to make. The vacuum cleaner-combined-broom-combined-windex would be fun though.&lt;/p&gt;
+
+&lt;h2 id=&quot;contents&quot;&gt;Contents&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;#materials&quot;&gt;Materials&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;#modelling-and-printing&quot;&gt;Modelling and printing&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;#electronics&quot;&gt;Electronics&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;#paint&quot;&gt;Paint&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;#final-product&quot;&gt;Final product&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;#models&quot;&gt;Models&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;materials&quot;&gt;Materials&lt;/h3&gt;
+&lt;p&gt;Given that I’d found the model on &lt;a href=&quot;https://www.thingiverse.com/thing:4546853&quot;&gt;Thingiverse&lt;/a&gt; I was always going to 3D print the main structure of the cannon, and I typically use PLA; the question remained for what to do about all the other parts. I had originally thought to use a &lt;a href=&quot;https://opensource.com/resources/raspberry-pi&quot;&gt;Raspberry Pi&lt;/a&gt; for the brains; this would let me have a nice touch screen interface in the cannon for controlling things like nerf gun power, lights, reading battery levels, etc - this turned out to not work (read on in &lt;a href=&quot;#modelling-and-printing&quot;&gt;Modelling and printing&lt;/a&gt; and &lt;a href=&quot;#electronics&quot;&gt;Electronics&lt;/a&gt; sections).&lt;/p&gt;
+
+&lt;p&gt;I bought a &lt;a href=&quot;https://www.amazon.com/NERF-MXX-1200-Motorized-12-Round-Capacity/dp/B07VXBGFJV&quot;&gt;NERF Rival Charger MXX-1200&lt;/a&gt; nerf gun to use inside, and there was one reason with two main advantages behind it for this choice.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Firstly, it was a flywheel ball-based nerf gun. Normally nerf guns fire small foam darts, using either a spring or a blast of compressed air. A spring mechanism would have required the spring to sit behind the point of firing, adding an extra six inches or so onto the length already needed. Compressed air could have been piped from further down my arm, but would have needed either cannisters or some mechanical motion to recompress the air, which I expected to be difficult. Then there’s the darts - normally these are stored vertically in a clip:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/cannon/nerf_clip.png&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;and this would not fit easily into the arm cannon. I could stack them end-to-end, but they’d then need to be shifted sideways at some point.&lt;/p&gt;
+
+&lt;p&gt;The Nerf Gun used these little foam balls, about two and a half centimetres diameter,&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/cannon/nerf_ball.png&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;which meant that I could store them in a pipe running down the length of the cannon next to my arm, and that they could then roll into the firing point easily - no need to stack one direction, and then move in a different direction. Tis would be much easier to design.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Secondly, the flywheel:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/cannon/flywheel.png&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This propels the balls by having the trigger activate the flywheels, spinning them up to speed, and then pushing the ready ball far enough into the wheels that they catch it and fling it out. As this resets the next ball can roll forward up until a point, where it would need to be pushed to go further. This is much more compact than a spring, and all I would need to do is mount it in front of my fist in the cannon and allow the balls to roll into it (or so was my thinking).&lt;/p&gt;
+
+&lt;p&gt;The last material consideration was lights - I wanted LEDs in this, as the arm cannon glows in the games&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/cannon/prime_glow.png&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;and has particular effects when charging, firing, etc. From the games I could see that it’s typically an orange glow, pulsing along those inset channels. The model I used had these, so I thought to mount LEDs on the inside of the cannon, and the sparse structure of the 3D print should allow enough light through whilst also dispersing it from being points to being a general smudge. &lt;a href=&quot;https://www.adafruit.com/category/168&quot;&gt;Neopixels&lt;/a&gt; were the easiest route - these are technically just WS2812 LEDs on a flexible copper backing, but with considerable software support for raspberry pi and arduino.&lt;/p&gt;
+
+&lt;p&gt;All the pieces seemed in place to me, so time to start modelling.&lt;/p&gt;
+
+&lt;h3 id=&quot;modelling-and-printing&quot;&gt;Modelling and printing&lt;/h3&gt;
+&lt;p&gt;I started to model this in &lt;a href=&quot;www.tinkercad.com&quot;&gt;Tinkercad&lt;/a&gt;, which, while it’s a great program, was an outright mistake. It does not give me the fine-grained control I need for a model this complicated. So I soon moved to &lt;a href=&quot;https://www.autodesk.com/products/fusion-360/overview&quot;&gt;Fusion360&lt;/a&gt;, an absolute beast of a program that I still barely understand, but could do considerably more in. This allowed me to easily slice the model into its different sections: the front piece, the cone, three sections of tube, and the elbow piece:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/cannon/split-out.png&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This would make both printing and prototyping easier - smaller prints, quicker turnaround, and fewer wasted prints. As I modelled other parts I added screw-based joins between these pieces so they could easily come apart if needed.&lt;/p&gt;
+
+&lt;p&gt;First thing to sort out was sizing - the arm cannong comes up to Samus’ right elbow, so this needs to fit my entire right forearm and hand, and then also have room for the nerf gun at the front. I measured my arm length with my hand in a fist (I had always imagined that there would be a crossbar I would hold to keep the cannon on, and have controls on), the length of the nerf gun flywheel piece, added a couple of ball-diameters to account for room for the barrel coming in and a firing mechanism, and then decided that this should all fit in the main tube - the cone and smaller tube at the front would just be for lighting and the balls flying through on their way out. The middle tube piece was also the easiest piece to stretch without stretching any existing detail beyond recognition. Next in sizing was diameter - again, this has to fit my forearm and the nerf gun, so it needs to be wide enough. I went to Home Depot’s PVC pipe section and stuck my arm in different PVC pipes to see how tight various diameters fit, how much motion I had, how much a closed fist rubbed against the sides, and so on. 4” was an almost perfect fit, so I scaled the model up to that and started some test prints. If you intend to make a similar model, I recommend this method of finding out the right size for you.&lt;/p&gt;
+
+&lt;h4 id=&quot;the-nerf-gun&quot;&gt;The nerf gun&lt;/h4&gt;
+&lt;p&gt;The hardest thing to fit was always going to be the nerf gun flywheel, and I wasn’t sure how best to do this, so I printed a test cone piece and sat around measuring and modelling:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/cannon/test_cone.png&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Perhaps I should have modelled the actual flywheel, but at this stage that was possibly beyond my skill? I worried I wouldn’t do it accurately, and that this would propagate more errors through the whole build. It ended up being a really tight fit - I could not have made the cannon any narrower - but with some grinding down of plastic edges I fit the flywheel jutting up into the cone, which would leave a decent amount of room for a firing mechanism between this and my hand. To hold it in place I created supports to match the existing flywheel supports and hold them, as well as a back support piece to hold it from the other side. Here’s the first iteration, and then I realised I’d messed up the screw join panels to the front piece, so I did a few other updates while I was there and made a final design:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/cannon/final_cone.png&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This supported the flywheel nicely, so I then moved to the first section of tube to add the rest of the flywheel supports, a screw join to the cone, and the beginnings of a barrel to lead into a firing mechanism. There was some consideration into the relative rotation of the flywheel to the cannon tube, since it had the inset channels and I wanted to stick LEDs on the inside to shine through, so I had to make sure that the flywheel supports did not get in the way of where I wanted LEDs. This worked well, until I actually tried to fit the LEDs in there and realised they sat &lt;em&gt;just&lt;/em&gt; below the actual wheels - and by just I mean the wheels scraped them until I got in there with a file and filed the wheel edges down. Could have decided this better, or alternatively just modelled a trench for the LEDs to sit in opposite the inset channels. It was getting very thin already, and … I thought of this idea too late. Ah well. I’ll further discuss the final LED mounting later. Back to the cannon.&lt;/p&gt;
+
+&lt;p&gt;Once I was working on adding the barrel for the nerf balls in and the supports for the flywheel onto the first part of the tube, I had to decide the relative rotation of the cone to the main tube. The reason for this is my arm had to fit down there, and my elbow locked the elbow piece into place, so it couldn’t rotate relative to my arm. The tube connecting to this had exterior designs that carried across both pieces, so it had a locked rotation too. The rest of the tube did not, but I did want a channel aligned with the screen. And given the shape of my arm, the barrel had to fit down the underside of my wrist, and curve up towards my hand, or on top of the wrist and curve over the fist down into the flywheel. I eventually settled on under the wrist, and modelled a cylinder a bit bigger than a nerf ball that ran down the tube and curved into the feeder point on the flywheel:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/cannon/inside_view.png&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I reasoned that any crossbar for my hand to hold and press buttons on could a) be added later, and b) would only get in the way for now, so it was excluded from the design - what you see in the phot above is glued in to test. Then came the question of how to push the balls from the feeder point into the flywheel, and at the same time prevent them from &lt;em&gt;accidentally&lt;/em&gt; going in there. A servo sounded like a good idea, one of those super light micro servos (link) that can practically be powered from an arduino. I needed a few things:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;a mount for the servo on the flywheel piece&lt;/li&gt;
+  &lt;li&gt;a rotating servo arm that would stop a ball going through with gravity, but push a ball through when wanted&lt;/li&gt;
+  &lt;li&gt;this arm also needed to not let the next ball through until after it had pushed the first and reset&lt;/li&gt;
+  &lt;li&gt;after some experiments, this also needed a support for the arm so it couldn’t come off the servo.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Let’s go over my design. Here’s all the components:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/cannon/firing.png&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The support had to be designed in conjunction with the arm, as the arm length affected where the servo would sit. I sliced a slit with a dremel and hacksaw down the middle of the flywheel piece to accomodate a rotating arm from the servo, and made it thicker and longer than necessary - the ball would still easily be supported. The main part of the support was a brace around the servo, and what remained was any extension required to precisely place it, so I came back to this after designing the arm. For the arm, I went through a few different designs:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/cannon/paper1.jpg&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/cannon/paper2.jpg&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;before settling on what can be seen in the numbered photo above. I started with a basic L shape - the little arm of the L would sit between the ball and flywheels in the default position, and prevent accidental firing. The ball itself would not be able to move to the sides from the given flywheel barrel shape, and the long arm of the L would stop it from moving backwards. By having the barrel end a hair more than a ball diameter away from the feeder point, this prevented more than one ball at a time in the feeder. So far so good. Then for firing, the servo would rotate this forward - the little arm drops out of the way into the slot I cut, and the long arm of the L comes forward to push the ball into the flywheels. Two problems:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;what’s stopping the ball from being pushed up out of the flywheel track completely?&lt;/li&gt;
+  &lt;li&gt;what’s stopping the next ball from falling into the feeder and back towards my arm while the current ball is being pushed into the flywheel?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I redesigned the arm and the barrel to fix both these problems: the barrel got a little extended roof that would stretch over toward the flywheels, to keep any ball in the track, and the arm got a curved back. This would hold any balls in the barrel at bay as it curved forward, only letting one drop when fully back. I created a servo mount that accomodated this, gave it a test, and it worked! A bit. The end part needed to be thicker, otherwise it would attempt to push the ball and just bend to one side due to the plastic being weak. The other thing that happened was the arm would occasionally come off the servo. So I made the arm thicker, and designed a support to sit on the other side of the arm, mounted via bearing to the flywheel base. This worked, and now I could get on with the rest of the barrel (I know that the above photo has a fair bit of barrel in it, as there were multiple designs and test prints happening simultaneously for efficiency). The rest of the barrel was mostly just length, to hold as many as I could - in fact, I probably could have and should have extended it further than I did, but I didn’t want it to cross another print boundary - it was already crossing one, and each interface was potential for trouble. Such worries were never realised, but I wanted to keeo this simple. I stopped the barrel just before the elbow section of the gun, and designed a cap that would fit on the end and hold itself in with some notches on the side. This way, if I needed to replace the spring, or work on any other parts, I could remove the entire spring piece by just popping off the end cap. This held the spring in, but not well - a small jostle could make it pop off vertically, and have the spring shoot out. I tried designing thicker caps, or ones that held around the circular shape as well as were notched, but since these were SLA-printed, they were very brittle. Any designs that were FDM-printed though either didn’t have the detail, or were similarly brittle due to the FDM layers. So I kept an SLA-cap and just glued it in with hot glue, since this can be pulled off:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/cannon/inside_view.png&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The barrel also needed to be reloadable in a way that didn’t involve getting the spring out, as the spring was a nightmare to put back in. I designed a hole in one side near the end, and a notch. This notch would hold what I called the ‘spring train’ - a flat circle that attached to the front of the spring, to press against the balls. So that I could pull it back and lock it into the notch, I added a T-shape to the top of this circle, that would poke up through the slot that ran the length of the barrel. With this, I could control where the spring was with my hand, pull it back to the notch, or whatever else.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/cannon/train.jpg&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It’s difficult to show this on the proper gun, and I don’t have a spare spring, but I got come rough video of what reloading looks like. It’s slow and awkward, but I can reload - an easy way to store the balls I’ve fired at a halloween party, for example.&lt;/p&gt;
+
+&lt;p&gt;To summarise, here’s the cross section of the entire gun:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/cannon/cross-section.png&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;That was all the modelling required to have the basics of the nerf gun - there’s more to fit any electronics required, but that’s the next section.&lt;/p&gt;
+
+&lt;h4 id=&quot;circuit-board-mounts-and-access&quot;&gt;Circuit board mounts and access&lt;/h4&gt;
+&lt;p&gt;I’d always envisioned having a panel I could remove to access a display and some control buttons - after all, I might want to deactivate the nerf gun, so that no one could fire it as I passed it around, or lower LED brightness, or even control nerf gun power. Or even just visualise live data about the gun - battery voltage, nerf balls remaining, etc. Samus’ gun never has a screen on it, in any of the games, so this had to be hideable - hence a removable panel. I opted for one of the ellipsoidal panels that sat either side, choosing the one that meant I would twist my arm toward me (this felt more comfortable):&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/cannon/elbow_cap.png&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This was easy to slice off in CAD about half a millimetre before the internal ceiling of the gun, so that the sliced-off piece had a raised bevel. To hold the piece on, but allow it to be removed, I bought some small circular magnets and made holes for these - these would just be friction-fitted in. The holes that actually printed in the test version were too small, which meant I had to slowly dremel them out to make the big enough for the magnets. On the bright side, this meant that I could made the holes &lt;em&gt;just&lt;/em&gt; as big as needed, and no bigger - an excellent friction fit.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/cannon/access.png&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So now I have access to where I want to have a display, and a bit of a cubby hole in which to store some of the electronics - the ellipsoid on the other side can hold some more. Let’s take stock of what I need:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;a display that fits within this ellipse&lt;/li&gt;
+  &lt;li&gt;some sort of programmable chip board with IO pins&lt;/li&gt;
+  &lt;li&gt;a battery&lt;/li&gt;
+  &lt;li&gt;a motor driver&lt;/li&gt;
+  &lt;li&gt;LEDs&lt;/li&gt;
+  &lt;li&gt;buttons&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;That’s actually quite a lot. At first I wanted a Raspberry Pi, but the original raspberry pi size - about a credit card in surface area - was too big to fit in the ellipse. Hmm. What about a smaller Raspberry pi - the &lt;a href=&quot;https://www.raspberrypi.com/products/raspberry-pi-zero/&quot;&gt;Raspberry Pi Zero&lt;/a&gt;? No, that was out of stock everywhere …. what else …&lt;/p&gt;
+
+&lt;p&gt;I spent some time thinking and came across some very slim arduinos on Adafruit.com: the &lt;a href=&quot;https://learn.adafruit.com/adafruit-feather&quot;&gt;Feather series&lt;/a&gt; - and these came with displays the same size, that included three buttons! Perfect! The datasheets also have the circuit board dimensions and the spacing between the screw holes in the circuit board, so I modelled some rails across the ellipsoid to hold the board.&lt;/p&gt;
+
+&lt;p&gt;Alright, we’ve mounted display and microchip. What next? I need to be able to detect whether the panel has been removed. &lt;a href=&quot;https://en.wikipedia.org/wiki/Hall_effect_sensor&quot;&gt;Hall effect sensors&lt;/a&gt; detect the presence or absence of a magnetic field, and I already knew I could mount little magnets int eh panel lid - another magnet hole was mounted, and you can read the rest of the magnetic field detection story in  the &lt;a href=&quot;#electronics&quot;&gt;Electronics&lt;/a&gt; section.&lt;/p&gt;
+
+&lt;p&gt;Next, a battery. I wanted to use 12v for the motors, since the nerf gun was originally powered by 9v and 12v was close enough and would give me good power - this was also easy to achieve with a 3S LiPo battery, and I had a LiPo charging setup. Perfect! &lt;a href=&quot;https://www.amazon.com/gp/product/B07W7CW6NV/ref=ppx_od_dt_b_asin_title_s00?ie=UTF8&amp;amp;psc=1&quot;&gt;This was my chosen battery&lt;/a&gt;: a 3 cell 2200maH LiPo - this would deliver 12v and all the amperage I would need for lights and the occasional motor spin-up. Looking for a good spot on the gun to mount it, I decided the arrow shape would work. But as it stood, it wasn’t protruding enough. Turns out the battery would have fit regardless, as this ended up being roomy, but I don’t regret these decision - roomier is easier than tight. I extruded the whole shapeso that the battery could fit entirely within it, and then extended it down the arm towards the tip more. This meant it crossed the boundary to the next piece, but that was ok - nothing mechanical happening here, just squishing a battery in. I wanted a snug fit, so the battery wouldn’t move, so I made it just big enough - LiPo pouches have some squish to them, and this worked out:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/cannon/battery.jpg&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;For the LEDs, I considered modelling some little square slots to fit the square LEDs of the strip, so that these would be flush with the inside of the barrel … but that’s a lot of effect. So nothing was modelled for the LEDs. They can just be glued down.&lt;/p&gt;
+
+&lt;p&gt;Finally, a motor driver. I used &lt;a href=&quot;https://www.amazon.com/gp/product/B07TFB22H5/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&amp;amp;psc=1&quot;&gt;a h-bridge-based motor driver for arduino&lt;/a&gt;, which … just fit almost perfectly into the opposite ellipsoid, straight off the bat! I did have to remove the heatsink for this. Hmm … do I really &lt;em&gt;need&lt;/em&gt; all that heatsink? This board was taking in raw 12v from the LiPo, and pumping an amount proportional to my PWM signal into the motors. These motors were spinning up whenever I chose to fire, and then going back to zero. Assuming I fired rarely, and seeing that the datasheet for this driver allowed for (checks notes) &lt;em&gt;40 amps&lt;/em&gt; to go through … yeah I think I can remove most of the heatsink. I cut the blades off to make it flat, and just glued the motor driver down, no modelling needed. Perfect.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/cannon/motor_driver.jpg&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;For the rest fo the Electronics discussion, skip to the next section (some of this is repeated). For the final modelling, keep reading.&lt;/p&gt;
+
+&lt;h4 id=&quot;fitting-my-arm&quot;&gt;Fitting my arm&lt;/h4&gt;
+&lt;p&gt;I’ve already discussed needed to lock in a relative rotation of my arm to the cannon, and the other thing I needed to make sure of was that this entire package was long enough - from cone to elbow end, I needed to fit the nerf gun flywheels and my fist to elbow, without this being too long. Too short wasn’t great, but also didn’t ruin the entire look. I measured the length of the flywheel piece, the length of my arm, added some estra, and then extended the middle bit.&lt;/p&gt;
+
+&lt;h4 id=&quot;extra-detail&quot;&gt;Extra detail&lt;/h4&gt;
+&lt;p&gt;Finally, the [greeblies]https://en.wikipedia.org/wiki/Greeble) - the little bits of extra detail that strictly and functionally are not necessary, but really are the icing on the cake. You don’t notice when they are there, but you tend to notice when they are not. I was working from &lt;a href=&quot;https://sketchfab.com/3d-models/samus-arm-cannon-61c8c52a8a03435caa9792df25d2d4eb&quot;&gt;this model of the cannon&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/cannon/fancy_gun_model.png&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;and comparing to my model, it has more underside detail.&lt;/p&gt;
+
+&lt;p&gt;I defintiely did and do not have the skill to model a lot of that, but I can attempt to approximate it. I ended up going for:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;those thin shallow grooves&lt;/li&gt;
+  &lt;li&gt;the ellipsoidal holes in the sides (air vents?)&lt;/li&gt;
+  &lt;li&gt;the raised hexagons&lt;/li&gt;
+  &lt;li&gt;the circular knob at the end&lt;/li&gt;
+  &lt;li&gt;the holes in the triangular flares&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I could talk about the modelling process, but … I just modelled them. Here’s what I did:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/cannon/detail.png&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/cannon/greeblies.jpg&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I really think this made a difference. It really does add that extra bit of realism to it all, even if the purpose isn’t obvious … or existant.&lt;/p&gt;
+
+&lt;h4 id=&quot;printing&quot;&gt;Printing&lt;/h4&gt;
+&lt;p&gt;As you have seen in the pictures above, I had many test prints, especially of the trickier mounting pieces for the flywheel and the servo. Some parts were cut down to print only the necessary changes and a bit of support structure, others I printed in entirety again and again, though these tended to be the smaller ones. Finally, once everything was locked down, I printed each piece in white PLA and started screwing it together and mounting all the components inside. The white PLA was so that the LEDs would shine through without the colour being affected - I wanted a nice yellow on the gun, and if the PLA was red then this would absorb some and reflect some internally. White also let the most light through (the elbow piece was printed in red, but it had no LEDs shining through, so this didn’t matter).&lt;/p&gt;
+
+&lt;p&gt;The mid-arm pieces were sliced up into several pieces and printed separately; I tried one whole piece, but it messed up 90% of the way through and I lost all that time and filament, so I decided to play it safe after that and print smaller pieces, even though that meant more screw holes and more screws. The elbow piece stayed one solid chunk, as it was harder to divide up, but it printed successfully both times I tried. Here’s some of my duds:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/cannon/duds.jpg&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I forgot to count, but probably went through five kilos of PLA to get all this?&lt;/p&gt;
+
+&lt;h3 id=&quot;electronics&quot;&gt;Electronics&lt;/h3&gt;
+&lt;p&gt;As I said in &lt;a href=&quot;#circuit-board-mounts-and-access&quot;&gt;Circuit board mounts and access&lt;/a&gt;, there’s a bunch of things I wanted to have in this:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;a display that fits within this ellipse&lt;/li&gt;
+  &lt;li&gt;some sort of programmable chip board with IO pins&lt;/li&gt;
+  &lt;li&gt;a battery&lt;/li&gt;
+  &lt;li&gt;a motor driver&lt;/li&gt;
+  &lt;li&gt;LEDs&lt;/li&gt;
+  &lt;li&gt;buttons&lt;/li&gt;
+  &lt;li&gt;a servo&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There are a few things I know off the bat:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;I need a PWM pin to drive the motor driver - both motors will take the same signal, and just splin in opposite ways due to wiring&lt;/li&gt;
+  &lt;li&gt;a servo for the trigger would require a single PWM pin as well&lt;/li&gt;
+  &lt;li&gt;the LEDs are &lt;a href=&quot;https://www.adafruit.com/category/168&quot;&gt;Neopixels&lt;/a&gt;, which means I need a single digital pin to drive them&lt;/li&gt;
+  &lt;li&gt;the display will probably be SPI-controlled, so I need SPI pins on the arduino&lt;/li&gt;
+  &lt;li&gt;I want at least four buttons, which means four digital input pins.&lt;/li&gt;
+  &lt;li&gt;I want a hall effect sensor, so that’s another digital input&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I also wanted to be able to read battery cell voltage (three cells, so three analog input pins). I’ll get to what happened to this later - let’s start with the discussion of the control board.&lt;/p&gt;
+
+&lt;h4 id=&quot;how-many-arduinos&quot;&gt;How many arduinos?&lt;/h4&gt;
+&lt;p&gt;As previously stated, I originally wanted to use a Raspberry pi. Why? Well, for a start I already had a few on hand, plus touch screen displays for them that fit on top. This would mean I wouldn’t need any physical buttons to control the display and I could have a fancy scifi-looking hi tech display. As I also said in the modelling section, I discovered that this would not fit … unfortunately, I discovered this fact &lt;em&gt;after&lt;/em&gt; I had already begun the wiring. Alas. Planning ahead is a good idea.&lt;/p&gt;
+
+&lt;p&gt;So I found Adafruit’s &lt;a href=&quot;https://learn.adafruit.com/adafruit-feather&quot;&gt;Feather series&lt;/a&gt;, which has a really nice form factor of display, and had an Arduino that contained all the pins I needed - SPI for the display, two PWMs, some digital input and some analog input. So I coded up each part and tested them separately, like any good software developer, and they all worked (with tweaking and cursing):&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/cannon/testing.png&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And then I turned on two components at once - LEDs and servo - and it didn’t work. Why not? Wasn’t sure. Tried display and servo. Tried display and LEDs … nothing. Why?&lt;/p&gt;
+
+&lt;p&gt;Well, as I had forgotten, servo control is implemented on the arduino by use of interrupts. The SPI protocol uses precise timing, which can be ruined by .. well, by being interrupted by interrupts. It’s their purpose. Neopixels are also driven with precise timing … less precise than SPI, but can still be ruined by interrupts. Servo control can also be ruined by turning &lt;em&gt;off&lt;/em&gt; interrupts.&lt;/p&gt;
+
+&lt;p&gt;Alright, how do we reconcile this? Well, Adafruit has a handy blog post about DMA-driven Neopixels - essentially we can use a hardware block on the chip to drive the LEDs, freeing up software for the interrupts for the servo. But that leaves the display unimplemented.&lt;/p&gt;
+
+&lt;p&gt;I hummed and hawed about this at length, and eventually settled on .. just using two arduinos. The cost came out to about what I might spend on a bigger chip that could do all three. So I would ahve one Feather with the dislay, and it would send commands over serial to a secondary arduino that would power the servo, the motors (PWM signals won’t interrupt anything), and the lights. Why won’t serial be messed up by the servo? Well, it will be operating infrequently - I’ll only use serial to tell the secondary arduino any values to use - motor power, light colour, light brightness, and it will set those values internally. Secondly, I used a baud rate (bits per second) of 19200, which is really really slow for the arduinos, so it probably could get interrupted and not even notice.&lt;/p&gt;
+
+&lt;p&gt;Now to code up this split design. It’s mostly one way communication, so the screen half just pulls the values saved from EEPROM and renders these, and then the buttons control a cursor on the screen to select the values and increase or decrease them. When the values - cannon power (0-255), cannon brightness (0-255), and optimistically suit LED brightness in case I get round to it (0-255) are changed, whatever changed is sent over serial with a control character to say what changed, and on the other end these are saved into memory to load next time on boot. Finally, the display arduino reads from the Hall Effect sensor that is mounted to sit beneath the panel magnet:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/cannon/magnet.jpg&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This is a binary signal, normally pulled to digital high but gets pulled low when the hall effect sensor is in the presence of a magnetic field. It’s a simpe process to check this every half a second, and if there is a magnetic field present, display nothing on the screen. This allows the display to sleep, which saves power.&lt;/p&gt;
+
+&lt;p&gt;Back to the messages, control arduino will receive the serial message, determine from the control character which value is to be updated, and then read the next byte for the value and save it locally. The rest of the logic is either on LED control, or servo and motor control:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The LEDs are updated every loop, and run through one of three patterns. There’s a slow pulsing pattern, with a bright spike amidst dull LEDs that travels forwards down the gun, and this is the base state. There’s the ‘charging’ pulse - multiple fast pulses travelling back up the arm - which occurs when the fire button is held down. And finally, there’s the firing pattern, a single big pulse that travels down the gun and ‘out’ the front with the nerf ball, which then transitions back to the base state.&lt;/li&gt;
+  &lt;li&gt;The firing button on the handgrip controls the servos and motors. These do nothing when the button is not pressed. When the button is held down, the motors spin up, ready to fire. When the button is released, the servo actuates forward, pushing the chambered ball into the flywheels, and then moves back. The code waits a hundred milliseconds to allow the firing to happen before spinning the motors down.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;All this code can be viewed in the &lt;a href=&quot;https://github.com/dmckinnon/samus_arduino_code&quot;&gt;Samus repo&lt;/a&gt; on my github.&lt;/p&gt;
+
+&lt;h4 id=&quot;led-mounting&quot;&gt;LED mounting&lt;/h4&gt;
+&lt;p&gt;The LEDs were mounted right up against the tube, so they glowed through the white PLA. I had them loosely wired to test and develop the patterns&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/cannon/LED_test.png&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/cannon/LED_test2.png&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;and then later either hot glued them down individually, or mounted them to a printed rigid bar that was glued down so they would stay down:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/cannon/led_bar.png&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;other-circuitry&quot;&gt;Other circuitry&lt;/h4&gt;
+&lt;p&gt;So we have our arduinos, we have our motors, what else do we need? Like I hinted to earlier, I did want to attempt a battery voltage reader, and made a voltage divider from resistors to read the voltage of each cell, but unfortunately this read values that were really off and after some circuit debugging I abandoned it. So all I needed was a voltage regulator to bring the 12v battery down to 5v to power the lights, arduinos, and servo (it was 1.5 amps, which is easily enough), and then a level switcher to go from the 3.3v feather arduino to the 5v control arduino. This was all awkwardly soldered onto a circuit board that sat below the battery, glued onto the plastic:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/cannon/mess_of_wires.jpg&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Yes, this is a horrible mishmash of wires, and the circuit went through several designs. I tried to glue a lot of the wires down, but it was hard to get a glue gun in there after the elbow piece. If I did this again, I would design my own circuit board that held everything necessary, and then model wire clips into the sides of the piece to hold eerything out of the way.&lt;/p&gt;
+
+&lt;h3 id=&quot;paint&quot;&gt;Paint&lt;/h3&gt;
+&lt;p&gt;Given that this was 3D printed, I had to sand the surface smooth before painting, otherwise you get these print artefacts where you can see the layer lines. First a 60 grit pass, then 120 grit, then 240 grit to polish it off. This was particularly difficult around the little edges, nooks, and crannies, but I got most of it.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/cannon/sanding2.png&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Then an undercoat layer. I was going off &lt;a href=&quot;https://youtu.be/wEHG-zrrdW0?t=549&quot;&gt;Frankly Built’s&lt;/a&gt; painting guide to start - automotive primer, then a base colour layer, then automotive metallic finish. It was difficult finding the right undercoat colour for the metallic green I was using, since these automotive metallic finishes let some undercoat colour through, but not much - eg. for other builds I did gold underneath with a red finish, that mostly looks red but at certain angles you can see the gold combine in with a really nice effect. The primer at least covered most of the sanding imperfections&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/cannon/priming.png&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;and after that I did an under-undercoat of yellow to get the colour of the inset channels baked in early - then I covered these in masking tape. It took a few cans to get a yellow that looked right, but I settled on Home Depot’s Sunset yeloow. Finally, I experimented with a green underlayer, a yellow underlayer, before settling with a base gray, and also used some of my test pieces to find the right green&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/cannon/green.jpg&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The yellow channels did need some fixing here and there since my masking tape was not perfect. I did this with some yellow paint and a thin paint brush.
+Unfortunately, I was too rash with the green; you really need to be patient with these paints. It looks like barely anything goes on, but then it starts to run easily.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/cannon/green_spray.png&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;There’s a few spots where i should have been lighter and just done more layers:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/cannon/paint_running1.jpg&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/cannon/paint_running2.jpg&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;and then some areas where I probably could go back and do another layer. Ah well … at least I can - I could sand off some of the dripped spots, tape everything around, and try again.&lt;/p&gt;
+
+&lt;h3 id=&quot;final-product&quot;&gt;Final product&lt;/h3&gt;
+&lt;p&gt;And here’s how it turned out!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/cannon/final_inside.jpg&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/cannon/final_horizontal.jpg&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/cannon/final_vertical.jpg&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/cannon/final_on_arm.jpg&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I hope to upload a clip to youtube of me firing it: you can see the light effects at the gun end.&lt;/p&gt;
+
+&lt;p&gt;I’m &lt;em&gt;really&lt;/em&gt; proud of this, it turned out so well. The final green and yellow work really well, and it fits on my arm so nicely! My biggest complaints are with the mechanical systems inside:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;the spring end cap can come off easily, and cause the spring to pop out&lt;/li&gt;
+  &lt;li&gt;sometimes the servo can get stuck, or balls pop out and don’t fire, and it needs adjusting or a good smack&lt;/li&gt;
+  &lt;li&gt;the wiring gets in the way a lot and makes a lot of things hard&lt;/li&gt;
+  &lt;li&gt;it’s difficult to upgrade - despite the fact that I can take it apart, the paint has covered the seams nicely, so any changes would ruin this&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;All that aside, I wore this at a halloween party and it didn’t feel awkward. It’s not too heavy, it’s not too big, and it’s easy to slide off and put to one side.&lt;/p&gt;
+
+&lt;p&gt;Let’s compare to a few of the video games:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/cannon/PrimeArmCannon.png&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/cannon/ssb.png&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The top is from Metroid Prime, and the bottom from Super Smash Bros - I was certainly aiming for a Prime style, and I think I got close - my colours might be a bit off, and I have small details off, like the greeblies. Mine also cannot open the front hatches for missiles, but that at least was deliberate. It looks about the right length, proportionally.The original model I worked from had a more … dull? Used? Aged? green, which I think works well too. All in all, rather happy with this build.&lt;/p&gt;
+
+&lt;h3 id=&quot;models&quot;&gt;Models&lt;/h3&gt;
+&lt;p&gt;There’s really only one model available online that I used for this, and I’ve already linked it multiple times but here it is again, explicitly: https://www.thingiverse.com/thing:4546853&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/cannon/original_model.png&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Big thanks to &lt;a href=&quot;https://www.thingiverse.com/lukeskr/designs&quot;&gt;LukeRS&lt;/a&gt; for modelling it and making it available for free.&lt;/p&gt;</content><author><name></name></author><category term="Projects" /><summary type="html"></summary></entry><entry><title type="html">Stormbreaker</title><link href="http://localhost:4000/Stormbreaker/" rel="alternate" type="text/html" title="Stormbreaker" /><published>2021-06-01T10:58:35-07:00</published><updated>2021-06-01T10:58:35-07:00</updated><id>http://localhost:4000/Stormbreaker</id><content type="html" xml:base="http://localhost:4000/Stormbreaker/">&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=c-B5TDvZN9I&amp;amp;ab_channel=ArakkalAbuEdits&quot;&gt;“A King’s weapon. Meant to be the greatest in Asgard. In theory it could even summon the Bifrost.”&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://www.youtube.com/watch?v=c-B5TDvZN9I&amp;amp;ab_channel=ArakkalAbuEdits&quot;&gt;“It have a name?”&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://www.youtube.com/watch?v=c-B5TDvZN9I&amp;amp;ab_channel=ArakkalAbuEdits&quot;&gt;“Stormbreaker”&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The pandemic was still going strong in mid-2020, and after &lt;a href=&quot;https://dmckinnon.github.io/The-Witch-Kings-Flail/&quot;&gt;the Witch-King’s Flail&lt;/a&gt; I discovered I quite enjoyed making movie weapons, the bigger the better. The obvious next choice was Stormbreaker, Thor’s axe from Avengers: Infinity War.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/stormbreaker/Thor.png&quot; alt=&quot;First attempt&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Despite the ordering of contents below, I made a lot of these parts in parallel until it was all connected. The handle was made at the same time as I worked on the hammer and axe part, and I did a lot of the polishing and finer parts of the hammer and axe simultaneously.&lt;/p&gt;
+
+&lt;h2 id=&quot;contents&quot;&gt;Contents&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;#materials&quot;&gt;Materials&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;#the-hammer&quot;&gt;The hammer&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;#the-axe&quot;&gt;The axe&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;#the-handle&quot;&gt;The handle&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;#attaching-it-all-together&quot;&gt;Attaching it all together&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;#painting&quot;&gt;Painting&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;#a-stand&quot;&gt;A stand&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;#final-product&quot;&gt;Final product&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;#templates&quot;&gt;Templates&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;materials&quot;&gt;Materials&lt;/h3&gt;
+&lt;p&gt;Much like the Witch-King’s flail, I did not want this to be some lightweight foam thing that could bounce around willy nilly, I wanted it to &lt;em&gt;feel&lt;/em&gt; proper, and also be as life-sized as possible. So the obvious materials choices were some sort of metal, with a wooden handle. What sort of metal? Aluminium would be relatively lightweight, but difficult to attach - it’s hard to weld, and adding rivet joints everywhere would be difficult and also ruin the look. Steel would be hard to rivet, but easy to weld - and probably give me the weight I want. Some experiments led me to choose 16 gauge steel, as Home Depot sells 12”x12” and 12”x24” sheets of weldable steel in 22 gauge and 16 gauge. I’m not a particularly skilled welder, so I went for a flux-core arc welder, to avoid having the extra gas tanks. Probably should have gone a MiG in retrospect, but oh well.&lt;/p&gt;
+
+&lt;h4 id=&quot;sizing&quot;&gt;Sizing&lt;/h4&gt;
+&lt;p&gt;I made a foamboard mock-up to get an idea for size and also the structure I wanted - considering the shape and weight this thing probably needs internal supports and so on. There’s a few shots I used for size. The obvious one is above in the introduction, with Hemsworth holding it, but that invovles perspective and makes it not that obvious to discern the size. There are other closer shots, like &lt;a href=&quot;https://www.youtube.com/watch?v=egvRCdbsBKM&amp;amp;ab_channel=MoviesClips&quot;&gt;the forging scene&lt;/a&gt;, but the best two are firstly from a &lt;a href=&quot;https://youtu.be/oOUtYKcHY8M?t=77&quot;&gt;Graham Norton interview&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/stormbreaker/chris_norton.jpg&quot; alt=&quot;First attempt&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Where we see it right next to his head. Chris is a big bloke, and probably has a big head, but this still involves estimation. The other is from Avengers: Endgame, where Thor cracks a beer open on the blade (it’s not very clear, this is a very quick shot, and I had to go through frame by frame):&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/stormbreaker/beer.jpg&quot; alt=&quot;First attempt&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And this is very useful - I know exactly how big a beer bottle is, and this involves little perspective, so I can measure how many beer bottles tall the axe is. From this I can also tell the relative size of the hammer to axe, whose size I know in beer bottles … bam done. 
+Here’s the final foamboard/cardboard mockup:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/stormbreaker/cardboard.jpg&quot; alt=&quot;First attempt&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And from this I learnt what sort of supports I’d want, what size I was dealing with, etc. Let’s get started.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-hammer&quot;&gt;The hammer&lt;/h3&gt;
+&lt;p&gt;The hammer seemed the easiest starting point since it’s all flat planes and angled joints, no curves. Looking back, I wish I had a plasma cutting table; it would have meant I could CAD-model all this up, export the design, and slice all the pieces. Alas, I did not, so I measured and manually cut each piece with powered metal shears. This worked alright, but certainly was not exact. Another construction option would be 3D printing - and now I have a 3D printer large enough, though I didn’t at the time - although this would run against my desire to have an appropriate weight.&lt;/p&gt;
+
+&lt;p&gt;I started with a pair of octagons and welded them together with vertical support pieces, to make the far end of the hammer:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/stormbreaker/octagon1.jpg&quot; alt=&quot;First attempt&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In retrospect these probably didn’t need to be as thick or strong, but I was worried this would be too light and didn’t want to skimp. I also didn’t want the slightest bump to dent it (got a bit overzealous there). From there, the angled sides, to finish off the end of the hammer. The Avengers films only give quick-motion shots but I could glean enough of the shape as it appeared symmetric and regular:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/stormbreaker/hammer_end.jpg&quot; alt=&quot;First attempt&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And compared to mine:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/stormbreaker/hammer_end_mine.jpg&quot; alt=&quot;First attempt&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;At this stage, cutting with shears wasn’t too awful; I would err on the side of a piece being too big, and then grind it down to more precisely fit into its spot, but errors did propagate when I did not have four sides to constrain me. That circular piece in the centre would be added later - I wanted this to be able to sit flat on my bench for now to make other construction easier. It was, all in all, a good start, and gave me confidence that this approach was working.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/stormbreaker/octagon_compare.jpg&quot; alt=&quot;First attempt&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Next came the longer part of the hammer, and this got trickier cos it has those triangular divets running down the length on two of the sides. I preemptively cut those into my octagonal hammer end, as I figured this would be easier without sides. Then I added supports and long side pieces - big rectangles, really, as the taper only occurs towards the radial axis of the hammer:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/stormbreaker/hammer_sides.jpg&quot; alt=&quot;First attempt&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And then welding long thin triangles for the corners. My measuring and cutting inaccuracies started to show here, and I had to grind some pieces down or add more weld than I preferred to make up the difference. I originally tried to make the wedge insets from 22-gauge steel, but this proved too thin to reasonably weld, so I just made a long right angle piece from the 16-gauge and welded it in.
+I started to really notice the weight at this stage. Finally, once I knew I didn’t need to sit it on the end of the hammer any more, I added the circular piece on the end. I’m pretty sure actual Stormbreaker has Viking runes inscribed there or something; I just went with a plain piece. I cut out a circle and a curved strip, and hammered the curved strip to make the circle raised off the end with a bevelled edge. This was very hard to get even and symmetric, but it’s one of those things where you only notice inaccuracies if you look closely, and looking at the whole you just notice that it’s there:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/stormbreaker/circle.jpg&quot; alt=&quot;First attempt&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/stormbreaker/circle_closeup.jpg&quot; alt=&quot;First attempt&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;side-trim&quot;&gt;Side trim&lt;/h4&gt;
+&lt;p&gt;Look closely at the hammer:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/stormbreaker/forge_hammer.jpg&quot; alt=&quot;First attempt&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;That edging around the wide end is what I turned my attention to next. How to achieve this? I could weld flat pieces of steel, but then you have an awkward weld line, as opposed to a direct edge. I tried a raised box section of 22-gauge, but a) this looked bad as it was too raised, and b) 22-gauge was too thin to weld.&lt;/p&gt;
+
+&lt;p&gt;I cut this off and left the idea on the shelf for a while, getting on with other parts of the build, and then eventually hit upon something else: wood. I had a large piece of thin … not chip board, but pulp board? Like the backing for a desk. It was 3mm thick or so, so not too raised, and easy to attach: I glued it. It was pretty easy to cut out the shapes I want, glue them on, and the idea was that they just wouldn’t get nudged too much so glue would be enough.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/stormbreaker/wood.jpg&quot; alt=&quot;First attempt&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Maybe it’ll look good enough covered in paint?&lt;/p&gt;
+
+&lt;h4 id=&quot;the-base-plates&quot;&gt;The base plates&lt;/h4&gt;
+&lt;p&gt;The base plates for both hammer and axe, or rather the plates that would connect together around the central handle, were made exactly the same. I made the base plate for the hammer first, and copied this for the axe (no template, just measurements, but they were easy measurements and straight edges). This particular part of the whole head is not particularly clear, but we do get a glimpse or two:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/stormbreaker/closeup_forge.jpg&quot; alt=&quot;First attempt&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I saw this as an irregular but symmetric octagon, with the edges inset at the top and bottom:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/stormbreaker/baseplateshape.jpg&quot; alt=&quot;First attempt&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This was measured, cut out, and then I welded a raised edge to the inward-facing side, with a gap for the handle:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/stormbreaker/baseplate1.jpg&quot; alt=&quot;First attempt&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I could have just not done this, I suppose, and just welded a flat side panel the whole way round when I connected the two base plates later. I think the reason I had this was that each plate in the film has some small thickness, with a thicker part connecting the two that starts attached to the axe-half:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/stormbreaker/realclose.jpg&quot; alt=&quot;First attempt&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;the-axe&quot;&gt;The axe&lt;/h3&gt;
+&lt;p&gt;Unfortunately by the time I got to this Home Depot was sold out of 12”x24” steel sheets, had no larger size, and the company (Everbilt?) said they were no longer making these. Real shame, cos the way I chose to do the axe blade made this more difficult. Let’s look at the axe:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/stormbreaker/closeup_forge.jpg&quot; alt=&quot;First attempt&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This was fairly long from base to blade, and tall from tip to tip. I had the idea of cutting it down the middle, so each side was two pieces, with a straight edge and a curve. Here’s my template:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/stormbreaker/axe_template.jpg&quot; alt=&quot;First attempt&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;But this is too big for one 12”x12” sheet of steel, and I had no bigger since the 24x12’s were out of stock and no longer being sold. What to do?&lt;/p&gt;
+
+&lt;p&gt;I welded two sheets together along one side. This made things a bit wonky, as it didn’t weld flat, but … what else was I to do? Having done that, I could actually fit both the top and the bottom half of an axe side onto one of these sheets, so I cut those out - with an angle grinder, due to the curve, not shears - and welded them together. Now I have the two side of the axe blade. I wanted internal supports so it held the shape, so several rectangles were welded on the inside, and a curve at the line where I wanted the blade taper to begin - this was about 15cm from the edge:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/stormbreaker/wedge.jpg&quot; alt=&quot;First attempt&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;To get the wedge shape iconic to axes, I first thought of bending the steel with a mold or something since my metal bender vice grip would have been awkward with that curve:&lt;/p&gt;
+
+&lt;p&gt;&lt;img align=&quot;center&quot; height=&quot;50%&quot; src=&quot;/assets/stormbreaker/clamps.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This, simply put, failed. That’s not how you bend steel. My next idea was simpler: smack it with a hammer. A lot.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/stormbreaker/hammered.jpg&quot; alt=&quot;First attempt&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This worked. It meant the steel was very dented, and it was more of a curve than a wedge, perhaps more polynomial than I’d prefer, but it worked and the blade edges were close enough together such that I could weld them. I used the slanted bits of wood from the mold to provide flat and heat-distanced surfaces for the clamps, and welded the two halves together. Getting there! Just need top and bottom panels&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/stormbreaker/sides.jpg&quot; alt=&quot;First attempt&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;and then the extra detailing.&lt;/p&gt;
+
+&lt;h4 id=&quot;extra-detail&quot;&gt;Extra detail&lt;/h4&gt;
+&lt;p&gt;But it’s not &lt;em&gt;just&lt;/em&gt; an axe blade, there’s extra detail on top. These patterns, in particular:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/stormbreaker/endgame_axe.png&quot; alt=&quot;First attempt&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Difficult to get a clear picture of before Thor 4 was released, but I had a rough idea. A few sketches later and I basically decided upon what I wanted:&lt;/p&gt;
+
+&lt;p&gt;&lt;img align=&quot;middle&quot; width=&quot;50%&quot; src=&quot;/assets/stormbreaker/stormbreaker_notes2.jpg&quot; style=&quot;transform:rotate(270deg);&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I deliberately didn’t do those top and bottom patterns. Why? I thought long and hard about how to do them - a little raised triangle? There were shots from other angles that show it raised. Weld a flat piece on, grind off the weld mostly? Or copy the wood idea from the hammer? None of it sounded right in my head, and given that I’d beaten the blade into its curve with a hammer, I wasn’t working with a nice surface. So I skipped this, but sometimes wish I hadn’t. Perhaps I should have just dremel-engraved the lines in. I suppose I can go back at do that at any point.&lt;/p&gt;
+
+&lt;p&gt;After some guessing and measuring, I figured out the dimensions of the pattern: raised about 20mm from the flat of the blade at the base, going all the way to flat against it at the blade edge. I cut out these guide rails after some careful measurement, lay them down, and then welded the tops on.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/stormbreaker/axe_detail1.jpg&quot; alt=&quot;First attempt&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You can see in these shots the notes and measurements I was drawing all over the axe head; thankfully the paint covered all this later.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/stormbreaker/axe_detail2.jpg&quot; alt=&quot;First attempt&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/stormbreaker/axe_writing.jpg&quot; alt=&quot;First attempt&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Unfortunately, I must have … I’m not sure really, stetched? Angled? Mismeasured something somewhere? I did something wrong, and they didn’t align at the blade edge - off by about 10mm. Not a huge error, only noticeable when looking head on, but still, an egregious error that was easy to avoid.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/stormbreaker/errors.jpg&quot; alt=&quot;First attempt&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This aside, once everything was semi-spot-welded on, I just had some intense grinding to do. Some of these spots were quite difficult to grind, like these trapezoidal pieces:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/stormbreaker/axe_detail3.jpg&quot; alt=&quot;First attempt&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;and they ended up not looking great, but this can be excused by the fact that the branches should be wrapping tight and close here, and therefore drawing attention from minutiae.&lt;/p&gt;
+
+&lt;h4 id=&quot;the-errors&quot;&gt;The errors&lt;/h4&gt;
+&lt;p&gt;Just a comment on all the errors that accumulated during the axe construction as opposed to the hammer. The hammer was quite precise - if I could have cut every piece on a machine, I’m sure it would have fit together really well. In contrast, the axe was not. Firstly, I did not have perfectly flat pieces due to welding two panels together to cut the blade from, and then they were curved shapes and I didn’t align them well. This meant that any further pieces were welded awkwardly and I just angle-grinded edges down to fit, etc, like the blade edge. There were also gaps where I could grind everything down &lt;em&gt;that much&lt;/em&gt;, so I filled the gaps in with other steel, or just left them in some cases. Certainly for some of the extra detail it was hard to get a grinder into some of the smaller areas. I think overall I did a good job of hiding these errors, and the bigger picture tends to draw the eye rather than the final detail, but still - I wish I had done this more carefully.&lt;/p&gt;
+
+&lt;h4 id=&quot;the-base-plate&quot;&gt;The base plate&lt;/h4&gt;
+&lt;p&gt;See &lt;a href=&quot;#the-base-plates&quot;&gt;the same from the hammer&lt;/a&gt;. I did the same here. It was more difficult to weld down, as there were more errors along the axe base edge than most others - for example, one side of the axe had a tapered edge, due to … just accumulated errors. I ground it all down as flat as I could and welded it as centrally as possible.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/stormbreaker/axe_baseplate_errors.jpg&quot; alt=&quot;First attempt&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;the-handle&quot;&gt;The handle&lt;/h3&gt;
+&lt;p&gt;The handle was conceptually simple - I got another 53mm x 1.2m dowel from Home Depot, the same as I’d used for &lt;a href=&quot;https://dmckinnon.github.io/The-Witch-Kings-Flail/#the-handle&quot;&gt;the Witch-King’s flail handle&lt;/a&gt;, and this … was just about the right size I wanted straight away. It also had to be made of wood. Look at the handle from the film:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/stormbreaker/forge1.jpg&quot; alt=&quot;First attempt&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;it’s made from a bunch of vines and branches twisted together and thickening. Instead of actually weaving all this, or, heaven forbid, growing it naturally, I decided to start from a single wooden pole and carve these designs into it to give it that look. I bought a few wood carving tools and got started:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/stormbreaker/wood_carving1.jpg&quot; alt=&quot;First attempt&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Unfortunately I didn’t realise a dremel could do all this a lot quicker, but retrospectively I still like that I did it this way: it’s slower and allowed me to plan it more as I went without making a sudden drastic mistake, which is easier with a machine tool. I let the pattern emerge more naturally, as opposed to planning the whole thing ahead; I’d decide on the next few inches at a time, just letting the “branches” twist and flow throughout the design.&lt;/p&gt;
+
+&lt;p&gt;Once this was complete, I did another pass of sanding down splinters and deepening the rifts between branches to solidify the look - some of this I did with a dremel, as well as some of the smoothing, but with a light touch.&lt;/p&gt;
+
+&lt;h3 id=&quot;attaching-it-all-together&quot;&gt;Attaching it all together&lt;/h3&gt;
+&lt;p&gt;First I had to attach the two top pieces together, and then attach the handle … or so I’d imagined:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/stormbreaker/split.jpg&quot; alt=&quot;First attempt&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It actually ended up being easier to attach everything at once.&lt;/p&gt;
+
+&lt;h4 id=&quot;attaching-the-handle-to-the-head&quot;&gt;Attaching the handle to the head&lt;/h4&gt;
+&lt;p&gt;The handle had to not move at all from the head. I originally had an idea of it being detachable, so it would be easy to transport, but … that just proved to be too annoying. So I wanted to rigidly attach the handle between the hammer and axe as rigidly as possible. I squeezed it all together with clamps and welded some supports between the two sides.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/stormbreaker/connecting.jpg&quot; alt=&quot;First attempt&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;For extra security screws were added through those into the handle, with a support across the top and a massive 10mm bolt to really hold it in. This held, but had an awful centre of mass. I could really only carry it directly upright:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/stormbreaker/head_handle.jpg&quot; alt=&quot;First attempt&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Finally, some panels to cover the sides:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/stormbreaker/side_panels.jpg&quot; alt=&quot;First attempt&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You might ask, “Why have these side panels if they’ll just be covered with wood?” Good question - they weren’t going to be completely covered. The branches around the head ideally were going to have gaps and spots where you could see through, so I wanted metal below that. Now all I needed was to add the “branches” flowing from the dowel up and around the head. Timber doesn’t flow easily, funnily enough, but can be carved. I bought a 6’x6’x48’ beam and cut a few blocks off, then fit some shaped blocks around the outside of the head:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/stormbreaker/wooden_head_blocks.jpg&quot; alt=&quot;First attempt&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;These were clamped and glued around the head so they weren’t going anywhere, and then the real work began: carving the patterns out of this block. Again, they emerged semi-organically, working from the patterns I’d made each side in the handle. There were a few air gaps that I don’t like, but it largely went well. Several router bits for the dremel later:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/stormbreaker/wood_carving2.jpg&quot; alt=&quot;First attempt&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/stormbreaker/wood_carving3.jpg&quot; alt=&quot;First attempt&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And I had what felt close to accurate! Any gaps were patched with wood putty, which stood out at first but once stained faded into the same colour.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-counterweight&quot;&gt;The counterweight&lt;/h3&gt;
+&lt;p&gt;Everything being attached threw a particular problem into sharp relief: the head was roughly 13kgs, and the handle was … 500g at best. Less, maybe. So the centre of mass was basically inside the handle, and this had incredible lever arm force wherever you held the handle. I needed a counterweight to be able to hold it in any way that wasn’t directly upright. But what’s super heavy? I need to counteract 13kgs, and shift the balance point to a comfortable holding spot on the handle, perhaps twenty centimetres lower than the head. Furthermore, there wasn’t a lot of room to fit a counterweight reasonably, so any counterweight needed to be very dense.&lt;/p&gt;
+
+&lt;p&gt;Lead came to mind, as a compromise between density and cost (platinum may be better for density but is \(\)$$). I bought a large fishing sinker, 7lbs of lead or so. How to attach this? Well, the melting point of lead is 327 degrees Celsius, and while wood ignites at about 300 degrees Celsius, it needs a good environment to sustain a burn … and I’d also felt that the end of the handle needed to look thicker anyway. So I cut another block off the thick beam I had, and drilled and carved out the centre to make a) a pit for the sinker to fit in, and b) a hole just wide enough to jam the handle in and attach this tightly:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/stormbreaker/block_end.jpg&quot; alt=&quot;First attempt&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The lead melted easily and was poured into this block, and then I shoved the handle in, screwed and glued it in. The wood block burnt a bit on the inside but didn’t catch further, presumably because a) there wasn’t much oxygen when I kept pouring lead in, and b) it was outside and cold; the lead cooled quite quickly. Finally, branch patterns were added to this block:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/stormbreaker/block_end_branches.jpg&quot; alt=&quot;First attempt&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This lowered the centre of mass to almost a comfortable point. Retrospectively, I should have gone easier on the supports in the head. I probably could not have used a much lighter steel, since the welder just sliced straight through the 22 gauge, and 20 gauge and 18 gauge just weren’t sold at Home Depot, but I could have used less steel - the supports did not need to be as strong as they were. I didn’t want to go much heavier on the counterweight since I still needed to be able to lift this entire thing &lt;em&gt;at all&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;painting&quot;&gt;Painting&lt;/h3&gt;
+
+&lt;h4 id=&quot;the-head&quot;&gt;The head&lt;/h4&gt;
+&lt;p&gt;This involved a bunch of tests between matte and shiny metal grey:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/stormbreaker/matte_shiny.jpg&quot; alt=&quot;First attempt&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;before I settled on the shiny metallic silver - it felt more true to the movie version, which looked to me very shiny and reflective and “ideal” rather than old, used, worn metal - I suppose this makes sense, given that in Infinity War at least it was used about five minutes after forging, so it’s about as new as it gets. I had done a layer of cold gal first, just to make sure it would last.&lt;/p&gt;
+
+&lt;h4 id=&quot;the-handle-1&quot;&gt;The handle&lt;/h4&gt;
+&lt;p&gt;The handle was stained, rather than painted; the wood I used was a rather light colour, and I wanted a much deeper brown to match Groot’s arm:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/stormbreaker/groot.jpg&quot; alt=&quot;First attempt&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So I just did layer after layer of a particular stain:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/stormbreaker/stained.jpg&quot; alt=&quot;First attempt&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I think I should have gone with a darker brown, but this still looks good and nice and tree-woody.&lt;/p&gt;
+
+&lt;h3 id=&quot;a-stand&quot;&gt;A stand&lt;/h3&gt;
+&lt;p&gt;As with my previous stands (links), this was a quick and dirty low effort stand, as it’s not the centre of attention. The only consideration was that the axe had to hang from this, and the stand had to support the weight. I settled for a couple of braced steel beams, with supports between them:&lt;/p&gt;
+
+&lt;p&gt;&lt;img align=&quot;middle&quot; width=&quot;50%&quot; src=&quot;/assets/stormbreaker/just_stand.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;final-product&quot;&gt;Final product&lt;/h3&gt;
+&lt;p&gt;And here’s how it turned out!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/stormbreaker/final1.jpg&quot; alt=&quot;First attempt&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/stormbreaker/final2.jpg&quot; alt=&quot;First attempt&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/stormbreaker/on_stand.jpg&quot; alt=&quot;First attempt&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As I’ve said, the centre of mass is a bit of a problem; less steel should have been used. The head is about 13kgs alone, and the entire thing at about 16kgs. Other post-build considerations I have are perhaps a darker stain on the wood for the handle, and more careful measuring/cutting for the easy-to-measure parts like the hammer end. Finally, a computer-aided plasma cutter would have given me much more precise pieces. All those nitpicks aside, this was a lot of fun to make. I really enjoyed the wood and metal work, nothing fiddly with costumes or fitting to my shoulders or head, no foam.&lt;/p&gt;
+
+&lt;p&gt;Let’s compare to some other designs I found online - I tried to not bias myself by looking at these too much beforehand or during.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;There’s this from The Hacksmith, who also clearly did body prep for the role:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/stormbreaker/hacksmith.jpg&quot; alt=&quot;First attempt&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Frankly Built gave it a crack with 3D printing the whole thing - I bet his is much lighter and easier to transport:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img align=&quot;center&quot; width=&quot;70%&quot; src=&quot;/assets/stormbreaker/frank_built.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Frankly Built then unboxed this one from Hasbro:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/stormbreaker/hasbro.jpg&quot; alt=&quot;First attempt&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Here’s a toy one from Amazon:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img align=&quot;center&quot; width=&quot;50%&quot; src=&quot;/assets/stormbreaker/amazon.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A lot of people seem to do a less branchy handle, or a curved handle. I don’t understand why; the film makes it pretty clear the handle is relatively straight and made from wood-based branches - maybe it’s something from the comics? But they do tend to get the head more accurate - I wish I could have achieved more detail there, it is the centrepiece after all. That Hasbro one appears to be the most accurate, except perhaps in size - perhaps I should have bought one and modelled from that instead of going from blurry film frames. Hacksmith used more ropey-lloking stuff to make the branches at the top, and I think that’s a good idea. Theirs was ~47kgs though; at least I can carry mine reasonably.&lt;/p&gt;
+
+&lt;h4 id=&quot;opinion-after-watching-thor-4&quot;&gt;Opinion after watching Thor 4&lt;/h4&gt;
+&lt;p&gt;As can be seen, Stormbreaker does not have many clear shots in Avengers: Infinity War or Endgame. However, there are many slow, well-focused close ups in Thor: Love and Thunder:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/stormbreaker/closeup_lot.jpg&quot; alt=&quot;First attempt&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/stormbreaker/lot2.jpg&quot; alt=&quot;First attempt&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And after watching this I’m all the more impressed, even if I am saying that myself - I got really close! I’m judging this on size accuracy and shared detail between mine and the film. The major aberrations are the detailing on the top and bottom of the blade, and the branches wrapping around the head itself - these should have been thinner, sparser, and spread out further down the hilt.&lt;/p&gt;
+
+&lt;h3 id=&quot;templates&quot;&gt;Templates&lt;/h3&gt;
+&lt;p&gt;Alas, I lost my axeblade template, but here are my written notes with dimensions, along with some photos with a measuring tape:&lt;/p&gt;
+
+&lt;p&gt;&lt;img width=&quot;50%&quot; src=&quot;/assets/stormbreaker/stormbreaker_notes1.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img align=&quot;center&quot; width=&quot;50%&quot; src=&quot;/assets/stormbreaker/stormbreaker_notes2.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img align=&quot;center&quot; width=&quot;50%&quot; src=&quot;/assets/stormbreaker/stormbreaker_notes3.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img align=&quot;center&quot; width=&quot;50%&quot; src=&quot;/assets/stormbreaker/measurement1.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img align=&quot;center&quot; width=&quot;50%&quot; src=&quot;/assets/stormbreaker/measurement2.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img align=&quot;center&quot; width=&quot;50%&quot; src=&quot;/assets/stormbreaker/measurement3.jpg&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="Projects" /><summary type="html">“A King’s weapon. Meant to be the greatest in Asgard. In theory it could even summon the Bifrost.” “It have a name?” “Stormbreaker”</summary></entry><entry><title type="html">The Witch King’s Armour</title><link href="http://localhost:4000/The-Witch-King-Armour/" rel="alternate" type="text/html" title="The Witch King’s Armour" /><published>2020-08-24T10:58:35-07:00</published><updated>2020-08-24T10:58:35-07:00</updated><id>http://localhost:4000/The-Witch-King-Armour</id><content type="html" xml:base="http://localhost:4000/The-Witch-King-Armour/">&lt;p&gt;&lt;a href=&quot;https://youtu.be/HF2sQtH7WpE?t=84&quot;&gt;“The spikes somehow evoke the crown of thorns. I don’t know quite what that means”&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;I first had the thought of making replica armour of the Witch-King of Angmar several years ago, made a start, faltered, put it aside … and then came the pandemic and with it loads of time at home alone. So while the gauntlets were started in 2018, most of this happened in 2020 - and also in a bit of a weird order. I kept jumping around between parts, using &lt;a href=&quot;https://solvingprocrastination.com/productive-procrastination/&quot;&gt;productive procrastination&lt;/a&gt;.&lt;/p&gt;
 
@@ -47,11 +715,11 @@
 
 &lt;p&gt;Treeflx also gave me a really nice texture that appeared to be in the film too. Take a look at this closeup:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/eyes.jpg&quot; alt=&quot;spiky&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-armour/eyes.jpg&quot; alt=&quot;spiky&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;and then a closeup of my painted treeflx (spoiler alert):&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/texture2.jpg&quot; alt=&quot;spiky&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-armour/texture2.jpg&quot; alt=&quot;spiky&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I’m not far from the correct texture. I suppose it’s due to the grainy nature of treeflx, and I didn’t do a thick layer of primer before painting - but that was deliberate. I wanted that texture.&lt;/p&gt;
 
@@ -61,9 +729,9 @@
 &lt;h3 id=&quot;the-helmet&quot;&gt;The helmet&lt;/h3&gt;
 &lt;p&gt;This was my favourite part of the entire build, as it’s just so iconic and noticeable, but also a difficult one to start - look at it:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/nazgul.jpg&quot; alt=&quot;spiky&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-armour/nazgul.jpg&quot; alt=&quot;spiky&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/head_and_shoulders.jpg&quot; alt=&quot;spiky&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-armour/head_and_shoulders.jpg&quot; alt=&quot;spiky&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Where do you start? 
 After much consideration, I broke it down into:&lt;/p&gt;
@@ -78,7 +746,7 @@ After much consideration, I broke it down into:&lt;/p&gt;
 &lt;h4 id=&quot;the-forehead-spike&quot;&gt;The Forehead Spike&lt;/h4&gt;
 &lt;p&gt;I rolled together two sheets to create a really long sheet as this spike was approximately a foot long (guessing from the films and actor and scaling down to my size). Simple to draw, and just had to make sure it didn’t taper too strongly. Here’s an initial version that mostly stayed the same:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/head_spike.jpg&quot; alt=&quot;spiky&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-armour/head_spike.jpg&quot; alt=&quot;spiky&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I used my finger and a butter knife while the treeflx was hot to fold it all around that centre crease, and just pressed it against my nose for the nose bridge. I think the only other changes after that were slightly thinning the spike at the top; otherwise, I hit close to bullseye first go.&lt;/p&gt;
 
@@ -90,15 +758,15 @@ After much consideration, I broke it down into:&lt;/p&gt;
 
 &lt;p&gt;The cheeks are not flat pieces; they curve with the face a bit and have their own waves and so on. Templates only got me so far, but I think I started from a strong spot. Here you can see I’ve drawn some attempts, molded them back in, and cut new attempts:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/initial_cheek.jpg&quot; alt=&quot;cheeky&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-armour/initial_cheek.jpg&quot; alt=&quot;cheeky&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;This stage had a lot of size adjustment - how long do I make those cheek spikes? How far down and also in front of my face should they go? The recurved spikes back up - how close should they meet in the middle? Many question, sand much close watching of various films clips happened. You can see my experiments with different lengths here, compare the left and the right:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/front.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-armour/front.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I eventually just picked something that seemed right to me - remember, I’m sizing this to my head - and went with it. Then came the finer detail. Take a look at the cheeks around the ear-level: there’s these deep grooves that lead to a webbed/bat-wing style look. This was just many iterations of heating, molding by hand, cooling, checking, wearing, repeat. For those who want to try this at home, sorry I don’t have an exact method for you to follow. Here’s an in progress shot:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/grooves.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-armour/grooves.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;As an aside, you can see the history of the piece right there - previous lines and text squished in, previous pieces I used molded back into this cheek piece, and also notes for future changes on the band and the spike.&lt;/p&gt;
 
@@ -107,69 +775,69 @@ After much consideration, I broke it down into:&lt;/p&gt;
 &lt;h4 id=&quot;final-before-painting&quot;&gt;Final before painting&lt;/h4&gt;
 &lt;p&gt;The black covering for my head is a sleeve of a shirt that I sewed one end shut on. Simple, does the job. I certainly can’t see well, but there’s enough other impracticalities with this entire costume that I’m not stressed there - for example, gotta try not to stab someone in the face as I walk past them.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/spikes.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-armour/spikes.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Looking back, I think my spikes are not as angled as the film prop:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/head_and_shoulders.jpg&quot; alt=&quot;spiky&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-armour/head_and_shoulders.jpg&quot; alt=&quot;spiky&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;But you know what, it’s probably ok. No one has called me out on this.&lt;/p&gt;
 
 &lt;h3 id=&quot;the-gauntlets&quot;&gt;The gauntlets&lt;/h3&gt;
 &lt;p&gt;As I said at the beginning, I had originally found a template online for these and worked from that. I bought some basic black pleather gloves with long wrists online, and looking at the gauntlets from the film, things seemed obvious:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/nazgul.jpg&quot; alt=&quot;spiky&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-armour/nazgul.jpg&quot; alt=&quot;spiky&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/movie_gauntlet.jpg&quot; alt=&quot;spiky&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-armour/movie_gauntlet.jpg&quot; alt=&quot;spiky&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;They’re made of little spiky plates lined along the fingers, with some back-of-hand plates that are bigger, with a bit of a webbed bat-wing pattern. This was also clear from the templates:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/template1.jpg&quot; alt=&quot;spiky&quot; class=&quot;center&quot; /&gt;
-&lt;img src=&quot;/assets/template2.jpg&quot; alt=&quot;spiky&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-armour/template1.jpg&quot; alt=&quot;spiky&quot; class=&quot;center&quot; /&gt;
+&lt;img src=&quot;/assets/wk-armour/template2.jpg&quot; alt=&quot;spiky&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I did a few iterations of the first spiky plate before settling on a design that was big enough to wrap around my finger, but not prohibitively big. Once I had that, it was just a matter of cutting them all out from a plate of treeflx and gluing them to my fingers.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/finger_curl.jpg&quot; alt=&quot;groovy&quot; class=&quot;left&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-armour/finger_curl.jpg&quot; alt=&quot;groovy&quot; class=&quot;left&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/hand_Start1.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-armour/hand_Start1.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/all_fingers.dng&quot; alt=&quot;groovy&quot; class=&quot;right&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-armour/all_fingers.dng&quot; alt=&quot;groovy&quot; class=&quot;right&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;As I said before, I wish I had thought of flattening the treeflx earlier, if only to make cutting easier. At least I was efficient in other ways:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/cutting.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-armour/cutting.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;This …. just took ages. You know what else takes ages? Watching all the Lord of the Rings films. At least I could do this in the background as I worked. One of the more difficult parts of this was I only had one hand to mold and glue - since the other hand had to be in the glove so things were pressed on in the right way while hot. Yes, I could have bought a fake hand … alas for hindsight.&lt;/p&gt;
 
 &lt;p&gt;Every so often I would check functionality - could I curl my hand without pieces breaking off, could I grip things, etc, just to make sure I wasn’t losing that.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/grip.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-armour/grip.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The knuckles and the back of the hand came next - let’s take a look at the templates:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/template3.jpg&quot; alt=&quot;spiky&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-armour/template3.jpg&quot; alt=&quot;spiky&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Again, there’s many ribbed/webbed/whatever plates leading down the back of the hand, and this has proved difficult over the years in that whenever I take it out to wear it I inevitably have to reglue some part of this - the pieces are just not a nice shape to sit on the hand. Ah well. Cut from template, mold with two hands, stick to back of one hand, repeat.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/knuckles1.jpg&quot; alt=&quot;groovy&quot; class=&quot;left&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-armour/knuckles1.jpg&quot; alt=&quot;groovy&quot; class=&quot;left&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/knuckles2.dng&quot; alt=&quot;groovy&quot; class=&quot;right&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-armour/knuckles2.dng&quot; alt=&quot;groovy&quot; class=&quot;right&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I worked all the way down to that flat piece on the wrist, which also hit the end of the glove and I figured that was a good stopping point for the gauntlets - at the time I wasn’t sure if I would do a wrist piece or not.&lt;/p&gt;
 
 &lt;h3 id=&quot;the-rest-of-the-arm&quot;&gt;The rest of the arm&lt;/h3&gt;
 &lt;p&gt;This part involved the most guesswork. There’s probably less than 5 seconds &lt;em&gt;total&lt;/em&gt; where you can see the shoulder/upper arm/wrist armour of the Witch King &lt;em&gt;at all&lt;/em&gt;, let alone clearly. It’s in a few broad shots, where I think the entire character is completely CGI:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/full_body.jpg&quot; alt=&quot;groovy&quot; class=&quot;left&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-armour/full_body.jpg&quot; alt=&quot;groovy&quot; class=&quot;left&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/full_cgi.jpg&quot; alt=&quot;groovy&quot; class=&quot;right&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-armour/full_cgi.jpg&quot; alt=&quot;groovy&quot; class=&quot;right&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;These weren’t particularly helpful, so I didn’t overindex on them. Then there’s a few close ups where you can see the shoulders easier, as well as a separate shot I used for the wrist. Let’s start with the wrist.&lt;/p&gt;
 
 &lt;h4 id=&quot;the-wrist&quot;&gt;The wrist&lt;/h4&gt;
 &lt;p&gt;This is most clearly seen in the shot that pans down from behind, facing Eowyn, as W-K lifts his flail - “clearly seen”, yeah right.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/handle_forearm.jpg&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-armour/handle_forearm.jpg&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;So again, I watched that scene &lt;em&gt;to death&lt;/em&gt;. Here’s my notes:&lt;/p&gt;
 &lt;ul&gt;
@@ -182,21 +850,21 @@ After much consideration, I broke it down into:&lt;/p&gt;
 
 &lt;p&gt;Good grief. I tried some experiments with a fluted piece near the start of the wrist, that would lead into this, but it didn’t feel right:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/fluted_wrist.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-armour/fluted_wrist.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;First off, I made a decision: only one piece, no spearate elbow piece or wrist piece from the main forearm piece. This is already getting immensely complicated and elbows are a pain.
 I flattened out one large sheet, heated it up, and just straight up pressed it onto my arm. Not comfortable at all, but it’s not hot enough to burn me and it worked. The raised grooves were easy, just really thin cuts rolled into cylinders and heat-pressed on, taking care to keep them raised. I kinda winged the patterns a bit, cos we get to see so little. The elbow spike I made separately, and gave it some structure to make it more robust, and then heat-attached it to the end of the arm. Here’s the attempt thus far:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/forearm.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-armour/forearm.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Those ridges need to be smoothed down, but otherwise I was quite happy! Again this was difficult since I could only use one hand at a time and I’m heavily right handed, but I made do.&lt;/p&gt;
 
 &lt;h4 id=&quot;shoulders&quot;&gt;Shoulders&lt;/h4&gt;
 &lt;p&gt;Let’s examine the few shreds of footage there are of the shoulders:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/head_and_shoulders.jpg&quot; alt=&quot;groovy&quot; class=&quot;left&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-armour/head_and_shoulders.jpg&quot; alt=&quot;groovy&quot; class=&quot;left&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/nazgul.jpg&quot; alt=&quot;groovy&quot; class=&quot;right&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-armour/nazgul.jpg&quot; alt=&quot;groovy&quot; class=&quot;right&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Notes:&lt;/p&gt;
 &lt;ul&gt;
@@ -210,22 +878,22 @@ I flattened out one large sheet, heated it up, and just straight up pressed it o
 
 &lt;p&gt;There’s also the question of how these will attach to my arm. I decided on straps and buckles, attached on the inside of all the pieces at the right points (somehow), and buckled under my arm. For the shoulder piece, theoretically it would also rest atop my shoulder and so stay on that way. There’s perhaps better ways, but this ended up working. I made my own straps from left-over pleather, by sewing long cylinders, sewing buckles onto the end, and then using small screws and washers to hold these to the armour. This final part was not great, but it meant they could rotate, instead of being glued in. Here’s a photo&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/strap1.jpg&quot; alt=&quot;groovy&quot; class=&quot;left&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-armour/strap1.jpg&quot; alt=&quot;groovy&quot; class=&quot;left&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/strap2.jpg&quot; alt=&quot;groovy&quot; class=&quot;right&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-armour/strap2.jpg&quot; alt=&quot;groovy&quot; class=&quot;right&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I started with the shoulder piece, as that was the biggest and probably the most defining. A large plate, rolled thin, heated and pressed against my own shoulder to get the basic shape. I padded this out to a nice rounded shape with an orange and my hands, as I felt it should be more filled than my scrawny lil shoulder, and more even. For the webbed end I just picked a design and cut it out:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/shoulder1.jpg&quot; alt=&quot;groovy&quot; class=&quot;right&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-armour/shoulder1.jpg&quot; alt=&quot;groovy&quot; class=&quot;right&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;That ridge that sticks out was a long thin strip that was heat-molded onto the end, and this took several goes to get it sticking strongly at a right angle. Another bar on top, and it was working pretty well. Again, all this was was major guesswork from a few tiny frames. The ridges I added last, and this was retrospectively a mistake, so I did this differently for the other shoulder. I suppose one was going to be a test case anyway, and I ended up liking the test case. The curved shape made it really hard to smooth the ridges out properly, which is so much easier on a flat surface. Regardless, I was happy with the final product:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/upper_arm.jpg&quot; alt=&quot;groovy&quot; class=&quot;right&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-armour/upper_arm.jpg&quot; alt=&quot;groovy&quot; class=&quot;right&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;You’ll also note the next two pieces in that photo (and they’re all painted, I did not document this properly at the time). These followed fairly simply, in that I largely copied the ridges, the webbed end, etc, and just made sure to make them short so they would fit one under the other, and without going too far down my arm. I also made sure to not make anything too uniform (ridge placement, webbed end, etc), as I felt this armour exhibited a bit of … not haphazard design, but not the standard uniformity one expects of armour. I did left-right mirror every piece though.&lt;/p&gt;
 
 &lt;h4 id=&quot;bringing-it-all-together&quot;&gt;Bringing it all together&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/whole_arm.jpg&quot; alt=&quot;groovy&quot; class=&quot;right&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-armour/whole_arm.jpg&quot; alt=&quot;groovy&quot; class=&quot;right&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;It felt so great to put this all on, it came together really well!&lt;/p&gt;
 
@@ -236,51 +904,53 @@ I flattened out one large sheet, heated it up, and just straight up pressed it o
 
 &lt;p&gt;Layer of new paint, layer of glue, and these pieces were looking schmicko:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/mace_and_helmet.jpg&quot; alt=&quot;groovy&quot; class=&quot;right&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-armour/mace_and_helmet.jpg&quot; alt=&quot;groovy&quot; class=&quot;right&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;the-cloak&quot;&gt;The cloak&lt;/h3&gt;
 &lt;p&gt;I wanted a long black cloak with wide sleeves, and a hood. Someone online linked me to one they found online for general costume-ness, and they’d used this for their Witch-King build. Sounds good to me. Bought one, but it was too … &lt;em&gt;clean&lt;/em&gt;, as you can see in the photo. This needed to be aged. Tatty. Worn. The actual one in the film looks thicker and heavier, and the purchased one was thin, light, and wavy. However, there’s a practical element: costumes are &lt;em&gt;hot&lt;/em&gt; and I was going to sweat in this. Might as well keep it light.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/straight_clock.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-armour/straight_clock.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I subjected the cloak to some fast wear-and-tear, including brushing it with various string wire brushes intended for cleaning up metal, slashing it a bit, sewing bits together to create intentional folds so it didn’t sit too straight, and then also weighing it down - I sewed steel ball bearings that I had lying around into the bottom hem, just to keep it from being too floaty.&lt;/p&gt;
 
 &lt;h3 id=&quot;sabatons&quot;&gt;Sabatons&lt;/h3&gt;
 &lt;p&gt;These were a lot of effort for perhaps something not necessary. Impractical to wear, at least. But you can see sabatons in the film - or rather, I could, due to how closely I was watching. Briefly, in the full body shots from before, and snippets in the behind-the-scenes:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/sabaton.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-armour/sabaton.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;And this was also an opportunity to add some height - the actor who played the Witch King was a huge man, and I’m … not. Some more height would be nice, really get that &lt;em&gt;looming&lt;/em&gt; feel. To give myself height, I started off by making a boot shape from some left over 7-ply wood, and holding my shoes in with plates of treeflx:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/boot1.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-armour/boot1.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I wanted to not have an entirely rigid sole, hence the split pieces that would be loosely connected, so I could still bend my foot. There’s next to no footage of sabatons from the film (maybe a tiny snippet), so I kinda just … made sabatons from my imagination. Had to be able to get shoes in and out easily, so I designed them with a lot of pieces that could come apart. You can see the overlaps here:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/sabaton_pieces.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-armour/sabaton_pieces.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The toe spike is raised there and as soon as I did it people pointed out it looked stupid and not proper, so I later moved it down but don’t have an unpainted photo.&lt;/p&gt;
 
 &lt;p&gt;This was a lot of heating treeflx and pressing it against different parts of my shoe or leg, and then smoothing it out to make sure the pieces didn’t have weird creases. I then bought two long leather straps and threaded them through holes made in each piece, to tie off at the ends. Takes a while, but works and looks nice and medieval.&lt;/p&gt;
 
 &lt;h3 id=&quot;a-stand&quot;&gt;A stand&lt;/h3&gt;
-&lt;p&gt;Far be it from me to just purchase a mannequin. I made something akin to a crucifix out of 2mm box section steel and bent the arms into the position I wanted, so the head rested on the top of the cross, and the arms came off the sides. Unfortunately I did not take a photo of it at this stage, but it’s not important.&lt;/p&gt;
+&lt;p&gt;Far be it from me to just purchase a mannequin. I made something akin to a crucifix out of 2mm box section steel and bent the arms into the position I wanted, so the head rested on the top of the cross, and the arms came off the sides.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/wk-armour/witch_king_stand.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Duct-tape around my arms, subsequently ripped off (ouch), gave a relatively solid shape for the arms. Combining that with a lot of space-filling stuffing padded everything out nicely, including the head.&lt;/p&gt;
 
 &lt;h3 id=&quot;final-product&quot;&gt;Final product&lt;/h3&gt;
 &lt;p&gt;And here’s how it turned out!&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/full1.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-armour/full1.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/full2.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-armour/full2.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/full3.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-armour/full3.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I’m &lt;em&gt;really&lt;/em&gt; pleased with this, the helmet especially. There aren’t many people who would notice the other arm pieces I suspect, but the helmet is the centre piece, the main eye-draw, the, well, crown. It ended up &lt;em&gt;fantastic&lt;/em&gt;, although I often forget my head is a good foot taller than it should be and door frames are annoying. Everything is annoying, frankly - I wore this to a halloween part and ended up taking half of it off for most of it, just to be able to eat, drink, and chat reasonably.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/halloween1.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-armour/halloween1.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/halloween2.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-armour/halloween2.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Even then I had to watch out that I didn’t accidentally stab people. But that helmet &lt;em&gt;looms&lt;/em&gt; and just looks so good. Here’s a shot from a friend’s halloween party, and I &lt;em&gt;dined out&lt;/em&gt; on compliments all evening, including many repetitions of my favourite “Where’d you buy this … wait seriously? You &lt;em&gt;made&lt;/em&gt; this?!?!”&lt;/p&gt;
 
@@ -289,33 +959,33 @@ I flattened out one large sheet, heated it up, and just straight up pressed it o
 &lt;h3 id=&quot;templates-1&quot;&gt;Templates&lt;/h3&gt;
 &lt;p&gt;Below are the templates I used for various parts. Firstly, the cheek template:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/cheek_template.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-armour/cheek_template.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The upper shoulder piece, both front-on and side on:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/shoulder_template.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-armour/shoulder_template.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/side_shoulder_template.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-armour/side_shoulder_template.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The remaining upper arm pieces:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/arm_template.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-armour/arm_template.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Working down, the wrist and hand templates:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/hand_templates.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-armour/hand_templates.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The two types of finger piece - the tip and the pieces along the finger:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/finger_templates.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-armour/finger_templates.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;And the slightly different template I made for my thumb:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/thumb_template.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="Projects" /><summary type="html">“The spikes somehow evoke the crown of thorns. I don’t know quite what that means”</summary></entry><entry><title type="html">The Witch King’s Flail</title><link href="http://localhost:4000/The-Witch-Kings-Flail/" rel="alternate" type="text/html" title="The Witch King’s Flail" /><published>2022-08-17T10:58:35-07:00</published><updated>2022-08-17T10:58:35-07:00</updated><id>http://localhost:4000/The-Witch-Kings-Flail</id><content type="html" xml:base="http://localhost:4000/The-Witch-Kings-Flail/">&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=ZAO4t8672hc&amp;amp;ab_channel=Baronessa&quot;&gt;“Some people call it a mace, some people call it a morningstar … I ended up calling it damned heavy, cos it was … it was damned heavy&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-armour/thumb_template.jpg&quot; alt=&quot;groovy&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="Projects" /><summary type="html">“The spikes somehow evoke the crown of thorns. I don’t know quite what that means”</summary></entry><entry><title type="html">The Witch King’s Flail</title><link href="http://localhost:4000/The-Witch-Kings-Flail/" rel="alternate" type="text/html" title="The Witch King’s Flail" /><published>2020-03-17T10:58:35-07:00</published><updated>2020-03-17T10:58:35-07:00</updated><id>http://localhost:4000/The-Witch-Kings-Flail</id><content type="html" xml:base="http://localhost:4000/The-Witch-Kings-Flail/">&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=ZAO4t8672hc&amp;amp;ab_channel=Baronessa&quot;&gt;“Some people call it a mace, some people call it a morningstar … I ended up calling it damned heavy, cos it was … it was damned heavy&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Late 2019 I needed to burn some time and thought it would be fun to start making a life-size replica of the flail of the Witch King of Angmar - specifically the version in the Lord of the Rings films:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/film_mace.jpg&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-flail/film_mace.jpg&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;There’s not many clear shots, as ole Witchy is mostly hefting it at poor Eowyn, but you get the idea. I had already begun a bit of my &lt;a href=&quot;https://dmckinnon.github.io/The-Witch-King-Armour/&quot;&gt;Witch King armour costume&lt;/a&gt;, and needed a break, so this provided a related distraction.&lt;/p&gt;
 
@@ -352,80 +1022,80 @@ I flattened out one large sheet, heated it up, and just straight up pressed it o
 
 &lt;p&gt;First things first, let’s get a good look at this thing, and figure out how big I should make it. I watched &lt;a href=&quot;https://www.youtube.com/watch?v=dQ_-rmuPZC4&amp;amp;t=77s&amp;amp;ab_channel=jullingen&quot;&gt;several&lt;/a&gt; &lt;a href=&quot;https://www.youtube.com/watch?v=ZAO4t8672hc&amp;amp;ab_channel=Baronessa&quot;&gt;clips&lt;/a&gt; from the film and behind the scenes over and over, frame by frame, to get an idea for the size, using people as a comparison. Eg. Peter Jackson is 5’7”, and look at how big the spiky chunk is next to him - that gives a good idea for size.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/pete.jpg&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-flail/pete.jpg&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The other part was to make a basic outline shape from cheap foam board. I cut out several cross sections and fit them together to make a 6-point star head at a particular size, before I realised it’s 8 points (retrospectively,I should have googled it because here it is, clear and obvious). But this is the sizing draft, so that doesn’t matter - and I decided that, in the spirit of Peter Jackson, it was roughly 50% too small. So let’s go bigger.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/draft.jpg&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-flail/draft.jpg&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;materials&quot;&gt;Materials&lt;/h4&gt;
 &lt;p&gt;I didn’t know how invested I’d get in this, and so went for the idea of “cheap and whatever I have lying around, plus cheap stuff from Home Depot” - so I used some massive 7-ply boards I had sitting around in the shed. Heavy stuff, but it worked. With my bigger cross sections, I sketched the outlines onto the wood and jigsaw’d these out. These then fit around a centre pole (53mm dowel from Home Depot) that slotted into the centre. At this stage it fit really tight and not well, and was more of a mace on the end of an immense stick. A nice weapon, but not what I wanted.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/mace_on_stick.jpg&quot; alt=&quot;More of a staff&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-flail/mace_on_stick.jpg&quot; alt=&quot;More of a staff&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;This head felt about the right size, and weight too - I didn’t want some lightweight foam thing swaying in the breeze, I wanted you to &lt;em&gt;feel&lt;/em&gt; when you were lifting this. This had to feel real. And it did.&lt;/p&gt;
 
 &lt;h3 id=&quot;filling-out-the-skeleton&quot;&gt;Filling out the skeleton&lt;/h3&gt;
 &lt;p&gt;I needed to properly attach these ‘ribs’ to the central rod, and then fill the space betweeen these ribs to create the final shape - and probably reduce the weight a bit while I was at it, cos 7-ply was hefty stuff. It fit together as in the above photo, but not cleanly, and the outward-facing edges are flat. These need to be tapered so as to present less of a surface - this’ll aid in getting a nice smooth curve around the flail later, rather than having wooden edges poking out and ruining that rounded shape. Furthermore, the inward-facing surfaces need to taper to an edge so that the ribs can slot together properly. A handheld belt sander did the trick:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/sanded1.jpg&quot; alt=&quot;I dont like sand&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-flail/sanded1.jpg&quot; alt=&quot;I dont like sand&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;And then they slotted together nicely, bit of wood glue (a LOT of wood glue) and it held!
 So how to fill all that empty space to give it some body?&lt;/p&gt;
 
 &lt;p&gt;Spray-on space-filling foam seemed the best option, though I will admit I did not research alternatives extensively. I went through four or five cans to get it to this stage&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/foam_mace.jpg&quot; alt=&quot;lotta foam&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-flail/foam_mace.jpg&quot; alt=&quot;lotta foam&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;and then cut it down to something more resembling the final product. Did this with just a knife, shaping bit by bit until it looked and felt right. There was very little exactness after this stage, just a lot of me comparing what I had to photos and eyeballing it.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/foam_cut2.jpg&quot; alt=&quot;lotta foam&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-flail/foam_cut2.jpg&quot; alt=&quot;lotta foam&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The one difficult part was the spikes - take a look (photo) - they’re very … spiky, sure, but triangular, or like cones with edges. The point is, those tips are a very particular well-defined shape and I couldn’t just have blobs. I was careful to keep the foam around the wood in a similar shape to assist later on. These spikes needed to hold the weight, as I noticed they were resting points, but also hold their shape. I played around with covering them in shells of thin cardboard, which bent quickly and easily, and then also thin-but-still-rigid shells of treeflx, which worked a lot better. You can see the different attempts on various spikes - card centre and right, treeflx on the left one:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/foam_cut1.jpg&quot; alt=&quot;PINK&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-flail/foam_cut1.jpg&quot; alt=&quot;PINK&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://www.treeflx.com/store/c2/TreeFLX#/&quot;&gt;Treeflx&lt;/a&gt; is amazing stuff. Heat it, mold it, stick it in a stew … well, not the latter, but you can heat it up, roll it thin, cut it with scissors, and then it cools to a very rigid shape. It became very useful in the handle, as you’ll see.&lt;/p&gt;
 
 &lt;h3 id=&quot;the-handle&quot;&gt;The handle&lt;/h3&gt;
 &lt;p&gt;While the head gets built, I started to think about how the handle will attach and how to make it look proper. Here’s what it looks like in the film:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/handle_forearm.jpg&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-flail/handle_forearm.jpg&quot; alt=&quot;First attempt&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Not super clear, but you can see some outlines of metal “wings” along the handle, it’s probably wrapped in leather, and there are some studs. It’s also gotta have a chain attach point, and be strong enough to hold the weight. I had some spare dowel left over after lopping off … four feet, so can use that as a base. But that felt a little too thin. Looking around the shed, I had some slightly wider PVC, which fit the dowel nicely. Alright! I grabbed some PVC caps, bolted the ring for the chain attach point through the cap into the dowel, got a chain from home depot, and we have a viable handle! Now it just needs to look … more Mordor.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/basic_handle.jpg&quot; alt=&quot;More of a staff&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-flail/basic_handle.jpg&quot; alt=&quot;More of a staff&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The PVC was easy to cover in pleather, so I just sewed a cylinder of pleather and added the studs. Next step was to slide the pleather sleeve over the PVC - I’m pleased it fit so well first go - and then as an extra precaution I nailed the sleeve down to the pipe so it wouldn’t slide as I held the handle.&lt;/p&gt;
 
 &lt;p&gt;Let’s take a look at those metal wings then.
 You get a vague idea of the shape from the very few closeups we get, which also implied that I didn’t need to be super exact (again, like at the start, I could have googled for other ideas, but for some reason I subconsciously decided to do this all from the films and no other sources). This seemed like a good chance to use treeflx again. I cut the fins out of thin treeflx for both ends, covered the caps, and just heat-molded the fins on:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/handle_treeflex_full.jpg&quot; alt=&quot;More of a staff&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-flail/handle_treeflex_full.jpg&quot; alt=&quot;More of a staff&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/handle_end.jpg&quot; alt=&quot;More of a staff&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-flail/handle_end.jpg&quot; alt=&quot;More of a staff&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Then it was just a matter of painting, and viola!&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/full_painted_handle.jpg&quot; alt=&quot;More of a staff&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-flail/full_painted_handle.jpg&quot; alt=&quot;More of a staff&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;smoothing&quot;&gt;Smoothing&lt;/h3&gt;
 &lt;p&gt;The foam was fairly rough and had little bubbles, so I needed to add something over the top to have a single smooth solid layer. This took a bit of consideration, and I hit upon something when trying spackling. I did several layers of this and it sunk in nicely. Did get crumbly once dried, but I forged on - maybe paint will fix that.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/cone_types.jpg&quot; alt=&quot;More of a staff&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-flail/cone_types.jpg&quot; alt=&quot;More of a staff&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Well, it got all spackled and there were some cracks, but let’s peg that down to artistic license - it’s looking pretty good shape-wise!&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/spackled.jpg&quot; alt=&quot;More of a staff&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-flail/spackled.jpg&quot; alt=&quot;More of a staff&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;paint&quot;&gt;Paint&lt;/h3&gt;
 &lt;p&gt;Just went for a few layers of a nice classic metal gray. Tried a few different grays before finally settling on light and matte:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/hanging.jpg&quot; alt=&quot;More of a staff&quot; class=&quot;left&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-flail/hanging.jpg&quot; alt=&quot;More of a staff&quot; class=&quot;left&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/full_painted.jpg&quot; alt=&quot;More of a staff&quot; class=&quot;left&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-flail/full_painted.jpg&quot; alt=&quot;More of a staff&quot; class=&quot;left&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/full_painted2.jpg&quot; alt=&quot;More of a staff&quot; class=&quot;right&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-flail/full_painted2.jpg&quot; alt=&quot;More of a staff&quot; class=&quot;right&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;second-thoughts-more-paint-and-then-glue&quot;&gt;Second thoughts, more paint, and then glue&lt;/h4&gt;
 &lt;p&gt;It still didn’t look &lt;em&gt;quite&lt;/em&gt; right, and furthermore the spackle kept cracking. I was poking around online and saw some suggestions to handle similar issues and also get a nice shine to a final product: a layer of glue. Dries clear, and you’re essentially plastic coating. Worth a shot! (did not consider the possibility it might look bad)
@@ -437,13 +1107,13 @@ Painted that on over the paint, and yeah it turned out really well! Even the tre
 &lt;h3 id=&quot;final-product&quot;&gt;Final product&lt;/h3&gt;
 &lt;p&gt;And here’s how it turned out!&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/final.jpg&quot; alt=&quot;More of a staff&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-flail/final.jpg&quot; alt=&quot;More of a staff&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I’m really pleased with this. A nice glossy sheen from that glue layer, but also has imperfections and cracks that sort of say aging and use has happened to this. If I made it again I think I would have done more experiments with materials at the start, but overall I have no real complaints. The actual mace head itself is hefty, but not unusably so; what adds the weight is the lever-arm force from the handle, since you can’t grab the chain at the point. Go back and look at the shot from the film now and consider where The Witch King holds the handle himself … and then behind the scenes they say an extra lifted it from below. Understandable.&lt;/p&gt;
 
 &lt;p&gt;Let’s compare to other versions found online …&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/google.jpg&quot; alt=&quot;More of a staff&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-flail/google.jpg&quot; alt=&quot;More of a staff&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Hey, I got pretty close! Shoulda looked at this earlier for inspiration, but was also very vindicating to know that I got that close by just looking at frames from the films.&lt;/p&gt;
 
@@ -451,16 +1121,16 @@ Painted that on over the paint, and yeah it turned out really well! Even the tre
 
 &lt;p&gt;Here’s a photo of the template I used to sketch the mace head skeleton onto wood for cutting, next to a measuring tape - in case you want to make your own:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/mace_template.jpg&quot; alt=&quot;More of a staff&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-flail/mace_template.jpg&quot; alt=&quot;More of a staff&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;and here’s the templates I used for the two ends of the handle. The chain-end is the more spiky.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/handle_templates.jpg&quot; alt=&quot;More of a staff&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-flail/handle_templates.jpg&quot; alt=&quot;More of a staff&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;You be the judge of how accurate these are. Finally, the templates for the mace spikes. The smaller spike covers:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/small_spike_template.jpg&quot; alt=&quot;More of a staff&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/wk-flail/small_spike_template.jpg&quot; alt=&quot;More of a staff&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;and the same for the larger spikes. These were folded and connected along the long edge:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/large_spike_template.jpg&quot; alt=&quot;More of a staff&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="Projects" /><summary type="html">“Some people call it a mace, some people call it a morningstar … I ended up calling it damned heavy, cos it was … it was damned heavy</summary></entry><entry><title type="html">Setup</title><link href="http://localhost:4000/welcome-to-jekyll/" rel="alternate" type="text/html" title="Setup" /><published>2022-08-17T10:58:35-07:00</published><updated>2022-08-17T10:58:35-07:00</updated><id>http://localhost:4000/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/welcome-to-jekyll/">&lt;p&gt;Website set up, hopefully projects to follow.&lt;/p&gt;</content><author><name></name></author><category term="updates" /><summary type="html">Website set up, hopefully projects to follow.</summary></entry></feed>
+&lt;p&gt;&lt;img src=&quot;/assets/wk-flail/large_spike_template.jpg&quot; alt=&quot;More of a staff&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="Projects" /><summary type="html">“Some people call it a mace, some people call it a morningstar … I ended up calling it damned heavy, cos it was … it was damned heavy</summary></entry><entry><title type="html">Setup</title><link href="http://localhost:4000/welcome-to-jekyll/" rel="alternate" type="text/html" title="Setup" /><published>2020-01-01T09:58:35-08:00</published><updated>2020-01-01T09:58:35-08:00</updated><id>http://localhost:4000/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/welcome-to-jekyll/">&lt;p&gt;Website set up, hopefully projects to follow.&lt;/p&gt;</content><author><name></name></author><category term="updates" /><summary type="html">Website set up, hopefully projects to follow.</summary></entry></feed>
