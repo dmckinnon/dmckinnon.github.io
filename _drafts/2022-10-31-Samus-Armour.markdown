@@ -180,12 +180,20 @@ Ah well. Mistakes happen, and I was rushing this.
 #### The back
 This is covered above in The Jetpack section. I just lay down on a piece of foam while a friend traced my outline, and then held this against my back and cut it down and heat-moulded it. Then I glued the 3d printed jetpack to it. 
 
+#### The shoes
+To get the shoes Samus has I had some spare sneakers that, to be honest, were a little past their use-by date. I formed some foam pieces to fit around in the basic shape of Samus' feet, added a tongue cover that folded forwards so my feet fit in, glued/sewed these down ... and it worked just fine:
+
+![First attempt](/assets/samus-armour/shoe1.jpg){: .center}  
+
+![First attempt](/assets/samus-armour/shoe2.jpg){: .center}  
+
+
 ### Lights
 Looking at Samus in various forms,
 
-photos
+![First attempt](/assets/samus-armour/dread_suit_lights.jpg){: .center}  
 
-Her suit lights up. Of course it does - it's a high tech space suit and these are practically _required_ to light up by the Laws Of Science Fiction. I'm mostly focusing on her Prime suit, and while I see many small points of green light, I've picked just a few main ones:
+Her suit lights up. Of course it does - it's a high tech space suit and these are practically _required_ to light up by the Laws Of Science Fiction. I'm mostly focusing on her Prime suit, and while I see many small points of green light, I've picked just a few main ones from the Metroid Prime suit:
 + Both sides of each shin
 + The outside of each thigh
 + two panels on the chest
@@ -194,39 +202,37 @@ Her suit lights up. Of course it does - it's a high tech space suit and these ar
 I used RGD strip LEDs, WS2812s - the same I used on Samus' arm cannon. These were to be run from an Arduino that I would hide in the chest piece, and run power and data wires down my right arm to the cannon - so I could set the brightness, pattern, and anything else I wanted, from the controls on the arm cannon. At the start, I just set static colours - green for every LED except jetpack ones (specifically numbered LEDs along the strip), which were blue. 
 
 #### Attaching to the foam
-I wanted the LEDs to be diffused through some material. Samus' glowing green armour parts are a consistent colour, not single dots. I tried covering the LEDs in EVA foam putty, but this barely diffused them - I could mostly see single points of light:
+I wanted the LEDs to be diffused through some material. Samus' glowing green armour parts are a consistent colour, not single dots. I tried covering the LEDs in EVA foam putty, but this barely diffused them - I could mostly see single points of light. Then I tried more rigid packing foam. When thick enough this worked really well and I used it on the chest and the jetpack LEDs:
 
 photo
 
-Then I tried more rigid packing foam. When thick enough this worked really well and I used it on the chest and the jetpack LEDs:
+But on the legs this was hard to cut into a good shape, and I had about 2-3mm of thickness to work with. Didn't diffuse enough. Then I found some thin sheets of packing foam that I could cut and layer. 6 layers diffused enough but was too thick, so I went with three as a compromise and I think it looked alright. You can still see single points, but they are more diffuse than the EVA putty:
 
-photo
-
-But on the legs this was hard to cut into a good shape, and I had about 2-3mm of thickness to work with. Didn't diffuse enough. Then I found some thin sheets of packing foam that I could cut and layer. 6 layers diffused enough but was too thick, so I went with three as a compromise and I think it looked good:
-
-photo
+![First attempt](/assets/samus-armour/leg_lights.jpg){: .center}  
 
 But how to attach? I tried gluing the edges in - hot glue melted through the foam, and superglue appeared to just crack. In retrospect, I should have designed the shins with this in mind; I could have made it so that the packing foam tucked between the two layers of EVA foam around the LED cut-out area of the shin. Given that I didn't do this, I decided eventually to _sew_ the packing foam cover on, and this actually worked! Threading through the bottom layer of EVA foam and holding the edges of packing foam down, up and down the sides of the cut-out area:
 
-photo
+![First attempt](/assets/samus-armour/shin_lights.jpg){: .center}  
+
+![First attempt](/assets/samus-armour/sewing_thighs.jpg){: .center}  
 
 it held the packing foam down tight enough, and I could tuck the edges in a bit! Excellent!
 
 ### Paint
-As I've written about in the [Samus arm cannon write-up](), the helmet, shoulders, and jetpack underwent the process I know for prepping and painting 3D prints: sanding with 60, 120, and then 240 grit sandpaper, several layers of primer, an undercolour, and finally the outer colour. I'll go into detail about the colour specifics here, rather than the process. 
+As I've written about in the [Samus arm cannon write-up](https://dmckinnon.github.io/Samus-Arm-Cannon/#paint), the helmet, shoulders, and jetpack underwent the process I know for prepping and painting 3D prints: sanding with 60, 120, and then 240 grit sandpaper, several layers of primer, an undercolour, and finally the outer colour. I'll go into detail about the colour specifics here, rather than the process. 
 
 #### The Helmet
-Following Frankly Built's tutorial, I used Red Metalcast over an undercoat of <brand> gold.
+Following Frankly Built's tutorial, I used [Dupli-Color Red Metalcast](https://www.amazon.com/Dupli-Color-EMC200007-Metal-Anodized-Color/dp/B000994BUM) over an undercoat of [Krylon gold](https://www.lowes.com/pl/Krylon-Gold--Spray-paint-Spray-paint-accessories-Paint/4294720379?refinement=4294747303,4294797224).
 
-photos?
+![First attempt](/assets/samus-armour/gold_helmet.jpg){: .center}  
 
 Not following Frank's tutorial, I was a little heavy-handed with the red. You really just need to dust this on, and have a lot of patience. Small layer by small layer. I got impatient that not enough was coming out, and then ... sprayed too much, and it started to run, and now I have run marks:
 
-photo
+![First attempt](/assets/samus-armour/helmet_paint_run.jpg){: .center}  
 
 I could sand this off and start again on this patch, but ... I don't trust myself to not make it worse. There were also some print artifacts that no amount of filler or primer could remove (well, some amount, but an amount more than I was going to reasonably do):
 
-photo
+![First attempt](/assets/samus-armour/hetlmet_artifacts.jpg){: .center}  
 
 And this took so much to print, that ... I'll live with this. In Frank's video, he gets some artifacts, and just prints another whole dang helmet. He's clearly more dedicated. 
 The last painted pieces were the pipes on the front:
