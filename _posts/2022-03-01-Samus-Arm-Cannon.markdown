@@ -300,7 +300,7 @@ And here's how it turned out!
 
 ![First attempt](/assets/cannon/final_on_arm.jpg){: .center}  
 
-I hope to upload a clip to youtube of me firing it: you can see the light effects at the gun end.
+[Here's it lighting up as it fires](https://youtu.be/awUbQU3-ZwY?t=1298): you can see the light effects at the gun end.
 
 I'm _really_ proud of this, it turned out so well. The final green and yellow work really well, and it fits on my arm so nicely! My biggest complaints are with the mechanical systems inside:
 + the spring end cap can come off easily, and cause the spring to pop out

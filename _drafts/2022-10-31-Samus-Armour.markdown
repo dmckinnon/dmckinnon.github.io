@@ -7,9 +7,9 @@ comments: true
 ---
 
 
-![First attempt](/assets/cannon/samus_gun_circled.png){: .center}
+![First attempt](/assets/samus-armour/samus.png){: .center}
 
-After making Samus' arm cannon - along with a Nerf gun inside of it - I thought "it seems a bit silly to have such a good arm piece, but not the rest of the costume". I'd found Samus' helmet on [Thingiverse](https://www.thingiverse.com/thing:1461378) in [various](https://www.thingiverse.com/thing:4640583) [models](https://www.thingiverse.com/thing:1214085/files), along with the [shoulder pieces](https://www.thingiverse.com/thing:1214085/files). The rest of the suit looks more body-molded than the shoulders and helmet; I could 3d print this, but getting size and shape right would take a lot of iterations, and these would also be big pieces. Regardless, I definitely thought I could give it a decent enough bash so that I had a full suit - much better than just the arm cannon. 
+After making [Samus' arm cannon](https://dmckinnon.github.io/Samus-Arm-Cannon/) - along with a Nerf gun inside of it - I thought "it seems a bit silly to have such a good arm piece, but not the rest of the costume". I'd found Samus' helmet on [Thingiverse](https://www.thingiverse.com/thing:1461378) in [various](https://www.thingiverse.com/thing:4640583) [models](https://www.thingiverse.com/thing:1214085/files), along with the [shoulder pieces](https://www.thingiverse.com/thing:1214085/files). The rest of the suit looks more body-molded than the shoulders and helmet; I could 3d print this, but getting size and shape right would take a lot of iterations, and these would also be big pieces. Regardless, I definitely thought I could give it a decent enough bash so that I had a full suit - much better than just the arm cannon. 
 
 I will admit that this whole suit was a bit of a rush job. While I considered the cannon a masterpiece not to be rushed, and the helmet similar - although to be honest I was careless with the paint - the suit was very much a "Well I have the cannon and the helmet, why not have the whole suit?". Halloween was coming up, and I thought I could get it done in time ... which experimentally I could, but it did mean accepting more errors than I preferred, and doing fewer iterations of some pieces than perhaps I should have done. Nevertheless, I'm happy that I made it and happy with the result, enough to show it off and be proud. Body-fitting suits are _hard_, and this was my first ever with EVA foam. 
 
@@ -44,31 +44,31 @@ There were sizing issues, printing issues, printer failures, nozzle tests, and v
 
 #### The Helmet
 As linked above, there are several helmet models I found. I started with this [well-labelled one](https://www.thingiverse.com/thing:4640583) from Thingiverse before realising that the size it was printing at was _far_ bigger than practical. Alright, time for a resize. I 3d-scanned my head and reconstructed the model around my head, resizing it to fit. But wait! I need to make sure tmy head fits through the bottom. Do I print half this and test? 
-Then I came across this [Frankly Built tutorial]() where he makes a Metroid Dread helmet, using a [purchased model]() from do3d.com - and more importantly, he didn't resize, he just printed it and it just about worked. His head looks normal sized, so I bought this model for $30 and decided to give it a go. 
+Then I came across this [Frankly Built tutorial](https://www.youtube.com/watch?v=wEHG-zrrdW0&ab_channel=FranklyBuilt) where he makes a Metroid Dread helmet, using a [purchased model](https://www.do3d.com/product-page/metroid-dread-samus-aran-helmet-3d-printable-model-ms903) from do3d.com - and more importantly, he didn't resize it, he just printed it and it just about worked. His head looks normal sized, so I bought this model for $25 and decided to give it a go (note: the model on do3d has changed since I printed this - it comes in fewer pieces). 
 
-picture?
+![First attempt](/assets/samus-armour/helmet_fusion.jpg){: .center}
 
 Without changing the size, it was too big for my printer. But thankfully, it came not just in a single model, but also in 6 pieces - the original model sliced down the middle of the face and twice sideways through the head. Each of these pieces fitted easily on my printer. But I needed a way to reattach them after printing them, so i added tabs across each of the cuts with a screw either side:
 
-photo
+![First attempt](/assets/samus-armour/helmet_bolts.jpg){: .center}
 
-so I could screw it all back together at the end. This had some error, but it's been negligible and I've gotten used to the look:
+so I could screw it all back together at the end. This had some error and you can see the join lines close up, but it's been negligible and I've gotten used to the look:
 
-photo
+![First attempt](/assets/samus-armour/helmet_whole_unpainted.jpg){: .center}
 
-Next, the visor. Frankly Built used clear plastic with a sheet of green translucent plastic from car headlight tints; these cost a fair bit, but I found some coloured lighting tints for hobbyist filmmaking, and among these was a good shade of green:
+Next, the visor. Frankly Built used clear plastic with a sheet of green translucent plastic from car headlight tints; these cost a fair bit, but I found some coloured lighting tints for hobbyist filmmaking, and among these was a good shade of green. I cut it to a reasonable shape and held it in place with some foam around the top edges, and hot gluing it on the bottom edges. While doing this, I added a lot more foam on the inside of the helmet. Why? Well, for a start it's hard plastic - not comfortable. Secondly, this balanced delicately on the top of my head and wobbled at the slightest motion - I wanted it to stay on a bit more solidly. So I added padding from EVA foam offcuts until it sat with pressure all over my head, holding it with some slight tension, and didn't wobble:
 
-picture
+![First attempt](/assets/samus-armour/inside_helmet.jpg){: .center}
 
-Finally, the mask. Note in this picture Samus appears to have some sort of oxygen mask covering her mouth and nose
+Finally, the mask (seen in above photo). Note in the following picture Samus appears to have some sort of oxygen mask covering her mouth and nose
 
-picture
+![First attempt](/assets/samus-armour/samus_face.jpg){: .center}
 
 Frankly Built achieved a similar thing with a basic gas mask from Home Depot, so I bought a similar one, tore off the air filters, and glued it in: perfect!
 
-photo. 
+![First attempt](/assets/samus-armour/full_helmet.jpg){: .center}
 
-I'll go over the painting later. 
+_Very_ happy with this. I'll go over the painting later. 
 
 
 #### The Shoulders
