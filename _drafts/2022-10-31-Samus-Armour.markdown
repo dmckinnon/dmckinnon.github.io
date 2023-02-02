@@ -48,7 +48,7 @@ Then I came across this [Frankly Built tutorial](https://www.youtube.com/watch?v
 
 ![First attempt](/assets/samus-armour/helmet_fusion.jpg){: .center}
 
-Without changing the size, it was too big for my printer. But thankfully, it came not just in a single model, but also in 6 pieces - the original model sliced down the middle of the face and twice sideways through the head. Each of these pieces fitted easily on my printer. But I needed a way to reattach them after printing them, so i added tabs across each of the cuts with a screw either side:
+Without changing the size, it was too big for my printer. But thankfully, it came not just  in a single model, but also in 6 pieces - the original model sliced down the middle of the face and twice sideways through the head. Each of these pieces fitted easily on my printer. But I needed a way to reattach them after printing them, so i added tabs across each of the cuts with a screw either side:
 
 ![First attempt](/assets/samus-armour/helmet_bolts.jpg){: .center}
 
@@ -74,38 +74,39 @@ _Very_ happy with this. I'll go over the painting later.
 #### The Shoulders
 [The shoulders also came from Thingiverse](https://www.thingiverse.com/thing:1214085/files), although I had to do some size checking. I printed some test slices to gauge size, and a full version to see how it looked. This first one ended up about 95% of the size that felt good, but also far too dense - I needed to really tone the settings down for this, since it weighed about a kilogram alone. 1kg per shoulder was not going to feel good. 
 
-The next problem was how to attach this to my shoulder. The shoulder spans about 90 degrees, which doesn't attach to a shoulder well. I need something to hold it inwards, and upwards. I designed a ring to attach on the inside:
+The next problem was how to attach this to my shoulder. The shoulder spans about 90 degrees, which doesn't attach to a shoulder well. I need something to hold it inwards, and upwards. I designed a ring to attach on the inside, that had slits for straps. This held it up around each arm:
 
-photo
-
-This held it up, from the upper part of the circle. But how to stop it from slipping down my arm held by my side? Well, I added slits for straps:
-
-photo
+![First attempt](/assets/samus-armour/good_shoulder.jpg){: .center}
 
 and with one on each shoulder, cinched tightly with elastic, these would hold each other in. Certainly with my mega-heavy shoulder this wasn't pleasant, but after reducing shell thickness infil density I got one shoulder to 700 grams and the other to 500 grams. My printer also broke through this, and I had _a lot_ of failures. 
 
-photo
+![First attempt](/assets/samus-armour/dodgy_shoulder.jpg){: .center}
 
-Then sanding and painting, which comes later.
+I'll discuss sanding and painting below.
 
 #### The jetpack
 Take a look at Samus' back:
 
-photo
+![First attempt](/assets/samus-armour/dread_back.jpg){: .center}
 
 That's a jetpack. Or at least I'm calling that a jetpack. I found a full model of Samus from Metroid Dread, which has a slightly different jetpack to Metroid Prime, but it was complete. I cut away the rest of the model to just have the jetpack pieces:
 
-photo
+![First attempt](/assets/samus-armour/jetpack_cutout.jpg){: .center}
 
 and thankfully these were separated out so I could print them separately. They came out a little thicker than I preferred, due to some messiness converting from a infinitely thin mesh to a full 3d body with thickness, but it worked out. These pieces are just hot-glued together, and then glued down to a sheet of foam:
 
-photo
+![First attempt](/assets/samus-armour/jetpack1.jpg){: .center}    
+
+![First attempt](/assets/samus-armour/jetpack2.jpg){: .center}  
+
+![First attempt](/assets/samus-armour/jetpack3.jpg){: .center}  
+
 
 
 ### Forming the foam
 Let's look at Samus' armour again:
 
-photo
+![First attempt](/assets/samus-armour/samus.png){: .center}
 
 There's black lines throughout the armour, which I'm going to use to break up the armour into distinct pieces, eg. a shin piece, a thigh piece, many chest pieces, etc. Given that this is all attached to a black onesie, the black background is taken care of; I just need each brightly coloured piece. The green will be LEDs, and the rest just formed from EVA foam. 
 
