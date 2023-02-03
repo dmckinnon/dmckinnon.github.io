@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Samus' Arm Cannon"
+title:  "Samus' Power Suit"
 date:   2022-10-31 10:58:35 -0700
 categories: Projects
 comments: true
@@ -108,35 +108,30 @@ Let's look at Samus' armour again:
 
 ![First attempt](/assets/samus-armour/samus.png){: .center}
 
-There's black lines throughout the armour, which I'm going to use to break up the armour into distinct pieces, eg. a shin piece, a thigh piece, many chest pieces, etc. Given that this is all attached to a black onesie, the black background is taken care of; I just need each brightly coloured piece. The green will be LEDs, and the rest just formed from EVA foam. 
+There's black lines throughout the armour (see the abdomen in particular), which I'm going to use to break up the armour into distinct pieces, eg. a shin piece, a thigh piece, many chest pieces, etc. Given that this is all attached to a black onesie, the black background is taken care of; I just need each brightly coloured piece. The green will be LEDs, and the rest just formed from EVA foam. 
 
 #### The shins
-Shins seemed the easiest starting point because I can reach my shin with both arms - this serves to help form the heated foam around my shin, and also meant I could prototype quickly with sewing various attachment methods. To get the shape I just ... looked at a few images of Samus
+Shins seemed the easiest starting point because I can reach my shin with both arms - this serves to help form the heated foam around my shin, and also meant I could prototype quickly with sewing various attachment methods. To get the shape I just ... looked at a few images of Samus while holding foam sheets around my leg in various ways, and drew and cut repeatedly until I had the basic outline. A little refinement later, and I had what ended up being close to the final version. This was two layers - one to hold the shape, the other to add depth so that the LEDS could be inset into the foam. 
 
-photo
+![First attempt](/assets/samus-armour/shin_two_layers.jpg){: .center}
 
-
-and then held foam around my leg in various ways, and drew and cut repeatedly until I had the basic outline. A little refinement later, and I had what ended up being close to the final version:
-
-photo
-
-This was two layers - one to hold the shape, the other to add depth so that the LEDS could be inset into the foam. I had 4mm foam, so attempting to inset the LEDs into one sheet would ahve been a nightmare. 
+I had 4mm foam, so attempting to inset the LEDs into one sheet would have been a nightmare. 
 Once I had the shape sketched and cut out, I started prototyping attachments by attaching the foam with metal pops:
 
-photo
+![First attempt](/assets/samus-armour/shin_pops1.jpg){: .center}  
+
+![First attempt](/assets/samus-armour/shin_pops2.jpg){: .center}  
 
 but as these were just points of connection, at the back of my shin where the tension was greatest (since that's where the foam shape deviated from body shape the most) the foam pulled away at those points. I switched to velcro, where there's far more surface area, and this held close to my leg a lot better. I also redid the shin piece. The first time, I glued two layers of foam together, cut out a section for the LEDs, and _then_ heat-molded it. This was bad, for one main reason: the two sheets are already glued. They have a relative position to each other. The heat-molding tries to change this, but the glue resists. For the second attempt, I cut two pieces, heat-formed them around my leg, _and then_ glued them together. This held the right shape a lot stronger. 
 The knee piece was made from two halves, glued together to get that curved shape, and then glued bending forwards on the top of the shin piece. 
-Finally, although I now think this was a mistake, I had slit the outer sheet of foam on the shin to reduce the strain and let that black line down the front of the shin be visible:
+Finally, although I now think this was a mistake, I had slit the outer sheet of foam on the shin to reduce the strain and let that black line down the front of the shin be visible, but then I decided I didn't like this, and covered it up with EVA foam putty. This looked kinda awkward, but I didn't want to redo the whole shin. 
 
-photo
-
-but then I decided I didn't like this, and covered it up with EVA foam putty. This looked kinda awkward, but I didn't want to redo the whole shin. 
+![First attempt](/assets/samus-armour/shin_unpainted.jpg){: .center}  
 
 #### The thighs
 The thighs were next, because my mind was still on the legs and they were still easier to work with than, say, one arm, where by nature of the location I had to do it single-handedly (pun intended). Let's look at the thigh pieces:
 
-photo
+![First attempt](/assets/samus-armour/thight.png){: .center} 
 
 There's an underlayer of yellow, and that orange piece on top of it that sits on the outer thigh, with the green light embedded in. This looks similar to the shin pieces, LED-wise, so I copied that strategy of putting a second layer over the first. I shaped both to my leg, and then glued them together. This took ... just a lot of hours of iterating and pinning pieces together, reheating, trying again, and so on. Thighs are an utter pain to shape to. Finally, I got something resembling the shape I wanted:
 
@@ -183,9 +178,9 @@ This is covered above in The Jetpack section. I just lay down on a piece of foam
 #### The shoes
 To get the shoes Samus has I had some spare sneakers that, to be honest, were a little past their use-by date. I formed some foam pieces to fit around in the basic shape of Samus' feet, added a tongue cover that folded forwards so my feet fit in, glued/sewed these down ... and it worked just fine:
 
-![First attempt](/assets/samus-armour/shoe1.jpg){: .center}  
+![First attempt](/assets/samus-armour/shoe_glue.jpg){: .center}  
 
-![First attempt](/assets/samus-armour/shoe2.jpg){: .center}  
+![First attempt](/assets/samus-armour/shoe1.jpg){: .center}  
 
 
 ### Lights
@@ -202,11 +197,11 @@ Her suit lights up. Of course it does - it's a high tech space suit and these ar
 I used RGD strip LEDs, WS2812s - the same I used on Samus' arm cannon. These were to be run from an Arduino that I would hide in the chest piece, and run power and data wires down my right arm to the cannon - so I could set the brightness, pattern, and anything else I wanted, from the controls on the arm cannon. At the start, I just set static colours - green for every LED except jetpack ones (specifically numbered LEDs along the strip), which were blue. 
 
 #### Attaching to the foam
-I wanted the LEDs to be diffused through some material. Samus' glowing green armour parts are a consistent colour, not single dots. I tried covering the LEDs in EVA foam putty, but this barely diffused them - I could mostly see single points of light. Then I tried more rigid packing foam. When thick enough this worked really well and I used it on the chest and the jetpack LEDs:
+I wanted the LEDs to be diffused through some material. Samus' glowing green armour parts are a consistent colour, not single dots. I tried covering the LEDs in EVA foam putty, but this barely diffused them - I could mostly see single points of light. 
 
-photo
+![First attempt](/assets/samus-armour/shoe1.jpg){: .center}  
 
-But on the legs this was hard to cut into a good shape, and I had about 2-3mm of thickness to work with. Didn't diffuse enough. Then I found some thin sheets of packing foam that I could cut and layer. 6 layers diffused enough but was too thick, so I went with three as a compromise and I think it looked alright. You can still see single points, but they are more diffuse than the EVA putty:
+Then I tried more rigid packing foam. When thick enough this worked really well and I used it on the chest and the jetpack LEDs. But on the legs this was hard to cut into a good shape, and I had about 2-3mm of thickness to work with. Didn't diffuse enough. Then I found some thin sheets of packing foam that I could cut and layer. 6 layers diffused enough but was too thick, so I went with three as a compromise and I think it looked alright. You can still see single points, but they are more diffuse than the EVA putty:
 
 ![First attempt](/assets/samus-armour/leg_lights.jpg){: .center}  
 
@@ -235,27 +230,32 @@ I could sand this off and start again on this patch, but ... I don't trust mysel
 ![First attempt](/assets/samus-armour/hetlmet_artifacts.jpg){: .center}  
 
 And this took so much to print, that ... I'll live with this. In Frank's video, he gets some artifacts, and just prints another whole dang helmet. He's clearly more dedicated. 
-The last painted pieces were the pipes on the front:
+The last painted pieces were the pipes on the front. These I SLA-printed - to keep that fine detail, instead of having to sand down a small tube - and spray painted, first with a couple layers of primer, and then a metallic silver. They just slotted into the front of the helmet, either side, and I got-glued them down
 
-photo
+![First attempt](/assets/samus-armour/sla_tube.jpg){: .center}  
 
-These I SLA-printed - to keep that fine detail, instead of having to sand down a small tube - and spray painted, first with a couple layers of primer, and then a metallic silver. These just glued onto the front. 
+ 
 
 #### The Shoulders
-Hoping that I'd learnt my lessons from the helmet, I tried to be lighter-handed with the paint on the shoulders. I hand-painted the inset channels black on the first and covered these in tape before doing several primer layers and an undercoat of gold:
+Hoping that I'd learnt my lessons from the helmet, I tried to be lighter-handed with the paint on the shoulders. I hand-painted the inset channels black on the first and covered these in tape before doing several primer layers and an undercoat of gold. 
 
-photo
+![First attempt](/assets/samus-armour/shoulder_paint1.jpg){: .center}  
 
-On the other shoulder, I painted it all first and then hand-painted the inset channels later. The final colour coat was Metalcast orange, and it took several very light layers over the gold for me to even see an effect. The metalcast red for the helmet had _bled_ out from the can like nothing else, but this ... was much sparser than expected, and I ... got heavier handed, and then the paint ran:
+On the other shoulder, I painted it all first and then hand-painted the inset channels later.
 
-photo
+![First attempt](/assets/samus-armour/shoulder_paint2.jpg){: .center}  
 
-ah well. It's not particularly noticeable. I get impatient with paint, clearly. Unfortunately, while this paint came out sparser than the red, it also did not last long, and I went through at least four or five cans all up, which got ... more expensive than I preferred. Finally, once all the orange and black was done, a clear coat to shine it up, and viola!
+The final colour coat was Metalcast orange, and it took several very light layers over the gold for me to even see an effect. The metalcast red for the helmet had _bled_ out from the can like nothing else, but this ... was much sparser than expected, and I ... got heavier handed, and then the paint ran:
 
-photo
+![First attempt](/assets/samus-armour/shoulder_paint3.jpg){: .center}  
+
+Ah well. It's not particularly noticeable. I get impatient with paint, clearly. Unfortunately, while this paint came out sparser than the red, it also did not last long, and I went through at least four or five cans all up, which got ... more expensive than I preferred. Finally, once all the orange and black was done, a clear coat to shine it up, and viola! It looked great. 
+
+![First attempt](/assets/samus-armour/full_shoulder.jpg){: .center}  
+
 
 #### The orange foam pieces
-I had a considerable amount of back and forth for the orange pieces. Kamui Cosplay has a [tutorial on how to prime EVA foam for spray painting]() which I tried, and I think I was a little heavy handed, or perhaps I was too close or too far? The plastiform layer didn't feel like it did much, and I'm not sure why. So I just ended up doing some primer layers directly onto the foam, and then gold undercoat with orange metalcast over the top. One problem I ran into though was that I heat-formed the layers, then sat them down outside to spray paint - for hours on end. This meant that their weight naturally squashed them flat again, and when I bent them or reheated and bent them, the paint cracked a bit, like a hard plastic layer. Oops - maybe I should have used thicker foam? 4mm did seem thin ...
+I had a considerable amount of back and forth for the orange pieces. Kamui Cosplay has a [tutorial on how to prime EVA foam for spray painting](https://www.youtube.com/watch?v=ROZlkW96hFI&ab_channel=KamuiCosplay) which I tried, and I think I was a little heavy handed, or perhaps I was too close or too far? The plastiform layer didn't feel like it did much, and I'm not sure why. So I just ended up doing some primer layers directly onto the foam, and then gold undercoat with orange metalcast over the top. One problem I ran into though was that I heat-formed the layers, then sat them down outside to spray paint - for hours on end. This meant that their weight naturally squashed them flat again, and when I bent them or reheated and bent them, the paint cracked a bit, like a hard plastic layer. Oops - maybe I should have used thicker foam? 4mm did seem thin ...
 
 Some areas had to be corrected or patched up with EVA foam putty, since I'd made mistakes and cut bits out, or had aberrations from hot glue that needed smoothing over. Thankfully the putty painted similar to the foam. 
 
@@ -265,12 +265,21 @@ These were simple. Just several coats of standard Home Depot yellow. Took me a c
 ### Final product
 And here's how it turned out!
 
-photo
+![First attempt](/assets/samus-armour/samus_partay.jpg){: .center} 
 
-photo
+![First attempt](/assets/samus-armour/samus_back.jpg){: .center} 
 
-Like I said, the foam armour was a bit of a rush job, since I wanted to get it done in time for Halloween and also I just wanted some quick armour - I didn't put intense thought and care into every piece. This is also the most uncomfortable and finicky costume I have - there are so many pieces and I move like a penguin and cannot bend over or sit down. But! People loved it, and with the helmet, shoulders, and gun all together in one complete package, it does look really really good. I'm glad I have the whole thing, and it was a good experiment and learning experience with EVA foam. 
+![First attempt](/assets/samus-armour/samus_halloween.jpg){: .center} 
+
+Like I said, the foam armour was a bit of a rush job, and it shows. I know it is all because I wanted to get it done in time for Halloween and also I just wanted some quick armour - I didn't put intense thought and care into every piece, but still, hurts a little. This is also the most uncomfortable and finicky costume I have - there are so many pieces and I move like a penguin and cannot bend over or sit down. But! People loved it, and with the helmet, shoulders, and gun all together in one complete package, it does look really really good. I'm glad I have the whole thing, warts and all, and it was a good experiment and learning experience with EVA foam. 
 
 ### Models
-There's r
+All STL models have been linked in relevant sections, but here they are again. All credit to the designers of those pieces, I just used them. 
+
+[The Metroid Dread Helmet from Do3d.com](https://www.do3d.com/product-page/metroid-dread-samus-aran-helmet-3d-printable-model-ms903)
+
+[Samus' shoulders](https://www.thingiverse.com/thing:1214085/files)
+
+[The model I used for the jetpack](https://www.thingiverse.com/thing:5338631)
+
 
