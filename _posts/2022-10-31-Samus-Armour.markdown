@@ -7,7 +7,7 @@ comments: true
 ---
 
 
-![First attempt](/assets/samus-armour/samus.png){: .center}
+<img src="/assets/samus-armour/samus.png"  width="60%" height="30%">
 
 After making [Samus' arm cannon](https://dmckinnon.github.io/Samus-Arm-Cannon/) - along with a Nerf gun inside of it - I thought "it seems a bit silly to have such a good arm piece, but not the rest of the costume". I'd found Samus' helmet on [Thingiverse](https://www.thingiverse.com/thing:1461378) in [various](https://www.thingiverse.com/thing:4640583) [models](https://www.thingiverse.com/thing:1214085/files), along with the [shoulder pieces](https://www.thingiverse.com/thing:1214085/files). The rest of the suit looks more body-molded than the shoulders and helmet; I could 3d print this, but getting size and shape right would take a lot of iterations, and these would also be big pieces. Regardless, I definitely thought I could give it a decent enough bash so that I had a full suit - much better than just the arm cannon. 
 
@@ -52,12 +52,12 @@ As linked above, there are several helmet models I found. I started with this [w
 
 Then I came across this [Frankly Built tutorial](https://www.youtube.com/watch?v=wEHG-zrrdW0&ab_channel=FranklyBuilt) where he makes a Metroid Dread helmet, using a [purchased model](https://www.do3d.com/product-page/metroid-dread-samus-aran-helmet-3d-printable-model-ms903) from do3d.com - and more importantly, he didn't resize it, he just printed it and it just about worked. His head looks normal sized, so I bought this model for $25 and decided to give it a go (note: the model on do3d has changed since I printed this - it comes in fewer pieces). 
 
-![First attempt](/assets/samus-armour/helmet_fusion.jpg){: .center}
+<img src="/assets/samus-armour/helmet_fusion.jpg"  width="60%" height="30%">
 
 Without changing the size, it was too big for my printer. But thankfully, it came not just in a single model, but also in 6 pieces - the original model sliced down the middle of the face and twice sideways through the head. Each of these pieces fitted easily on my printer. Great!
 But I needed a way to reattach them after printing them and did not think glue was enough, so i added tabs across each of the cuts with a screw either side
 
-![First attempt](/assets/samus-armour/helmet_bolts.jpg){: .center}
+<img src="/assets/samus-armour/helmet_bolts.jpg"  width="60%" height="30%">
 
 so I could screw it all back together at the end. This had some error and you can see the join lines close up, but it's been negligible and I've gotten used to the look:
 
@@ -65,7 +65,7 @@ so I could screw it all back together at the end. This had some error and you ca
 
 Next, the visor. Frankly Built used clear plastic with a sheet of green translucent plastic from car headlight tints; these cost a fair bit, but I found some coloured lighting tints for hobbyist filmmaking, and among these was a good shade of green. I cut it to a reasonable shape and held it in place with some foam around the top edges, and hot gluing it on the bottom edges. While doing this, I added a lot more foam on the inside of the helmet. Why? Well, for a start it's hard plastic - not comfortable. Secondly, this balanced delicately on the top of my head and wobbled at the slightest motion - I wanted it to stay on a bit more solidly. So I added padding from EVA foam offcuts until it sat with pressure all over my head, holding it with some slight tension, and didn't wobble:
 
-![First attempt](/assets/samus-armour/inside_helmet.jpg){: .center}
+<img src="/assets/samus-armour/inside_helmet.jpg"  width="60%" height="30%">
 
 Finally, the mask (seen in above photo). Note in the following picture Samus appears to have some sort of oxygen mask covering her mouth and nose
 
@@ -87,7 +87,7 @@ The next problem was how to hold this to my body. The shoulder piece spans about
 
 and with one on each shoulder, cinched tightly with elastic, these would hold each other in. Certainly with my mega-heavy shoulder piece this wasn't pleasant, but after reducing shell thickness and infill density I got one shoulder to 700 grams and the other to 500 grams. My printer also broke through this, and I had _a lot_ of failures. 
 
-![First attempt](/assets/samus-armour/dodgy_shoulder.jpg){: .center}
+<img src="/assets/samus-armour/dodgy_shoulder.jpg"  width="60%" height="30%">
 
 I'll discuss sanding and painting below.
   
@@ -107,14 +107,13 @@ and thankfully these were all individual pieces in the model so I could print th
 
 ![First attempt](/assets/samus-armour/jetpack2.jpg){: .center}  
 
-![First attempt](/assets/samus-armour/jetpack3.jpg){: .center}  
+<img src="/assets/samus-armour/jetpack3.jpg"  width="60%" height="30%">
 
-  
    
 ### Forming the foam
 Let's look at Samus' armour again:
 
-![First attempt](/assets/samus-armour/samus.png){: .center}
+<img src="/assets/samus-armour/samus.png"  width="60%" height="30%">
 
 There's black lines throughout the armour (see the abdomen in particular), which I'm going to use to break up the armour into distinct pieces, eg. a shin piece, a thigh piece, many chest pieces, etc. Given that this is all attached to a black onesie, the black background is taken care of; I just need each brightly coloured piece. The green will be LEDs, and the rest just formed from EVA foam. 
   
@@ -122,7 +121,7 @@ There's black lines throughout the armour (see the abdomen in particular), which
 #### The shins
 Shins seemed the easiest starting point because I can reach my shin with both arms - this serves to help form the heated foam around my shin, and also meant I could prototype quickly with sewing various attachment methods. To get the shape I just ... looked at a few images of Samus while holding foam sheets around my leg in various ways, and drew and cut repeatedly until I had the basic outline. A little refinement later, and I had what ended up being close to the final version. This was two layers - one to hold the shape, the other to add depth so that the LEDS could be inset into the foam. 
 
-![First attempt](/assets/samus-armour/shin_two_layers.jpg){: .center}
+<img src="/assets/samus-armour/shin_two_layers.jpg"  width="60%" height="30%">
 
 I had 4mm foam, so attempting to inset the LEDs into one sheet would have been a nightmare. 
 Once I had the shape sketched and cut out, I started prototyping attachments by attaching the foam with metal pops:
@@ -136,7 +135,7 @@ but as these were just singular points of connection, at the back of my shin whe
 This was bad, for one main reason: the two sheets are already glued. They have a relative position to each other. The heat-molding tries to warp each piece separately, but the glue resists since the two layers would otherwise be shifting relative to each other. For the second attempt, I cut two pieces, heat-formed them around my leg, _and then_ glued them together. This held the right shape a lot stronger. 
 The knee piece was made from two halves, glued together to get that curved shape, and then glued bending forwards on the top of the shin piece. Finally, although I now think this was a mistake, I had slit the outer sheet of foam on the shin to reduce the strain and let that black line down the front of the shin be visible, but then I decided I didn't like this, and covered it up with EVA foam putty. This looked kinda awkward, but I didn't want to redo the whole shin. 
 
-![First attempt](/assets/samus-armour/shin_unpainted.jpg){: .center}  
+<img src="/assets/samus-armour/shin_unpainted.jpg"  width="60%" height="30%">
   
    
 #### The thighs
@@ -171,7 +170,7 @@ Not much to say here either. These pieces just need to wrap around both upper ar
 #### The chest
 The final of the major foam pieces, the chest. Take a look:
 
-![First attempt](/assets/samus-armour/her_chest.png){: .center} 
+<img src="/assets/samus-armour/her_chest.png"  width="60%" height="30%">
 
 This breastplate is typically very triangular from a side profile; I wanted to capture that, and also the low angle it has down the front. What was difficult was the transition from there to the rest of the chest. I cut a piece of foam that resembled a bib to sit around my neck, and a bracing piece that would attach at a right angle to this to prop it up from my chest:
 
@@ -179,7 +178,7 @@ This breastplate is typically very triangular from a side profile; I wanted to c
 
 I didn't want to spend too much time on this; at this stage, I was finding foam development really difficult to get as exact and good looking as 3D printing (it's possible, experts do it all the time. An expert I am not). So I was sufficiently happy with this basic shape, and just honed the edges and added velcro until it sat right:
 
-![First attempt](/assets/samus-armour/my_chest2.jpg){: .center}  
+<img src="/assets/samus-armour/my_chest2.jpg"  width="60%" height="30%">
 
 
 Then added slits for lights ..... and realised only too late that I'd somehow made this incredibly unsymmetrical. Ah well. Mistakes happen, and I was rushing this. 
@@ -194,13 +193,14 @@ To get the shoes Samus has I had some spare sneakers that, to be honest, were a 
 
 ![First attempt](/assets/samus-armour/shoe_glue.jpg){: .center}  
 
-![First attempt](/assets/samus-armour/shoe1.jpg){: .center}  
+<img src="/assets/samus-armour/shoe1.jpg"  width="60%" height="30%">  
+
 
    
 ### Lights
 Looking at Samus from other games as well as the above images,
-
-![First attempt](/assets/samus-armour/dread_suit_lights.jpg){: .center}  
+ 
+<img src="/assets/samus-armour/dread_suit_lights.jpg"  width="60%" height="30%">
 
 ![First attempt](/assets/samus-armour/corruption_Suit.png){: .center} 
 
@@ -224,9 +224,9 @@ Then I tried more rigid packing foam. When thick enough this worked really well 
 
 But how to attach? I tried gluing the edges in - hot glue melted through the diffusing foam, and superglue appeared to just crack. In retrospect, I should have designed the shins with this in mind; I could have made it so that the packing foam tucked between the two layers of EVA foam around the LED cut-out area of the shin. Given that I didn't do this, I decided eventually to _sew_ the packing foam cover on, and this actually worked! Threading through the bottom layer of EVA foam and holding the edges of packing foam down, up and down the sides of the cut-out area:
 
-![First attempt](/assets/samus-armour/shin_lights.jpg){: .center}  
+<img src="/assets/samus-armour/shin_lights.jpg"  width="60%" height="30%">
 
-![First attempt](/assets/samus-armour/sewing_thighs.jpg){: .center}  
+<img src="/assets/samus-armour/sewing_thighs.jpg"  width="60%" height="30%">
 
 It held the packing foam down tight enough, and I could tuck the edges in a bit! Excellent!
   
@@ -245,12 +245,12 @@ Not following Frank's tutorial, I was a little heavy-handed with the red. You re
 
 I could sand this off and start again on this patch, but ... I don't trust myself to not make it worse. There were also some print artifacts that no amount of filler or primer could remove (well, some amount, but an amount more than I was going to reasonably do):
 
-![First attempt](/assets/samus-armour/hetlmet_artifacts.jpg){: .center}  
+<img src="/assets/samus-armour/helmet_artifacts.jpg"  width="60%" height="30%"> 
 
 And this took so much time and material to print, that ... I'll live with this. In Frank's video, he gets some artifacts, and just prints another whole dang helmet. He's clearly more dedicated. 
 The last painted pieces were the pipes on the front. These I SLA-printed - to keep that fine detail, instead of having to sand down a small tube - and spray painted, first with a couple layers of primer, and then a metallic silver. They just slotted into the front of the helmet, either side, and I got-glued them down
 
-![First attempt](/assets/samus-armour/sla_tube.jpg){: .center}  
+<img src="/assets/samus-armour/sla_tube.jpg"  width="60%" height="30%">
 
  
 #### The Shoulders
