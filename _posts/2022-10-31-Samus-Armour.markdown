@@ -81,11 +81,15 @@ _Very_ happy with this. I'll go over the painting later.
 #### The Shoulders
 [The shoulders also came from Thingiverse](https://www.thingiverse.com/thing:1214085/files), although I had to do some size checking. I printed some test slices to gauge size, and a full version to see how it looked. This first full shoulder ended up about 95% of the size that felt good, but also far too dense - I needed to really tone the settings down for the next print, since the sholder weighed about a kilogram alone. 1kg resting on each of my shoulders was not going to feel good. 
 
-The next problem was how to hold this to my body. The shoulder piece spans about 90 degrees, which doesn't attach to a human shoulder well. I need something to hold it both inwards and upwards. I designed a ring to attach on the inside of the shoulder piece that had slits for straps to pass through. This held it up around each arm:
+The next problem was how to hold this to my body. The shoulder piece spans about 90 degrees, which doesn't attach to a human shoulder well. I need something to hold it both inwards and upwards. I designed a ring to attach on the inside of the shoulder piece that had slits for straps to pass through.
+
+<img src="/assets/samus-armour/shoulder_band.png"  width="60%" height="30%">
+
+This held it up around each arm, and with one on each shoulder, cinched tightly with elastic, these would hold each other in.
 
 ![First attempt](/assets/samus-armour/good_shoulder.jpg){: .center}
 
-and with one on each shoulder, cinched tightly with elastic, these would hold each other in. Certainly with my mega-heavy shoulder piece this wasn't pleasant, but after reducing shell thickness and infill density I got one shoulder to 700 grams and the other to 500 grams. My printer also broke through this, and I had _a lot_ of failures. 
+Certainly with my mega-heavy shoulder piece this wasn't pleasant, but after reducing shell thickness and infill density I got one shoulder to 700 grams and the other to 500 grams. My printer also broke through this, and I had _a lot_ of failures. 
 
 <img src="/assets/samus-armour/dodgy_shoulder.jpg"  width="60%" height="30%">
 
