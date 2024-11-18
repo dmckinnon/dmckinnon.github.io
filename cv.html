@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>About | McKinnon Building</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="About" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The things I have built" />
+<meta property="og:description" content="The things I have built" />
+<link rel="canonical" href="http://localhost:4000/about/" />
+<meta property="og:url" content="http://localhost:4000/about/" />
+<meta property="og:site_name" content="McKinnon Building" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="About" />
+<script type="application/ld+json">
+{"@type":"WebSite","headline":"About","description":"The things I have built","url":"http://localhost:4000/about/","name":"McKinnon Building","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="McKinnon Building" /></head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>David McKinnon's Resume</title>
+  <style>
+      body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 20px;
+          background-color: #000000;
+      }
+      header {
+          text-align: center;
+          margin-bottom: 50px;
+      }
+      section {
+          margin-bottom: 40px;
+      }
+      h2 {
+          border-bottom: 2px solid #333;
+          padding-bottom: 5px;
+      }
+      ul {
+          list-style-type: none;
+          padding: 0;
+      }
+      li {
+          margin-bottom: 10px;
+      }
+      .work-history h3 {
+          margin-bottom: 5px;
+      }
+      .work-history p {
+          margin: 0 0 10px 0;
+          font-size: 14px;
+          color: #555;
+      }
+      footer {
+          text-align: center;
+          font-size: 12px;
+          color: #888;
+          margin-top: 50px;
+      }
+  </style>
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">David McKinnon</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="dmckinnon.github.io">Home</a></div>
+      </nav></div>
+</header>
+<header>
+  <h1>David McKinnon</h1>
+  <h3>Embedded ML Engineer</h3>
+  <h4>mckinnondavidj@gmail.com</h4>
+  <h4>Redmond, WA</h4>
+</header>
+
+<main class="page-content" aria-label="Content">
+      
+  <section>
+    <h2>Notable Skills</h2>
+    <ul>
+        <li>Graph Pass Optimization</li>
+        <li>Simultaneous Localization and Mapping (SLAM)</li>
+        <li>Research on open-ended/unsolved problems</li>
+        <li>Embedded Systems (particularly Qualcomm hardware)</li>
+    </ul>
+</section>
+
+<section class="work-history">
+    <h2>Work History</h2>
+
+    <h3>Qualcomm - Senior Machine Learning Engineer</h3>
+    <p>Nov 2023 - Present</p>
+    <p>Many ML models are not ready for running on NPUs (Qualcomm's Hexagon). My work focused on implementing
+      graph passes and Ops to enable all the models in Qualcomm's AI Hub Models collection to run on Hexagon.</p>
+    <li>Graph passes in HexNN, involving tiling, memory location (eg VTCM), and memory formatting</li>
+    <li>Implementing ops in HVX and HMX assembly</li>
+    <li>Graph passes in ONNX Optimizer</li>
+    <li>Compiling and quantising open-source models for TFLite and QNN, including fixing incompatibilities</li>
+    <li>Released <a href="https://aihub.qualcomm.com/">Qualcomm AI Hub</a> and <a href="https://aihub.qualcomm.com/models">Qualcomm AI Hub Models</a></li>
+    
+    <h3>Tetra - ML Engineer</h3>
+    <p>May 2023 - Nov 2023 (acquired by Qualcomm Nov 2023)</p>
+    <p>Many ML models are designed for PyTorch but not for TFLite or CoreML. My work focused on fixing 
+      incompatibilities to bridge this gap and optimise models for devices.
+    </p>
+    <li>Implemented missing ML ops from pytorch in tensorflow and coreml, eg. multi-head attention</li>
+    <li>Implemented CoreML graph passes</li>
+    <li>Compiling and quantising open-source models for TFLite and QNN, including fixing incompatibilities</li>
+
+
+    <h3>Microsoft - Software Engineer II</h3>
+    <p>Jan 2017 - Feb 2023</p>
+    <p>I worked on many new and experimental features within the tracking framework of the Microsoft HoloLens,
+      like tracking in visually constrained environments or non-inertial environments, and also developed 
+      analyses to measure tracking accuracy in these situations.
+    </p>
+    <li>Shipped Windows Mixed Reality and HoloLens 2</li>
+    <li>Developed <a href="https://docs.microsoft.com/en-us/windows/mixed-reality/qr-code-tracking">6DoF QR code tracking</a> on HoloLens ASIC, involving stereo triangulation and integrating into the map</li>
+    <li>Developed <a href="https://learn.microsoft.com/en-us/hololens/hololens2-moving-platform">visual SLAM in a non-inertial reference frame</a></li>
+    <li>Analysis of tracking-accuracy-measurement methods: comparing optitrack to ndi optotrack to Vive lighthouses, including considerations for when the reference frame was moving too.</li>
+    <li>Constellation-based SLAM for tracking in the dark or environmentally constrained scenarios. </li>
+    <li>Designed and developed test architecture for assessing hologram stability across visual tracking and display pipeline for build validation.</li>
+    <li>Optimising the visual-inertial tracker for cDSP blocks in the XR2 SoC. Involved researching the cDSP architecture, porting existing algorithms, and attempts at hardware-optimised mathematics both by hand and auto-done by compiler.</li>
+    
+</section>
+
+<section>
+  <h2>Research experience</h2>
+  <ul>
+      <li><strong>Honours Thesis:</strong> Soccer-ball Detection and Tracking on Low-Compute robots for RoboCup Standard Platform League.</li>
+      <li><strong>Robotics lab research:</strong> Analysis of different feature types used in machine learners for soccer ball detection on an embedded platform.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Personal Work</h2>
+  <ul>
+      <li><strong>Tutorials:</strong> Detailed tutorials on topics like camera calibration, feature detection, SVD, stereo depth, IMU calibration. See <a href="https://github.com/dmckinnon">Github</a></li>
+      <li><strong>Software projects:</strong> Ray Tracing, an embedded Gameboy emulator, embedded ML on a chip small enough for a business card.</li>
+      <li><strong>Other:</strong> Personal projects including reaction-wheel robots, self-taught welding, 3D modelling, and other miscellaneous things found on my personal blog. See <a class="page-link" href="dmckinnon.github.io">Home</a></li>
+  </ul>
+</section>
+
+<section>
+    <h2>Education and Skills</h2>
+    <ul>
+        <li><strong>Bachelor's Degree: Computer Engineering:</strong> UNSW 2016</li>
+        <li><strong>Bachelor's Degree: Mathematics:</strong> UNSW 2016</li>
+        <li><strong>Languages:</strong> C, C++, Python</li>
+        <li><strong>Skills:</strong> Computer Vision, Embedded Systems, operating systems, Machine Learning, Qualcomm firmware, assembly</li>
+    </ul>
+</section>
+
+<section>
+  <h2>Patents</h2>
+  <ul>
+      <li><a href="https://patents.google.com/patent/US20220375105A1/en?inventor=David+John+MCKINNON"><strong>Tracking on a Moving Platform</strong></a></li>
+      <li><a href="https://patents.google.com/patent/US20240221322A1/en?inventor=David+John+MCKINNON&oq=inventor:(David+John+MCKINNON)&peid=6242151a4e268%3A15%3A3c48b87f"><strong>Automatic Detection of the Presence of a Moving Platform</strong> </a></li>
+      <li><a href="https://patents.google.com/patent/WO2024144942A1/en?inventor=David+John+MCKINNON&oq=inventor:(David+John+MCKINNON)"><strong>Enabling a local mixed reality map to remain de-coupled from a global mixed reality map </strong></a></li>
+      <li><a href="https://patents.google.com/patent/US20230308321A1/en?inventor=David+John+MCKINNON&oq=inventor:(David+John+MCKINNON)"><strong>Coordinated communication in an electronic system </strong></a></li>
+  </ul>
+</section>
+
+<section>
+  <h2>Links</h2>
+  <ul>
+      <li><a href="https://www.linkedin.com/in/david-john-mckinnon/"><strong>LinkedIn</strong></a></li>
+      <li><a href="github.com/dmckinnon"><strong>GitHub</strong></a></li>
+    </ul>
+</section>
+
+</main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">David McKinnon's resume</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">McKinnon Building</li><li><a class="u-email" href="mailto:themckinnonbuilding@gmail.com">themckinnonbuilding@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/dmckinnon"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">dmckinnon</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The things I have built</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
