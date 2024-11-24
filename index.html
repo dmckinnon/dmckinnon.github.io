@@ -1,0 +1,72 @@
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+
+layout: default
+---
+
+<div class="home">
+    {%- if page.title -%}
+    <h1 class="page-heading">McKinnon Building</h1>
+    {%- endif -%}
+
+    <h2>Posts</h2>
+    <p>Various things I have physically made</p>
+
+    {%- if paginator.posts.size > 0 -%}
+    {%- if page.list_title -%}
+    <h3 class="post-list-heading">{{ page.list_title }}</h3>
+    {%- endif -%}
+    <ul class="post-list">
+        {%- for post in paginator.posts -%}
+        <li>
+            <span class="post-meta">{{ post.date | date: site.date_format }}</span>
+            <h3>
+                <a class="post-link"
+                   href="{{ post.url | relative_url }}">
+                    {{ post.title | escape }}
+                </a>
+            </h3>
+        </li>
+        {%- endfor -%}
+    </ul>
+
+    {% if paginator.total_pages > 1 %}
+    <div class="pager">
+        <ul class="pagination">
+            {%- if paginator.previous_page %}
+            <li><a href="{{ paginator.previous_page_path | relative_url }}"
+                   class="previous-page">&laquo;</a></li>
+            {%- else %}
+            <li>
+                <div class="pager-edge">&laquo;</div>
+            </li>
+            {%- endif %}
+
+            {% for page in (1..paginator.total_pages) %}
+            <li>
+                {% if page == paginator.page %}
+                <div class="current-page">{{ page }}</div>
+                {% elsif page == 1 %}
+                <a href="{{ '/' | relative_url }}">{{ page }}</a>
+                {% else %}
+                <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
+                {% endif %}
+            </li>
+            {% endfor %}
+
+            {%- if paginator.next_page %}
+            <li><a href="{{ paginator.next_page_path | relative_url }}"
+                   class="next-page">&raquo;</a></li>
+            {%- else %}
+            <li>
+                <div class="pager-edge">&raquo;</div>
+            </li>
+            {%- endif %}
+        </ul>
+    </div>
+    {%- endif -%}
+
+    {%- endif -%}
+
+</div>

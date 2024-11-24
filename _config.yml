@@ -27,16 +27,18 @@ url: "https://www.youtube.com/@themckinnonbuilding" # the base hostname & protoc
 github_username:  dmckinnon
 
 # Build settings
-remote_theme: pages-themes/slate@v0.2.0
+remote_theme: pages-themes/midnight@v0.2.0
 plugins:
   - jekyll-feed
   - jekyll-remote-theme
+  - jekyll-paginate
+  - jekyll-sitemap
 
 # Site settings
 permalink: /:title/
 markdown: kramdown
-#paginate: 5
-#paginate_path: "/:num/"
+paginate: 5
+paginate_path: "/:num/"
 date_format: "%b %-d, %Y"
 
 # Exclude from processing.
