@@ -26,7 +26,7 @@ I didn't formally learn to snowboard either – I just watched other people, tri
 
  
 
-Then I went backcountry skiing, also known as ski touring. This requires a lot of skiing skill as you encounter a large range of terrain, all ungroomed. It could be powder, breakable crust, hard crust, ice, wet concrete, etc, and even transition points between those. When I skied St Helens top to bottom it featured ice, corn, breakable crust, wet concrete, and then nice "groomed" hardpack.  
+In 2021 I started backcountry skiing, also known as ski touring. This requires a lot of skiing skill as you encounter a large range of terrain, all ungroomed. It could be powder, breakable crust, hard crust, ice, wet concrete, etc, and even transition points between those. When I skied St Helens top to bottom it featured ice, corn, breakable crust, wet concrete, and then nice "groomed" hardpack.  
 
  
 
@@ -34,7 +34,7 @@ I hadn't skied since 2014, but I gave it a bash - and wasn't too bad. I fumbled 
 
  
 
-Now I'm back into resort skiing, and thought "well this is easier than backcountry, since the terrain is a lot more predictable and often groomed". I didn't focus on any particular learning, I just skied and had fun. While there's nothing wrong with this, it did mean that when things went wrong - I got chatter on my front tips, or was consistently slower, or even just generally struggled – I didn't understand why and also never got better.  
+As of 2023 I'm back into resort skiing, and thought "well this is easier than backcountry, since the terrain is a lot more predictable and often groomed". I didn't focus on any particular learning, I just skied and had fun. While there's nothing wrong with this, it did mean that when things went wrong - I got chatter on my front tips, or was consistently slower, or even just generally struggled – I didn't understand why and also never got better.  
 
  
 
@@ -63,8 +63,8 @@ All this as an example to highlight deliberate practice: I would go down the ski
 
 For the next run, try that more consistently – yep, going a lot faster and remaining in control! 
 
-Now I'm a far better skier, and all it took was few important tips, then trying some things to translate those tips into a language I understand, and then consistently practice practice practice.  
+Now I'm a far better skier, and all it took was a few important tips, then trying some things to translate those tips into a language I understand, and then consistently practice practice practice.  
 
  
 
-The attitude makes a significant difference. Instead of just "that run was more fun" as when I was just skiing for funsies without trying, I was actively thinking "Let's improve". Mentioning things to friends, asking for advice, asking "did that go better" or just getting a feel for it myself, and always having a little process in the back of the mind watching what I was doing. An attitude of "let's learn and improve".
+The attitude makes a significant difference. Instead of just "that run was more fun" as when I was just skiing for funsies without trying, I was actively thinking "let's improve". Mentioning things to friends, asking for advice, asking "did that go better" or just getting a feel for it myself, and always having a little process in the back of the mind watching what I was doing. An attitude of "let's learn and improve".
