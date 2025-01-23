@@ -12,7 +12,7 @@ comments: true
  
 A friend wanted to test his lost-wax casting setup, and asked me for a model. We successfully cast this model below (Jinx, from Netflix' Arcane or from League of Legends) out of brass and it turned out great!
 
-![Jinx](/assets/ring/jinx.png){: .center}
+![Jinx](/assets/ring/jinx.jpeg){: .center}
 
 
 A year or two later I saw that someone online had made a [ring with strontium aluminate](https://www.reddit.com/r/ResinCasting/comments/bu49ku/this_is_a_ring_made_of_resinepoxy_mixed_with/) (glow powder) embedded in into the metal. They'd specifically used red glow powder, giving their ring a very fiery effect.
@@ -24,28 +24,24 @@ Which gave me the obvious idea: can we do this with The One Ring?
 
 From the book, we know the text can glow bright enough to read whilst the Ring is cool enough to comfortably hold. Since glow powder reacts to light, this is perfect. 
 
-A quick search on Thingiverse revealed several One Ring designs, and once SLA-printed there was an obvious candidate – [smooth rounded edges, big text, and most importantly, deep text](https://www.thingiverse.com/thing:2766289). 
+A quick search on Thingiverse revealed several One Ring designs, and once SLA-printed there was an obvious candidate – [smooth rounded edges, big text, and most importantly, deep text](https://www.thingiverse.com/thing:2766289). To do a quick feasibility test, this was printed in standard resin and the text filled in with powder. Any excess was dusted off:
 
-
-![Printed version](/assets/ring/print1.png){: .center}
- 
-To do a quick feasibility test, this was printed in standard resin and the text filled in with powder. Any excess was dusted off:
-
-![glowing](/assets/ring/glow1.png){: .center}
+![glowing](/assets/ring/glow1.jpg){: .center}
 
 Excellent! Didn't brush off as much powder as I wanted to, but this was also a quick draft. It proved the concept nicely, so I forged on.
 
 Next step is to print this in wax resin: 
 
-![wax version](/assets/ring/wax1.png){: .center}
+![wax version](/assets/ring/wax1.jpg){: .center}
  
 This will get embedded into plaster and melted out to make the negative. These were created in batches of two so that there was a spare, and the rods seen in the image are sprues, or tracks for brass and air to flow – if there were only one pathway, airbubbles would easily occur since molten brass is heavier than air (citation needed).  
 
-Encasing in plaster: 
+Encasing in plaster. I smooshed plaster into the text separately, to ensure palster got in the tiny holes: 
 
-![](/assets/ring/plaster1.png){: .center}
-![](/assets/ring/plaster2.png){: .center}
-![](/assets/ring/plaster3.png){: .center}
+![](/assets/ring/plaster1.jpg){: .center}
+![](/assets/ring/plaster2.jpg){: .center}
+![](/assets/ring/plaster3.jpg){: .center}
+![](/assets/ring/plaster3.jpg){: .center}
  
 The plaster needs to cook at increasing temperatures, with a ceiling of 1100 degrees F, for 14 hours. The kiln is programmable and it was set to the right times and temperatures so I just hit go ... and then got back into bed as it was super early and I wanted to do it that evening. I don't completely understand this part; something about heat-treating the plaster, I'm sure, and making sure it matches the molten brass temperature sufficiently so as not to crack upon contact.  
 
@@ -83,11 +79,11 @@ Once they were cleaned up, I took a closer look. The text unfortunately was not 
 
 After a quick polish, I set about adding powder. This needs to be added into each groove of text, but wiped off all the other surfaces, and then sealed in. Superglue was a good option; others online have used it to good effect, and I could seal in short stretches of text at a time. After some practice on the spare: 
  
-[photo] 
+![Two Rings to share the power](/assets/ring/spare_glow.jpg){: .center}
 
  
 
-This is looking pretty good! Now let's try the real thing. The process was: 
+This is looking pretty good! It's glowing all over because I wasn't too carefuly with cleaning off excess powder. Good lesson to learn the easy way. Now let's try the real thing. The process was: 
 1. Tip more powder than necessary onto the current section 
 
 2. Scrape over with tweezers, taking most of the excess away 
