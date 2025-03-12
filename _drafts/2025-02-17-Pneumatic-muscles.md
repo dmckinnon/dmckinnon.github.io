@@ -8,7 +8,7 @@ comments: true
 
 # Pneumatic muscles
 
-[](/assets/pneumatics/muscle.jpg)
+![](/assets/pneumatics/muscle.jpg)
 
 There have been a couple of projects where I want strong but relatively light actuators. One is a bipedal robot - weight from motors on the legs can help stabilise and reduce inverted pendulum effect, but it also means it adds a torque to the limbs (this is likely negligible. Typical biped legs do not swing out to high angles). Another one involves a large glove that goes over my hand and extends far out, and I want the fingers to actuate. Using electric motors of sufficient strength here means having a number of motors fixed some distance from my hand, when this device is anchored on my arm. That's a considerable torque, and an uncomfortable one too (unless it's shoulder day).
 
@@ -20,7 +20,7 @@ The biggest reasons i want to try pneumatic muscles is the strength to weight ra
 ## What is a [pneumatic muscle](https://softroboticstoolkit.com/book/pneumatic-artificial-muscles)?
 These are sometimes called [McKibben muscles](https://en.wikipedia.org/wiki/Pneumatic_artificial_muscles#:~:text=Pneumatic%20artificial%20muscles%20(PAMs)%20are,integration%20into%20other%20projects/systems.). There is a flexible hollow part, the actuator, that will be pressurised. This usually is split into a bladder and some sort of expanding mesh (think a finger trap, or braided cable sleeves) to take the strain. At each end is a rigid cap - these form attachment points to the bodies to be acted upon. Feeding in through one rigid cap is a supply line of air. When the air pressurises the bladder, it expands and so does the mesh - radially. Therefore, it axially - lengthwise - contracts, which pulls the ends together with some force proportional to the pressure. Typically, one end is attached to a frame, and the other to a part that needs moving, or it is attached to an arm around a rotating joint, and this pulls the arm in a rotation. 
 
-[](/assets/pneumatics/diagram.jpg)
+![](/assets/pneumatics/diagram.jpg)
 
 Think of it like a regular muscle - your bicep is attached to the humerus (upper arm bone) and to the radius/ulna (forearm bones) - and it attaches across a rotating joint (the elbow). When you lift using your bicep, it is contracting, which pulls the two bones together. The forearm rotates towards the upper arm about the elbow with some force. 
 
@@ -39,12 +39,12 @@ List of end cap parts:
 - 1/4" sleeve
 - 1/4" cap with a hole
 
-![](/assets/pneumatics/all_parts.jpg)
+![](/assets/pneumatics/all_parts.png)
 
 Feed the bike tyre and mesh through the compression coupling, and insert the sleeve. Push this down into the coupling for a tight fit:
 
-![](/assets/pneumatics/end_with_sleeve.jpg)
-![](/assets/pneumatics/end_pressed.jpg)
+![](/assets/pneumatics/end_with_sleeve.png)
+![](/assets/pneumatics/end_pressed.png)
 
 On one end, add the cap. If this does not hold pressure, cut the cork in half, jam the cork in the sleeve, then add the cap back. The cap should press the cork into the sleeve, and maintain pressure.
 On the other end, add the adapters to convert down to 1/4". The plastic pipe I use to route between solenoids, the 5mm hose, fits tightly onto this. Push a sleeve through the 1/4" adapter, and jam the 5mm tube onto this. Add the cap and plumber's tape for a tight fit
@@ -54,7 +54,7 @@ On the other end, add the adapters to convert down to 1/4". The plastic pipe I u
 
 Now feed the other end of the tube into a press-fit coupling, this goes into the solenoid ... and bam. Air. 
 
-![The entire assembly](/assets/pneumatics/whole_thing.jpg) 
+![The entire assembly](/assets/pneumatics/assembly.png) 
 
 ### Testing
 How strong are these? From Wikipedia,
@@ -69,6 +69,7 @@ Contraction:
 - 25 psi
 - 50 psi
 - 75 psi
+
 
 As I mentioned above, the weaves I use can bulge more than this. I made a smaller muscle from a silicone tube, and it barely contracts axially. This is because the tube barely expands under pressure. The bigger muscles I made use a bike tyre, which I know can bulge considerably - why doesn't it bulge further? Because there is no more room in the weave - if the weave bulges more, it contracts axially more and there isn't room for the tyre that direction. I should try a looser weave. 
 
