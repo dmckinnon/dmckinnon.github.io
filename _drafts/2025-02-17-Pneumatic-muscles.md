@@ -63,30 +63,24 @@ My meshes are made from plastic fibers, which together can handle quite a strain
 
 Ideally a costume or movable robot would have its own compressed air supply - and a compressor, if not multiple carbon dioxide cannisters. Given that this is just in the testing/early development stages, I'm attaching it to my air compressor with a 150psi tank at however many gallons - basically, a lot of air, but a lot of air that is not particularly mobile. I have been running the system at 50psi, but can crank it to 75. 
 
-Now for some measurements. How strong is each muscle? How far does it contract?
+Now for some numbers. How strong is each muscle? How far does it contract? How much does it weigh?
 
-Contraction:
-- 25 psi
-- 50 psi
-- 75 psi
+50 psi appeared to give me the upper limit, in that beyond that pressure, the tube did not noticeably expand any further, just get higher pressure inside.
 
+At 50 psi, the entire muscle contracts 15mm in length. 
+This lifts 4lbs at least, but with 8lbs attached it starts to leak. Yes, I should have more rigorously tested, and got the actual limit. A muscle of length 16cm weighs 114g, using brass components.
 
-As I mentioned above, the weaves I use can bulge more than this. I made a smaller muscle from a silicone tube, and it barely contracts axially. This is because the tube barely expands under pressure. The bigger muscles I made use a bike tyre, which I know can bulge considerably - why doesn't it bulge further? Because there is no more room in the weave - if the weave bulges more, it contracts axially more and there isn't room for the tyre that direction. I should try a looser weave. 
+As mentioned above, the mesh used can bulge more than this. I made a smaller muscle from a silicone tube, and it barely contracts axially. This is because the tube barely expands under pressure. The bigger muscles I made use a bike tyre, which I know can bulge considerably - why doesn't it bulge further? Because there is no more room in the mesh - if the mesh bulges more, it contracts axially more and there isn't room for the tyre that direction. One experiment I'd like to try is remove fibres from the mesh to see if it expands more. The fibres are in groups of four or five, criss-crossing around the perimeter - I'd remove one or two from each group. 
 
-Lifting weight:
-This was harder to do rigorously as I didn't want to do it to breaking point
-- 25 psi:
-- 50 psi:
-- 75 psi:
-
-Weight of 1 muscle (length Xmm): 114g
 
 ## Different components
-The couplings I've used in this muscle have been brass. One muscle is ~110g. For comparison, one stepper motor is maybe 400g. We're already saving considerable weight if you think about holding this in a costume on your arm for an hour, or on the end of a robotic limb. But can we get this lighter? Also, save costs? Each brass coupling part is maybe $5-10, and with five-ish partspre muscle, that's going to add up. 
+The couplings I've used in this muscle have been brass. One 160cm muscle is ~110g, as above (the mesh and tyre do not add much weight, 90% of this is brass). For comparison, one stepper motor is maybe 400g. We're already saving considerable weight if you think about holding this in a costume on your arm for an hour, or on the end of a robotic limb. 
+
+But can we get this lighter? Also, save costs - each brass coupling part is maybe $5-10, and with five-ish parts per muscle, that's going to add up. 
 What could we use?
 
 ### Resin
-I researched engineering resins for resin 3D-printing - Siraya Blu, Phrozen Rigid series, Anycubic tough - and got Siraya Blu tough and Phrozen Onyx 410. 
+I researched engineering resins for resin 3D-printing - Siraya Blu, Phrozen Rigid series, Anycubic tough - and got Siraya Blu tough (Phrozen Onyx looked a good candidate, but I could only find resin profiles on Phrozen's printers and most people claimed to use a mixture of Onyx and other resins, with maybe ~30% onyx. This wasn't helpful). 
 
 People have printed threaded parts from these resins - [this man](https://www.youtube.com/watch?v=7r16-UDo2t4) printed bolts and nuts in Siraya Blu Tough and tested them for shear strength, tensile strength, practicality (the threads needed to be tapped again), etc. To the best of my knowledge, no one has printed compression fittings with these resins and tried them - or at least, no one has published the results.
 
@@ -94,12 +88,13 @@ Can we print from these parts and get an airtight seal? Will the muscle be just 
 
 #### Siraya Blu Tough
 I printed parts from Siraya Blu
+
 photo
 
-My printer is definitely capable of high precision - I've seen this on printing minis for D&D. But these threads ... they are definitely not defined enough. Is resin getting stuck in the threads and not getting cleaned out? The inner thread worked and connected to the metal, and meshed well. 
+As can (with difficulty) be seen from the photo, there were some aberrations when printing this. Printing some more, we find:
 
-I tried several different tolerance levels and cleaning strategies:
-
-#### Phrozen Rigid Onyx 410
+- Print more of these
+- build an entire muscle from them
+- Test
 
 
