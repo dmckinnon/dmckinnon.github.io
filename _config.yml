@@ -23,7 +23,7 @@ email: themckinnonbuilding@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   These are some of the things I have built and written about
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://www.youtube.com/@themckinnonbuilding" # the base hostname & protocol for your site, e.g. http://example.com
+url: "dmckinnon.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  dmckinnon
 
 # Build settings
