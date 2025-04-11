@@ -6,16 +6,16 @@ categories: Projects
 comments: true
 ---
 
-# A Business card 
+# Machine Learning on a Business card 
 
 I've seen blog posts of business cards that run linux - [exhibit A](https://www.thirtythreeforty.net/posts/2019/12/my-business-card-runs-linux/), [exhibit B](https://dmitry.gr/?r=05.Projects&proj=33.%20LinuxCard) - and as a tinkerer and someone involved in embedded systems, this absolutely tickles me. How cool! Think about what this says of you, immediately!
 
-I really wanted to make one. But I'm not really an embedded OS person, more of an embedded ML person. Can we run embedded ML on a business card?
+I really wanted to make a business card like this - specifically, one with a microchip, embedded software, and some fun functionality. But I'm not really an embedded OS person, more of an embedded ML person. Can we run embedded ML on a business card?
 
 ## Contents
-- [The Arduino](#the-arduino-nano-ble-33)  
+- [Idea overview](#the-idea)
 
-- [Chip Selection](#can-i-make-my-own)
+- [A prototype](#a-prototype)  
 
 - [Circuit Design](#designing-the-circuit)
 
@@ -23,92 +23,147 @@ I really wanted to make one. But I'm not really an embedded OS person, more of a
 
 - [Final product](#final-product)
 
-## The Arduino Nano BLE 33
-Turns out that you can! Following [this tutorial](https://www.allaboutcircuits.com/projects/tinyml-projects-creating-a-voice-controlled-robot-subsystems/), we have an example of a speech recogniser model running on an Arduino Nano. The chip specifically is an nRF-somethingsomething, which has a single-core ARM Cortex M4 clocked at 64MHz. I followed the tutorial, adding in my own target words - the model now detects 'one' through to 'nine' - and this worked on the Arduino board with perhaps 70% accuracy. That is, about 70% of the time it detected and correctly categorised the word I said, printing this out via serial. 
+## The Idea
+Let's go over what this would entail. I want a circuit board the size of a business card (about 2" x 3", or 50mm x 80mm),
+with my details printed on it. It needs to have a circuit that uses a microchip, and this microchip must run a
+machine learning algorithm - specifically, a neural network.
+The neural network should have some input from the user, and give some feedback that usage was successful. It also should be powered by USB, for convenience.
 
-## Can I make my own?
-Arduino open-sources their hardware, providing [all schematics](https://docs.arduino.cc/resources/schematics/ABX00030-schematics.pdf?_gl=1*9iuc9m*_up*MQ..*_ga*MzE1NzM3NzU2LjE3NDEzMDk2NDM.*_ga_NEXN8H46L5*MTc0MTMwOTY0MC4xLjAuMTc0MTMwOTY0MC4wLjAuMjA3NzcwODg4OQ..) - from this I can see which components are used and how they are connected. For example, the microphone used is an MP34TDR PDM microphone. They also open-source all their example code, so I was able to just access this directly. 
+I know from the [examples](https://www.thirtythreeforty.net/posts/2019/12/my-business-card-runs-linux/) [above](https://www.thirtythreeforty.net/posts/2019/12/my-business-card-runs-linux/)
+that this is possible. That is, a business-card-sized circuit board with a microchip powered by USB is do-able. The question is: what neural network can we run on such a tiny chip?
 
-### The nRF52840
-While I did design the entire circuit around the nRF, I'll talk about the rest of the circuit later. Let's discuss just the usage of this chip first.
+### Neural networks
+Before going further, let's discuss [neural networks](https://www.ibm.com/think/topics/neural-networks). If you already know about them, jump ahead. If you don't this is
+not a comprehensive explanation - they're a dense topic. This is just an overview. A neural network is an algorithm that performs
+statistical categorisation. Or, in other words, AI. It takes some input like an image or an audio stream, finds some notable pattern within like a collection
+of pixels that resemble a face, or a collection of frequencies and amplitudes that sound like "hello", and assign a score to a number of categories. 
+These might be: face, ball, apple, dog. They could be spoken words: hello, goodbye, hey google. A high score for a particular category denotes confidence
+that "this is it". 
 
-There are several features of this chip that make it desirable here:
-- sufficient internal flash (any program with tflite micro is gonna be chunky)
-- built-in USB data lines (no need for an FTDI chip anymore, woo!)
-- built-in hardware PDM circuit (it's important, just accept this for now)
-- the code just works and I know this
+Typically, however, neural networks are computationally intensive - that is, they require a lot of time and mathematics to arrive at an answer.
+This is because they rely on an operation called a convolution that multiplies many numbers, then adds them. Big powerful processors do this with ease.
+Tiny microprocessors that fit onto business cards ... less so. The neural network needs to be minimal.
 
-However, the nRF phyiscal chip package is BGA only. What does this mean? It means that there are pins buried underneath the chip itself that I cannot access from the outside, meaning I just have to trust they are soldered. This is above my skill and tools. [SMD components are hard](https://dmckinnon.github.io/SMD-components-are-hard/).
+### Speech recognition
+A speech recognition neural network sounds like a good idea. Microphones can be really small, on the order of millimetres. I can use LEDs to display 
+the result in some way - maybe just recognise numbers spoken, and display the number. 
 
-So let's pick another chip: the RP2040
+The input here would be a brief snippet of audio. The advantage is that this takes up a lot less memory than, say, an image from a camera. Correspondingly,
+such neural networks tend to be smaller - especially when they do not detect many words.
+
+### Making my own neural network
+Some research uncovered [this tutorial](https://www.allaboutcircuits.com/projects/tinyml-projects-creating-a-voice-controlled-robot-subsystems/).
+This is a speech recognition neural network model, that is run on an Arduino (read: tiny microprocessor). Perfect! Even better is that the tutorial
+demonstrates how to train the model with new data, and the training data gives a bigger selection of words to choose from. These include the numbers 'one' to 'nine'. 
+I selected these numbers for the model to detect, ran through the training tutorial, and bam - a small neural network model that recognises a few spoken numbers.
+
+I acquired the [Arduino used in the tutorial](https://docs.arduino.cc/hardware/nano-33-ble/) - the board comes with a microphone on it - uploaded the model and the surrounding software, and ran it.
+It worked with perhaps ~70% accuracy (70% of the time it correctly identified the number I'd spoken, and displayed it on my computer). This is great! An excellent demonstration that can catch attention. Next step is to design this into a business card.
+
+
+## A prototype
+I have the working concept on a working circuit board. This [circuit board](https://docs.arduino.cc/hardware/nano-33-ble/) is about 45mm x 15mm. This easily
+fits within a business card. Arduino even open-sources their hardware, providing [all schematics](https://docs.arduino.cc/resources/schematics/ABX00030-schematics.pdf?_gl=1*9iuc9m*_up*MQ..*_ga*MzE1NzM3NzU2LjE3NDEzMDk2NDM.*_ga_NEXN8H46L5*MTc0MTMwOTY0MC4xLjAuMTc0MTMwOTY0MC4wLjAuMjA3NzcwODg4OQ..).
+So why not just copy this?
+
+One main reason: the microchip used, the nRF52840, is a [BGA](https://en.wikipedia.org/wiki/Ball_grid_array) chip.
+This means that instead of having little legs on the sides to solder the chip down, it has dots underneath. 
+I've [written about this in more detail elsewhere](https://dmckinnon.github.io/SMD-components-are-hard/) - suffice to say for here that such microchips
+are not for novices, and I am still a novice. I need a different microchip.
 
 ### The RP2040
 This is a microchip [designed by Raspberry Pi](https://www.raspberrypi.com/products/rp2040/). Important features here include:
-- GPIO ports with PIO interfaces (programmable hardware not too unlike an FPGA)
-- nominal 125MHz dual core Cortex M0 (so definitely fast enough)
-- 520Kb RAM (why 520 not 512? This always bugged me)
-- built in USB data lines
+- Quad Flat package! This is the opposite of BGA - this has little legs on the side to solder. This is much kinder to a novice.
+- nominal 125MHz dual core Cortex M0
+    - Read: twice as fast as the nRF52840, which we know runs the software. So this is easily fast enough. 
+- 520Kb RAM
+    - The neural network is 46kB, the rest of the software ~200kB, so this is easily enough
+- Programming it is really easy
 - well documented and supported
-- it's cheap and so are the dev boards
-- Quad Flat Package, not BGA, so easier to solder on
 
 Downsides:
-- I have to port the software
+- The software I have that I know works was written for the nRF microchip. I can rewrite it for the RP2040, it just takes time. 
 
-There's a bunch of software issues here, things like the Arduino TFLite Micro uses mbed OS and I wanted to avoid that on RPi because ... why have it, and the example used FFT libraries from a custom TFLite micro that I needed to bring across etc etc etc these details are boring. 
-
-Point is, I ported the software to a Raspberry Pi Pico dev board with this chip, and a breakout board with the microphone connected. It worked. Not as well (~30% accuracy???) but it worked. I'll stress about those errors later. 
+The upsides were enough to overcome the (minimal) downside. I acquired a [dev board](https://www.raspberrypi.com/products/raspberry-pi-pico/) for this chip,
+ported the software, and got the tutorial I had before running. I also added extra software to display the numerical result on some LEDs wired to the board.
+This was not without issue, however. On this new chip, the neural network showed to be ~30% accurate, with a heavy bias towards recognising 'eight'. 
+In fact, 'eight' was a false positive _most of the time_. What's wrong?
 
 ### The differences
-So this dev board setup was different from the arduino, and also had a lower accuracy. Correlation does not _imply_ causation, but it does sidle up to it at parties or wink at it suggestively across a crowded room.
+Let's consider the differences between the two setups. The arduino setup works great, the RP2040 setup does not. They have some differences.
+Correlation does not _imply_ causation, but it does sidle up to it at parties or wink at it suggestively across a crowded room.
 
 What are the differences?
 
-- dual core vs single core
+- dual core microchip for RP2040 vs single core microchip for nRF
     - doubt it's this, unless the software is written really badly
 - different software?
     - checked, it's basically the same barring minor low level calls that are not in critical areas (except for PDM but we'll get there)
 - different model?
-    - neural network is the same bits for each, both using TFLite micro 
-- different input
+    - neural network is the same bits for each, both using TFLite micro. I copy-pasted.
+- different vocal input?
+    - I'm speaking into each, and I recorded myself - sounds the same to my ear.
+- different audio input?
 
-Ah, here we go. So the nRF chip has hardware PDM circuits, and the RP2040 uses PIO to do the same. 
+Ah, here we go. The nRF chip has hardware PDM circuits to read data from the microphone, but the RP2040 uses PIO to achieve this. A difference!
+Let's go into more detail.
 
-First, let's briefly discuss these three things:
 
 #### PDM
-Pulse Density Modulation encodes analog signals into a digital bitstream where the number of high pulses (a '1') over a period signifies the signal's amplitude. That is, the density of pulses represents amplitude, and this density is modulated. This bitstream must be far higher frequency than the original signal - in both chips' cases, ~1MHz is used, and the human voice peaks at ~20kHz (don't quote me on that).
-The analog signal can be recreated by using a low-pass filter that integrates the bitstream over time to produce a multi-bit value to represent amplitude at that time.
+Pulse Density Modulation encodes analog signals into a digital bitstream where the number of high pulses (a '1') over a period
+signifies the signal's amplitude. That is, the density of pulses represents amplitude, and this density is modulated. This bitstream
+must be far higher frequency than the original signal - in both chips' cases, ~1MHz is used, and the human voice peaks at ~20kHz (don't quote me on that).
+The analog signal can be recreated by using a low-pass filter that integrates the bitstream over time to produce a multi-bit value
+to represent amplitude at that time.
 
-The nRF chip [implements this in hardware](https://docs.nordicsemi.com/bundle/ps_nrf52840/page/pdm.html). This means that it has an electronic circuit in the silicon that is designed for converting a PDM signal into a series of values that represent amplitudes at times. There is also a circuit for performing the decimation filter to convert the bitstream to the multi-bit values, 
+The nRF chip [implements this in hardware](https://docs.nordicsemi.com/bundle/ps_nrf52840/page/pdm.html).
+This means that it has an electronic circuit in the silicon that is designed for converting a PDM signal from the microphone into a series
+of values that represent amplitudes at times. There is also a circuit for performing the decimation filter to
+convert the bitstream to the multi-bit values.
 
 #### PIO
-Programmable IO is a feature on the RP2040 that allows a simple assembly language to control state machines on various IO pins. These state machines can be configured for things like serial data shifting, clock generation, etc. In this case, one pin is configured to be the PDM clock, and another pin is configured as the input, shifting in one bit per clock cycle. This bits are then pushed in sets of 32 to a buffer. Any further filtering, etc, runs in software. 
+Programmable IO is a feature on the RP2040 that allows a simple assembly language to control state machines on various IO pins.
+These state machines can be configured for things like serial data shifting, clock generation, etc. In this case, one pin is
+configured to be the PDM clock, and another pin is configured as the input, shifting in one bit per clock cycle. This bits are
+then pushed in sets of 32 to a buffer. Any further filtering, etc, runs in software. 
 
-The nRF state machine could have a slightly different clock signal. It could have a slightly different shifter. It might do an extra step before pushing bits further. The hardware decimation filter has parameters and coefficients that are hidden. All these things can produce slightly different sounds, which a neural network can interpret differently.
+The nRF state machine could have a slightly different clock signal.
+It could have a slightly different shifter. It might do an extra step before pushing bits further.
+The hardware decimation filter has parameters and coefficients that are hidden. All these things can produce slightly different sounds,
+which a neural network can interpret differently.
 
+#### What can be done?
+I'm still investigating this part, unfortunately. Stay tuned. 
 
+For now, 30% accuracy is enough. Let's get on with designing the rest of the circuit.
 
 ## Designing the circuit
-Like Arduino, Raspberry Pi open sourced their dev board, the [Raspberry Pi Pico](https://www.raspberrypi.com/products/raspberry-pi-pico/). It's relatively simple - power regulation, flash, the chip itself, an LED, a crystal, some passive components, and all other pins broken out to the edges of the physical board. 
+Like Arduino, Raspberry Pi open sourced the dev board I used, the [Raspberry Pi Pico](https://www.raspberrypi.com/products/raspberry-pi-pico/).
+It's relatively simple - power regulation, flash memory, the chip itself, an LED, a crystal, some passive components, and all other pins broken out to
+the edges of the physical board. 
 
-What I need here is: power regulation, flash, the chip itself, more LEDs, a crystal, and the PDM microphone. This should not be too difficult, especially given that the documentation with the chip provides a sample circuit, including the KiCAD files. 
+What I need here is: power regulation, flash memory, the chip itself, more LEDs, a crystal, and the PDM microphone.
+This should not be too difficult, especially given that the documentation with the chip provides a sample circuit, including the KiCAD files. 
 
 ### KiCAD
 KiCAD is a program for electronic circuit design. There are two main interfaces I care about: schematic, and the PCB.
 
-The schematic lays out the theory of the circuit: which components are used, what are their connections. Here's an example:
+The schematic lays out the theory of the circuit: which components are used, what are their connections. So I add the chip, power, flash memory, leds, etc and connect as needed.
+Here's an example:
 
 ![](/assets/card/kicad_schematic.png)
 
-Here we see the flash memory for the RP2040. I'd copied this straight from the examples Raspberry Pi provided. Several pins are pulled high or low, some have decoupling capacitors, one is connected to a switch - this gets pulled low to program the device. Several are connected to labels that are used elsewhere. See the full circuit as a pdf in the repo (LINK).
+Here we see the flash memory for the RP2040. I'd copied this straight from the examples Raspberry Pi provided.
+Several pins are pulled high or low, some have decoupling capacitors, one is connected to a switch - this gets pulled
+low to program the device. Several are connected to labels that are used elsewhere. The full schematic is [here](https://github.com/dmckinnon/dmckinnon.github.io/blob/master/assets/card/schematic.pdf).
 
-Then there is the PCB design. This is the layout. Having chosen components and connections, now they are physically laid out. First, the outline of the board is created from the edge.cuts layer:
+Then there is the PCB design. This is the physical layout that will be on the actual board.
+First, the outline of the board is created from the edge.cuts layer:
 
-![](/assets/card/kicad_pcb.png)
+![](/assets/card/kicad_pcb_cut.png)
 
-This has the dimensions of a business card (~80mm x ~50mm), but one corner is cut out for a USB-C insert. We'll get back to this. Most of the rest of the board is unused by the circuit and I just filled it with business card text: name, email, description, and instructions on card usage. 
-Why is the circuit crammed into one side and not more spread out? Well, firstly spread out would make the text ararngement harder - I don't want components and text mixed, for readability. Secondly, short tracks benefit small circuits - or rather, long tracks are detrimental. Extra resistance, etc. So, let's cram it tiny. 
+This has the dimensions of a business card (~80mm x ~50mm), but one corner is cut out for a USB-C insert. Most of the rest of the board is unused by the circuit and I just filled it with business card text: name, email, description, and instructions on card usage. 
+Why is the circuit crammed into one side and not more spread out? Well, firstly spread out would make the text arrangement harder - I don't want components and text mixed, for readability. Secondly, short tracks benefit small circuits - or rather, long tracks are detrimental. Extra resistance, etc. So, let's cram it tiny. 
 
 The board is 0.8mm thick, which is the thickness inside a USB "male" connector. Male is in quotes because technically the "female" half of USB has a "male" part in it too (is it non binary?). This board acts as the outtie bit in the female connector. Let's look at the USB-C part:
 
@@ -145,11 +200,11 @@ This entire circuit and process went through several iterations, as I made mista
 ![](/assets/card/kicad_pcb.png)
 
 ## Manufacturing the circuit
-PCBWay manufactured the board itself for $15 for ten boards, using USPS shipping. Mouser provided the parts, at varying costs. Unfortunately this is quite an expensive board, for a couple of reasons:
-- the flash chip isn't cheap (cost)
-- the buckboost converter for power regulation isn't cheap (cost)
+PCBWay manufactured the board for $15 for ten boards, using USPS shipping (~5 for the boards, ~9 for shipping). Mouser provided the parts, at varying costs. Unfortunately this is quite an expensive board, for a couple of reasons:
+- the flash chip isn't cheap
+- the buckboost converter for power regulation isn't cheap
     - this could absolutely have been made cheaper, I could use a linear regulator. They are less efficient, but this is not battery powered so that does not matter.
-- the microphone is not cheap
+- the microphone is not cheap (over a dollar per mic!)
 
 All in all, the cost is perhaps ~$12 a board? Pricey, when compared to some of the Linux business cards I saw online (one was at $3 a board). Ah well, I'll design the next one with price in mind. If one of these got me a job, $12 is well worth it.
 
