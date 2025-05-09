@@ -10,7 +10,7 @@ comments: true
 
 I've seen blog posts of business cards that run linux - [exhibit A](https://www.thirtythreeforty.net/posts/2019/12/my-business-card-runs-linux/), [exhibit B](https://dmitry.gr/?r=05.Projects&proj=33.%20LinuxCard) - and as a tinkerer and someone involved in embedded systems, this absolutely tickles me. How cool! Think about what this says of you, immediately!
 
-I really wanted to make a business card like this - specifically, one with a microchip, embedded software, and some fun functionality. But I'm not really an embedded OS person, more of an embedded ML person. Can we run embedded ML on a business card?
+I really wanted to make a business card like this - specifically, one with a microchip, embedded software, and some fun functionality. But I'm not really an embedded OS person, more of an embedded ML person. Can we run embedded machine learning inference on a business card?
 
 ## Contents
 - [Idea overview](#the-idea)
@@ -27,7 +27,7 @@ I really wanted to make a business card like this - specifically, one with a mic
 Let's go over what this would entail. I want a circuit board the size of a business card (about 2" x 3", or 50mm x 80mm),
 with my details printed on it. It needs to have a circuit that uses a microchip, and this microchip must run a
 machine learning algorithm - specifically, a neural network.
-The neural network should have some input from the user, and give some feedback that usage was successful. It also should be powered by USB, for convenience.
+The neural network should take some input from the user, and give some feedback that it was successful. It also should be powered by USB, for convenience.
 
 I know from the [examples](https://www.thirtythreeforty.net/posts/2019/12/my-business-card-runs-linux/) [above](https://www.thirtythreeforty.net/posts/2019/12/my-business-card-runs-linux/)
 that this is possible. That is, a business-card-sized circuit board with a microchip powered by USB is do-able. The question is: what neural network can we run on such a tiny chip?
@@ -40,16 +40,15 @@ of pixels that resemble a face, or a collection of frequencies and amplitudes th
 These might be: face, ball, apple, dog. They could be spoken words: hello, goodbye, hey google. A high score for a particular category denotes confidence
 that "this is it". 
 
-Typically, however, neural networks are computationally intensive - that is, they require a lot of time and mathematics to arrive at an answer.
-This is because they rely on an operation called a convolution that multiplies many numbers, then adds them. Big powerful processors do this with ease.
+Typically, however, neural networks are computationally intensive - that is, they require a lot of time and mathematics to arrive at an answer. Big powerful processors do this with ease.
 Tiny microprocessors that fit onto business cards ... less so. The neural network needs to be minimal.
 
-### Speech recognition
-A speech recognition neural network sounds like a good idea. Microphones can be really small, on the order of millimetres. I can use LEDs to display 
-the result in some way - maybe just recognise numbers spoken, and display the number. 
-
-The input here would be a brief snippet of audio. The advantage is that this takes up a lot less memory than, say, an image from a camera. Correspondingly,
+A speech recognition neural network sounds like a good idea - this would recognise a set of spoken words,
+and somehow display which word was spoken to the user. The input here would be a brief snippet of audio. The advantage is that this takes up a lot less memory than, say, an image from a camera. Correspondingly,
 such neural networks tend to be smaller - especially when they do not detect many words.
+Microphones can be really small, on the order of millimetres. I can use LEDs to display 
+the result in some way - maybe just recognise numbers spoken, like "one", "two", etc, and display the number. 
+
 
 ### Making my own neural network
 Some research uncovered [this tutorial](https://www.allaboutcircuits.com/projects/tinyml-projects-creating-a-voice-controlled-robot-subsystems/).
@@ -62,9 +61,12 @@ It worked with perhaps ~70% accuracy (70% of the time it correctly identified th
 
 
 ## A prototype
-I have the working concept on a working circuit board. This [circuit board](https://docs.arduino.cc/hardware/nano-33-ble/) is about 45mm x 15mm. This easily
-fits within a business card. Arduino even open-sources their hardware, providing [all schematics](https://docs.arduino.cc/resources/schematics/ABX00030-schematics.pdf?_gl=1*9iuc9m*_up*MQ..*_ga*MzE1NzM3NzU2LjE3NDEzMDk2NDM.*_ga_NEXN8H46L5*MTc0MTMwOTY0MC4xLjAuMTc0MTMwOTY0MC4wLjAuMjA3NzcwODg4OQ..).
-So why not just copy this?
+
+I have the working concept on a working circuit board. So why make something new?
+Why not just completely reuse this in my own design? It'll fit within a business card (3" x 2" approx) easily.
+The [circuit board](https://docs.arduino.cc/hardware/nano-33-ble/) I'm using is about 45mm x 15mm.
+Arduino even open-sources their hardware, providing [all schematics](https://docs.arduino.cc/resources/schematics/ABX00030-schematics.pdf?_gl=1*9iuc9m*_up*MQ..*_ga*MzE1NzM3NzU2LjE3NDEzMDk2NDM.*_ga_NEXN8H46L5*MTc0MTMwOTY0MC4xLjAuMTc0MTMwOTY0MC4wLjAuMjA3NzcwODg4OQ..).
+What's stopping me?
 
 One main reason: the microchip used, the nRF52840, is a [BGA](https://en.wikipedia.org/wiki/Ball_grid_array) chip.
 This means that instead of having little legs on the sides to solder the chip down, it has dots underneath. 
@@ -110,9 +112,12 @@ Let's go into more detail.
 
 
 #### PDM
-Pulse Density Modulation encodes analog signals into a digital bitstream where the number of high pulses (a '1') over a period
+Pulse Density Modulation encodes analog signals into a digital bitstream (a sequence of bits sent at a certain frequency) where the number of high pulses (a '1') over a period
 signifies the signal's amplitude. That is, the density of pulses represents amplitude, and this density is modulated. This bitstream
-must be far higher frequency than the original signal - in both chips' cases, ~1MHz is used, and the human voice peaks at ~20kHz (don't quote me on that).
+must be far higher frequency than the original signal, as it needs many bits to represent the amplitude at a certain time point.
+That is, if the analog signal amplitude over a particular 5 millisecond sample (200Hz sampling) is approximately 0.5, then the bitstream needs to send 16 ones and 16 0s
+within 5ms ... which requires 32*200Hz == 16kHz bit rate.
+Inn both chips' cases, a ~1MHz bitstream is used, and the human voice peaks at ~20kHz (don't quote me on that).
 The analog signal can be recreated by using a low-pass filter that integrates the bitstream over time to produce a multi-bit value
 to represent amplitude at that time.
 
@@ -154,7 +159,7 @@ Here's an example:
 ![](/assets/card/kicad_schematic.png)
 
 Here we see the flash memory for the RP2040. I'd copied this straight from the examples Raspberry Pi provided.
-Several pins are pulled high or low, some have decoupling capacitors, one is connected to a switch - this gets pulled
+Several pins are pulled high or low (3.3v or ground respectively), some have decoupling capacitors, one is connected to a switch - this gets pulled
 low to program the device. Several are connected to labels that are used elsewhere. The full schematic is [here](https://github.com/dmckinnon/dmckinnon.github.io/blob/master/assets/card/schematic.pdf).
 
 Then there is the PCB design. This is the physical layout that will be on the actual board.
@@ -173,7 +178,9 @@ The board is 0.8mm thick, which is the thickness inside a USB "male" connector. 
 
 ![](/assets/card/card_usb.png)
 
-There are tracks only on one side since the circuit only need be one side. The tracks used are the ones necessary for USB 2.0 mode, as I only need this for data transfer - to program and debug - and thereafter for power. Thankfully, this worked first go. As a backup, the first circuit had a place for an on-board USB connector, but this went unused. 
+There are tracks only on one side since the circuit only need be one side.
+The tracks used are the ones necessary for USB 2.0 mode, as I only need this for data transfer - to program and debug - and thereafter for power.
+Thankfully, this worked first go. As a backup, the first circuit had a place for an on-board USB connector, but this went unused for later versions (See [below](#mistakes-along-the-way))
 
 Next, we arrange the components. The RP2040 is biggest and central, but the tracks around it should be sensibly arranged. For example, the flash chip uses the pins on the top side of the RP2040 - so let's place it there:
 
@@ -198,6 +205,20 @@ Originally I had 4, and would display the result in binary. Someone pointed out 
 This entire circuit and process went through several iterations, as I made mistakes, forgot connections, redesigned, and so on. This is the final design:
 
 ![](/assets/card/kicad_pcb.png)
+
+### Mistakes along the way
+The circuit design had three distinct iterations, due to several mistakes. 
+
+The first design I connected the Chip Select pin for the Flash Memory incorrectly - it was always pulled high, so I couldn't use the button
+to select "write your program to memory" mode. Whoops. 
+
+Second iteration corrected this, but kept another mistake that had been in the first design and I just hadn't spotted it due to the first error.
+There are several pins on the RP2040 that require 1.1v power for the CPU. There is another pin that supplies this power, and these pins all need
+to be externally connected. I had misread the reference design I was using, and missed these connections. This meant, essentially, that the CPU was
+not powered. No power means no speech recognition. 
+
+So even when copying from a reference design mistakes can be made. Both these points were highlighted in the documentation too, and the biggest mistake
+was probably not readin ghtis in entirety first. If there is good documentation ... read the documentation.
 
 ## Manufacturing the circuit
 PCBWay manufactured the board for $15 for ten boards, using USPS shipping (~5 for the boards, ~9 for shipping). Mouser provided the parts, at varying costs. Unfortunately this is quite an expensive board, for a couple of reasons:
