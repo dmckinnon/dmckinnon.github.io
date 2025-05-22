@@ -6,21 +6,25 @@ categories: Tutorials
 comments: true
 ---
 
-Let's discuss LLMs and GPTs. 
+# Chatting with a GPT
+If you've used ChatGPT or Claude to summarise some difficult text (legalese perhaps) or answer a question for you, then you've seen how impressive these AIs can be. They appear to know everything, and can modulate their answers stylistically and cater to your thinking in a thousand ways.
+But they're so mystical! An absolute black box of magic. I hope to, in this post, unpack what a Large Language Model (LLM) is and broadly how it works.
 
 # What is an LLM 
 
-Large Language Models, as their name suggests, deal with language. Typically these have vast repositories of natural language - whatever we say and write - and are used for many tasks relating to this. They can complete partial sets of writing: "Einstein was a theoretical ___" (what comes next?). They can fill in a middle blank: "The best racer ever was ___ and they often won by a huge margin" (what goes there?). They can extract information, like named entities: "Einstein worked in the Swiss patent office in Zurich" (what are the names there? Einstein, Swiss, Zurich). They can summarise and evaluate text, like give sentiment analysis (was this paragraph positive?). They can even answer questions, and the most well known LLM to do this is good ole ChatGPT (not to diss Claude).
+Large Language Models, as their name suggests, deal with language. Typically these have vast repositories of natural language - whatever we say and write - and are used for many tasks relating to this. They can complete partial sentences: "Einstein was a theoretical ___" (what comes next?). They can fill in a middle blank: "The best racer ever was ___ and they often won by a huge margin" (what goes there?). They can extract information, like named entities: "Einstein worked in the Swiss patent office in Zurich" (what are the names there? Einstein, Swiss, Zurich). They can summarise and evaluate text, like give sentiment analysis (was this paragraph positive?). They can even answer questions, and the most well known LLM to do this is good ole ChatGPT (not to diss Claude).
 
-The power of an LLM is that they can capture and process all the nuanced relationships between various words, phrases, and meaning that we have. Therefore, they can produce reasonable results upon very in-depth requests. 
+LLMs capture subtle relationships—syntax, semantics, even world knowledge—to generate coherent text. Therefore, they can produce reasonable results upon very in-depth requests. 
  
 ## How do LLMs work?
-All these models - GPTs, Llamas, BERTs, etc - rely on two thinks: a central building block called a Transformer, and the abstract concept of an embedding space.
+It might appear that LLMs do proper human-like thinking behind the scenes. In a way, that's true - they reason about relationships between words and deeper semantic meaning. You do this, however implicitly, when reading for example. But it only appears this way because we have managed to approximate this process with a few mathematical concepts and operations.
+
+All these models - GPTs, Llamas, BERTs, etc - at their core, LLMs combine two ideas: "embedding space", that maps tokens to numbers, and Transformers (the process that crunches those numbers).
 Transformers will make more sense in the context of the embedding space, so let's start there. 
  
 ## Embedding Space
-These models work on words: either as input, or as output. We pass in "generate a poem about cats", or get out a summary of a wikipedia page. Do they operate on words internally? No. They operate on numbers. So how do we get from words to numbers?
-
+These language models work on words: either as input, or as output. We pass in "generate a poem about cats", or get out a summary of a wikipedia page.
+Do they operate on words internally? No. They operate on numbers. So how do we get from words to numbers?
 
 One way would be to assign every word in the dictionary a number:
 + 'a' - 1
@@ -29,25 +33,35 @@ One way would be to assign every word in the dictionary a number:
 
 and so on. 
 
-But then what does 53+286 mean? Angle+Blueberry? We need the composition of these numbers associated with words to make sense. 
-So what we do is we have a vector space for these numbers. Think of a 3-dimnensional vector space to represent positions in a room: (x, y, z). Each dimension means something different. The amount of forwards, the amount of sideways, the amount of up. These are all directions in a room though. We can get more abstract. If you want to classify people, you might use a vector: a dimension for lightness or darkness of skin colour, a dimension for height, a dimension for weight, a dimension for eye colour, a dimension for … foot size, and so on. These dimensions need not be unique too. We can have some that correlate: finger length and palm area are strongly correlated, but there's no stoppping us from writing both down. We could have, say, 200 measurements to describe a person. 
+But if ‘angle’ = 53 and ‘blueberry’ = 286, adding them is meaningless unless our numbering encodes semantic relationships. We need the composition of these numbers associated with words to make sense. 
+So what we do is we have a vector space for these numbers. Think of a 3-dimensional vector space to represent positions in a room: (x, y, z).
+Each dimension means something different. The amount of forwards, the amount of sideways, the amount of up. These are all directions in a room though.
+We can get more abstract. If you want to classify people, you might use a vector: a dimension for lightness or darkness of skin colour, a dimension for
+height, a dimension for weight, a dimension for eye colour, a dimension for … foot size, and so on. These dimensions need not be unique too.
+We can have some that correlate: finger length and palm area are strongly correlated, but there's no stoppping us from writing both down
+We could have, say, 200 measurements to describe a person. 
 
 
-In a similar vein, we create vectors for words. These are typically enormous, for example one of the LLAMA models uses a 4096-dimensional embedding space. Each dimension captures something different, and these could get quite abstract: tense, noun-ness, archaity, slang-ness, how much this relates to other concepts, etc. 
-Now we should be able to do math on this. What does this mean? Well, back to our person classification example, if we get the vector representating a tall dark-skinned person, and subtract from that a vector with a high dark value and a high height value, then we should get a vector similar to that of a person who is short and light-skinned. 
+In a similar vein, we create vectors for words. These vectors are typically enormous, for example one of the LLAMA models uses a 4096-dimensional vector
+for each word in its vocabulary (the vocabulary of an LLM, much like that of a person, is the set of all words they know and can work with). 
+The set of all these vectors that can represent words is called the 'embedding space'. 
 
 
-So, if we have a vector representing "dog", with all that that entails, and subtract the vector for "woof" … and then add the vector for "purr", we might get somewhat close to the vector for "cat". There's still some differences, but hopefully this illustrates the space. Another example: take the vector for "king". Subtract the vector for "man". Add the vector for "woman". This should be close to … the vector for "queen". 
+Each dimension of the vectors in the embedding space captures something different, and these could get quite abstract: tense, noun-ness, archaic-ness, slang-ness, how much this relates to
+other concepts, etc. 
+Now we should be able to do math on this. What does this mean? Well, back to our person classification example,
+if we get the vector representating a tall dark-skinned person, and subtract from that a vector with a high dark value and a high height value,
+then we should get a vector similar to that of a person who is short and light-skinned. 
+
+
+So, if we have a vector representing "king". Subtract the vector for "man". Add the vector for "woman". This should be close to … the vector for "queen". 
 Every vector must, however, be associated with a real word - there is a function that maps words to the embedding space and back. So if we end up with a new vector, the function must somehow map it back to a known existing word. The group of words we can use is called the "vocabulary" (funny, that). We can have a very large expressive vocabulary, but this requires more compute. Or, we could have a smaller vocabulary and be faster at computing answers, but be able to say less. 
-[TODO: does this need iamges?]
+
+### Summary and terms
+To reiterate, LLMs use a database, called a vocabulary, of words, called tokens, where each word maps to a large vector of numbers, called embedding vectors. These embedding vectors represent with many dimensions all the different concepts, relationships, and semantic meaning a token might hold.
+
+Now that we’ve seen how words become numbers, let’s explore how Transformers use those numbers to predict text
  
- 
-### A token side note
-So I've said that we have vectors for words this entire time, but strictly speaking the truth is a bit different. These models use "tokens", and create vectors in the embedding space for "tokens". A token can be a whole work, or it can be a building block of a word - think of a suffix like "ed" or "ing". 
-If we have the token "walk", and we add the vector for the token "ing", then we should change the "tense-ness" of the vector for the token "walk" - "ing" makes this present tense (walking), vs "ed" which would make it past tense (walked). 
-This is just a more expressive and efficient way to store tokens. If we tried to encapsulate every word individually, this would be hugely inefficient in memory. By storing sub-words like tokens, which themselves can be concepts, we can be more efficient. (eg. Many words we use are compound words of latin or greek-originating parts. Consider helicopter, misogyny, shopkeeper, and so on.). Short words, like "and", or really rare words, like erudite, might be tokens themselves, but common pieces of words - "ing", "ion", "real", etc - are made into tokens
- 
-(TODO: can do more detail here but this already might be second level detail)
  
 ## Transformers
 So we have the embedding space. Instead of words, we work on large vectors which encapsulate a lot of concepts and "type-ness" about each word. 
@@ -86,7 +100,16 @@ Finally, this gets converted back from embedding space to vocabulary space, with
 The highest probability word is chosen as the next word then, and written out. 
  
 To continue generating the sequence, the new word is appended to what has been written so far, and passed back in to start the whole process again. 
+
+### Summary 
  
+
+## Wrapping up
+This should give you a good idea of what's happening next time you ask ChatGPT a question - it has processed how each word in your prompt relates to every word - or rather, token - in its vocabulary, which is vast indeed. Then it figures out the most likely token that comes next ... and repeat. If you ask "Explain thermodynamics", then the likely tokens are ones that relate to heat, entropy, and various laws. But it does better than just that, It won't just say "heat law thermo", since the most likely token after "law" is "of", and so on. 
+
+Another example: when you ask for a summary of text, the embedding vectors that get created attempt to contain all the relationships and meaning in the original text, but in a dense form. Then when they are converted from vectors into tokens, the tokens are "This detaisl the second law of thermodynamics" rather than an entire paragraph to say the same. 
+
+
 Of course, the actual process involves a whole lot more. You can have multiple attention layers, each tweaking the embedding vectors and the concepts they represent slightly. Each attention layer is trained to focus on different ideas, and so on. But this should hopefully be a good broad overview to help understand the base functionality.
  
  
