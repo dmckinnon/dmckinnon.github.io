@@ -88,59 +88,24 @@ Downsides:
 
 The upsides were enough to overcome the (minimal) downside. I acquired a [dev board](https://www.raspberrypi.com/products/raspberry-pi-pico/) for this chip,
 ported the software, and got the tutorial I had before running. I also added extra software to display the numerical result on some LEDs wired to the board.
-This was not without issue, however. On this new chip, the neural network showed to be ~30% accurate, with a heavy bias towards recognising 'eight'. 
-In fact, 'eight' was a false positive _most of the time_. What's wrong?
 
-### The differences
-Let's consider the differences between the two setups. The arduino setup works great, the RP2040 setup does not. They have some differences.
-Correlation does not _imply_ causation, but it does sidle up to it at parties or wink at it suggestively across a crowded room.
+### Software differences and issues
+The software for the RP2040 is largely the same as for the Arduino nRF board. It was easy to add in the extra control I wanted: there was a spot for "oh we have detected a word that we want with sufficient confidence". However, this was not without difficulties. 
 
-What are the differences?
+As far as I was aware, I set the two microphones up the same (16kHz sample rate, 2-byte samples), but the audio I got was giving different results. Namely, on the nRF I would get reasonable results (ie. it said "you detected a five" when I spoke "five" and so on, about 70% of the time), but on the RP2040, it would detect 'eight' most of the time and otherwise ... nothing. Why?
 
-- dual core microchip for RP2040 vs single core microchip for nRF
-    - doubt it's this, unless the software is written really badly
-- different software?
-    - checked, it's basically the same barring minor low level calls that are not in critical areas (except for PDM but we'll get there)
-- different model?
-    - neural network is the same bits for each, both using TFLite micro. I copy-pasted.
-- different vocal input?
-    - I'm speaking into each, and I recorded myself - sounds the same to my ear.
-- different audio input?
+There's a long story in here where I dug thorugh every part of the program. A major red herring was that the nRF chip has some hardware-optimised
+Neural Network operations that the RP2040 does not, so it could well have been computing differently. It _should not_ have been, this _should_ get the same
+numbers, but 'should' is a dangerous word in computing.
 
-Ah, here we go. The nRF chip has hardware PDM circuits to read data from the microphone, but the RP2040 uses PIO to achieve this. A difference!
-Let's go into more detail.
+It turns out this was not the cause. The cause was the audio sampling. The nRF ostensibly sampled at 16kHz, but provided 256 samples over 144ms - this is approximately 2kHz. The documentation claims that there are hardware filters and other stuff happening on the audio, so this makes some sense. The PDM library 
+I used for the RP2040 theoretically does the same filters, but given that the nRF hardware stuff is proprietary, it's likely there's more they aren't saying.
 
+So the RP2040 was giving me 256 samples over 16ms (which is precisely 16kHz), as expected. Probably this was too noisy a signal, or too short a signal, or ...
+the neural network just expected more preprocessing on the signal than this had had, and that was giving me failures. 
+I overcame this by increasing the number of samples and therefore the time window we got audio snippets over, to 1024. This worked in that it produced a good result ... if you speak slowly. Think of how people in shows speak when the other character has a poor grasp of the language - it's like that. 
+"Ththththrrrreeeee", dragging each sound out. It works? (shrug)
 
-#### PDM
-Pulse Density Modulation encodes analog signals into a digital bitstream (a sequence of bits sent at a certain frequency) where the number of high pulses (a '1') over a period
-signifies the signal's amplitude. That is, the density of pulses represents amplitude, and this density is modulated. This bitstream
-must be far higher frequency than the original signal, as it needs many bits to represent the amplitude at a certain time point.
-That is, if the analog signal amplitude over a particular 5 millisecond sample (200Hz sampling) is approximately 0.5, then the bitstream needs to send 16 ones and 16 0s
-within 5ms ... which requires 32*200Hz == 16kHz bit rate.
-Inn both chips' cases, a ~1MHz bitstream is used, and the human voice peaks at ~20kHz (don't quote me on that).
-The analog signal can be recreated by using a low-pass filter that integrates the bitstream over time to produce a multi-bit value
-to represent amplitude at that time.
-
-The nRF chip [implements this in hardware](https://docs.nordicsemi.com/bundle/ps_nrf52840/page/pdm.html).
-This means that it has an electronic circuit in the silicon that is designed for converting a PDM signal from the microphone into a series
-of values that represent amplitudes at times. There is also a circuit for performing the decimation filter to
-convert the bitstream to the multi-bit values.
-
-#### PIO
-Programmable IO is a feature on the RP2040 that allows a simple assembly language to control state machines on various IO pins.
-These state machines can be configured for things like serial data shifting, clock generation, etc. In this case, one pin is
-configured to be the PDM clock, and another pin is configured as the input, shifting in one bit per clock cycle. This bits are
-then pushed in sets of 32 to a buffer. Any further filtering, etc, runs in software. 
-
-The nRF state machine could have a slightly different clock signal.
-It could have a slightly different shifter. It might do an extra step before pushing bits further.
-The hardware decimation filter has parameters and coefficients that are hidden. All these things can produce slightly different sounds,
-which a neural network can interpret differently.
-
-#### What can be done?
-I'm still investigating this part, unfortunately. Stay tuned. 
-
-For now, 30% accuracy is enough. Let's get on with designing the rest of the circuit.
 
 ## Designing the circuit
 Like Arduino, Raspberry Pi open sourced the dev board I used, the [Raspberry Pi Pico](https://www.raspberrypi.com/products/raspberry-pi-pico/).
@@ -240,9 +205,31 @@ And yet I got it working!
 
 ![](/assets/card/final.png)
 
-Can't exactly have a video on this page, but it's largely working. There's still the software issues mentioned in [the differences](#the-differences) - this leads to eight being heard far more often than anything else, and some numbers not being heard at all. It's a work in progress. 
+Can't exactly have a video on this page, but it's largely working. See [the software section](#software-differences-and-issues) for the details here - the tl;dr
+is that it detects the expected audio when you speak slowly and clearly enunciate and drag out each phoneme. Not a great experience?
+At this stage .. I could work on this a whole lot longer, I could dig into the signal processing, I could maybe train a new neural network
+with different preprocessing expectations, oooorrrr ....
 
+I could say this is sufficient, and meets my initial goal. I'm happy with this check point. Maybe I'll revisit this one day?
 
+For those interested in the code, it can be found on my github: (https://github.com/dmckinnon/mlcard)[https://github.com/dmckinnon/mlcard]
+
+### Reactions
+I have shown this to some of my peers in the AI industry - some electrical engineers, some software engineers. 
+Reactions range from confusion - "hang on, what's it do?" (and given that I have to explain, it rarely goes well) - to "wow!" and they think
+it's so cool and want one themselves. This is basically the reaction I want. If I hand this to a hiring manager, I want it to capture their attention
+in a way that makes them remember me and associate me with a really cool hobby project. 
+
+### Things I would change
+An idea I had - after I'd had the final boards made - was that if this truly was a business card I would give to someone else, with no expectation of it
+being returned, then a useful addition would be to break out the remaining pins to solderable header plates on the edge of the card. Why? So that someone
+could program this themselves and use it as a Raspberry Pi Pico, albeit with the microphone attached. Then, whenever they use this dev board, they
+are reminded of me. Ah well, next iteration.
+
+The second main improvement I would do is cost-related: instead of the buck-boost converter from 5v to 3.3v, which involves the inductor and the diode,
+I would simply use the recommendation from the RP2040 hardware reference doc: a linear regulator. Simpler, cheaper, fewer parts. Less efficient, sure,
+but this is not my concern since a) I'm running off USB power, and b) this is rarely running _anyway_. 
+Again, something to change for next time.
 
 
 
