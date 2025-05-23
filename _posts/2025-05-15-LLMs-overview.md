@@ -102,7 +102,10 @@ The highest probability word is chosen as the next word then, and written out.
 To continue generating the sequence, the new word is appended to what has been written so far, and passed back in to start the whole process again. 
 
 ### Summary 
- 
+So going over attention again: for the initial prompt, we take each word - as a vector - and get three things: tis query, its key, its value.
+Then we compare each word's query to every other word's key, seeing how similar "what do I want" and "what do I contain" for each pair of words are.
+The amount of similar then scales the value, which is "what can I offer". Finally, this gives a set of probabilities over the whole vocabulary,
+which allows us to check what the most likely next word is. Then this next word is fed back in, we get queries, compare to each key, scale a new value, and so on.
 
 ## Wrapping up
 This should give you a good idea of what's happening next time you ask ChatGPT a question - it has processed how each word in your prompt relates to every word - or rather, token - in its vocabulary, which is vast indeed. Then it figures out the most likely token that comes next ... and repeat. If you ask "Explain thermodynamics", then the likely tokens are ones that relate to heat, entropy, and various laws. But it does better than just that, It won't just say "heat law thermo", since the most likely token after "law" is "of", and so on. 
