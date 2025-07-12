@@ -12,31 +12,45 @@ comments: true
 # Tokens
 In a [previous post](https://dmckinnon.github.io/LLMs-overview/) I discussed how Large Language Models like ChatGPT broadly work. One important tool they use is the concept of an embedding space, where words are converted into vectors of numbers, and I wrote of how these vectors can encode and represent concepts. These vectors are then used to predict the next vector - which represents tokens in the vocabulary of the model. The vocabulary is, as the name suggests, the set of all the possible tokens - or words - that this model can use.
 
-This was an oversimplification. Yes, some models do operate off whole words, but this requires a massive vocabulary; each word like 'dog' and 'dogs' would have their own vector, despite being closely related. The tokenizer wouldn't by default consider these similar. Imagine having a function that maps from every word in the dictionary to a different vector - that's huge! 
-Firstly, we have a processing power problem: the model must output a probability distribution over the entire vocabulary at each step—so larger vocabularies mean larger softmax layers and more computation. 
-Then you would also have trouble with new words: a new mapping would be created for each new word. This is inefficient, and poorly represents words: we can't add "dog" and "s" to get the plural "dogs", since "s" isn't a token in itself. How do we get a vector with a high plural-ness dimension from a word? "s", the 'plural-maker', if you will, is not a word in itself. 
-Ideally, we want a system where adding the vector for 'dog' and 's' gives us something close to 'dogs' - some sort of compositional semantics. But if 's' is not a token, we lose that flexibility. 
+![image from https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/](/assets/llm1/embedding.png)
 
 ## Contents
 - [Word tokenisation](#full-word-tokens)
+- [Token basics](#token-basics)
 - [Character-level tokenisation](#character-level-tokens)
 - [Subword tokenisation](#subword-level-tokens)
 - [Experiments](#experimenting-with-tokenisation)
 - [Wrapping up](#wrapping-up)
 
 ## Full word tokens
+What I had written was an oversimplification. Yes, some models do operate off whole words, but this requires a massive vocabulary; each word like 'dog' and 'dogs' would have their own vector, despite being closely related. The tokenizer wouldn't by default consider these similar. Imagine having a function that maps from every word in the dictionary to a different vector - that's huge! 
+
+Firstly, we have a processing power problem: the model must output a probability distribution over the entire vocabulary at each step—so larger vocabularies mean larger softmax layers and more computation.
+
+Then you would also have trouble with new words: a new mapping would be created for each new word. This is inefficient, and poorly represents words: we can't add "dog" and "s" to get the plural "dogs", since "s" isn't a token in itself. How do we get a vector with a high plural-ness dimension from a word? "s", the 'plural-maker', if you will, is not a word in itself. 
+
+Ideally, we want a system where mathematics on these vectors works on a token-meaning level too - some sort of compositional semantics. Here's an example
+
+![image from https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/](/assets/tokens/vector_math.png)
+
+This doesn't work completely if we can't have single letters like 's' as a token.
+
+## Token basics
 To overcome these difficulties and to make things work better, some language models use the concept of "tokens" instead of full words. Tokens can be whole words, can be sub words, can even be individual letters: consider a modifying suffix like 'ed' or 'ing'
+
 If we have the token "walk", and we add the vector for the token "ing", then we should change the "tense-ness" of the vector for the token "walk" - "ing" makes this present tense (walking), vs "ed" which would make it past tense (walked). By storing sub-words like tokens, which themselves can be concepts, we can be more efficient. (eg. Many words we use are compound words of latin or greek-originating parts. Consider helicopter, misogyny, shopkeeper, and so on.). Short words, like "and", or really rare words, like erudite, might be tokens themselves, but common pieces of words - "ing", "ion", "real", etc - are made into tokens. Tokenization schemes that break words into meaningful subunits allow models to generalize better. If 'walk' and 'ing' are separate tokens, the model can learn how 'ing' modifies verbs across many contexts.
 
 Let's go over some different token-encoding schemes and what they look like in practice. 
 
 ## Character-level tokens
 One way we can represent words efficiently but also have considerable word-building flexibility, is by making each character a token: 'a', 'b', ';', '!' and so on. Then we can map characters to vectors and get 'd' + 'o' + 'g' + 's' = 'dogs'. If we added the vectors corresponding to each of these tokens, and decoded that vector, we'd get the word "dogs". Great! This is also highly memory efficient: we have a vocabulary of about 256 (all letters, numbers, a bunch of punctuation, etc)
+
 It's also conducive to arbitrary words: as long as the word uses english characters (we could extend to other character sets too, include Iceland's eth and thorn), then it can be represented with these tokens. 
 
 But this is not particularly powerful. As discussed, attention takes the vectors for each token and computes the relationships they all have with each other to find the most likely next vector/token. If you have a 'd' … what comes next? There's a LOT of things that could come after a 'd'. So this comes down to the data you train on. If you wanted a Language Model that only spat out, say, boys names from the 50s, then there's fewer things that come after 'd'. But all the english language? You can see the problem. 
 
 Well, what if we just use a large context window - that is, process loads of vectors at a time? The last 50 characters probably tells us a lot about the next one character. We know from the attention discussion that a series of vectors/tokens are used, and the importance and relevance of all of them is used to compute the next likely token. 
+
 Ok, let's consider this: so if we have 's', 'a', 'i', then the next likely token is … probably a 'd': 'said' is a common word. This is very similar to what your next-word-predictor on your keyboard does. Extending the horizon will give us more information, and so on. 
 
 This approach has proven to work well in small, domain-specific datasets. In fact, Andrej Karpathy, eminent AI researcher, has used this token encoding scheme to make a generative Language Model to create "new shakespeare" - it generates "shakespeare-like" sentences (eg. "Forsooth, mine uncle, I beseech'd". It's not Shakespeare, but it's shakespeare-esque). This operates only on characters as tokens, using a set of 64 tokens at a time. 
@@ -47,17 +61,22 @@ Attempting this on a general natural-language question-answerer or text-summaris
 So what other schemes are there? 
 
 ## Subword-level tokens
-As mentioned above, a lot of words we use are compound words, or made up of sub-word modifiers or building blocks. You can have a verb, walk, and this can have its tense modified with a suffix: -ed, -ing. The word 'way' is a word on its own, but can be compounded with others: gang, door, run (gangway, doorway, runway). These all relate to the original meaning of way (a space that is intended to be moved through), but modify it. A doorway implies a narrow opening; a runway implies a honking great road and aeroplanes. In embedding space, this would work as each of these tokens being individual vectors ('way', 'door', 'run'), and then the addition of their vectors having semantic meaning. When converted back to token space from embedding space, the sum of the vectors for 'run' and 'way' should produce a vector that translates to the tokens that make up 'runway' (perhaps a single token itself, but probably not)
+As mentioned above, a lot of words we use are compound words, or made up of sub-word modifiers or building blocks. You can have a verb, walk, and this can have its tense modified with a suffix: -ed, -ing. The word 'way' is a word on its own, but can be compounded with others: gang, door, run (gangway, doorway, runway). These all relate to the original meaning of way (a space that is intended to be moved through), but modify it. A doorway implies a narrow opening; a runway implies a honking great road and aeroplanes. 
+
+In embedding space, this would work as each of these tokens being individual vectors ('way', 'door', 'run'), and then the addition of their vectors having semantic meaning. When converted back to token space from embedding space, the sum of the vectors for 'run' and 'way' should produce a vector that translates to the tokens that make up 'runway' (perhaps a single token itself, but probably not)
 To generalise this concept, by separating subwords into tokens, the model can learn how different suffices like 'ing' modify verbs across many contexts.
 
 But how do we get these sub words? How do we decide what a reasonable sub-word is? 
+
 One answer is: have a dictionary of predetermined tokens. Well, we considered this, and while it's mildly more reasonable than a dictionary of full words, it hits the same problems (handling new word, for example)
 
 Another answer is: build up the vocabulary from the dataset we are given. Let's say we're trying to learn on ALL of wikipedia. And instead of coming in with a pre-made tokenisation, we're going to build our own tokenisation from the given text. 
 
-Let's go over what this means
+Let's go over what this means.
 We start with a simple character-based tokenisation. All lower case letters, upper case letters, all possible punctuation, spaces, even the rare semicolon and the demisemicolon (when you want but the briefest of pauses). 
+
 Then we perform frequency analysis over the text for pairs of tokens; that is, how often does each possible pair of characters appear? For example, 'i' and 'n' would appear often together ('in' being a common word itself, but also is part of ing, a common suffix). These most common pairs get merged to create a new token: 'in' becomes a token in the vocabulary (as would things is like 'is', 'it', 'at', and so on. Not because they are words themselves, but because they are common pairings even within words, eg 'with' has 'it').
+
 This is repeated again and again, until we have a vocabulary of a desired size. The tokens will get larger as we go, but this then means we can represent some things with fewer tokens. For example, 'tokenisation' - we might have 'token' be an entire token itself, as would 'tion', and therefore we have perhaps four or five tokens. Compare this to a per-letter basis: we can now have a denser information content in the same amount of tokens. Given that the processing scales on a per-vector basis, and each vector corresponds to one token, the denser we can be with tokens the better. 
 
 
@@ -73,7 +92,7 @@ So to summarise subword tokenisation, we can build up a vocabulary of subwords t
 
 ## Experimenting with tokenisation
 Let's show tokenisation in practice. 
-I trained a subword tokeniser, as described above, on the text of Shakespeare (using Karpathy's [example repository]()), and aim for a vocabulary size of 1000 tokens. So initially we have 256 (all the single characters in a character-level tokeniser). Here's an example of some of the tokens. The numbers are their index in the vocabulary. 
+I trained a subword tokeniser, as described above, on the text of Shakespeare (using Karpathy's [example repository](https://github.com/karpathy/nanoGPT)), and aim for a vocabulary size of 1000 tokens. So initially we have 256 (all the single characters in a character-level tokeniser). Here's an example of some of the tokens. The numbers are their index in the vocabulary. 
 
     ":": 26,
     ";": 27,
@@ -108,7 +127,7 @@ The tokeniser algorithm then does some frequency analysis and begins making new 
 
 Let's see more token merging:
 
-"one": 457,
+    "one": 457,
     " pr": 458,
     " com": 459,
     " at": 460,
@@ -119,8 +138,7 @@ These are getting increasingly high level. Remember, we still want the individua
 
 On another note, notice that a lot of letters are paired with a starting space, eg token 268 above, or token 461 just here. " the" is a very common token, with the space at the start. While "the" is almost as common, the space is the key thing - by separating that out as a token we establish the space as part of the meaning. 
 
-
- " grace": 924,
+    " grace": 924,
     "less": 925,
     " beg": 926,
     " eyes": 927,

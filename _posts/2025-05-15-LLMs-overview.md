@@ -49,17 +49,23 @@ The set of all these vectors that can represent words is called the 'embedding s
 ![image from https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/](/assets/llm1/embedding.png)
 
 Each dimension of the vectors in the embedding space captures something different, and these could get quite abstract: tense, noun-ness, archaic-ness, slang-ness, how much this relates to
-other concepts, etc. 
+other concepts, etc.
+
 Now we should be able to do math on this. What does this mean? Well, back to our person classification example,
 if we get the vector representating a tall dark-skinned person, and subtract from that a vector with a high dark value and a high height value,
 then we should get a vector similar to that of a person who is short and light-skinned. 
 
 
 So, if we have a vector representing "king". Subtract the vector for "man". Add the vector for "woman". This should be close to … the vector for "queen". 
+
+![image from https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/](/assets/tokens/vector_math.png)
+
 Every vector must, however, be associated with a real word - there is a function that maps words to the embedding space and back. So if we end up with a new vector, the function must somehow map it back to a known existing word. The group of words we can use is called the "vocabulary" (funny, that). We can have a very large expressive vocabulary, but this requires more compute. Or, we could have a smaller vocabulary and be faster at computing answers, but be able to say less. 
 
 ### Summary and terms
 To reiterate, LLMs use a database, called a vocabulary, of words, called tokens, where each word maps to a large vector of numbers, called embedding vectors. These embedding vectors represent with many dimensions all the different concepts, relationships, and semantic meaning a token might hold.
+
+![image from https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/](/assets/tokens/token_vectors.png)
 
 Now that we’ve seen how words become numbers, let’s explore how Transformers use those numbers to predict text
  
