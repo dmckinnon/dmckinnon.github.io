@@ -12,9 +12,15 @@ But they're so mystical! An absolute black box of magic. I hope to, in this post
 
 # What is an LLM 
 
-Large Language Models, as their name suggests, deal with language. Typically these have vast repositories of natural language - whatever we say and write - and are used for many tasks relating to this. They can complete partial sentences: "Einstein was a theoretical ___" (what comes next?). They can fill in a middle blank: "The best racer ever was ___ and they often won by a huge margin" (what goes there?). They can extract information, like named entities: "Einstein worked in the Swiss patent office in Zurich" (what are the names there? Einstein, Swiss, Zurich). They can summarise and evaluate text, like give sentiment analysis (was this paragraph positive?). They can even answer questions, and the most well known LLM to do this is good ole ChatGPT (not to diss Claude).
+Large Language Models, or LLMs, as their name suggests, deal with language. They have an internal model of natural language, based on their training. This internal model captures multiple levels of meaning, from individual words to word-group interactions, facts, syntax, semantics. An internal vocabulary is built up, using the given training data - eg. "all of wikipedia, in english". From this vocabulary, which represents all the words and concepts the model can operate on, the model learns connections between the items and how to use them to construct coherent language as output.
+For example, if one were to train a Language Model only on Shakespearean English, the LLM's vocabulary and internal concepts would reflect this. 
 
-LLMs capture subtle relationships—syntax, semantics, even world knowledge—to generate coherent text. Therefore, they can produce reasonable results upon very in-depth requests. 
+An example of an LLM is a GPT - a Generative Pretrained Transformer. These can be used for language translation or querying. Consider the task of French to English. The GPT is trained on translation data such that it builds up an internal model of how the French language corresponds to English, including all manner of nuance, idioms, etc (dependeng on the data used). Then, when given a sentence in French as input, the internal model can operate on this sentence and provide the english translation. 
+
+LLMs typically are tasked with natural language-based tasks. They can complete partial sentences: "Einstein was a theoretical ___" (what comes next?). They can fill in a middle blank: "The best racer ever was ___ and they often won by a huge margin" (what goes there?). Such skills can be used in question-answering or fact-checking. 
+
+They can extract information, like named entities: "Einstein worked in the Swiss patent office in Zurich" (what are the names there? Einstein, Swiss, Zurich). They can summarise and evaluate text, like give sentiment analysis (was this paragraph positive?). They can even answer questions, and the most well known LLM to do this is good ole ChatGPT.
+
  
 ## How do LLMs work?
 It might appear that LLMs do proper human-like thinking behind the scenes. In a way, that's true - they reason about relationships between words and deeper semantic meaning. You perform similar mental tasks, however subconcious, when reading text like this, for example. But it only appears this way because we have managed to approximate this process with a few mathematical concepts and operations.
@@ -72,7 +78,7 @@ Now that we’ve seen how words become numbers, let’s explore how Transformers
  
 ## Transformers
 So we have the embedding space. Instead of words, we work on large vectors which encapsulate a lot of concepts and "type-ness" about each word. 
-Let's focus on the core use case of a GPT: we have some text, what comes next in that text? (note: transformers can do other things, but I'm going to focus on a use case initially to make the explanation easier)
+Let's focus on the core use case of a LLM: we have some text, what comes next in that text? (note: transformers can do other things, but I'm going to focus on a use case initially to make the explanation easier)
 This is where a transformer can help. A standard-configuration for a transformer will take as input a series of vectors - representing tokens, or words - and by checking all these against each other, figure out which vector in embedding space - so which word in the vocabulary - is the most likely to come next. This can be generalised, of course, to any embedding space. Maybe the embedding space was trained on more abstract concepts than words. The transformer is merely trying to say "given these vectors, which one is the mostly likely to come next". 
  
 So how does it do that? 

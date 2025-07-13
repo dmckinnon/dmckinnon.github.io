@@ -6,8 +6,6 @@ categories: Tutorials
 comments: true
 ---
 
-// This needs links and pictures
-
 
 # Tokens
 In a [previous post](https://dmckinnon.github.io/LLMs-overview/) I discussed how Large Language Models like ChatGPT broadly work. One important tool they use is the concept of an embedding space, where words are converted into vectors of numbers, and I wrote of how these vectors can encode and represent concepts. These vectors are then used to predict the next vector - which represents tokens in the vocabulary of the model. The vocabulary is, as the name suggests, the set of all the possible tokens - or words - that this model can use.
@@ -25,9 +23,9 @@ In a [previous post](https://dmckinnon.github.io/LLMs-overview/) I discussed how
 ## Full word tokens
 What I had written was an oversimplification. Yes, some models do operate off whole words, but this requires a massive vocabulary; each word like 'dog' and 'dogs' would have their own vector, despite being closely related. The tokenizer wouldn't by default consider these similar. Imagine having a function that maps from every word in the dictionary to a different vector - that's huge! 
 
-Firstly, we have a processing power problem: the model must output a probability distribution over the entire vocabulary at each step—so larger vocabularies mean larger softmax layers and more computation.
+Firstly, we have a processing power problem: the model must output a probability distribution over the entire vocabulary at each step. Larger vocabularies, therefore, mean considerably more computation.
 
-Then you would also have trouble with new words: a new mapping would be created for each new word. This is inefficient, and poorly represents words: we can't add "dog" and "s" to get the plural "dogs", since "s" isn't a token in itself. How do we get a vector with a high plural-ness dimension from a word? "s", the 'plural-maker', if you will, is not a word in itself. 
+Then you would also have trouble with new words: a new mapping would be created for each new word. This is inefficient, and poorly represents words: we can't add "dog" and "s" to get the plural "dogs", since "s" isn't a token in itself. How do we get a vector with a high plural-ness dimension from a word? "s", the 'plural-maker', if you will, is not a word in itself. How would we adjust a 'dog' token vector to get the 'dogs' token vector?
 
 Ideally, we want a system where mathematics on these vectors works on a token-meaning level too - some sort of compositional semantics. Here's an example
 
@@ -58,7 +56,7 @@ This approach has proven to work well in small, domain-specific datasets. In fac
 But this is with all the Shakespeare to train on, which in terms of memory usage is not that much (I think 1 megabyte?) and is a heavily overfit dataset. This shows that even a simple character-level modeler can generate coherent text on a constrained domain, but will struggle to scale well. 
 Attempting this on a general natural-language question-answerer or text-summariser … wouldn't produce great results (you'd need an enormous horizon, and even then characters simply don't have the expressive power). 
 
-So what other schemes are there? 
+So does a better scheme exist? One that doesn't mean a single vector per entire word, but still contains more meaning than individual characters. 
 
 ## Subword-level tokens
 As mentioned above, a lot of words we use are compound words, or made up of sub-word modifiers or building blocks. You can have a verb, walk, and this can have its tense modified with a suffix: -ed, -ing. The word 'way' is a word on its own, but can be compounded with others: gang, door, run (gangway, doorway, runway). These all relate to the original meaning of way (a space that is intended to be moved through), but modify it. A doorway implies a narrow opening; a runway implies a honking great road and aeroplanes. 
@@ -66,9 +64,16 @@ As mentioned above, a lot of words we use are compound words, or made up of sub-
 In embedding space, this would work as each of these tokens being individual vectors ('way', 'door', 'run'), and then the addition of their vectors having semantic meaning. When converted back to token space from embedding space, the sum of the vectors for 'run' and 'way' should produce a vector that translates to the tokens that make up 'runway' (perhaps a single token itself, but probably not)
 To generalise this concept, by separating subwords into tokens, the model can learn how different suffices like 'ing' modify verbs across many contexts.
 
+To highlight the advantages of this system, consider the following:
+
+`Character: ['T','h','e',' ','c','a','t',' ','s','a','t',' ','d','o','w','n']`
+`Subword: ['The',' cat',' sat', 'do', 'wn']`
+
+In the first line, we need a much longer context length to capture this meaning. This means considerably more processing, and even with that we may not be able to express higher level meaning. In the second line, we have a far shorter context window. Here, we can perform less processing for the same meaning, or capture more context and meaning for the same number of vectors.
+
 But how do we get these sub words? How do we decide what a reasonable sub-word is? 
 
-One answer is: have a dictionary of predetermined tokens. Well, we considered this, and while it's mildly more reasonable than a dictionary of full words, it hits the same problems (handling new word, for example)
+One answer is: have a dictionary of predetermined tokens. Well, we considered this, and while it's mildly more reasonable than a dictionary of full words, it hits the same problems (handling new word, for example).
 
 Another answer is: build up the vocabulary from the dataset we are given. Let's say we're trying to learn on ALL of wikipedia. And instead of coming in with a pre-made tokenisation, we're going to build our own tokenisation from the given text. 
 
