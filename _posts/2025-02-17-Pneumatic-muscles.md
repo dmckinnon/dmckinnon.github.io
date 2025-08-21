@@ -86,15 +86,8 @@ People have printed threaded parts from these resins - [this man](https://www.yo
 
 Can we print from these parts and get an airtight seal? Will the muscle be just as strong? (well, no - brass will still be better. Will it be strong _enough_?)
 
-#### Siraya Blu Tough
-I printed parts from Siraya Blu
+This is still an open question I'm investigating. I've tried a couple of resins, like Siraya Blu Tough, but I think my designs were faulty. I was attempting
+threaded pieces, and these weren't working well due to poorly-printed threads. I've come up with another design that involves two pieces pressed together, and it has more promise. Next post on this topic should have results
 
-photo
-
-As can (with difficulty) be seen from the photo, there were some aberrations when printing this. Printing some more, we find:
-
-- Print more of these
-- build an entire muscle from them
-- Test
 
 
