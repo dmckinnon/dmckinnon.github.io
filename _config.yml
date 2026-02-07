@@ -41,7 +41,7 @@ feed:
 # Site settings
 permalink: /:title/
 markdown: kramdown
-paginate: 5
+paginate: 25
 paginate_path: "/:num/"
 date_format: "%b %-d, %Y"
 
