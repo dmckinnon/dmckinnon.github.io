@@ -36,6 +36,7 @@ plugins:
 
 feed:
   excerpt_only: false
+  posts_limit: 1000
 
 
 # Site settings
