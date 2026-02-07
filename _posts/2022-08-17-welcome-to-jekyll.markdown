@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Setup"
-date:   2020-01-01 10:58:35 -0700
+date: 2022-08-17 10:00:00 -0700
 categories: updates
 ---
 Website set up, hopefully projects to follow.
