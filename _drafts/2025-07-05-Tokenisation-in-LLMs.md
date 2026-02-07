@@ -10,7 +10,7 @@ comments: true
 # Tokens
 In a [previous post](https://dmckinnon.github.io/LLMs-overview/) I discussed how Large Language Models like ChatGPT broadly work. One important tool they use is the concept of an embedding space, where words are converted into vectors of numbers, and I wrote of how these vectors can encode and represent concepts. These vectors are then used to predict the next vector - which represents tokens in the vocabulary of the model. The vocabulary is, as the name suggests, the set of all the possible tokens - or words - that this model can use.
 
-![image from https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/](/assets/llm1/embedding.png)
+![image from https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/](https://dmckinnon.github.io/assets/llm1/embedding.png)
 
 ## Contents
 - [Word tokenisation](#full-word-tokens)
@@ -29,7 +29,7 @@ Then you would also have trouble with new words: a new mapping would be created 
 
 Ideally, we want a system where mathematics on these vectors works on a token-meaning level too - some sort of compositional semantics. Here's an example
 
-![image from https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/](/assets/tokens/vector_math.png)
+![image from https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/](https://dmckinnon.github.io/assets/tokens/vector_math.png)
 
 This doesn't work completely if we can't have single letters like 's' as a token.
 

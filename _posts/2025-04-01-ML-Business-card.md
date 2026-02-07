@@ -121,7 +121,7 @@ KiCAD is a program for electronic circuit design. There are two main interfaces 
 The schematic lays out the theory of the circuit: which components are used, what are their connections. So I add the chip, power, flash memory, leds, etc and connect as needed.
 Here's an example:
 
-![](/assets/card/kicad_schematic.png)
+![](https://dmckinnon.github.io/assets/card/kicad_schematic.png)
 
 Here we see the flash memory for the RP2040. I'd copied this straight from the examples Raspberry Pi provided.
 Several pins are pulled high or low (3.3v or ground respectively), some have decoupling capacitors, one is connected to a switch - this gets pulled
@@ -130,18 +130,18 @@ low to program the device. Several are connected to labels that are used elsewhe
 Then there is the PCB design. This is the physical layout that will be on the actual board.
 First, the outline of the board is created from the edge.cuts layer:
 
-![](/assets/card/kicad_pcb_cut.png)
+![](https://dmckinnon.github.io/assets/card/kicad_pcb_cut.png)
 
 This has the dimensions of a business card (~80mm x ~50mm), but one corner is cut out for a USB-C insert. Most of the rest of the board is unused by the circuit and I just filled it with business card text: name, email, description, and instructions on card usage. 
 Why is the circuit crammed into one side and not more spread out? Well, firstly spread out would make the text arrangement harder - I don't want components and text mixed, for readability. Secondly, short tracks benefit small circuits - or rather, long tracks are detrimental. Extra resistance, etc. So, let's cram it tiny. 
 
 The board is 0.8mm thick, which is the thickness inside a USB "male" connector. Male is in quotes because technically the "female" half of USB has a "male" part in it too (is it non binary?). This board acts as the outtie bit in the female connector. Let's look at the USB-C part:
 
-![](/assets/card/kicad_usb_c.png)
+![](https://dmckinnon.github.io/assets/card/kicad_usb_c.png)
 
-![](/assets/card/card_in_usb.png)
+![](https://dmckinnon.github.io/assets/card/card_in_usb.png)
 
-![](/assets/card/card_usb.png)
+![](https://dmckinnon.github.io/assets/card/card_usb.png)
 
 There are tracks only on one side since the circuit only need be one side.
 The tracks used are the ones necessary for USB 2.0 mode, as I only need this for data transfer - to program and debug - and thereafter for power.
@@ -149,27 +149,27 @@ Thankfully, this worked first go. As a backup, the first circuit had a place for
 
 Next, we arrange the components. The RP2040 is biggest and central, but the tracks around it should be sensibly arranged. For example, the flash chip uses the pins on the top side of the RP2040 - so let's place it there:
 
-![](/assets/card/kicad_flash.png)
+![](https://dmckinnon.github.io/assets/card/kicad_flash.png)
 
 I made sure the LEDs used pins on the right side, as the crystal used some of the bottom pins:
 
-![](/assets/card/kicad_leds.png)
+![](https://dmckinnon.github.io/assets/card/kicad_leds.png)
 
 The pins for the PDM microphone are on the left:
 
-![](/assets/card/kicad_mic.png)
+![](https://dmckinnon.github.io/assets/card/kicad_mic.png)
 
 and around it are decoupling capacitors. 
 
 The LEDs are arranged in a 7-segment display configuration:
 
-![](/assets/card/kicad_more_leds.png)
+![](https://dmckinnon.github.io/assets/card/kicad_more_leds.png)
 
 Originally I had 4, and would display the result in binary. Someone pointed out that 7-segment and decimal was just ... clearer. Less ambiguous and confusing. Fair point, and I do have GPIO pins to spare. 
 
 This entire circuit and process went through several iterations, as I made mistakes, forgot connections, redesigned, and so on. This is the final design:
 
-![](/assets/card/kicad_pcb.png)
+![](https://dmckinnon.github.io/assets/card/kicad_pcb.png)
 
 ### Mistakes along the way
 The circuit design had three distinct iterations, due to several mistakes. 
@@ -196,14 +196,14 @@ All in all, the cost is perhaps ~$12 a board? Pricey, when compared to some of t
 
 I soldered the boards myself - [Josh Elsdon](https://www.elsdon.io/) is a friend and has a SMD soldering setup. A controllable-pressure heat gun, and a soldering iron with a _really_ fine tip, plus solder paste and flux. 
 
-![](/assets/card/soldering.png)
+![](https://dmckinnon.github.io/assets/card/soldering.png)
 
 Definitely the hardest thing I have soldered, but it got easier with practice. See [this](https://dmckinnon.github.io/SMD-components-are-hard/) for my difficulties with the microphone. 
 
 ## Final Product
 And yet I got it working!
 
-![](/assets/card/final.png)
+![](https://dmckinnon.github.io/assets/card/final.png)
 
 Can't exactly have a video on this page, but it's largely working. See [the software section](#software-differences-and-issues) for the details here - the tl;dr
 is that it detects the expected audio when you speak slowly and clearly enunciate and drag out each phoneme. Not a great experience?

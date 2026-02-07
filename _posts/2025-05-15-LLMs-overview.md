@@ -52,7 +52,7 @@ In a similar vein, we create vectors for words. These vectors are typically enor
 for each word in its vocabulary (the vocabulary of an LLM, much like that of a person, is the set of all words they know and can work with). 
 The set of all these vectors that can represent words is called the 'embedding space'. 
 
-![image from https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/](/assets/llm1/embedding.png)
+![image from https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/](https://dmckinnon.github.io/assets/llm1/embedding.png)
 
 Each dimension of the vectors in the embedding space captures something different, and these could get quite abstract: tense, noun-ness, archaic-ness, slang-ness, how much this relates to
 other concepts, etc.
@@ -64,14 +64,14 @@ then we should get a vector similar to that of a person who is short and light-s
 
 So, if we have a vector representing "king". Subtract the vector for "man". Add the vector for "woman". This should be close to … the vector for "queen". 
 
-![image from https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/](/assets/tokens/vector_math.png)
+![image from https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/](https://dmckinnon.github.io/assets/tokens/vector_math.png)
 
 Every vector must, however, be associated with a real word - there is a function that maps words to the embedding space and back. So if we end up with a new vector, the function must somehow map it back to a known existing word. The group of words we can use is called the "vocabulary" (funny, that). We can have a very large expressive vocabulary, but this requires more compute. Or, we could have a smaller vocabulary and be faster at computing answers, but be able to say less. 
 
 ### Summary and terms
 To reiterate, LLMs use a database, called a vocabulary, of words, called tokens, where each word maps to a large vector of numbers, called embedding vectors. These embedding vectors represent with many dimensions all the different concepts, relationships, and semantic meaning a token might hold.
 
-![image from https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/](/assets/tokens/token_vectors.png)
+![image from https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/](https://dmckinnon.github.io/assets/tokens/token_vectors.png)
 
 Now that we’ve seen how words become numbers, let’s explore how Transformers use those numbers to predict text
  
@@ -93,7 +93,7 @@ This might sound silly when generating new text, but is particularly important w
 
 The following image demonstrates how the transformer sees phrases - when predicting each future word, it can only look at past words:
 
-![](/assets/llm1/masked.png)
+![](https://dmckinnon.github.io/assets/llm1/masked.png)
  
 ### Self:
 This means that the Transformer looks at what the context window - both what it got given and what it generated - and compares to its own embedding space. It could compare to different spaces (we'll get there), but in this example, it's contained. Only the input data and generated data and how it relates to itself is relevant
@@ -111,7 +111,7 @@ So each vector's (word's) query is compared with each other vector's key (includ
 
 Here's a numerical example, from [3Blue1Brown](https://www.3blue1brown.com/lessons/attention):
 
-![](/assets/llm1/attn_logits.png)
+![](https://dmckinnon.github.io/assets/llm1/attn_logits.png)
 
 In the above image, we can see the numerical result from each Query-Key computation, for each pair of words/tokens. 
 
@@ -122,13 +122,13 @@ The value for a vector is "What information will I provide?". So if something is
 
 Here's 3Blue1Brown again, showing the probabilistic result:
 
-![](/assets/llm1/softmax_Attn.png)
+![](https://dmckinnon.github.io/assets/llm1/softmax_Attn.png)
 
 These probabilities will weight different dimensions in the value, which is then converted back to embedding space. For the "pet" example, there might also be a dimension of "nationality", and this would get given a very low probability (multiplied with a number close to 0), and therefore have very little effect; the "breed" dimension might get weighted higher, have a number close to one. This would then give a higher value in embedding space. 
 
 Here's a visual example, from [Jay Alammar's blog](https://jalammar.github.io/illustrated-transformer/).
 
-![](/assets/llm1/simple_attention.png)
+![](https://dmckinnon.github.io/assets/llm1/simple_attention.png)
 
 The above image displays the attention of 'it' across the entire input vector. Colour intensity represents higher probabilities, so we can see that 'it' relates very strongly to 'The animal' (as expected), but also, less probably, to 'street'. The latter is possible; consider "The animal didn't cross the street because it was too dangerous" - here, 'it' refers to the street. 
 
@@ -139,7 +139,7 @@ The result of all of this is a new embedding vector. Let's just summarise the jo
 Finally, this gets converted back from embedding space to vocabulary space, with probabilities. That is, we have a giant dictionary that is our vocabulary, where words are ordered: word #1, word #2, and so on. In each position, 1, 2, etc, this conversion gives us a probability that the vector from embedding space was converted to this word. "Walking" might be the highest probability, but "walked" may not be that far behind. "Antitrust" would get a very low probability in this case, as its entirely unrelated. 
 The highest probability word is chosen as the next word then, and written out. The following figure shows this process, bottom up. We take the output vector, and pass it through a linear operation to get logits - these are log-likelihoods for each index. The softmax operation converts real-numbered values - the log-likelihoods, which range from negative infinity to positive infinity - to proportionate numbers between 0 and 1. That is, probabilities. Then we get the highest probaility value, and find the word that corresponds to. 
 
-![from https://jalammar.github.io/illustrated-transformer/](/assets/llm1/decode.png)
+![from https://jalammar.github.io/illustrated-transformer/](https://dmckinnon.github.io/assets/llm1/decode.png)
  
 To continue generating the sequence, the new word is appended to what has been written so far, and passed back in to start the whole process again. 
 
