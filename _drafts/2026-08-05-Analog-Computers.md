@@ -30,6 +30,7 @@ So, firstly, let's go over how they work - feel free to skip this, but it should
 
 The following is a diagram of an op-amp, with output $V_{out}$, and the two inputs $V_+$ and $V_-$. The other voltage lines are to power the whole thing, and these also provide upper and lower limits to the output voltage. 
 ![](https://dmckinnon.github.io/assets/analog/opamp.png) 
+
 There's also power lines to said op-amp, but these aren't important, they just give us the upper and lower bounds of what Vout can be. The op-amp equation is 
 $V_{out} = A(V_+ - V_-)$
  Typically $A$ is something on the order of 100 000. This is where my initial confusion lay - I assumed it would be 2 or 3, and maybe you'd buy an extreme one that had a factor of 10 or you'd chain a few to get a bigger one … no. It's actually meant to be infinite gain, in theory. 
@@ -52,12 +53,14 @@ Well, apart from demonstrating the feedback mechanism of op-amps, this circuit "
 This basic feedback mechanism and mathematical trick, relying on the op-amp to drive  $V_{out}$ however necessary to produce the requisite voltage, can then be exploited to create several more useful circuits:
  
 The scaler (or amplifier, but now that's become an overloaded term):
-
+![](https://dmckinnon.github.io/assets/analog/inverting-amplifier-circuit.jpg) 
 
 Consider the inverting scaler first. $V_+ = 0v$, and by the virtual short steady state $V_- = 0v$. Therefore all current from $V_{in}$ must flow through the feedback resistor, thanks to Kirchoff's Current Law. $\frac{Vin}{R_1} = \frac{(0-V_{out})}{R_2}$. Solving for $V_{out}$ gives $V_{out} = \frac{-R_2}{R_1}V_{in}$. By choosing $R_2$ and $R_1$, we can scale the input voltage by various factors, eg. $R_2 = 2*R_1$, to double it. 
  
 
 The non-inverting follows with only a little more working:
+![](https://dmckinnon.github.io/assets/analog/noninverter.jpg)
+
 $\frac{V_{in}-0}{R_1} = \frac{V_{out}-V_{in}}{R_2}$
 $V_{out} = R_2(\frac{1}{R_2} + \frac{1}{R_1})V_{in}$
 So $V_{out} = (1+\frac{R2}{R1})V_{in}$
@@ -65,7 +68,7 @@ Note that this can only scale greater than one, but you can always just chain tw
  
  
 The Inverting Summer
-
+![](https://dmckinnon.github.io/assets/analog/inverting_summer.png) 
 
 This follows from Kirchoff's Current Law, the fact that currents add together - the current at $V_-$ is the sum of the currents from each of $V_1$ and $V_2$ - therefore $\frac{-V_{out}}{R_3} = \frac{V_1}{R_1} + \frac{V_2}{R_2}$, so we get $V_{out} = \frac{-1}{R_3} (V_1R_1+V_2R_2)$
 By setting $R_2 = R_1 = R_3$, we can cancel out the resistance scale factors, and $V_{out} = -(V_1+V2)$
@@ -73,7 +76,7 @@ This can be made to do general weighted linear equations - a dot product with st
 $V_{out} = \frac{-1}{R_{feedback}} (R_1V_1 + R_2V_2 … )$
  
 The Subtractor
-
+![](https://dmckinnon.github.io/assets/analog/subtractor.jpg)
 
 This is slightly more complicated. Given we don't care about amplifying, we just want to subtract, let's say that all resistors are just some value $R$.
 As $V_- = V_+$, and $V_+=\frac{R}{R+R}V_1=\frac{V_1}{2}$, we have
@@ -83,9 +86,9 @@ Substituting,
 $\frac{V_1}{2}\frac{2}{R} - \frac{V_2}{R}= \frac{V_o}{R}$
 And therefore
 $V_{o}=V_1-V_2$
-This can be made more complicated, into a more generalised linear equation with different resistor values. https://www.electronics-tutorials.ws/opamp/opamp_5.html
+This can be made more complicated, into a more generalised linear equation with different resistor values. 
  
-There's a few more blocks, but the point hopefully is clear by now - we can use these circuit elements - op-amps and resistors - to do some simple mathematics on voltages. We could create, for example, a circuit that produces an output voltage y where $y =  2x + 3$. You then just need to have a dial that lets you set $x$, and then you measure $y$. 
+There's [a few more blocks](https://www.electronics-tutorials.ws/opamp/op-amp-building-blocks.html), but the point hopefully is clear by now - we can use these circuit elements - op-amps and resistors - to do some simple mathematics on voltages. We could create, for example, a circuit that produces an output voltage y where $y =  2x + 3$. You then just need to have a dial that lets you set $x$, and then you measure $y$. 
 Simple, easy to do on paper, but if you needed to produces results quickly and could set and read voltages quickly, and also digital computing had not been invented, then such a circuit could be useful. 
 Still, probably too simple and contrived to be worthwhile. 
  
@@ -94,7 +97,7 @@ Integrals are just adding a lot of small bits up, and we have adders, but a majo
 Capacitors work in a much more nuanced and complex way than I'm about to describe, but the following should be all that's necessary to know for the topic at hand. A capacitor has two plates, and if there is a voltage difference across them then one side charges up to equalise the voltage, neutralising the difference. This can then quickly discharge if the voltage across suddenly changes due to external factors. 
  
 So if we connect a capacitor across the op-amp feedback loop:
-
+![](https://dmckinnon.github.io/assets/analog/integrator.png)
 
 Then as $V_{in}$ changes, $V_{out}$ is driven to be the same as $V_{in}$ (so that $V_+$ is 0). But capacitors introduce some time delay - they must charge up to neutralise a voltage difference, it's not immediate. I'll not go into the derivation here, but we know that the voltage across the plates of a capacitor is equal to the charge on the capacitor, divided by the specific parameters called capacitance, which is really just a factor derived from physical construction (materials, dimensions, etc). $V_{in}$ changes, and the charge therefore changes. If $V_cap$ is the voltage across the capacitor, then
 $V_{cap} = \frac{Q}{C}$
@@ -109,6 +112,7 @@ TODO factor of R
 … and thus we can compute the integral of $V_in$ over time. 
  
 This might still be confusing, so here's an exmaple with a periodic signal that might make it clearer:
+![](https://dmckinnon.github.io/assets/analog/integrator_waveform.png)
 
 Where the input voltage over time is blue, and the output red.
 As $V_{in}$ switches, the output signal starts accumulating, proportional to the area under the signal of $V_{in}$. $V_{in}$ then switches again, and $V_{out}$ starts dropping, as the "area under the signal" decreases. This occurs in a sliding window fashion, meaning the integral value, the value of $V_{out}$, really only holds true for a moving time window of $V_{in}$. If $V_{in}$ was a constant value, say, 1v, then $V_{out}$would simply keep increasing until it saturated. If $V_{in}$ was then changed to 0v, $V_{out}$would decrease down to 0. 
@@ -116,11 +120,14 @@ This holds for more complex input signals too. Sines become cosines, and so on.
  
 So we can compute integrals. Can we invert this? 
 Well, instead of connecting the capacitor in the feedback loop, what if we put it before the feedback loop?
- 
+ ![](https://dmckinnon.github.io/assets/analog/differentiator.jpg)
 
 In this case, we have the situation where $V_{cap} = V_{in} - V_-$ (and $V_- = 0$), $I = \frac{dQ}{dt}= C\frac{dV_{in}}{dt}. By KCL, $I = \frac{V_{out}}{R_f}, so now 
 $C\frac{dV_{in}}{dt} = \fracV_{out}{R_f}$, and we can rearrange this and see that $V_{out}$ is now proportional to the derivative of Vin over time, instead of the integral! 
 Again, this is demonstrated nicely in some diagrams:
+
+<TODO add a diagram of the waverforms>
+
 If we put in a triangular wave, we see a square wave out, a square wave produces impulses, sines become cosines, etc. 
 <Explain how it works from the capacitor>
  
@@ -132,12 +139,14 @@ $\frac{dx}{dt}=\sigma(y-x)$
 $\frac{dy}{dt}=-xz+rx-y$
 $\frac{dz}{dt}=xy-bz$
 This creates a pretty 3D plot in $x$, $y$, and $z$ that looks something like 
+![](https://dmckinnon.github.io/assets/analog/lorentz.png)
 
 This is with $\sigma=10$, $b=\frac{8}{3}$, and $r=28$. Why? Because … if you pick those, it looks nice. Pick different, and it looks different. That's all.
 
 We have derivatives, multiplication by constants, some basic arithmetic … we can do all this! Since we plot $x$, $y$, and $z$, we'll feed the terms for the derivatives into an integrating op-amp setup, and that will give us … well, an inverted, signal, but an inverting amplifier can correct that. Take a look: 
 This is the X equation. $\frac{dx}{dt}=\sigma(y-x)$
 (We've chosen $\sigma=10$ but I'll get into that below)
+![](https://dmckinnon.github.io/assets/analog/x_equation.png)
 
 Let's read this from left to right. On the left, labels for the $-X$ signal and the $Y$ signal. The currents for these signals sum at the label $s(y-x)$, where I'm using $s=\sigma$, as per Kirchoff's Current Law. This feeds into an integrating op-amp at $V_-$. 
 Using the working from above, and using $V_{out}=label(-X)$,
