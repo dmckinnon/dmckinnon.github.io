@@ -1,4 +1,11 @@
-This needs a lot more detail and connective tissue. Multipliers come out of nowhere, are explained very quickly
+# Analog Computers
+
+## Contents
+- intro
+- op-amps
+- lorentz
+- multipliers
+- results
 
 Back in the Dark Ages, before general purpose computers existed, if you wanted a program that would compute a particular equation for arbitrary inputs you had to make a one-off device. Today's digital computing allows for general mathematics and logic - a program can be written for any particular math you might want to do, and rerun on the same hardware. Such is the blessing of digital computing. 
 Without this … Analog Computers were used. 
@@ -10,7 +17,9 @@ So how does this work? My aim was to construct such a circuit for the Lorentz At
 For reference, the Lorentz Attractor equations are 
 
 $\frac{dx}{dt}=\sigma(y-x)$
+
 $\frac{dy}{dt}=-xz+rx-y$
+
 $\frac{dz}{dt}=xy-bz$
 
 
@@ -32,9 +41,12 @@ The following is a diagram of an op-amp, with output $V_{out}$, and the two inpu
 ![](https://dmckinnon.github.io/assets/analog/opamp.png) 
 
 There's also power lines to said op-amp, but these aren't important, they just give us the upper and lower bounds of what Vout can be. The op-amp equation is 
+
 $V_{out} = A(V_+ - V_-)$
- Typically $A$ is something on the order of 100 000. This is where my initial confusion lay - I assumed it would be 2 or 3, and maybe you'd buy an extreme one that had a factor of 10 or you'd chain a few to get a bigger one … no. It's actually meant to be infinite gain, in theory. 
+
+Typically $A$ is something on the order of 100 000. This is where my initial confusion lay - I assumed it would be 2 or 3, and maybe you'd buy an extreme one that had a factor of 10 or you'd chain a few to get a bigger one … no. It's actually meant to be infinite gain, in theory. 
 I don't understand why - what use is something that amplifies a tiny difference infinitely? 
+
  
 There's a missing piece though - the feedback loop. If we connect $V_-$ to $V_{out}$, then $V_{out}$ will amplify the difference between $V_+$ and … $V_{out}$. So if $V_{out}$ drops below $V_+$, $V_{out}$ is amplified to create a larger positive signal … bringing it back up. If $V_{out}$ goes above $V_+$, this creates a negative signal, bringing it back down. The stable equilibrium, which analog circuits like, is the state where $V_-=V_+$, and $V_{out}$ produces a steady-state signal. This is called the virtual short: $V_+=V_-$. Not quite a law, but just the stable steady state. Note that because the gain is "infinite", even tiny differences are amplified. 
 
@@ -43,18 +55,26 @@ We can now exploit this. Consider this connection:
 ![](https://dmckinnon.github.io/assets/analog/voltage-follower-circuit.jpg) 
 
 Now we have $V_{out} = V_-$, and $V_+ = V_{in}$. The op-amp will drive $V_{out}$ to be the amplified difference of $V_+$ and $V_-$, as per $V_{out} = A(V_+ - V_-)$. We can rewrite this, with our new information:
+
 $V_{out} = A(V_{in} - V_{out})$
+
 Expanding and rearranging, 
+
 $(1+A)V_{out} = AV_{in}$
+
 and then
+
 $V_{out} = (\frac{A}{1+A})V_{in}$
+
+
 Given that $A$ is ~infinite, but in practice 100 000 or so, this is practically 1 and therefore we have a "voltage follower". This means that $V_{out}$ is driven to whatever $V_{in}$ is. Why does this matter? We could simply just continue a wire from $V_{in}$ … what does this buy us?
 Well, apart from demonstrating the feedback mechanism of op-amps, this circuit "isolates" $V_{out}$ whilst allowing it to copy  $V_{in}$. That is,  $V_{in}$ might be a low-current signal and  $V_{out}$ might require a higher current than  $V_{in}$ can deliver, but because the op-amp is externally powered,  $V_{out}$ can still be driven and stay the same voltage. Anyway, this is a digression. We don't necessarily need this for mathematics.  
+
  
 This basic feedback mechanism and mathematical trick, relying on the op-amp to drive  $V_{out}$ however necessary to produce the requisite voltage, can then be exploited to create several more useful circuits:
+
  
 The scaler (or amplifier, but now that's become an overloaded term):
-
 ![](https://dmckinnon.github.io/assets/analog/inverting-amplifier-circuit.jpg) 
 
 Consider the inverting scaler first. $V_+ = 0v$, and by the virtual short steady state $V_- = 0v$. Therefore all current from $V_{in}$ must flow through the feedback resistor, thanks to Kirchoff's Current Law. $\frac{Vin}{R_1} = \frac{(0-V_{out})}{R_2}$. Solving for $V_{out}$ gives $V_{out} = \frac{-R_2}{R_1}V_{in}$. By choosing $R_2$ and $R_1$, we can scale the input voltage by various factors, eg. $R_2 = 2*R_1$, to double it. 
