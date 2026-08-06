@@ -39,6 +39,7 @@ I don't understand why - what use is something that amplifies a tiny difference 
 There's a missing piece though - the feedback loop. If we connect $V_-$ to $V_{out}$, then $V_{out}$ will amplify the difference between $V_+$ and … $V_{out}$. So if $V_{out}$ drops below $V_+$, $V_{out}$ is amplified to create a larger positive signal … bringing it back up. If $V_{out}$ goes above $V_+$, this creates a negative signal, bringing it back down. The stable equilibrium, which analog circuits like, is the state where $V_-=V_+$, and $V_{out}$ produces a steady-state signal. This is called the virtual short: $V_+=V_-$. Not quite a law, but just the stable steady state. Note that because the gain is "infinite", even tiny differences are amplified. 
 
 We can now exploit this. Consider this connection:
+
 ![](https://dmckinnon.github.io/assets/analog/voltage-follower-circuit.jpg) 
 
 Now we have $V_{out} = V_-$, and $V_+ = V_{in}$. The op-amp will drive $V_{out}$ to be the amplified difference of $V_+$ and $V_-$, as per $V_{out} = A(V_+ - V_-)$. We can rewrite this, with our new information:
@@ -53,6 +54,7 @@ Well, apart from demonstrating the feedback mechanism of op-amps, this circuit "
 This basic feedback mechanism and mathematical trick, relying on the op-amp to drive  $V_{out}$ however necessary to produce the requisite voltage, can then be exploited to create several more useful circuits:
  
 The scaler (or amplifier, but now that's become an overloaded term):
+
 ![](https://dmckinnon.github.io/assets/analog/inverting-amplifier-circuit.jpg) 
 
 Consider the inverting scaler first. $V_+ = 0v$, and by the virtual short steady state $V_- = 0v$. Therefore all current from $V_{in}$ must flow through the feedback resistor, thanks to Kirchoff's Current Law. $\frac{Vin}{R_1} = \frac{(0-V_{out})}{R_2}$. Solving for $V_{out}$ gives $V_{out} = \frac{-R_2}{R_1}V_{in}$. By choosing $R_2$ and $R_1$, we can scale the input voltage by various factors, eg. $R_2 = 2*R_1$, to double it. 
@@ -97,6 +99,7 @@ Integrals are just adding a lot of small bits up, and we have adders, but a majo
 Capacitors work in a much more nuanced and complex way than I'm about to describe, but the following should be all that's necessary to know for the topic at hand. A capacitor has two plates, and if there is a voltage difference across them then one side charges up to equalise the voltage, neutralising the difference. This can then quickly discharge if the voltage across suddenly changes due to external factors. 
  
 So if we connect a capacitor across the op-amp feedback loop:
+
 ![](https://dmckinnon.github.io/assets/analog/integrator.png)
 
 Then as $V_{in}$ changes, $V_{out}$ is driven to be the same as $V_{in}$ (so that $V_+$ is 0). But capacitors introduce some time delay - they must charge up to neutralise a voltage difference, it's not immediate. I'll not go into the derivation here, but we know that the voltage across the plates of a capacitor is equal to the charge on the capacitor, divided by the specific parameters called capacitance, which is really just a factor derived from physical construction (materials, dimensions, etc). $V_{in}$ changes, and the charge therefore changes. If $V_cap$ is the voltage across the capacitor, then
@@ -120,6 +123,7 @@ This holds for more complex input signals too. Sines become cosines, and so on.
  
 So we can compute integrals. Can we invert this? 
 Well, instead of connecting the capacitor in the feedback loop, what if we put it before the feedback loop?
+
  ![](https://dmckinnon.github.io/assets/analog/differentiator.jpg)
 
 In this case, we have the situation where $V_{cap} = V_{in} - V_-$ (and $V_- = 0$), $I = \frac{dQ}{dt}= C\frac{dV_{in}}{dt}. By KCL, $I = \frac{V_{out}}{R_f}, so now 
@@ -139,6 +143,7 @@ $\frac{dx}{dt}=\sigma(y-x)$
 $\frac{dy}{dt}=-xz+rx-y$
 $\frac{dz}{dt}=xy-bz$
 This creates a pretty 3D plot in $x$, $y$, and $z$ that looks something like 
+
 ![](https://dmckinnon.github.io/assets/analog/lorentz.png)
 
 This is with $\sigma=10$, $b=\frac{8}{3}$, and $r=28$. Why? Because … if you pick those, it looks nice. Pick different, and it looks different. That's all.
@@ -146,6 +151,7 @@ This is with $\sigma=10$, $b=\frac{8}{3}$, and $r=28$. Why? Because … if you p
 We have derivatives, multiplication by constants, some basic arithmetic … we can do all this! Since we plot $x$, $y$, and $z$, we'll feed the terms for the derivatives into an integrating op-amp setup, and that will give us … well, an inverted, signal, but an inverting amplifier can correct that. Take a look: 
 This is the X equation. $\frac{dx}{dt}=\sigma(y-x)$
 (We've chosen $\sigma=10$ but I'll get into that below)
+
 ![](https://dmckinnon.github.io/assets/analog/x_equation.png)
 
 Let's read this from left to right. On the left, labels for the $-X$ signal and the $Y$ signal. The currents for these signals sum at the label $s(y-x)$, where I'm using $s=\sigma$, as per Kirchoff's Current Law. This feeds into an integrating op-amp at $V_-$. 
@@ -178,6 +184,8 @@ Onto the equation for Y!
 $\frac{dy}{dt}=-xz+28x-y$
 (I've now subbed in $r=28$)
 
+![](https://dmckinnon.github.io/assets/analog/y_equation.png)
+
 On the left, we have $-XZ$, $+X$ (from the $X$ circuit), and $-Y$, and each term is scaled by a resistor. As $-Y$ has no coefficient, it gets scaled by the "default" value, $R=100k\omega$. We want $28X$, and $100/28 = 3.57$ (remember, the scale factor is $\frac{1}{\frac{1}{28}RC}=\frac{28}{RC}$, which is why here we divide by 28). I'm scaling $-XZ$ by an extra factor. I want to scale the whole circuit down to an acceptable level, but any global scale factor on $X, Y, Z$ gets squared through the multiplier stage, so I need a "fudge factor" to undo that square. 
 Then we sum the signal and pass it through the integrator - $C$ is the same here, I use the same value capacitors globally. To do otherwise would … change the frequencies for different equations and produce something I don't want. We get the $-Y$ signal from the integrator, invert with a scale 1 to produce $Y$.
 
@@ -185,18 +193,25 @@ Finally, Z:
 $\frac{dz}{dt}=xy-\frac{8}{3}z$
 (using $b=\frac{8}{3}$)
 
+![](https://dmckinnon.github.io/assets/analog/z_equation.png)
+
 By now this should be recognisable. $-Z$ is a feedback signal from the integrator result, and it is appropriately scaled, then added to $XY$. As $XY$ is a multiplied signal, we have the special "anti-square fudge factor" from above. The scale parameter on $-Z$ is $\frac{100}{\frac{8}{3}}$. These are integrated to form the future $-Z$ signal, which is then inverted by an inverting amplifier of scale 1 to produce $+Z$. 
 
 Here's the complete circuit:
 
+![](https://dmckinnon.github.io/assets/analog/full_circuit_1.png)
+
 And here's the waveforms for X, Y, and Z, respectively, measured from my simulation:
- 
 
+![](https://dmckinnon.github.io/assets/analog/x_output.png)
 
+![](https://dmckinnon.github.io/assets/analog/y_output.png)
 
-
+![](https://dmckinnon.github.io/assets/analog/z_output.png)
 
 Here's the ground truth waveforms we expect for X, Y, and Z respectively, plotted against time:
+
+![](https://dmckinnon.github.io/assets/analog/gt.png)
 
 It works!
 
@@ -207,28 +222,38 @@ Well, I glossed over something above -how do we get XY and -XZ?
  And we can see that this works. But I can't just buy a magical chip that does this … 
 Oh wait. I can: 
 
+![](https://dmckinnon.github.io/assets/analog/mouser.png)
+
 
 Oh, those are expensive. Can I design my own?
 Googling a bit, I found a solution: the transconductance amplifier. One basic use for a transconductance amplifier is a "voltage controlled amplifier". Where an op-amp amplifies by a factor controlled by a (typically) static resistance, we can used a varying voltage here to amplify another signal.
-This sounds an awful lot like we are scaling one signal based on another, which must involve multiplication. Checking the datasheet https://www.ti.com/lit/ds/symlink/lm13700.pdf we see:
+This sounds an awful lot like we are scaling one signal based on another, which must involve multiplication. Checking [the datasheet](https://www.ti.com/lit/ds/symlink/lm13700.pdf) we see:
+
+![](https://dmckinnon.github.io/assets/analog/transconductance.png)
 
 
 Aha! A multiplier! And the following explanation, accompanying this diagram
 
+![](https://dmckinnon.github.io/assets/analog/4qmult.png)
+
 That may be a bit dense, but the point is that we now know how the input terms relate to the output, and what constant factors we need to control. 
- I could do a whole write up on multipliers, or indeed just this investigation. I built just this circuit in KiCad and simulated a few input signals. Long story short … it was confusing and did not give me stable results. For some constant signals I got expected results, but for some time varying signals, one would dominate over the other. The resultant wave would be saturated towards one of the inputs, or the expected output would be in the mV-amplitude scale, which would be annoying for the main circuit. 
+I could do a whole write up on multipliers, or indeed just this investigation. I built just this circuit in KiCad and simulated a few input signals. Long story short … it was confusing and did not give me stable results. For some constant signals I got expected results, but for some time varying signals, one would dominate over the other. The resultant wave would be saturated towards one of the inputs, or the expected output would be in the mV-amplitude scale, which would be annoying for the main circuit. 
 I wish I understood why … but this is a less important rabbit hole, and I was struggling to get good answers. So I put this aside. 
  
 Nonlinear Analog Circuits is a great and specific textbook, and has a chapter on multipliers. It mentions transconductance amplifiers as multipliers, but from first principles rather than from a prebuilt chip. It discusses pulse modulation multipliers. Finally, it discusses log-antilog multiplers:
 
+![](https://dmckinnon.github.io/assets/analog/nla_1.png)
 
-
+![](https://dmckinnon.github.io/assets/analog/nla_2.png)
  
 Let's consider the log-antilog multiplier. While the
- pages above show everything necessary, I'll go into simpler and perhaps clearer detail. The basic circuit is 
+pages above show everything necessary, I'll go into simpler and perhaps clearer detail. The basic circuit is 
 
+![](https://dmckinnon.github.io/assets/analog/log.png)
 
 This uses the current flow property of a diode to produce an output voltage. A transistor is just two diodes connected together, (UNDERSTNAD WHY BRIDGE COLLECTOR AND GATE) and if we bridge the collector and gate, we get essentially a single diode but one a lot more stable. So, let's start with the current flow through a diode:
+
+![](https://dmckinnon.github.io/assets/analog/current_eq.png)
 
 Where $I_c$ is the collector current, $I_s$ is the saturation current (TODO: what is this), and $V_{BE}$ is the voltage across the base-emitter. There's a number of constants here ($q$, $K$, $T$), but we know these from physics and can reduce this to
 $I_c = I_s(\exp{38.6V_{BE}}-1)$
@@ -261,7 +286,8 @@ $V_{out} = -(XY + XB + YA + AB) + XB + YA + AB = -XY$
 One more inverting voltage follower, and we arrive at $V_{out} = XY$!
  
 Here's the circuit for a log-antilog multiplier:
- 
+
+![](https://dmckinnon.github.io/assets/analog/log_antilog.png)
 
 
 Top left, on OA1 and OA2, we can see two log-amplifiers implemented on V1 and V2. These are summed with an offset voltage across R7, inverted, and then passed to an antilog amplifier below. This offset is just a natural artefact of the components used and we want this to be what the log-antilog system considers "1", so we pass 1v through a log amplifier.
@@ -270,19 +296,25 @@ I made this in simulation and tested it with some generated sine waves of differ
  
 This would cost 5 op-amps to produce (passive components and individual transistors are so cheap their cost is irrelevant), so this is much better than a proper multiplier circuit (op-amps cost ~$1 for one chip containing 4). Here's my full circuit:
 
+![](https://dmckinnon.github.io/assets/analog/full_mult.png)
+
 It's big and complicated, but break down to each op-amp, and the structure should be clear. 
  
 Integrating this into the main circuit instead of the ideal voltage sources, we see:
 
+![](https://dmckinnon.github.io/assets/analog/bad_out.png)
+
 Where Z is pink. 
 Hmm. Let's run this with the same inputs as the ideal voltage multiplier, and see what's different:
 
+![](https://dmckinnon.github.io/assets/analog/delta.png)
  
 
 Where pink is the output of the multiplier, and orange is the output of the ideal multiplier (the simulator just multiplied the values it has).
 The signals are very close! But slightly off, and this causes chaotic effects down the line. This is, after all, a chaotic system of equations. 
 We can try to initialise things nicely, by starting with the ideal product of voltages, and then switching to the designed multiplier after some time:
 
+![](https://dmckinnon.github.io/assets/analog/cycle.png)
 
 Brown is Z, yellow and orange are Y and X respectively. Pink is simulated source switching to multiplier circuit after some time.
  
