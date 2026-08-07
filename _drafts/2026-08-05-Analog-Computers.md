@@ -1,11 +1,5 @@
 # Analog Computers
 
-TODO:
-- fill out todos
-saturation
-derivative waveform
-cap explanation
-
 ## Contents
 - [Op-Amps](#op-amps) 
 - [The Lorentz Attractor](#the-lorentz-attractor)
@@ -213,14 +207,18 @@ By KCL, $I = \frac{V_{out}}{R_f}$, so now
 
 $C\frac{dV_{in}}{dt} = \frac{V_{out}}{R_f}$,
 
-and we can rearrange this and see that $V_{out}$ is now proportional to the derivative of Vin over time, instead of the integral! 
+and we can rearrange this and see that $V_{out}$ is now proportional to the derivative of Vin over time, instead of the integral! A scaling factor of $RC$ falls out, and we'll see that explained in the next section.
+
+From the capacitor's perspective, as it charges under a changing voltage, a current flows across it, proportional to the rate of change of voltage. As voltage changes more intensely, more current flows - since the capacitor reacts and charges quicker. If voltage changes slowly, the capacitor charges or discharges slower (since the difference in potential energy across it is lower) and therefore less current flows. The current flowing through determines the output voltage.
 
 Again, this is demonstrated nicely in some diagrams:
 
-<TODO add a diagram of the waverforms>
+![](https://dmckinnon.github.io/assets/analog/diff_waveforms.png)
 
 If we put in a triangular wave, we see a square wave out, a square wave produces impulses, sines become cosines, etc. 
-<Explain how it works from the capacitor>
+
+One final aside about both integrators and differentiators: as capacitors are frequency-dependent circuit elements, these mathematical blocks only work within certain frequency bands. At 0Hz, so DC, capacitors are open-circuits and no current flows. At high frequencies, like the MHz range, we get ... unstable behaviours, and we need a different circuit to stabilise these. You also get other factors coming into play. But for kHz, we're fine and the above equations hold. 
+
  
 Alright! We now have calculus! 
 
@@ -287,8 +285,9 @@ $\frac{dx}{dt} = \frac{1}{RC}10(y-x)$
 
 Alright so we've scaled to what we want. This can be repeated across all three equations, and we see a factor of $\frac{1}{RC}$ emerge, scaling everything down. 
 This has several implications:
-    1. From the plot above, we know the absolute limits of $X, Y, Z$ in these equations, and maybe we don't want to use voltage that high. Eg. $Z$ might reach 50V! This term, and the parts it uses, can help us scale things down to manageable levels. For example, we could choose $R$ and $C$ such that the outputs never exceed, say, +/- 5v. Perfectly manageable. 
-    2. We can derive all the other resistor values from this. Set $R=100k\Omega$ - a pretty standard resistor size – and then the resistors for the $X$ equation above become $10k\Omega$ each (as they are $\frac{1}{10}R$). We can do similar to get factors of $28$ and $\frac{8}{3}$ in the other equations, as you'll see. 
+
+- From the plot above, we know the absolute limits of $X, Y, Z$ in these equations, and maybe we don't want to use voltage that high. Eg. $Z$ might reach 50V! This term, and the parts it uses, can help us scale things down to manageable levels. For example, we could choose $R$ and $C$ such that the outputs never exceed, say, +/- 5v. Perfectly manageable. 
+- We can derive all the other resistor values from this. Set $R=100k\Omega$ - a pretty standard resistor size – and then the resistors for the $X$ equation above become $10k\Omega$ each (as they are $\frac{1}{10}R$). We can do similar to get factors of $28$ and $\frac{8}{3}$ in the other equations, as you'll see. 
 $C$ also acts as a time component. The larger we choose the capacitance, the slower the whole circuit oscillates. Want this to oscillate in the MHz range? A really small $C$, which scales the circuit differently. I wanted to sample in the kHz range, which means I increased the capacitance to slow everything down. 
 
 Hopefully all that makes sense! If not, just read it as "we're choosing values relative to a baseline, that determines the maximum voltage levels, and there's just some magical scale parameter there".
@@ -366,9 +365,9 @@ I wish I understood why … but this is a less important rabbit hole, and I was 
 ### The Log-Antilog Multiplier
 Nonlinear Analog Circuits is a great and specific textbook, and has a chapter on multipliers. It mentions transconductance amplifiers as multipliers, but from first principles rather than from a prebuilt chip. It discusses pulse modulation multipliers. Finally, it discusses log-antilog multiplers:
 
-![](https://dmckinnon.github.io/assets/analog/nla_1.png)
+![](https://dmckinnon.github.io/assets/analog/nla_1.jpg)
 
-![](https://dmckinnon.github.io/assets/analog/nla_2.png)
+![](https://dmckinnon.github.io/assets/analog/nla_2.jpg)
  
 Let's consider the log-antilog multiplier. While the
 pages above show everything necessary, I'll go into simpler and perhaps clearer detail. The basic circuit is 
@@ -379,7 +378,7 @@ This uses the current flow property of a diode to produce an output voltage. A t
 
 ![](https://dmckinnon.github.io/assets/analog/current_eq.png)
 
-Where $I_c$ is the collector current, $I_s$ is the saturation current (TODO: what is this), and $V_{BE}$ is the voltage across the base-emitter. There's a number of constants here ($q$, $K$, $T$), but we know these from physics and can reduce this to
+Where $I_c$ is the collector current, $I_s$ is the saturation current (the maximum current that flows when this transistor is switched off), and $V_{BE}$ is the voltage across the base-emitter. There's a number of constants here ($q$, $K$, $T$), but we know these from physics and can reduce this to
 
 $I_c = I_s(e^{38.6V_{BE}}-1)$
 
