@@ -1,5 +1,10 @@
 # Analog Computers
 
+TODO:
+- fill out todos
+- contents and headings
+- formatting fixes with eqs
+
 ## Contents
 - intro
 - op-amps
@@ -98,56 +103,83 @@ This can be made to do general weighted linear equations - a dot product with st
 $V_{out} = \frac{-1}{R_{feedback}} (R_1V_1 + R_2V_2 … )$
  
 The Subtractor
+
 ![](https://dmckinnon.github.io/assets/analog/subtractor.jpg)
 
 This is slightly more complicated. Given we don't care about amplifying, we just want to subtract, let's say that all resistors are just some value $R$.
 As $V_- = V_+$, and $V_+=\frac{R}{R+R}V_1=\frac{V_1}{2}$, we have
+
 $\frac{V_2-V_-}{R} = \frac{V_- -V_o}{R}$
-$V_-(\frac{2}{R}})=\frac{V_2}{R}+\frac{V_o}{R}$
+
+$V_-(\frac{2}{R})=\frac{V_2}{R}+\frac{V_o}{R}$
+
 Substituting,
+
 $\frac{V_1}{2}\frac{2}{R} - \frac{V_2}{R}= \frac{V_o}{R}$
+
 And therefore
+
 $V_{o}=V_1-V_2$
+
 This can be made more complicated, into a more generalised linear equation with different resistor values. 
+
  
 There's [a few more blocks](https://www.electronics-tutorials.ws/opamp/op-amp-building-blocks.html), but the point hopefully is clear by now - we can use these circuit elements - op-amps and resistors - to do some simple mathematics on voltages. We could create, for example, a circuit that produces an output voltage y where $y =  2x + 3$. You then just need to have a dial that lets you set $x$, and then you measure $y$. 
 Simple, easy to do on paper, but if you needed to produces results quickly and could set and read voltages quickly, and also digital computing had not been invented, then such a circuit could be useful. 
 Still, probably too simple and contrived to be worthwhile. 
+
  
 Earlier I mentioned I was attempting a differential equation. These contain derivatives integrals. How do we perform that with op-amps? 
+
 Integrals are just adding a lot of small bits up, and we have adders, but a major drawback of analog computing is that there is no storage. For this, we need a time-based element. Enter the capacitor.
 Capacitors work in a much more nuanced and complex way than I'm about to describe, but the following should be all that's necessary to know for the topic at hand. A capacitor has two plates, and if there is a voltage difference across them then one side charges up to equalise the voltage, neutralising the difference. This can then quickly discharge if the voltage across suddenly changes due to external factors. 
+
  
 So if we connect a capacitor across the op-amp feedback loop:
 
 ![](https://dmckinnon.github.io/assets/analog/integrator.png)
 
 Then as $V_{in}$ changes, $V_{out}$ is driven to be the same as $V_{in}$ (so that $V_+$ is 0). But capacitors introduce some time delay - they must charge up to neutralise a voltage difference, it's not immediate. I'll not go into the derivation here, but we know that the voltage across the plates of a capacitor is equal to the charge on the capacitor, divided by the specific parameters called capacitance, which is really just a factor derived from physical construction (materials, dimensions, etc). $V_{in}$ changes, and the charge therefore changes. If $V_cap$ is the voltage across the capacitor, then
+
 $V_{cap} = \frac{Q}{C}$
+
 $V_{cap} = V_- -V_{out}$, but $V_-$ is 0 due to the feedback loop, so $V_{cap} = -V_{out}$
+
+
 The rate of change of $V_{out}$ over time is proportional to the rate of change of charge over time. But rate of change of charge over time is current, and the current flowing in is $I_{in} = \frac{V_{in}}{R_{in}}$
+
 So $I = \frac{dQ}{dt} = C\frac{dV_{out}}{dt}$
+
 Solving for $V_{out}$, we get 
+
 $V_{out} = \frac{1}{C} \int I_{in} \,dt
- and $I_{in} = V_{in}/R_{in}$, so
- $V_{out} = \frac{1}{RC} \int V_{in} \,dt$
-TODO factor of R
+
+and $I_{in} = V_{in}/R_{in}$, so
+
+$V_{out} = \frac{1}{RC} \int V_{in} \,dt$
+
 … and thus we can compute the integral of $V_in$ over time. 
  
 This might still be confusing, so here's an exmaple with a periodic signal that might make it clearer:
+
 ![](https://dmckinnon.github.io/assets/analog/integrator_waveform.png)
 
 Where the input voltage over time is blue, and the output red.
 As $V_{in}$ switches, the output signal starts accumulating, proportional to the area under the signal of $V_{in}$. $V_{in}$ then switches again, and $V_{out}$ starts dropping, as the "area under the signal" decreases. This occurs in a sliding window fashion, meaning the integral value, the value of $V_{out}$, really only holds true for a moving time window of $V_{in}$. If $V_{in}$ was a constant value, say, 1v, then $V_{out}$would simply keep increasing until it saturated. If $V_{in}$ was then changed to 0v, $V_{out}$would decrease down to 0. 
+
 This holds for more complex input signals too. Sines become cosines, and so on. 
  
 So we can compute integrals. Can we invert this? 
+
 Well, instead of connecting the capacitor in the feedback loop, what if we put it before the feedback loop?
 
  ![](https://dmckinnon.github.io/assets/analog/differentiator.jpg)
 
 In this case, we have the situation where $V_{cap} = V_{in} - V_-$ (and $V_- = 0$), $I = \frac{dQ}{dt}= C\frac{dV_{in}}{dt}. By KCL, $I = \frac{V_{out}}{R_f}, so now 
-$C\frac{dV_{in}}{dt} = \fracV_{out}{R_f}$, and we can rearrange this and see that $V_{out}$ is now proportional to the derivative of Vin over time, instead of the integral! 
+
+$C\frac{dV_{in}}{dt} = \fracV_{out}{R_f}$,
+and we can rearrange this and see that $V_{out}$ is now proportional to the derivative of Vin over time, instead of the integral! 
+
 Again, this is demonstrated nicely in some diagrams:
 
 <TODO add a diagram of the waverforms>
@@ -159,58 +191,88 @@ Alright! We now have calculus!
 
 Back to the original idea: 
 I mentioned earlier I was attempting a circuit with Lorentz attractor equations. These differential equations are:
+
 $\frac{dx}{dt}=\sigma(y-x)$
+
 $\frac{dy}{dt}=-xz+rx-y$
+
 $\frac{dz}{dt}=xy-bz$
+
+
 This creates a pretty 3D plot in $x$, $y$, and $z$ that looks something like 
 
 ![](https://dmckinnon.github.io/assets/analog/lorentz.png)
 
 This is with $\sigma=10$, $b=\frac{8}{3}$, and $r=28$. Why? Because … if you pick those, it looks nice. Pick different, and it looks different. That's all.
 
+
 We have derivatives, multiplication by constants, some basic arithmetic … we can do all this! Since we plot $x$, $y$, and $z$, we'll feed the terms for the derivatives into an integrating op-amp setup, and that will give us … well, an inverted, signal, but an inverting amplifier can correct that. Take a look: 
+
+
 This is the X equation. $\frac{dx}{dt}=\sigma(y-x)$
+
 (We've chosen $\sigma=10$ but I'll get into that below)
 
 ![](https://dmckinnon.github.io/assets/analog/x_equation.png)
 
 Let's read this from left to right. On the left, labels for the $-X$ signal and the $Y$ signal. The currents for these signals sum at the label $s(y-x)$, where I'm using $s=\sigma$, as per Kirchoff's Current Law. This feeds into an integrating op-amp at $V_-$. 
 Using the working from above, and using $V_{out}=label(-X)$,
+
 $V_{out} = \frac{1}{RC} \int V_{in} \,dt$
+
 Therefore
+
 $-X = V_{out} = \frac{1}{RC} \int Y - X \,dt$
+
 Where $C$ is the capacitance of C2 in the diagram, and $R$ is the input resistance for $V_-$ - we'll tune this to get the $\sigma$ that we want. 
+
 The op-amp to the right is a basic inverting amplifier with scale factor 1, and as we feed in $-X$, the output is $X$. This is the signal we measure for plotting purposes, and also to pass into the other differential equations. 
 
+
 Before going over $Y$ and $Z$, let's discuss the $RC$ parameter and the part it has to play.  
-    We've chosen $\sigma$ to be 10, so we want to scale $(y-x)$ by 10. How do we do that in an integral?
+We've chosen $\sigma$ to be 10, so we want to scale $(y-x)$ by 10. How do we do that in an integral?
 Assume some general value for $R$, and pick the integrator input resistors as $\frac{1}{10}R$. Then 
+
 $-X = \frac{1}{\frac{1}{10}RC} \int Y - X \,dt$
+
 Since integrals are linear, and since we could have two separate intgegrators and sum them afterwards, we can do 
+
 $-X = \frac{1}{RC} \int \frac{1}{10}Y\,dt +  \frac{1}{RC}\int -\frac{1}{10} X \,dt$
+
 Recombining,
+
 $-X = \frac{1}{RC} \int 10(Y – X) \,dt$
+
 And then differentiate wrt $t$ both sides,
+
 $\frac{dx}{dt} = \frac{1}{RC}10(y-x)$
+
+
 Alright so we've scaled to what we want. This can be repeated across all three equations, and we see a factor of $\frac{1}{RC}$ emerge, scaling everything down. 
 This has several implications:
     1. From the plot above, we know the absolute limits of $X, Y, Z$ in these equations, and maybe we don't want to use voltage that high. Eg. $Z$ might reach 50V! This term, and the parts it uses, can help us scale things down to manageable levels. For example, we could choose $R$ and $C$ such that the outputs never exceed, say, +/- 5v. Perfectly manageable. 
     2. We can derive all the other resistor values from this. Set $R=100k\omega$ - a pretty standard resistor size – and then the resistors for the $X$ equation above become $10k\omega$ each (as they are $\frac{1}{10}R$). We can do similar to get factors of $28$ and $\frac{8}{3}$ in the other equations, as you'll see. 
 $C$ also acts as a time component. The larger we choose the capacitance, the slower the whole circuit oscillates. Want this to oscillate in the MHz range? A really small $C$, which scales the circuit differently. I wanted to sample in the kHz range, which means I increased the capacitance to slow everything down. 
+
 Hopefully all that makes sense! If not, just read it as "we're choosing values relative to a baseline, that determines the maximum voltage levels, and there's just some magical scale parameter there".
 
 
 Onto the equation for Y!
+
 $\frac{dy}{dt}=-xz+28x-y$
+
 (I've now subbed in $r=28$)
 
 ![](https://dmckinnon.github.io/assets/analog/y_equation.png)
 
 On the left, we have $-XZ$, $+X$ (from the $X$ circuit), and $-Y$, and each term is scaled by a resistor. As $-Y$ has no coefficient, it gets scaled by the "default" value, $R=100k\omega$. We want $28X$, and $100/28 = 3.57$ (remember, the scale factor is $\frac{1}{\frac{1}{28}RC}=\frac{28}{RC}$, which is why here we divide by 28). I'm scaling $-XZ$ by an extra factor. I want to scale the whole circuit down to an acceptable level, but any global scale factor on $X, Y, Z$ gets squared through the multiplier stage, so I need a "fudge factor" to undo that square. 
+
 Then we sum the signal and pass it through the integrator - $C$ is the same here, I use the same value capacitors globally. To do otherwise would … change the frequencies for different equations and produce something I don't want. We get the $-Y$ signal from the integrator, invert with a scale 1 to produce $Y$.
 
 Finally, Z:
+
 $\frac{dz}{dt}=xy-\frac{8}{3}z$
+
 (using $b=\frac{8}{3}$)
 
 ![](https://dmckinnon.github.io/assets/analog/z_equation.png)
